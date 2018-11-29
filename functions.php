@@ -112,11 +112,11 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
-  register_post_type( 'maincards',
+  register_post_type( 'cities',
     array(
       'labels' => array(
-          'name' => __( 'Карточки городов' ),
-          'singular_name' => __( 'Карточка городов' )
+          'name' => __( 'Города' ),
+          'singular_name' => __( 'Город' )
       ),
       'public' => true,
       'has_archive' => true,
@@ -165,6 +165,43 @@ function create_taxonomy(){
     'show_in_quick_edit'    => null, // по умолчанию значение show_ui
   ) );
 }
+
+function your_prefix_get_meta_box( $meta_boxes ) {
+  $prefix = 'meta-';
+
+  $meta_boxes[] = array(
+    'id' => 'hotels-info',
+    'title' => esc_html__( 'Информация', 'hotels-info' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'        => 'Город',
+        'id'          => $prefix . 'hotelcity',
+        'type'        => 'post',
+
+        // Post type.
+        'post_type'   => 'cities',
+
+        // Field type.
+        'field_type'  => 'select_advanced',
+
+        // Placeholder, inherited from `select_advanced` field.
+        'placeholder' => 'Выберите город',
+
+        // Query arguments. See https://codex.wordpress.org/Class_Reference/WP_Query
+        'query_args'  => array(
+            'post_status'    => 'publish',
+            'posts_per_page' => - 1,
+        ),
+      ),
+    ),
+  );
+  return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'your_prefix_get_meta_box' );
 
 function add_theme_menu_item() {
     add_menu_page("Theme Settings", "Theme Settings", "manage_options", "theme-settings", "theme_settings_page", null, 99);

@@ -6,7 +6,7 @@
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
 					<?php 
-          $custom_query = new WP_Query( array( 'post_type' => 'maincards' ) );
+          $custom_query = new WP_Query( array( 'post_type' => 'cities' ) );
           if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 					<div class="maincards__item">
 						<a href="#">

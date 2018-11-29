@@ -20,14 +20,12 @@
 								<div class="hotel-item__img mb-4">
 									<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 									<div class="hotel-item__img__city">
-										<?php 
-											$terms = get_the_terms( $post->ID , 'tx_cities' );
-											foreach ( $terms as $term ): ?>
-												<?php $term_link = get_term_link($term); ?>
+										<?php $post_id = rwmb_meta( 'meta-hotelcity' ); ?>
+
 												<div class="hotel-item__img__city__link">
-													<a href="<?php echo $term_link; ?>"><img src="<?php bloginfo('template_url'); ?>/img/pin.svg" alt="" class="hotel-item__icon mr-2"><span><?php echo $term->name; ?><span></a>	
+													<a href="<?php echo get_permalink($post_id) ?>"><img src="<?php bloginfo('template_url'); ?>/img/pin.svg" alt="" class="hotel-item__icon mr-2"><span><?php echo get_the_title( $post_id ); ?><span></a>	
 												</div>
-										<?php endforeach; ?>
+										
 									</div>
 								</div>
 								<div class="hotel-item__title">
