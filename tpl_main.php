@@ -12,6 +12,9 @@ Template Name: Главная страница
 <div class="py-5">
 	<?php get_template_part( 'blocks/newhotels', 'default' ); ?>	
 </div>
+<div class="py-5">
+	<?php get_template_part( 'blocks/popularhotels', 'default' ); ?>	
+</div>
 
 
 <?php get_footer(); ?>

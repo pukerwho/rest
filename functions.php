@@ -197,6 +197,23 @@ function your_prefix_get_meta_box( $meta_boxes ) {
             'posts_per_page' => - 1,
         ),
       ),
+      array(
+        'id' => $prefix . 'hotel-address',
+        'type' => 'text',
+        'name' => esc_html__( 'Адрес', 'hotels-info' ),
+      ),
+      array(
+        'name'  => 'Контакты',
+        'id'    => $prefix . 'hotel-contact',
+        'size'        => 50,
+        'field_type' => 'text',
+        'clone' => true,
+      ),
+      array(
+        'name'  => 'Фотографии',
+        'id' => $prefix . 'hotel-photos',
+        'type' => 'image_advanced',
+      ),
     ),
   );
   return $meta_boxes;

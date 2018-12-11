@@ -7,6 +7,13 @@ $('.header__mobile__close').on('click', function(){
 	$('.header__mobile__cover').removeClass('header__mobile__cover__active');
 })
 
+//TABS
+if ($(document).width() < 960) {
+  $(document).on('click', '.tab-button-outer .nav-item', function(){
+    $('.nav-tabs').toggleClass('open');
+  })
+}
+
 //SWIPER
 if ($(document).width() < 960) {
   var mySwiper = new Swiper ('.swiper-maincards', {
