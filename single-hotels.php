@@ -45,7 +45,22 @@
 					  <div class="tab-pane tab-single-hotel fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 					  	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						  	<div class="hotel-main">
-						  		<?php the_content(); ?>
+						  		<div class="row">
+						  			<div class="col-md-3">
+						  				<h3 class="mb-5">Рейтинги</h3>
+						  				<div>
+						  					<h4>Общий:</h4>
+						  					<div class="hotel-rating">
+						  						<div class="hotel-rating-bar" style="width: <?php echo rwmb_meta( 'meta-hotel-mainrating' ); ?>%">
+						  							<span><?php echo rwmb_meta( 'meta-hotel-mainrating' ); ?>%</span>
+						  						</div>
+						  					</div>
+						  				</div>
+						  			</div>
+						  			<div class="col-md-9">
+						  				<?php the_content(); ?>
+						  			</div>
+						  		</div>
 						  	</div>
 					  	<?php endwhile; else: ?>
 								<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

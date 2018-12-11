@@ -12,7 +12,17 @@
 		<div class="pc-show">
 			<div class="row">
 				<?php 
-			  $custom_query = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 4 ) );
+			  $custom_query = new WP_Query( array( 
+			  	'post_type' => 'hotels', 
+			  	'posts_per_page' => 4,
+			  	'meta_query' => array(
+						array(
+							'key'     => 'meta-hotel-popular',
+							'value'   => 1,
+							'compare' => '=',
+						),
+					)
+			  ) );
 			  if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 					<div class="col-md-3">
 						<a href="<?php the_permalink(); ?>">
@@ -44,7 +54,17 @@
 					<div class="swiper-container swiper-hotels">
 				    <div class="swiper-wrapper">
 				    	<?php 
-						  $custom_query = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 4 ) );
+						  $custom_query = new WP_Query( array( 
+						  	'post_type' => 'hotels', 
+						  	'posts_per_page' => 4,
+						  	'meta_query' => array(
+									array(
+										'key'     => 'meta-hotel-popular',
+										'value'   => 1,
+										'compare' => '=',
+									),
+								) 
+						  ) );
 						  if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 								<div class="swiper-slide">
 			          	<a href="<?php the_permalink(); ?>">

@@ -51,6 +51,7 @@ add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 function theme_name_scripts() {
     wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/style.css' );
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
+    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.min.js','','',true);
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js');
     wp_register_script( 'loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
     wp_enqueue_script( 'myscripts', get_template_directory_uri() . '/js/scripts.js');
@@ -213,6 +214,17 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'name'  => 'Фотографии',
         'id' => $prefix . 'hotel-photos',
         'type' => 'image_advanced',
+      ),
+      array(
+        'name'  => 'Рейтинг (Главный)',
+        'id' => $prefix . 'hotel-mainrating',
+        'type' => 'text',
+      ),
+      array(
+        'name'  => 'Популярный?',
+        'id' => $prefix . 'hotel-popular',
+        'type' => 'checkbox',
+        'std'  => 0,
       ),
     ),
   );
