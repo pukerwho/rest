@@ -29,7 +29,11 @@
 								<a href="<?php the_permalink(); ?>" class="pb-3"><?php the_title(); ?></a>
 							</div>
 							<div class="hotel-item__rating pt-3">
-								Рейтинг: <?php echo rwmb_meta( 'meta-hotel-mainrating' ); ?> из 100
+								<div class="hotel-rating">
+		  						<div class="hotel-rating-bar" style="width: <?php echo rwmb_meta( 'meta-hotel-mainrating' ); ?>%">
+		  							<span>Рейтинг: <?php echo rwmb_meta( 'meta-hotel-mainrating' ); ?> из 100</span>
+		  						</div>
+		  					</div>
 							</div>
 						</div>
 					</div>

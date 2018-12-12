@@ -58,7 +58,19 @@
 						  				</div>
 						  			</div>
 						  			<div class="col-md-9">
-						  				<?php the_content(); ?>
+						  				<div class="hotel-content mb-5">
+						  					<?php the_content(); ?>	
+						  				</div>
+						  				<h3 class="text-uppercase mb-5">Фотографии территории:</h3>
+						  				<div class="hotel-photos">
+									  		<?php 
+													$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'large' ) );
+													$title_img = get_the_title();
+													foreach ( $images as $image ) {
+													    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
+													} 
+												?>
+									  	</div>
 						  			</div>
 						  		</div>
 						  	</div>
@@ -67,14 +79,46 @@
 							<?php endif; ?>
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="nomers" role="tabpanel" aria-labelledby="nomers-tab">
-					  	<div class="hotel-photos">
-					  		<?php 
-									$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'large' ) );
-									$title_img = get_the_title();
-									foreach ( $images as $image ) {
-									    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
-									} 
-								?>
+					  	<div class="nomers">
+					  		<div class="nomers-item mb-5 pb-5">
+					  			<h2 class="mb-4 pb-3">Номера "Люкс"</h2>
+					  			<h3 class="mb-5">Стоимость: <?php echo rwmb_meta( 'meta-hotel-lux-price' ); ?></h3> 
+					  			<div class="hotel-photos">
+							  		<?php 
+											$images = rwmb_meta( 'meta-hotel-lux-photos', array( 'size' => 'large' ) );
+											$title_img = get_the_title();
+											foreach ( $images as $image ) {
+											    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
+											} 
+										?>
+							  	</div>
+					  		</div>
+					  		<div class="nomers-item mb-5 pb-5">
+					  			<h2 class="mb-4 pb-3">Номера "Полулюкс"</h2>
+					  			<h3 class="mb-5">Стоимость: <?php echo rwmb_meta( 'meta-hotel-halflux-price' ); ?></h3> 
+					  			<div class="hotel-photos">
+							  		<?php 
+											$images = rwmb_meta( 'meta-hotel-halflux-photos', array( 'size' => 'large' ) );
+											$title_img = get_the_title();
+											foreach ( $images as $image ) {
+											    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
+											} 
+										?>
+							  	</div>
+					  		</div>
+					  		<div class="nomers-item mb-5 pb-5">
+					  			<h2 class="mb-4 pb-3">Бюджетные номера</h2>
+					  			<h3 class="mb-5">Стоимость: <?php echo rwmb_meta( 'meta-hotel-budget-price' ); ?></h3> 
+					  			<div class="hotel-photos">
+							  		<?php 
+											$images = rwmb_meta( 'meta-hotel-budget-photos', array( 'size' => 'large' ) );
+											$title_img = get_the_title();
+											foreach ( $images as $image ) {
+											    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
+											} 
+										?>
+							  	</div>
+					  		</div>
 					  	</div>
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">

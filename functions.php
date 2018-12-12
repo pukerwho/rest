@@ -211,7 +211,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'clone' => true,
       ),
       array(
-        'name'  => 'Фотографии',
+        'name'  => 'Фотографии территории',
         'id' => $prefix . 'hotel-photos',
         'type' => 'image_advanced',
       ),
@@ -228,6 +228,88 @@ function your_prefix_get_meta_box( $meta_boxes ) {
       ),
     ),
   );
+
+  $meta_boxes[] = array(
+    'id' => 'hotels-lux',
+    'title' => esc_html__( 'Номера люкс', 'hotels-lux' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Есть такие?',
+        'id' => $prefix . 'hotel-lux-has',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Фотографии люксовых номеров',
+        'id' => $prefix . 'hotel-lux-photos',
+        'type' => 'image_advanced',
+      ),
+      array(
+        'name'  => 'Стоимость',
+        'id' => $prefix . 'hotel-lux-price',
+        'type' => 'text',
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'id' => 'hotels-halflux',
+    'title' => esc_html__( 'Номера полулюкс', 'hotels-halflux' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Есть такие?',
+        'id' => $prefix . 'hotel-halflux-has',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Фотографии люксовых номеров',
+        'id' => $prefix . 'hotel-halflux-photos',
+        'type' => 'image_advanced',
+      ),
+      array(
+        'name'  => 'Стоимость',
+        'id' => $prefix . 'hotel-halflux-price',
+        'type' => 'text',
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'id' => 'hotels-budget',
+    'title' => esc_html__( 'Бюджетные номера', 'hotels-budget' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Есть такие?',
+        'id' => $prefix . 'hotel-budget-has',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Фотографии люксовых номеров',
+        'id' => $prefix . 'hotel-budget-photos',
+        'type' => 'image_advanced',
+      ),
+      array(
+        'name'  => 'Стоимость',
+        'id' => $prefix . 'hotel-budget-price',
+        'type' => 'text',
+      ),
+    ),
+  );
+
   return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'your_prefix_get_meta_box' );

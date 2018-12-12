@@ -8981,12 +8981,18 @@ a:hover {
 .bg-pastel-blue {
   background-color: #bec5e7;
   -webkit-box-shadow: 0px 3px 4px 1px #99a5e3;
-  box-shadow: 0px 3px 4px 1px #99a5e3; }
+  box-shadow: 0px 4px 3px 0px #99a5e3; }
+  .bg-pastel-blue:hover {
+    -webkit-box-shadow: 0px 1px 0.001px 0px #99a5e3;
+    box-shadow: 0px 1px 0.001px 0px #99a5e3; }
 
 .bg-paster-green {
   background-color: #cdf5d4;
-  -webkit-box-shadow: 0px 3px 4px 1px #9ef6ad;
-  box-shadow: 0px 3px 4px 1px #9ef6ad; }
+  -webkit-box-shadow: 0px 4px 3px 0px #9ef6ad;
+  box-shadow: 0px 4px 3px 0px #9ef6ad; }
+  .bg-paster-green:hover {
+    -webkit-box-shadow: 0px 1px 0.001px 0px #9ef6ad;
+    box-shadow: 0px 1px 0.001px 0px #9ef6ad; }
 
 .btn {
   font-size: 1.8rem;
@@ -9283,6 +9289,19 @@ a:hover {
     background-color: #4caf50;
     -webkit-border-radius: 2px;
     border-radius: 2px; }
+
+.nomers-item {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #e7e6e4), color-stop(0, #fff));
+  background-image: -webkit-linear-gradient(left, #e7e6e4 33%, #fff 0);
+  background-image: -o-linear-gradient(left, #e7e6e4 33%, #fff 0);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #e7e6e4), color-stop(0, #fff));
+  background-image: linear-gradient(90deg, #e7e6e4 33%, #fff 0);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  -webkit-background-size: .6rem .2rem;
+  background-size: .6rem .2rem; }
+  .nomers-item:last-child {
+    background: none; }
 
 .single-hotel .cover img {
   width: 100%;
