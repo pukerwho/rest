@@ -30,7 +30,7 @@
 						    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
 						  </li>
 						  <li class="nav-item">
-						    <a class="nav-link" id="photos-tab" data-toggle="tab" href="#photos" role="tab" aria-controls="photos" aria-selected="false">Фотографии</a>
+						    <a class="nav-link" id="nomers-tab" data-toggle="tab" href="#nomers" role="tab" aria-controls="nomers" aria-selected="false">Номера</a>
 						  </li>
 						  <li class="nav-item">
 						    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Контакты</a>
@@ -66,7 +66,7 @@
 								<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 							<?php endif; ?>
 					  </div>
-					  <div class="tab-pane tab-single-hotel fade" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+					  <div class="tab-pane tab-single-hotel fade" id="nomers" role="tabpanel" aria-labelledby="nomers-tab">
 					  	<div class="hotel-photos">
 					  		<?php 
 									$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'large' ) );
