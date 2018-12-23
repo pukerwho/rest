@@ -8957,6 +8957,9 @@ li {
 h2 {
   font-size: 2.8rem; }
 
+h4 {
+  color: #484848; }
+
 p {
   color: #82817d;
   font-size: 1.8rem;
@@ -9367,6 +9370,10 @@ a:hover {
       object-fit: cover;
       -o-object-position: top;
       object-position: top; }
+
+.include h4 {
+  margin: 0;
+  padding: 0; }
 
 html.lb-disable-scrolling {
   overflow: hidden;

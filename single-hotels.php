@@ -48,7 +48,7 @@
 						  		<div class="row">
 						  			<div class="col-md-3">
 						  				<h3 class="mb-5">Рейтинги</h3>
-						  				<div>
+						  				<div class="mb-5">
 						  					<h4>Общий:</h4>
 						  					<div class="hotel-rating">
 						  						<div class="hotel-rating-bar" style="width: <?php echo rwmb_meta( 'meta-hotel-mainrating' ); ?>%">
@@ -56,6 +56,8 @@
 						  						</div>
 						  					</div>
 						  				</div>
+						  				<h3 class="mb-5">Удобства:</h3>
+						  				<?php get_template_part( 'blocks/include', 'default' ); ?>
 						  			</div>
 						  			<div class="col-md-9">
 						  				<div class="hotel-content mb-5">

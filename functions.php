@@ -230,6 +230,47 @@ function your_prefix_get_meta_box( $meta_boxes ) {
   );
 
   $meta_boxes[] = array(
+    'id' => 'hotels-include',
+    'title' => esc_html__( 'Удобства', 'hotels-include' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Wi-fi',
+        'id' => $prefix . 'hotel-wifi',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Парковка',
+        'id' => $prefix . 'hotel-parking',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Детская площадка',
+        'id' => $prefix . 'hotel-playground',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Бассейн',
+        'id' => $prefix . 'hotel-pool',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Трансфер',
+        'id' => $prefix . 'hotel-transfer',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
     'id' => 'hotels-lux',
     'title' => esc_html__( 'Номера люкс', 'hotels-lux' ),
     'post_types' => array( 'hotels' ),
