@@ -1,15 +1,15 @@
-<div class="newhotels">
+<div class="familyhotels">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-5">
 					<div class="my-table">
 						<div class="my-table-cell pr-4">
-							<img src="<?php bloginfo('template_url'); ?>/img/newhotels.svg" alt="" width="40px">
+							<img src="<?php bloginfo('template_url'); ?>/img/familyhotels.svg" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Недавно добавленные на сайт</h2>
-							<p>Поприветствуем новичков!</p>		
+							<h2>Семейный отдых</h2>
+							<p>Лучшие предложения для тех, кто едет отдыхать с детьми!</p>		
 						</div>
 					</div>
 				</div>

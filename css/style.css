@@ -9000,6 +9000,13 @@ a:hover {
   -webkit-border-radius: 0.6rem;
   border-radius: 0.6rem; }
 
+.my-table {
+  display: table; }
+
+.my-table-cell {
+  display: table-cell;
+  vertical-align: middle; }
+
 .header__content {
   display: flex;
   align-items: center;

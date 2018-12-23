@@ -3,8 +3,15 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-5">
-					<h2>Популярные предложения</h2>
-					<p>Эти пансионаты пользуются повышенным спросом!</p>	
+					<div class="my-table">
+						<div class="my-table-cell pr-4">
+							<img src="<?php bloginfo('template_url'); ?>/img/popularhotels.svg" alt="" width="40px">
+						</div>
+						<div class="table-text">
+							<h2>Популярные предложения</h2>
+							<p>Эти пансионаты пользуются повышенным спросом!</p>	
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
