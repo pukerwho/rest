@@ -294,6 +294,60 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'id' => $prefix . 'hotel-lux-price',
         'type' => 'text',
       ),
+      array(
+        'name'  => 'Кондиционер',
+        'id' => $prefix . 'hotel-lux-conder',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Телевизор',
+        'id' => $prefix . 'hotel-lux-tv',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Холодильник',
+        'id' => $prefix . 'hotel-lux-frize',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Стиральная машинка',
+        'id' => $prefix . 'hotel-lux-stiralka',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Аптечка',
+        'id' => $prefix . 'hotel-lux-aptechka',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Фен',
+        'id' => $prefix . 'hotel-lux-fen',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Микроволновая печь',
+        'id' => $prefix . 'hotel-lux-micro',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Кофеварка',
+        'id' => $prefix . 'hotel-lux-coffee',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Утюг',
+        'id' => $prefix . 'hotel-lux-utug',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
     ),
   );
 

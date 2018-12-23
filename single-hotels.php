@@ -85,7 +85,7 @@
 					  		<div class="nomers-item mb-5 pb-5">
 					  			<h2 class="mb-4 pb-3">Номера "Люкс"</h2>
 					  			<h3 class="mb-5">Стоимость: <?php echo rwmb_meta( 'meta-hotel-lux-price' ); ?></h3> 
-					  			<div class="hotel-photos">
+					  			<div class="hotel-photos mb-5">
 							  		<?php 
 											$images = rwmb_meta( 'meta-hotel-lux-photos', array( 'size' => 'large' ) );
 											$title_img = get_the_title();
@@ -93,6 +93,10 @@
 											    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
 											} 
 										?>
+							  	</div>
+							  	<h3 class="mb-5">Удобства:</h3>
+							  	<div class="include-grid">
+							  		<?php get_template_part( 'blocks/includelux', 'default' ); ?>
 							  	</div>
 					  		</div>
 					  		<div class="nomers-item mb-5 pb-5">
