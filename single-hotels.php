@@ -128,7 +128,7 @@
 					  	</div>
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-					  	Контакты
+					  	<?php get_template_part( 'blocks/single-hotel-contact', 'default' ); ?>
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
 					  	Обсуждение

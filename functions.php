@@ -179,6 +179,33 @@ function your_prefix_get_meta_box( $meta_boxes ) {
     'autosave' => true,
     'fields' => array(
       array(
+        'name'  => 'Фотографии территории',
+        'id' => $prefix . 'hotel-photos',
+        'type' => 'image_advanced',
+      ),
+      array(
+        'name'  => 'Рейтинг (Главный)',
+        'id' => $prefix . 'hotel-mainrating',
+        'type' => 'text',
+      ),
+      array(
+        'name'  => 'Популярный?',
+        'id' => $prefix . 'hotel-popular',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'id' => 'hotels-contact',
+    'title' => esc_html__( 'Контакты', 'hotels-contact' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
         'name'        => 'Город',
         'id'          => $prefix . 'hotelcity',
         'type'        => 'post',
@@ -201,30 +228,49 @@ function your_prefix_get_meta_box( $meta_boxes ) {
       array(
         'id' => $prefix . 'hotel-address',
         'type' => 'text',
-        'name' => esc_html__( 'Адрес', 'hotels-info' ),
+        'name' => esc_html__( 'Адрес', 'hotels-contact' ),
       ),
       array(
-        'name'  => 'Контакты',
-        'id'    => $prefix . 'hotel-contact',
+        'id'            => $prefix . 'hotel-map',
+        'name'          => 'Location',
+        'type'          => 'map',
+
+        // Default location: 'latitude,longitude[,zoom]' (zoom is optional)
+        'std'           => '-6.233406,-35.049906,15',
+
+        // Address field ID
+        'address_field' => $prefix . 'hotel-address',
+
+        // Google API key
+        'api_key'       => 'AIzaSyA7ofGxkOMREhswh27U_aOa-eLyzBfyZkI',
+      ),
+      array(
+        'name'  => 'Телефоны',
+        'id'    => $prefix . 'hotel-phones',
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
       ),
       array(
-        'name'  => 'Фотографии территории',
-        'id' => $prefix . 'hotel-photos',
-        'type' => 'image_advanced',
+        'name'  => 'Viber',
+        'id'    => $prefix . 'hotel-viber',
+        'size'        => 50,
+        'field_type' => 'text',
+        'clone' => true,
       ),
       array(
-        'name'  => 'Рейтинг (Главный)',
-        'id' => $prefix . 'hotel-mainrating',
-        'type' => 'text',
+        'name'  => 'Whatsapp',
+        'id'    => $prefix . 'hotel-whatsapp',
+        'size'        => 50,
+        'field_type' => 'text',
+        'clone' => true,
       ),
       array(
-        'name'  => 'Популярный?',
-        'id' => $prefix . 'hotel-popular',
-        'type' => 'checkbox',
-        'std'  => 0,
+        'name'  => 'Telegram',
+        'id'    => $prefix . 'hotel-telegram',
+        'size'        => 50,
+        'field_type' => 'text',
+        'clone' => true,
       ),
     ),
   );
