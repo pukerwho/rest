@@ -4,7 +4,18 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="cover">
+				<div class="cover p-relative">
+					<div class="cover-icon">
+						<?php if(rwmb_meta( 'meta-hotel-mainrating' ) > 75): ?>
+							<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="">
+						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 50): ?>
+							<img src="<?php bloginfo('template_url'); ?>/img/sun-cloud.svg" alt="">
+						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 25): ?>
+							<img src="<?php bloginfo('template_url'); ?>/img/cloud.svg" alt="">
+						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) < 25): ?>
+							<img src="<?php bloginfo('template_url'); ?>/img/rain.svg" alt="">
+						<?php endif ?>
+					</div>
 					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">	
 				</div>
 			</div>
@@ -131,7 +142,7 @@
 					  	<?php get_template_part( 'blocks/single-hotel-contact', 'default' ); ?>
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-					  	Обсуждение
+					  	<?php comments_template(); ?> 
 					  </div>
 					</div>
 				</div>
