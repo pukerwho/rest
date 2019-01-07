@@ -38,7 +38,7 @@
             <a href="<?php echo home_url(); ?>" class="header__logo">
               <span class="header__logo__icon"></span>
               <div class="header__logo__title">
-                RestX
+                Відпочивай
               </div>
             </a>
           </div>

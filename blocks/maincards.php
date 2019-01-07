@@ -9,7 +9,7 @@
           $custom_query = new WP_Query( array( 'post_type' => 'cities' ) );
           if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 					<div class="maincards__item">
-						<a href="#">
+						<a href="<?php the_permalink(); ?>">
 							<div class="maincards__item__card" style="background: url('<?php echo get_the_post_thumbnail_url(); ?>')">
 								<div class="maincards__item__card__title">
 									<?php the_title(); ?>
