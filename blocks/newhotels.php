@@ -17,7 +17,7 @@
 		</div>
 		<!-- PC VERSION -->
 		<div class="pc-show">
-			<div class="row">
+			<div class="row mb-5">
 				<?php 
 			  $custom_query = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 4 ) );
 			  if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
@@ -29,7 +29,7 @@
 		</div>
 		<!-- MOBILE VERSION -->
 		<div class="mobile-show">
-			<div class="row">
+			<div class="row mb-5">
 				<div class="col-md-12">
 					<div class="swiper-container swiper-hotels">
 				    <div class="swiper-wrapper">
@@ -45,6 +45,13 @@
 		      	<div class="swiper-button-prev swiper-hotels-button-prev"></div>
 				  </div>
 			  </div>
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-md-12">
+				<div class="button-more text-center">
+					<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+				</div>
 			</div>
 		</div>
 	</div>

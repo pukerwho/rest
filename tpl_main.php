@@ -18,6 +18,15 @@ Template Name: Главная страница
 <div class="py-5">
 	<?php get_template_part( 'blocks/familyhotels', 'default' ); ?>	
 </div>
+<div class="py-5">
+	<?php get_template_part( 'blocks/premiumhotels', 'default' ); ?>	
+</div>
+<div class="py-5">
+	<?php get_template_part( 'blocks/nearseahotels', 'default' ); ?>	
+</div>
+<div class="py-5">
+	<?php get_template_part( 'blocks/animalshotels', 'default' ); ?>	
+</div>
 
 
 <?php get_footer(); ?>

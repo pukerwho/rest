@@ -9003,6 +9003,11 @@ a:hover {
   -webkit-border-radius: 0.6rem;
   border-radius: 0.6rem; }
 
+.button-more .btn {
+  border: 1px solid #cccccc; }
+.button-more a {
+  color: #444444; }
+
 .my-table {
   display: table; }
 

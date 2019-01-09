@@ -130,21 +130,21 @@ add_action( 'init', 'create_post_type' );
 
 add_action('init', 'create_taxonomy');
 function create_taxonomy(){
-  register_taxonomy('tx_cities', array('hotels'), array(
+  register_taxonomy('tx_collections', array('hotels'), array(
     'label'                 => '', // определяется параметром $labels->name
     'labels'                => array(
-      'name'              => 'Города',
-      'singular_name'     => 'Город',
-      'search_items'      => 'Поиск города',
-      'all_items'         => 'Все города',
-      'view_item '        => 'Посмотреть город',
-      'parent_item'       => 'Родительский город',
-      'parent_item_colon' => 'Родительский город:',
-      'edit_item'         => 'Редактировать город',
-      'update_item'       => 'Одновить город',
+      'name'              => 'Подборки',
+      'singular_name'     => 'Подборка',
+      'search_items'      => 'Поиск подборки',
+      'all_items'         => 'Все подборки',
+      'view_item '        => 'Посмотреть подборку',
+      'parent_item'       => 'Родительская подборка',
+      'parent_item_colon' => 'Родительская подборка:',
+      'edit_item'         => 'Редактировать подборку',
+      'update_item'       => 'Одновить подборку',
       'add_new_item'      => 'Добавить',
-      'new_item_name'     => 'Новый',
-      'menu_name'         => 'Города',
+      'new_item_name'     => 'Новая',
+      'menu_name'         => 'Подборки',
     ),
     'description'           => '', // описание таксономии
     'public'                => true,
