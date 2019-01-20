@@ -27,7 +27,7 @@
     			'order'    => 'ASC',
 					'tax_query' => array(
 				    array(
-			        'taxonomy' => 'tx_collections',
+			        'taxonomy' => 'collections',
 			        'terms' => 'animals',
 			        'field' => 'slug',
 			        'include_children' => true,
@@ -55,7 +55,7 @@
 								'posts_per_page' => 4,
 								'tax_query' => array(
 							    array(
-						        'taxonomy' => 'tx_collections',
+						        'taxonomy' => 'collections',
 						        'terms' => 'animals',
 						        'field' => 'slug',
 						        'include_children' => true,

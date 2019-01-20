@@ -27,7 +27,7 @@
     			'order'    => 'ASC',
 					'tax_query' => array(
 				    array(
-			        'taxonomy' => 'tx_collections',
+			        'taxonomy' => 'collections',
 			        'terms' => 'nearsea',
 			        'field' => 'slug',
 			        'include_children' => true,
@@ -55,7 +55,7 @@
 								'posts_per_page' => 4,
 								'tax_query' => array(
 							    array(
-						        'taxonomy' => 'tx_collections',
+						        'taxonomy' => 'collections',
 						        'terms' => 'nearsea',
 						        'field' => 'slug',
 						        'include_children' => true,
@@ -78,7 +78,13 @@
 		<div class="row mb-5">
 			<div class="col-md-12">
 				<div class="button-more text-center">
-					<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+					<a href="<?php 
+					$term_slug = 'nearsea';
+					$term_link = get_term_link($term_slug, 'collections');
+					echo $term_link;
+					?>">
+					<div class="btn">Смотреть больше вариантов</div>
+				</a>
 				</div>
 			</div>
 		</div>

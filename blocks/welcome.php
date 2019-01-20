@@ -2,7 +2,7 @@
 	<div class="welcome__text">
 		<h1>Летний<br>отдых<br> в Украине</h1>
 		<p>Самый удобный сайт по отдыху</p>
-		<div class="btn bg-paster-green">Каталог</div>
+		<a href="<?php echo get_permalink( get_page_by_path( 'catalog' ) ); ?>" class="text-dark"><div class="btn bg-paster-green">Каталог</div></a>
 	</div>
 	<div class="welcome__photos">
 		<div class="welcome__photos__row">

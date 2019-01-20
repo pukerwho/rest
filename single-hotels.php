@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<?php if ( $post->post_parent ) { ?>
+ <a href="<?php echo get_permalink( $post->post_parent ); ?>" >
+    <?php echo get_the_title( $post->post_parent ); ?>
+ </a>
+<?php } ?>
+
 <div class="single-hotel">
 	<div class="container-fluid">
 		<div class="row">

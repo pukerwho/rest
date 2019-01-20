@@ -120,8 +120,8 @@
 			),
 			'tax_query' => array(
 		    array(
-	        'taxonomy' => 'tx_collections',
-	        'terms' => 'popular',
+	        'taxonomy' => 'collections',
+			    'terms' => 'popular',
 	        'field' => 'slug',
 	        'include_children' => true,
 	        'operator' => 'IN'
@@ -157,7 +157,7 @@
 						),
 						'tax_query' => array(
 					    array(
-				        'taxonomy' => 'tx_collections',
+				        'taxonomy' => 'collections',
 				        'terms' => 'popular',
 				        'field' => 'slug',
 				        'include_children' => true,
@@ -181,7 +181,12 @@
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="<?php echo $term_link_popular ?>"><div class="btn">Смотреть больше вариантов</div></a>
+
+			<?php $terms = get_terms('collections');
+foreach ($terms as $term) {
+	echo '<a href="' . get_term_link($term) . '">' . $term->name . '</a>';
+} ?>
 		</div>
 	</div>
 </div>
@@ -224,7 +229,7 @@
 			),
 			'tax_query' => array(
 		    array(
-	        'taxonomy' => 'tx_collections',
+	        'taxonomy' => 'collections',
 	        'terms' => 'family',
 	        'field' => 'slug',
 	        'include_children' => true,
@@ -261,7 +266,7 @@
 						),
 						'tax_query' => array(
 					    array(
-				        'taxonomy' => 'tx_collections',
+				        'taxonomy' => 'collections',
 				        'terms' => 'family',
 				        'field' => 'slug',
 				        'include_children' => true,
@@ -327,7 +332,7 @@
 			),
 			'tax_query' => array(
 		    array(
-	        'taxonomy' => 'tx_collections',
+	        'taxonomy' => 'collections',
 	        'terms' => 'premuim',
 	        'field' => 'slug',
 	        'include_children' => true,
@@ -364,7 +369,7 @@
 						),
 						'tax_query' => array(
 					    array(
-				        'taxonomy' => 'tx_collections',
+				        'taxonomy' => 'collections',
 				        'terms' => 'premium',
 				        'field' => 'slug',
 				        'include_children' => true,
@@ -430,7 +435,7 @@
 			),
 			'tax_query' => array(
 		    array(
-	        'taxonomy' => 'tx_collections',
+	        'taxonomy' => 'collections',
 	        'terms' => 'nearsea',
 	        'field' => 'slug',
 	        'include_children' => true,
@@ -467,7 +472,7 @@
 						),
 						'tax_query' => array(
 					    array(
-				        'taxonomy' => 'tx_collections',
+				        'taxonomy' => 'collections',
 				        'terms' => 'nearsea',
 				        'field' => 'slug',
 				        'include_children' => true,
@@ -517,7 +522,7 @@
 <div class="pc-show">
 	<div class="row mb-5">
 		<?php 
-			$terms = get_the_terms( $post->ID , 'tx_collections' );
+			$terms = get_the_terms( $post->ID , 'collections' );
 			$id_city = get_the_id();
 			$custom_query = new WP_Query( array( 
 			'post_type' => 'hotels', 
@@ -532,7 +537,7 @@
 			),
 			'tax_query' => array(
 		    array(
-	        'taxonomy' => 'tx_collections',
+	        'taxonomy' => 'collections',
 	        'terms' => 'animals',
 	        'field' => 'slug',
 	        'include_children' => true,
@@ -569,7 +574,7 @@
 						),
 						'tax_query' => array(
 					    array(
-				        'taxonomy' => 'tx_collections',
+				        'taxonomy' => 'collections',
 				        'terms' => 'animals',
 				        'field' => 'slug',
 				        'include_children' => true,

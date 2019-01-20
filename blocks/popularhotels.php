@@ -26,7 +26,7 @@
     			'order'    => 'ASC',
 					'tax_query' => array(
 				    array(
-			        'taxonomy' => 'tx_collections',
+			        'taxonomy' => 'collections',
 			        'terms' => 'popular',
 			        'field' => 'slug',
 			        'include_children' => true,
@@ -55,7 +55,7 @@
 			    			'order'    => 'ASC',
 								'tax_query' => array(
 							    array(
-						        'taxonomy' => 'tx_collections',
+						        'taxonomy' => 'collections',
 						        'terms' => 'popular',
 						        'field' => 'slug',
 						        'include_children' => true,

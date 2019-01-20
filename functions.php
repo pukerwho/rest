@@ -23,6 +23,15 @@ if( !isset( $content_width ) ) {
     // @TODO : edit the value for your own specifications
     $content_width = 960;
 }
+
+/**
+ * Get the bootstrap!
+ * (Update path to use cmb2 or CMB2, depending on the name of the folder.
+ * Case-sensitive is important on some systems.)
+ */
+require_once __DIR__ . '/inc/cmb2/init.php';
+require_once __DIR__ . '/inc/CMB2-Post-Search-field/lib/init.php';
+
 // Register menus, use wp_nav_menu() to display menu to your template ( cf : http://codex.wordpress.org/Function_Reference/wp_nav_menu )
 register_nav_menus( array(
     'main_menu' => __( 'Menu principal', 'minimal-blank-theme' ) //@TODO : change i18n domain name to yours
@@ -130,7 +139,7 @@ add_action( 'init', 'create_post_type' );
 
 add_action('init', 'create_taxonomy');
 function create_taxonomy(){
-  register_taxonomy('tx_collections', array('hotels'), array(
+  register_taxonomy('collections', array('hotels', 'cities'), array(
     'label'                 => '', // определяется параметром $labels->name
     'labels'                => array(
       'name'              => 'Подборки',
@@ -157,13 +166,149 @@ function create_taxonomy(){
     'rest_base'             => null, // $taxonomy
     'hierarchical'          => true,
     'update_count_callback' => '',
-    'rewrite'               => true,
     //'query_var'             => $taxonomy, // название параметра запроса
     'capabilities'          => array(),
     'meta_box_cb'           => null, // callback функция. Отвечает за html код метабокса (с версии 3.8): post_categories_meta_box или post_tags_meta_box. Если указать false, то метабокс будет отключен вообще
     'show_admin_column'     => false, // Позволить или нет авто-создание колонки таксономии в таблице ассоциированного типа записи. (с версии 3.5)
     '_builtin'              => false,
     'show_in_quick_edit'    => null, // по умолчанию значение show_ui
+  ) );
+}
+
+function your_prefix_register_taxonomy() {
+
+  $args = array (
+    'label' => esc_html__( 'citylists', 'text-domain' ),
+    'labels' => array(
+      'menu_name' => esc_html__( 'citylists', 'text-domain' ),
+      'all_items' => esc_html__( 'All citylists', 'text-domain' ),
+      'edit_item' => esc_html__( 'Edit citylist', 'text-domain' ),
+      'view_item' => esc_html__( 'View citylist', 'text-domain' ),
+      'update_item' => esc_html__( 'Update citylist', 'text-domain' ),
+      'add_new_item' => esc_html__( 'Add new citylist', 'text-domain' ),
+      'new_item_name' => esc_html__( 'New citylist', 'text-domain' ),
+      'parent_item' => esc_html__( 'Parent citylist', 'text-domain' ),
+      'parent_item_colon' => esc_html__( 'Parent citylist:', 'text-domain' ),
+      'search_items' => esc_html__( 'Search citylists', 'text-domain' ),
+      'popular_items' => esc_html__( 'Popular citylists', 'text-domain' ),
+      'separate_items_with_commas' => esc_html__( 'Separate citylists with commas', 'text-domain' ),
+      'add_or_remove_items' => esc_html__( 'Add or remove citylists', 'text-domain' ),
+      'choose_from_most_used' => esc_html__( 'Choose most used citylists', 'text-domain' ),
+      'not_found' => esc_html__( 'No citylists found', 'text-domain' ),
+      'name' => esc_html__( 'citylists', 'text-domain' ),
+      'singular_name' => esc_html__( 'citylist', 'text-domain' ),
+    ),
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'show_in_nav_menus' => true,
+    'show_tagcloud' => true,
+    'show_in_quick_edit' => true,
+    'show_admin_column' => false,
+    'show_in_rest' => false,
+    'hierarchical' => true,
+    'query_var' => true,
+    'sort' => false,
+    'rewrite' => array(
+      'with_front' => false,
+      'hierarchical' => true,
+    ),
+  );
+
+  register_taxonomy( 'citylist', array( 'hotels', 'cities' ), $args );
+}
+add_action( 'init', 'your_prefix_register_taxonomy', 0 );
+
+add_action( 'cmb2_admin_init', 'cmb2_sample_metaboxes' );
+/**
+ * Define the metabox and field configurations.
+ */
+function cmb2_sample_metaboxes() {
+
+  // Start with an underscore to hide fields from custom fields list
+  $prefix = '_yourprefix_';
+
+  /**
+   * Initiate the metabox
+   */
+  $cmb = new_cmb2_box( array(
+    'id'            => 'citylist_metabox',
+    'title'         => __( 'Города/Коллекции', 'cmb2' ),
+    'object_types'     => array( 'term' ), // Tells CMB2 to use term_meta vs post_meta
+    'taxonomies'       => array( 'citylist' ), // Tells CMB2 which taxonomies should have these fields
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'show_names'    => true, // Show field names on the left
+    // 'cmb_styles' => false, // false to disable the CMB stylesheet
+    // 'closed'     => true, // Keep the metabox closed by default
+  ) );
+
+  $cmb->add_field( array(
+    'name' => 'Заголовок',
+    'id'   => $prefix . 'citylist_title',
+    'type' => 'text',
+  ) );
+
+  $cmb->add_field( array(
+    'name' => 'Подзаголовок',
+    'id'   => $prefix . 'citylist_undertitle',
+    'type' => 'text',
+  ) );
+
+  $cmb->add_field( array(
+    'name' => 'Иконка',
+    'id'   => $prefix . 'citylist_icon',
+    'type' => 'file',
+  ) );
+
+  $cmb->add_field( array(
+    'name' => 'Город',
+    'id'   => $prefix . 'citylist_city',
+    'type' => 'post_search_text',
+    'post_type'   => 'cities',
+    'select_type' => 'radio',
+  ) );
+}
+
+add_action( 'cmb2_admin_init', 'yourprefix_register_theme_options_metabox' );
+/**
+ * Hook in and register a metabox to handle a theme options page and adds a menu item.
+ */
+function yourprefix_register_theme_options_metabox() {
+  /**
+   * Registers options page menu item and form.
+   */
+  $cmb_options = new_cmb2_box( array(
+    'id'           => 'yourprefix_theme_options_page',
+    'title'        => esc_html__( 'Theme Options', 'cmb2' ),
+    'object_types' => array( 'options-page' ),
+    /*
+     * The following parameters are specific to the options-page box
+     * Several of these parameters are passed along to add_menu_page()/add_submenu_page().
+     */
+    'option_key'      => 'yourprefix_theme_options', // The option key and admin menu page slug.
+    'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
+    // 'menu_title'      => esc_html__( 'Options', 'cmb2' ), // Falls back to 'title' (above).
+    // 'parent_slug'     => 'themes.php', // Make options page a submenu item of the themes menu.
+    // 'capability'      => 'manage_options', // Cap required to view options-page.
+    // 'position'        => 1, // Menu position. Only applicable if 'parent_slug' is left empty.
+    // 'admin_menu_hook' => 'network_admin_menu', // 'network_admin_menu' to add network-level options page.
+    // 'display_cb'      => false, // Override the options-page form output (CMB2_Hookup::options_page_output()).
+    // 'save_button'     => esc_html__( 'Save Theme Options', 'cmb2' ), // The text for the options-page save button. Defaults to 'Save'.
+    // 'disable_settings_errors' => true, // On settings pages (not options-general.php sub-pages), allows disabling.
+    // 'message_cb'      => 'yourprefix_options_page_message_callback',
+  ) );
+  /**
+   * Options fields ids only need
+   * to be unique within this box.
+   * Prefix is not needed.
+   */
+  $cmb_options->add_field( array(
+    'name'    => esc_html__( 'Site Background Color', 'cmb2' ),
+    'desc'    => esc_html__( 'field description (optional)', 'cmb2' ),
+    'id'      => 'bg_color',
+    'type'    => 'colorpicker',
+    'default' => '#ffffff',
   ) );
 }
 
@@ -454,6 +599,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
   return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'your_prefix_get_meta_box' );
+
+function my_custom_upload_mimes($mimes = array()) {
+    $mimes['svg'] = "image/svg+xml";
+    return $mimes;
+}
+add_action('upload_mimes', 'my_custom_upload_mimes');
 
 function add_theme_menu_item() {
     add_menu_page("Theme Settings", "Theme Settings", "manage_options", "theme-settings", "theme_settings_page", null, 99);
