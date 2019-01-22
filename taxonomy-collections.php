@@ -1,18 +1,5 @@
 <?php get_header(); ?>
 
-<?php
-	$posts = new WP_Query( array(
-	    'relationship' => array(
-	        'id'   => 'categories_to_posts',
-	        'from' => get_the_ID(), // You can pass object ID or full object
-	    ),
-	    'nopaging'     => true,
-	) );
-	while ( $posts->have_posts() ) : $posts->the_post(); ?>
-    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-  <?php endwhile; ?>
-
-
 <div class="container">
 	<div class="row mb-5">
 		<div class="col-md-12">

@@ -78,7 +78,11 @@
 		<div class="row mb-5">
 			<div class="col-md-12">
 				<div class="button-more text-center">
-					<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+					<a href="<?php 
+					$term_slug = 'popular';
+					$term_link = get_term_link($term_slug, 'collections');
+					echo $term_link;
+					?>"><div class="btn">Смотреть больше вариантов</div></a>
 				</div>
 			</div>
 		</div>
