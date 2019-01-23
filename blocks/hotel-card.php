@@ -13,9 +13,12 @@
 		</div>
 		<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 		<div class="hotel-item__img__city">
-			<?php $post_id = rwmb_meta( 'meta-hotelcity' ); ?>
 			<div class="hotel-item__img__city__link">
-				<a href="<?php echo get_permalink($post_id) ?>"><img src="<?php bloginfo('template_url'); ?>/img/pin.svg" alt="" class="hotel-item__icon mr-2"><span><?php echo get_the_title( $post_id ); ?><span></a>	
+				<?php
+				$myterms = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
+				foreach ($myterms as $myterm): ?>
+					<a href="<?php echo get_term_link($myterm) ?>"><img src="<?php bloginfo('template_url'); ?>/img/pin.svg" alt="" class="hotel-item__icon mr-2"><span><?php echo $myterm->name; ?><span></a>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</div>

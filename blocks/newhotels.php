@@ -47,12 +47,5 @@
 			  </div>
 			</div>
 		</div>
-		<div class="row mb-5">
-			<div class="col-md-12">
-				<div class="button-more text-center">
-					<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>

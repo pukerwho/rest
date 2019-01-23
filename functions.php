@@ -31,6 +31,8 @@ if( !isset( $content_width ) ) {
  */
 require_once __DIR__ . '/inc/cmb2/init.php';
 require_once __DIR__ . '/inc/CMB2-Post-Search-field/lib/init.php';
+require_once get_template_directory() . '/inc/carbon-fields/carbon-fields-plugin.php';
+require_once get_template_directory() . '/inc/custom-fields/citylist-meta.php';
 
 // Register menus, use wp_nav_menu() to display menu to your template ( cf : http://codex.wordpress.org/Function_Reference/wp_nav_menu )
 register_nav_menus( array(
@@ -122,24 +124,12 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
-  register_post_type( 'cities',
-    array(
-      'labels' => array(
-          'name' => __( 'Города' ),
-          'singular_name' => __( 'Город' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'hierarchical' => true,
-      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-    )
-  );
 }
 add_action( 'init', 'create_post_type' );
 
 add_action('init', 'create_taxonomy');
 function create_taxonomy(){
-  register_taxonomy('collections', array('hotels', 'cities'), array(
+  register_taxonomy('collections', array('hotels'), array(
     'label'                 => '', // определяется параметром $labels->name
     'labels'                => array(
       'name'              => 'Подборки',
@@ -215,7 +205,7 @@ function your_prefix_register_taxonomy() {
     ),
   );
 
-  register_taxonomy( 'citylist', array( 'hotels', 'cities' ), $args );
+  register_taxonomy( 'citylist', array( 'hotels' ), $args );
 }
 add_action( 'init', 'your_prefix_register_taxonomy', 0 );
 
@@ -259,14 +249,6 @@ function cmb2_sample_metaboxes() {
     'name' => 'Иконка',
     'id'   => $prefix . 'citylist_icon',
     'type' => 'file',
-  ) );
-
-  $cmb->add_field( array(
-    'name' => 'Город',
-    'id'   => $prefix . 'citylist_city',
-    'type' => 'post_search_text',
-    'post_type'   => 'cities',
-    'select_type' => 'radio',
   ) );
 }
 
@@ -350,26 +332,6 @@ function your_prefix_get_meta_box( $meta_boxes ) {
     'priority' => 'default',
     'autosave' => true,
     'fields' => array(
-      array(
-        'name'        => 'Город',
-        'id'          => $prefix . 'hotelcity',
-        'type'        => 'post',
-
-        // Post type.
-        'post_type'   => 'cities',
-
-        // Field type.
-        'field_type'  => 'select_advanced',
-
-        // Placeholder, inherited from `select_advanced` field.
-        'placeholder' => 'Выберите город',
-
-        // Query arguments. See https://codex.wordpress.org/Class_Reference/WP_Query
-        'query_args'  => array(
-            'post_status'    => 'publish',
-            'posts_per_page' => - 1,
-        ),
-      ),
       array(
         'id' => $prefix . 'hotel-address',
         'type' => 'text',

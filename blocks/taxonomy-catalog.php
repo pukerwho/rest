@@ -72,9 +72,9 @@
 						),
 						'tax_query' => array(
 					    array(
-				        'taxonomy' => 'collections',
-				        'terms' => 'family',
-				        'field' => 'slug',
+				        'taxonomy' => 'citylist',
+						    'terms' => $current_term,
+				        'field' => 'term_id',
 				        'include_children' => true,
 				        'operator' => 'IN'
 					    )
