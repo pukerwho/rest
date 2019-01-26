@@ -7,16 +7,39 @@ $('.header__mobile__close').on('click', function(){
 	$('.header__mobile__cover').removeClass('header__mobile__cover__active');
 });
 
-
-$('.select_collections_class').on('click', function () {
-  var checkboxes = $('.collections_filter_class');
-  checkboxes.toggleClass('d-block'); 
+//Открывает и закрывает Фильтр-коллекций
+$('.select_collections_class').on('click', function (e) {
+  var collections_checkboxes = $('.collections_filter_class');
+  collections_checkboxes.toggle();
+  e.stopPropagation();
 });
 
-$('.select_numers_class').on('click', function () {
-  var checkboxes = $('.numers_filter_class');
-  checkboxes.toggleClass('d-block'); 
+$('.collections_filter_class').click(function(e) { 
+  e.stopPropagation();
+})
+
+$(document).click(function(e) {
+  var collections_checkboxes = $('.collections_filter_class');
+  collections_checkboxes.hide();
+  e.stopPropagation();
+})
+
+//Открывает и закрывает Фильтр-номеров
+$('.select_numers_class').on('click', function (e) {
+  var numers_checkboxes = $('.numers_filter_class');
+  numers_checkboxes.toggle();
+  e.stopPropagation();
 });
+
+$('.numers_filter_class').click(function(e) { 
+  e.stopPropagation();
+})
+
+$(document).click(function(e) {
+  var numers_checkboxes = $('.numers_filter_class');
+  numers_checkboxes.hide();
+  e.stopPropagation();
+})
 
 // $('.selectBox').on('click', function(event){
   
