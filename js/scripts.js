@@ -7,6 +7,15 @@ $('.header__mobile__close').on('click', function(){
 	$('.header__mobile__cover').removeClass('header__mobile__cover__active');
 });
 
+$(window).scroll(function(){
+  var h_scroll = $(this).scrollTop();
+  if (h_scroll > 500) {
+    $('.mobile-link').fadeIn();
+  } else {
+    $('.mobile-link').fadeOut();
+  }
+})
+
 //Открывает и закрывает Фильтр-коллекций
 $('.select_collections_class').on('click', function (e) {
   var collections_checkboxes = $('.collections_filter_class');

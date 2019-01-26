@@ -10572,7 +10572,7 @@ button.swiper-pagination-bullet {
 
   /* FOOTER */
   .mobile-link {
-    display: block;
+    display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -10580,7 +10580,7 @@ button.swiper-pagination-bullet {
     .mobile-link a {
       width: 100%;
       display: block;
-      background-color: #cdf5d4;
+      background-color: #e0e0fb;
       text-align: center;
       font-size: 2rem;
       color: #444444;
