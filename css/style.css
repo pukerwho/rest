@@ -10559,7 +10559,8 @@ button.swiper-pagination-bullet {
   .hotel-filter .checkboxes {
     width: 100%;
     position: relative;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    top: 0; }
   .hotel-filter .btn-container {
     width: 100%; }
     .hotel-filter .btn-container .btn {
