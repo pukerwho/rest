@@ -1,5 +1,12 @@
     </section>
     <hr>
+    <div class="mobile-link">
+        <?php 
+            if( !is_page_template( 'tpl_catalog.php' ) ){
+                get_template_part('blocks/footer-info');
+            } 
+        ?>
+    </div>
     <footer id="footer">
     	<div class="container py-5">
     		<div class="row">

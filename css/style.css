@@ -9059,6 +9059,9 @@ a:hover {
 .header .add-button {
   margin-left: 3.7rem; }
 
+.mobile-link {
+  display: none; }
+
 .welcome {
   max-width: 128rem;
   position: relative;
@@ -10565,6 +10568,22 @@ button.swiper-pagination-bullet {
     width: 100%; }
     .hotel-filter .btn-container .btn {
       position: relative;
-      width: 100%; } }
+      width: 100%; }
+
+  /* FOOTER */
+  .mobile-link {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999; }
+    .mobile-link a {
+      width: 100%;
+      display: block;
+      background-color: #cdf5d4;
+      text-align: center;
+      font-size: 2rem;
+      color: #444444;
+      padding: 1.5rem 0; } }
 
 /*# sourceMappingURL=style.css.map */
