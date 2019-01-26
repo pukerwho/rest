@@ -584,3 +584,61 @@ add_action("admin_menu", "add_theme_menu_item");
 function theme_settings_page() {
     include 'form-file.php';
 }
+
+function hotels_filter_function(){
+  $filterargs = array(
+    'post_type' => 'hotels', 
+  );
+  if ($_POST['budgetfilter'] != '') { 
+    $filterargs['meta_query'][] = array(
+      'key'     => 'meta-hotel-budget-has',
+      'value'   => $_POST['budgetfilter'],
+      'compare' => '=', 
+    );
+  }
+  if ($_POST['halfluxfilter'] != '') { 
+    $filterargs['meta_query'][] = array(
+      'key'     => 'meta-hotel-halflux-has',
+      'value'   => $_POST['halfluxfilter'],
+      'compare' => '=', 
+    );
+  }
+  if ($_POST['luxfilter'] != '') { 
+    $filterargs['meta_query'][] = array(
+      'key'     => 'meta-hotel-lux-has',
+      'value'   => $_POST['luxfilter'],
+      'compare' => '=', 
+    );
+  }
+  if ($_POST['citylistfilter'] != '') { 
+    $filterargs['tax_query'][] = array(
+      'taxonomy' => 'citylist',
+      'terms' => $_POST['citylistfilter'],
+      'field' => 'term_id',
+      'include_children' => true,
+      'operator' => 'IN'
+    );
+  }
+  if ($_POST['collectionsfilter'] != '') { 
+    $filterargs['tax_query'][] = array(
+      'taxonomy' => 'collections',
+      'terms' => $_POST['collectionsfilter'],
+      'field' => 'slug',
+      'include_children' => true,
+      'operator' => 'AND'
+    );
+  }
+
+  $custom_query_afisha = new WP_Query( $filterargs );
+  if ($custom_query_afisha->have_posts()) : while ($custom_query_afisha->have_posts()) : $custom_query_afisha->the_post();
+    echo '<div class="col-md-3">';
+    get_template_part( 'blocks/hotel-card', 'default' );
+    echo '</div>';
+  endwhile; 
+  endif;
+  die;
+}
+ 
+
+ add_action('wp_ajax_myfilter', 'hotels_filter_function'); 
+add_action('wp_ajax_nopriv_myfilter', 'hotels_filter_function');

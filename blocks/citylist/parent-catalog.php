@@ -16,7 +16,7 @@
 
 <!-- PC SHOW -->
 <div class="pc-show">
-	<div class="row mb-5">
+	<div class="row mb-5" id="response">
 		<?php 
 			$id_city = get_term_meta( get_queried_object_id(), '_yourprefix_citylist_city', true);
 			$current_term = get_queried_object_id();
