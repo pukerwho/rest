@@ -585,6 +585,15 @@ function theme_settings_page() {
     include 'form-file.php';
 }
 
+add_action('wp_head', 'myplugin_ajaxurl');
+
+function myplugin_ajaxurl() {
+
+   echo '<script type="text/javascript">
+           var ajaxurl = "' . admin_url('admin-ajax.php') . '";
+         </script>';
+}
+
 function hotels_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels', 
@@ -639,6 +648,5 @@ function hotels_filter_function(){
   die;
 }
  
-
- add_action('wp_ajax_myfilter', 'hotels_filter_function'); 
+add_action('wp_ajax_myfilter', 'hotels_filter_function'); 
 add_action('wp_ajax_nopriv_myfilter', 'hotels_filter_function');
