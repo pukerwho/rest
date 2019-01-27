@@ -3,7 +3,7 @@
 		<div class="mb-5">
 			<div class="my-table">
 				<div class="my-table-cell pr-4">
-					<img src="<?php $term_icon = get_term_meta( get_queried_object_id(), '_yourprefix_citylist_icon', true); echo $term_icon ?>" alt="" width="40px">
+					<img src="<?php $term_icon = carbon_get_term_meta( get_queried_object_id(), 'crb_citylist_icon', true); echo $term_icon ?>" alt="" width="40px">
 				</div>
 				<div class="table-text">
 					<h1><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_title') ?></h1>
