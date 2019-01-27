@@ -6,8 +6,8 @@
 					<img src="<?php $term_icon = get_term_meta( get_queried_object_id(), '_yourprefix_citylist_icon', true); echo $term_icon ?>" alt="" width="40px">
 				</div>
 				<div class="table-text">
-					<h1><?php $term_title = get_term_meta( get_queried_object_id(), '_yourprefix_citylist_title', true); echo $term_title ?></h1>
-					<p><?php $term_undertitle = get_term_meta( get_queried_object_id(), '_yourprefix_citylist_undertitle', true); echo $term_undertitle ?></p>
+					<h1><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_title') ?></h1>
+					<p><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_description') ?></p>
 				</div>
 			</div>
 		</div>
@@ -22,7 +22,7 @@
 			$current_term = get_queried_object_id();
 			$custom_query = new WP_Query( array( 
 			'post_type' => 'hotels', 
-			'posts_per_page' => 4,
+			'posts_per_page' => 20,
 			'orderby' => 'rand',
 			'order'    => 'ASC',
 			'meta_query' => array(

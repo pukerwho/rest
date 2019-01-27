@@ -20,7 +20,7 @@
 		$current_term = get_queried_object_id();
 		$custom_query = new WP_Query( array( 
 		'post_type' => 'hotels', 
-		'posts_per_page' => 4,
+		'posts_per_page' => 20,
 		'orderby' => 'rand',
 		'order'    => 'ASC',
 		'tax_query' => array(
