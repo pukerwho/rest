@@ -596,7 +596,10 @@ function myplugin_ajaxurl() {
 
 function hotels_filter_function(){
   $filterargs = array(
-    'post_type' => 'hotels', 
+    'post_type' => 'hotels',
+    'meta_query' => array(
+      'relation' => 'OR',
+    )
   );
   if ($_POST['budgetfilter'] != '') { 
     $filterargs['meta_query'][] = array(
