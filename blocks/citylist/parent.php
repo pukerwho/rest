@@ -22,7 +22,7 @@
 				<div class="tab-content" id="myTabContent">
 				  <div class="tab-pane tab-single-hotel fade show active" id="catalog" role="tabpanel" aria-labelledby="catalog-tab">
 				  	<div class="mb-5">
-				  		<?php get_template_part( 'blocks/filters/filter-hotel', 'default' ); ?>
+				  		<?php get_template_part( 'blocks/filters/city-filter-hotel', 'default' ); ?>
 				  	</div>
 				  	<div class="mb-5 lead">
 				  		<?php get_template_part( 'blocks/citylist/parent-catalog', 'default' ); ?>

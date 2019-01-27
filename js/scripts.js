@@ -50,13 +50,28 @@ $(document).click(function(e) {
   e.stopPropagation();
 })
 
-// $('.selectBox').on('click', function(event){
-  
-//   checkboxes.toggleClass('d-block');
-//   event.stopPropagation();
-// });
+//Catalog filter
+$('#catalog-filter').submit(function(){
+  var filter = $(this);
+  console.log(filter.serialize());
+  $.ajax({
+    url:ajaxurl, // обработчик
+    data:filter.serialize(), // данные
+    type:filter.attr('method'), // тип запроса
+    beforeSend:function(xhr){
+      filter.find('button').text('Загружаю...'); // изменяем текст кнопки
+    },
+    success:function(data){
+      console.log(data);
+      filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
+      $('#response').html(data);
+    }
+  });
+  return false;
+});
 
-$('#filter').submit(function(){
+//Catalog filter
+$('#city-filter').submit(function(){
   var filter = $(this);
   console.log(filter.serialize());
   $.ajax({

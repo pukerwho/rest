@@ -1,15 +1,5 @@
 <div class="hotel-filter">
-	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="catalog-filter">
-		<?php if( $terms = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0 ) ) ): ?>
-			<div class="select">
-				<select name="citylistfilter"><option>Город</option>
-					<?php foreach ($terms as $term): ?>
-						<option value="<?php echo $term->term_id ?>"><?php echo $term->name ?></option>
-					<?php endforeach; ?>
-				</select>
-			</div>
-		<?php endif; ?>
-		
+	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="city-filter">
 		<div class="multiselect">
 	    <div class="selectBox select_collections_class">
 	    	<div class="select">
@@ -46,9 +36,10 @@
         <input type="checkbox" name="luxfilter" value="1" id="lux" /><span>Люкс</span></label>
 	    </div>
 	  </div>
+	  <input type="hidden" name="citynamefilter" value="<?php echo get_queried_object_id() ?>">
 	  <div class="btn-container">
 	  	<button class="btn bg-paster-green">Применить фильтр</button>	
 	  </div>
-		<input type="hidden" name="action" value="my_catalog_filter">
+		<input type="hidden" name="action" value="my_city_filter">
 	</form>
 </div>
