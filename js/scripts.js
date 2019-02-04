@@ -121,3 +121,16 @@ if ($(document).width() < 960) {
     },
   });
 };
+
+//SWIPER NOW WATCH
+var nowwatch_button_next = $('.swiper-nowwatch-button-next');
+var nowwatch_button_prev = $('.swiper-nowwatch-button-prev');
+var mySwiper = new Swiper ('.swiper-hotels-now-watch', {
+  slidesPerView: 7,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: nowwatch_button_next,
+    prevEl: nowwatch_button_prev,
+  },
+});

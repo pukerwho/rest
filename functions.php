@@ -60,7 +60,7 @@ function addAdminEditorStyle() {
 // подключаем файлы со стилями
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 function theme_name_scripts() {
-    wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/style.css' );
+    wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/style.css', false, time() );
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
     wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.min.js','','',true);
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js');
@@ -482,6 +482,31 @@ function my_custom_upload_mimes($mimes = array()) {
     return $mimes;
 }
 add_action('upload_mimes', 'my_custom_upload_mimes');
+
+
+// создаем новую колонку
+add_filter( 'manage_'.'hotels'.'_posts_columns', 'add_citylist_column', 4 );
+function add_citylist_column( $columns ){
+  $num = 2; // после какой по счету колонки вставлять новые
+  $new_columns = array(
+    'citylist' => 'Город',
+  );
+
+  return array_slice( $columns, 0, $num ) + $new_columns + array_slice( $columns, $num );
+}
+
+// заполняем колонку данными
+add_action('manage_'.'hotels'.'_posts_custom_column', 'fill_citylist_column', 5, 2 );
+function fill_citylist_column( $colname, $post_id ){
+  if( $colname === 'citylist' ){
+    $citylists = wp_get_post_terms(  $post_id , 'citylist', array( 'parent' => 0 ) );
+    foreach ($citylists as $citylist) {
+      echo $citylist->name;
+    }
+    // echo get_post_meta( $post_id, 'views', 1 ); 
+  }
+}
+
 
 //Add Ajax
 add_action('wp_head', 'myplugin_ajaxurl');
