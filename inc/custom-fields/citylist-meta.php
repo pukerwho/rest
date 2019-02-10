@@ -12,7 +12,7 @@ function crb_attach_theme_options() {
       Field::make( 'text', 'crb_citylist_title', 'Заголовок' ),
       Field::make( 'text', 'crb_citylist_description', 'Подзаголовок' ),
       Field::make( 'image', 'crb_citylist_icon', 'Иконка' )->set_value_type( 'url'),
-      Field::make( 'textarea', 'crb_citylist_text', 'Текст' ),
+      Field::make( 'rich_text', 'crb_citylist_rich_text', 'Текст' ),
   ) );
 }
 

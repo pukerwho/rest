@@ -42,5 +42,12 @@
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="lead">
+				<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ?>
+			</div>
+		</div>
+	</div>
 </div>
