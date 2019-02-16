@@ -9448,6 +9448,20 @@ a:hover {
   background-size: .6rem .2rem; }
   .nomers-item:last-child {
     background: none; }
+  .nomers-item__small {
+    color: #9c9c9b;
+    font-size: 1.5rem; }
+  .nomers-item .price_tr {
+    font-size: 1.7rem;
+    padding: 5px 0px; }
+  .nomers-item .price_underline {
+    border-bottom: 3px solid #d3e8ff; }
+  .nomers-item .price_min {
+    background: #acd17d;
+    padding: 5px; }
+  .nomers-item .price_max {
+    background: #ffe0e5;
+    padding: 5px; }
 
 .single-hotel .cover img {
   width: 100%;
