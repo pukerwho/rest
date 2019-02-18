@@ -335,6 +335,48 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'checkbox',
         'std'  => 0,
       ),
+      array(
+        'name'  => 'Зона отдыха',
+        'id' => $prefix . 'hotel-restzone',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Кухня',
+        'id' => $prefix . 'hotel-kitchen',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Бильярд',
+        'id' => $prefix . 'hotel-billiard',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Спортивная площадка',
+        'id' => $prefix . 'hotel-workout',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Сауна',
+        'id' => $prefix . 'hotel-sauna',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Безналичный рассчет',
+        'id' => $prefix . 'hotel-mastercard',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Рядом рынок',
+        'id' => $prefix . 'hotel-market',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
     ),
   );
 

@@ -99,25 +99,26 @@
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="nomers" role="tabpanel" aria-labelledby="nomers-tab">
 					  	<div class="nomers">
+					  		<?php if(rwmb_meta( 'meta-hotel-lux-has' )): ?>
 					  		<div class="nomers-item mb-5 pb-5">
 					  			<h2 class="mb-4 pb-3">
 					  				Номера "Люкс"
 					  				<span class="nomers-item__small">
 						  				(
 						  				<?php if(rwmb_meta( 'meta-hotel-lux-hastwo' )): ?>
-						  				2-х местные;
+						  				<span>2-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-lux-hasthree' )): ?>
-						  				3-х местные;
+						  				<span>3-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-lux-hasfour' )): ?>
-						  				4-х местные;
+						  				<span>4-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-lux-hasfive' )): ?>
-						  				5-ти местные;
+						  				<span>5-ти местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-lux-hassix' )): ?>
-						  				6-ти местные;
+						  				<span>6-ти местные</span>
 						  				<?php endif ?>
 						  				)
 					  				</span>
@@ -141,25 +142,27 @@
 							  		<?php get_template_part( 'blocks/includelux', 'default' ); ?>
 							  	</div>
 					  		</div>
+					  		<?php endif ?>
+					  		<?php if(rwmb_meta( 'meta-hotel-halflux-has' )): ?>
 					  		<div class="nomers-item mb-5 pb-5">
 					  			<h2 class="mb-4 pb-3">
 						  			Номера "Полулюкс"
 						  			<span class="nomers-item__small">
 						  				(
 						  				<?php if(rwmb_meta( 'meta-hotel-halflux-hastwo' )): ?>
-						  				2-х местные;
+						  				<span>2-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-halflux-hasthree' )): ?>
-						  				3-х местные;
+						  				<span>3-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-halflux-hasfour' )): ?>
-						  				4-х местные;
+						  				<span>4-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-halflux-hasfive' )): ?>
-						  				5-ти местные;
+						  				<span>5-ти местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-halflux-hassix' )): ?>
-						  				6-ти местные;
+						  				<span>6-ти местные</span>
 						  				<?php endif ?>
 						  				)
 					  				</span>
@@ -183,25 +186,27 @@
 							  		<?php get_template_part( 'blocks/includehalflux', 'default' ); ?>
 							  	</div>
 					  		</div>
+					  		<?php endif ?>
+					  		<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
 					  		<div class="nomers-item mb-5 pb-5">
 					  			<h2 class="mb-4 pb-3">
 					  				Бюджетные номера
 					  				<span class="nomers-item__small">
 						  				(
 						  				<?php if(rwmb_meta( 'meta-hotel-budget-hastwo' )): ?>
-						  				2-х местные;
+						  				<span>2-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-budget-hasthree' )): ?>
-						  				3-х местные;
+						  				<span>3-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-budget-hasfour' )): ?>
-						  				4-х местные;
+						  				<span>4-х местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-budget-hasfive' )): ?>
-						  				5-ти местные;
+						  				<span>5-ти местные</span>
 						  				<?php endif ?>
 						  				<?php if(rwmb_meta( 'meta-hotel-budget-hassix' )): ?>
-						  				6-ти местные;
+						  				<span>6-ти местные</span>
 						  				<?php endif ?>
 						  				)
 					  				</span>
@@ -225,6 +230,7 @@
 							  		<?php get_template_part( 'blocks/includebudget', 'default' ); ?>
 							  	</div>
 					  		</div>
+					  		<?php endif ?>
 					  	</div>
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">

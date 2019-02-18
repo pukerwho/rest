@@ -9449,8 +9449,13 @@ a:hover {
   .nomers-item:last-child {
     background: none; }
   .nomers-item__small {
+    position: relative;
     color: #9c9c9b;
     font-size: 1.5rem; }
+    .nomers-item__small span:after {
+      content: ';'; }
+    .nomers-item__small span:last-child:after {
+      content: ''; }
   .nomers-item .price_tr {
     font-size: 1.7rem;
     padding: 5px 0px; }
