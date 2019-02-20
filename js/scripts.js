@@ -134,3 +134,15 @@ var mySwiper = new Swiper ('.swiper-hotels-now-watch', {
     prevEl: nowwatch_button_prev,
   },
 });
+
+$(document).on('click', '.nomer', function(event){
+  var nomer = $(this).attr("data-nomer");
+  $('.nomer-modal-' + nomer).show();
+  $('body').addClass('nomer-modal__open');
+})
+
+$(document).on('click', '.nomer-modal__back', function(event){
+  var nomer = $(this).attr("data-nomer");
+  $('.nomer-modal-' + nomer).hide();
+  $('body').removeClass('nomer-modal__open');
+})

@@ -22,14 +22,6 @@
 	</div>
 	<?php endif ?>
 <!-- end budget-frize -->
-<!-- begin budget-stiralka -->
-	<?php if(rwmb_meta( 'meta-hotel-budget-stiralka' )): ?>
-	<div class="d-flex align-items-center mb-5">
-		<img src="<?php bloginfo('template_url'); ?>/img/washer.svg" alt="" width="45px" class="mr-3">
-		<h4>Стиральная машинка</h4>
-	</div>
-	<?php endif ?>
-<!-- end budget-stiralka -->
 <!-- begin budget-aptechka -->
 	<?php if(rwmb_meta( 'meta-hotel-budget-aptechka' )): ?>
 	<div class="d-flex align-items-center mb-5">
@@ -70,3 +62,51 @@
 	</div>
 	<?php endif ?>
 <!-- end budget-utug -->
+<!-- begin budget-wifi -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-wifi' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/wifi.svg" alt="" width="45px" class="mr-3">
+		<h4>Wi-Fi</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-wifi -->
+<!-- begin budget-clean -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-clean' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/dust.svg" alt="" width="45px" class="mr-3">
+		<h4>Уборка в номере</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-clean -->
+<!-- begin budget-fan -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-fan' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/fan.svg" alt="" width="45px" class="mr-3">
+		<h4>Вентилятор</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-fan -->
+<!-- begin budget-safe -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-safe' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/safe.svg" alt="" width="45px" class="mr-3">
+		<h4>Сейф</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-safe -->
+<!-- begin budget-dush -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-dush' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/shower.svg" alt="" width="45px" class="mr-3">
+		<h4>Душ</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-dush -->
+<!-- begin budget-sanuzel -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-sanuzel' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/toilet.svg" alt="" width="45px" class="mr-3">
+		<h4>Санузел</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-sanuzel -->

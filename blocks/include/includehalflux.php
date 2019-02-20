@@ -22,14 +22,6 @@
 	</div>
 	<?php endif ?>
 <!-- end halflux-frize -->
-<!-- begin halflux-stiralka -->
-	<?php if(rwmb_meta( 'meta-hotel-halflux-stiralka' )): ?>
-	<div class="d-flex align-items-center mb-5">
-		<img src="<?php bloginfo('template_url'); ?>/img/washer.svg" alt="" width="45px" class="mr-3">
-		<h4>Стиральная машинка</h4>
-	</div>
-	<?php endif ?>
-<!-- end halflux-stiralka -->
 <!-- begin halflux-aptechka -->
 	<?php if(rwmb_meta( 'meta-hotel-halflux-aptechka' )): ?>
 	<div class="d-flex align-items-center mb-5">
@@ -70,3 +62,51 @@
 	</div>
 	<?php endif ?>
 <!-- end halflux-utug -->
+<!-- begin halflux-wifi -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-wifi' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/wifi.svg" alt="" width="45px" class="mr-3">
+		<h4>Wi-Fi</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-wifi -->
+<!-- begin halflux-clean -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-clean' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/dust.svg" alt="" width="45px" class="mr-3">
+		<h4>Уборка в номере</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-clean -->
+<!-- begin halflux-fan -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-fan' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/fan.svg" alt="" width="45px" class="mr-3">
+		<h4>Вентилятор</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-fan -->
+<!-- begin halflux-safe -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-safe' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/safe.svg" alt="" width="45px" class="mr-3">
+		<h4>Сейф</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-safe -->
+<!-- begin halflux-dush -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-dush' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/shower.svg" alt="" width="45px" class="mr-3">
+		<h4>Душ</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-dush -->
+<!-- begin halflux-sanuzel -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-sanuzel' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/toilet.svg" alt="" width="45px" class="mr-3">
+		<h4>Санузел</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-sanuzel -->

@@ -1,12 +1,4 @@
 <div class="include">
-	<!-- begin Wi-fi -->
-	<?php if(rwmb_meta( 'meta-hotel-wifi' )): ?>
-	<div class="d-flex align-items-center mb-4">
-		<img src="<?php bloginfo('template_url'); ?>/img/wifi.svg" alt="" width="45px" class="mr-3">
-		<h4>Wi-Fi</h4>
-	</div>
-	<?php endif ?>
-	<!-- end  -->
 	<!-- begin parkovka -->
 	<?php if(rwmb_meta( 'meta-hotel-parking' )): ?>
 	<div class="d-flex align-items-center mb-4">
@@ -55,6 +47,14 @@
 	</div>
 	<?php endif ?>
 	<!-- end kitchen -->
+	<!-- begin stiralka -->
+	<?php if(rwmb_meta( 'meta-hotel-stiralka' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/washer.svg" alt="" width="45px" class="mr-3">
+		<h4>Стиральная машина</h4>
+	</div>
+	<?php endif ?>
+	<!-- end  -->
 	<!-- begin billiard -->
 	<?php if(rwmb_meta( 'meta-hotel-billiard' )): ?>
 	<div class="d-flex align-items-center mb-4">

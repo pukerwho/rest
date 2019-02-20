@@ -22,14 +22,6 @@
 	</div>
 	<?php endif ?>
 <!-- end lux-frize -->
-<!-- begin lux-stiralka -->
-	<?php if(rwmb_meta( 'meta-hotel-lux-stiralka' )): ?>
-	<div class="d-flex align-items-center mb-5">
-		<img src="<?php bloginfo('template_url'); ?>/img/washer.svg" alt="" width="45px" class="mr-3">
-		<h4>Стиральная машинка</h4>
-	</div>
-	<?php endif ?>
-<!-- end lux-stiralka -->
 <!-- begin lux-aptechka -->
 	<?php if(rwmb_meta( 'meta-hotel-lux-aptechka' )): ?>
 	<div class="d-flex align-items-center mb-5">
@@ -70,3 +62,51 @@
 	</div>
 	<?php endif ?>
 <!-- end lux-utug -->
+<!-- begin lux-wifi -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-wifi' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/wifi.svg" alt="" width="45px" class="mr-3">
+		<h4>Wi-Fi</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-wifi -->
+<!-- begin lux-clean -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-clean' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/dust.svg" alt="" width="45px" class="mr-3">
+		<h4>Уборка в номере</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-clean -->
+<!-- begin lux-fan -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-fan' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/fan.svg" alt="" width="45px" class="mr-3">
+		<h4>Вентилятор</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-fan -->
+<!-- begin lux-safe -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-safe' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/safe.svg" alt="" width="45px" class="mr-3">
+		<h4>Сейф</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-safe -->
+<!-- begin lux-dush -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-dush' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/shower.svg" alt="" width="45px" class="mr-3">
+		<h4>Душ</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-dush -->
+<!-- begin lux-sanuzel -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-sanuzel' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/toilet.svg" alt="" width="45px" class="mr-3">
+		<h4>Санузел</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-sanuzel -->
