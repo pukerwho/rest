@@ -120,6 +120,14 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
+					<h3 class="mb-5">Удобства:</h3>
+			  	<div class="include-grid">
+			  		<?php get_template_part( 'blocks/include/includestandart', 'default' ); ?>
+			  	</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
 					<h3 class="mb-5">Фотографии:</h3>
 					<div class="hotel-photos mb-5">
 			  		<?php 
@@ -129,14 +137,6 @@
 							    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="standart-photos" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
 							} 
 						?>
-			  	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h3 class="mb-5">Удобства:</h3>
-			  	<div class="include-grid">
-			  		<?php get_template_part( 'blocks/include/includestandart', 'default' ); ?>
 			  	</div>
 				</div>
 			</div>

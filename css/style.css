@@ -9546,6 +9546,16 @@ a:hover {
   display: grid;
   -ms-grid-columns: 33.3333% [3];
   grid-template-columns: repeat(3, 33.3333%); }
+  .include-grid .d-flex {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #eee;
+    padding: 2rem;
+    margin-right: 3rem; }
+    .include-grid .d-flex:nth-child(3n) {
+      margin-right: 0; }
 
 .nomers .nomer {
   height: 300px;
