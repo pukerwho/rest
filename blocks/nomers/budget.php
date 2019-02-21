@@ -59,14 +59,14 @@
 	  			</h2>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" style="margin-bottom: 75px;">
 				<div class="col-md-12">
 					<h3 class="mb-5">Цены</h3>
 				</div>
 			</div>
 			<div class="nomer-price mb-5">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: calc((<?php echo rwmb_meta( 'meta-hotel-budget-minprice_nesezon' ); ?>/<?php echo rwmb_meta( 'meta-hotel-budget-maxprice_sezon' ); ?>)*100%);">
 								<div class="nomer-price__number">
@@ -80,7 +80,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: calc((<?php echo rwmb_meta( 'meta-hotel-budget-maxprice_nesezon' ); ?>/<?php echo rwmb_meta( 'meta-hotel-budget-maxprice_sezon' ); ?>)*100%);">
 								<div class="nomer-price__number">
@@ -94,7 +94,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: calc((<?php echo rwmb_meta( 'meta-hotel-budget-minprice_sezon' ); ?>/<?php echo rwmb_meta( 'meta-hotel-budget-maxprice_sezon' ); ?>)*100%);">
 								<div class="nomer-price__number">
@@ -108,7 +108,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: 100%;">
 								<div class="nomer-price__number">

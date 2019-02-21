@@ -9621,6 +9621,10 @@ a:hover {
     padding: 1rem;
     text-align: center; }
   .nomers .nomer-price__number {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -75px;
     font-size: 2rem;
     font-weight: 800;
     text-align: center;
@@ -9631,6 +9635,14 @@ a:hover {
       border-radius: 0.8rem;
       text-align: center;
       padding: 1rem; }
+  .nomers .nomer-price .col-lg-3:first-of-type .nomer-price__column {
+    background-color: #d3e8ff; }
+  .nomers .nomer-price .col-lg-3:nth-child(2n) .nomer-price__column {
+    background-color: #d3e8ff; }
+  .nomers .nomer-price .col-lg-3:nth-child(3n) .nomer-price__column {
+    background-color: #fde9e4; }
+  .nomers .nomer-price .col-lg-3:last-of-type .nomer-price__column {
+    background-color: #fde9e4; }
 
 html.lb-disable-scrolling {
   overflow: hidden;
@@ -10770,6 +10782,10 @@ button.swiper-pagination-bullet {
     .hotel-filter .btn-container .btn {
       position: relative;
       width: 100%; }
+
+  /* Nomers */
+  .nomers .nomer__price .col-lg-3 {
+    margin-bottom: 75px; }
 
   /* FOOTER */
   .mobile-link {

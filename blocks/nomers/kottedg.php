@@ -66,7 +66,7 @@
 			</div>
 			<div class="nomer-price mb-5">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: calc((<?php echo rwmb_meta( 'meta-hotel-kottedg-minprice_nesezon' ); ?>/<?php echo rwmb_meta( 'meta-hotel-kottedg-maxprice_sezon' ); ?>)*100%);">
 								<div class="nomer-price__number">
@@ -80,7 +80,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: calc((<?php echo rwmb_meta( 'meta-hotel-kottedg-maxprice_nesezon' ); ?>/<?php echo rwmb_meta( 'meta-hotel-kottedg-maxprice_sezon' ); ?>)*100%);">
 								<div class="nomer-price__number">
@@ -94,7 +94,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: calc((<?php echo rwmb_meta( 'meta-hotel-kottedg-minprice_sezon' ); ?>/<?php echo rwmb_meta( 'meta-hotel-kottedg-maxprice_sezon' ); ?>)*100%);">
 								<div class="nomer-price__number">
@@ -108,7 +108,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="nomer-price__item">
 							<div class="nomer-price__column" style="height: 100%;">
 								<div class="nomer-price__number">
