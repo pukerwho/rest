@@ -231,10 +231,14 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'text',
       ),
       array(
-        'name'  => 'Популярный?',
-        'id' => $prefix . 'hotel-popular',
-        'type' => 'checkbox',
-        'std'  => 0,
+        'name'  => 'Минимальная стоимость',
+        'id' => $prefix . 'hotel-minprice',
+        'type' => 'number',
+      ),
+      array(
+        'name'  => 'Максимальная стоимость',
+        'id' => $prefix . 'hotel-maxprice',
+        'type' => 'number',
       ),
     ),
   );

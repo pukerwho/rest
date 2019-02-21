@@ -26,8 +26,8 @@
 		<div class="hotel-item__title">
 			<a href="<?php the_permalink(); ?>" class="pb-3"><?php the_title(); ?></a>
 		</div>
-		<div class="pt-3">
-			Цена?
+		<div class="lead pt-3">
+			Цена: <?php echo rwmb_meta( 'meta-hotel-minprice' ); ?> — <?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?> грн
 		</div>
 	</div>
 </a>
