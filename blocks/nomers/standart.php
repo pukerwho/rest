@@ -8,6 +8,33 @@
 	<div class="nomer" style="background: url('<?php echo $image_standart['url']; ?>'); background-size: cover; background-repeat: no-repeat;" data-nomer="standart">
 		<div class="nomer__title">
 			Номера Стандарт
+			<br>
+			<span>Цена: <?php echo rwmb_meta( 'meta-hotel-standart-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-standart-maxprice_sezon' ); ?> грн</span>
+			<br>
+			<span class="nomer__qty">
+				<?php if(rwmb_meta( 'meta-hotel-standart-hasone' )): ?>
+				<span>1</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-standart-hastwo' )): ?>
+				<span>2</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-standart-hasthree' )): ?>
+				<span>3</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-standart-hasfour' )): ?>
+				<span>4</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-standart-hasfive' )): ?>
+				<span>5</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-standart-hassix' )): ?>
+				<span>6</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-standart-hasseven' )): ?>
+				<span>7</span>
+				<?php endif ?>
+				местные
+			</span>
 		</div>
 	</div>
 </div>

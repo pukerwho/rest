@@ -8,6 +8,33 @@
 	<div class="nomer" style="background: url('<?php echo $image_halflux['url']; ?>'); background-size: cover; background-repeat: no-repeat;" data-nomer="halflux">
 		<div class="nomer__title">
 			Номера "Полу люкс"
+			<br>
+			<span>Цена: <?php echo rwmb_meta( 'meta-hotel-halflux-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-halflux-maxprice_sezon' ); ?> грн</span>
+			<br>
+			<span class="nomer__qty">
+				<?php if(rwmb_meta( 'meta-hotel-halflux-hasone' )): ?>
+				<span>1</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-halflux-hastwo' )): ?>
+				<span>2</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-halflux-hasthree' )): ?>
+				<span>3</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-halflux-hasfour' )): ?>
+				<span>4</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-halflux-hasfive' )): ?>
+				<span>5</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-halflux-hassix' )): ?>
+				<span>6</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-halflux-hasseven' )): ?>
+				<span>7</span>
+				<?php endif ?>
+				местные
+			</span>
 		</div>
 	</div>
 </div>

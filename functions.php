@@ -298,6 +298,31 @@ function your_prefix_get_meta_box( $meta_boxes ) {
   );
 
   $meta_boxes[] = array(
+    'id' => 'hotels-sale',
+    'title' => esc_html__( 'Скидки', 'hotels-sale' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Есть скидки?',
+        'id' => $prefix . 'hotel-sale',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Текст',
+        'id' => $prefix . 'hotel-sale-text',
+        'type' => 'wysiwyg',
+        'options' => array(
+          'textarea_rows' => 4,
+        ),
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
     'id' => 'hotels-include',
     'title' => esc_html__( 'Удобства', 'hotels-include' ),
     'post_types' => array( 'hotels' ),

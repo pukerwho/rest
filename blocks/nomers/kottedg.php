@@ -8,6 +8,33 @@
 	<div class="nomer" style="background: url('<?php echo $image_kottedg['url']; ?>'); background-size: cover; background-repeat: no-repeat;" data-nomer="kottedg">
 		<div class="nomer__title">
 			Коттедж
+			<br>
+			<span>Цена: <?php echo rwmb_meta( 'meta-hotel-kottedg-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-kottedg-maxprice_sezon' ); ?> грн</span>
+			<br>
+			<span class="nomer__qty">
+				<?php if(rwmb_meta( 'meta-hotel-kottedg-hasone' )): ?>
+				<span>1</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-kottedg-hastwo' )): ?>
+				<span>2</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-kottedg-hasthree' )): ?>
+				<span>3</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-kottedg-hasfour' )): ?>
+				<span>4</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-kottedg-hasfive' )): ?>
+				<span>5</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-kottedg-hassix' )): ?>
+				<span>6</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-kottedg-hasseven' )): ?>
+				<span>7</span>
+				<?php endif ?>
+				местные
+			</span>
 		</div>
 	</div>
 </div>

@@ -9577,7 +9577,17 @@ a:hover {
     background: linear-gradient(to top, rgba(10, 10, 10, 0.75) 40%, rgba(10, 10, 10, 0) 100%);
     -webkit-border-radius: 0.8rem;
     border-radius: 0.8rem;
-    padding: 3rem 1.75rem 1.5rem; }
+    padding: 6rem 1.75rem 1.5rem; }
+    .nomers .nomer__title span {
+      font-size: 1.5rem; }
+  .nomers .nomer__qty {
+    font-size: 1.3rem; }
+    .nomers .nomer__qty span {
+      position: relative; }
+      .nomers .nomer__qty span:after {
+        content: ','; }
+      .nomers .nomer__qty span:last-child:after {
+        content: ''; }
   .nomers .nomer-modal {
     display: none;
     position: fixed;

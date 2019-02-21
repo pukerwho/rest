@@ -8,6 +8,33 @@
 	<div class="nomer" style="background: url('<?php echo $image_lux['url']; ?>'); background-size: cover; background-repeat: no-repeat;" data-nomer="lux">
 		<div class="nomer__title">
 			Номера "Люкс"
+			<br>
+			<span>Цена: <?php echo rwmb_meta( 'meta-hotel-lux-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-lux-maxprice_sezon' ); ?> грн</span>
+			<br>
+			<span class="nomer__qty">
+				<?php if(rwmb_meta( 'meta-hotel-lux-hasone' )): ?>
+				<span>1</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-lux-hastwo' )): ?>
+				<span>2</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-lux-hasthree' )): ?>
+				<span>3</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-lux-hasfour' )): ?>
+				<span>4</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-lux-hasfive' )): ?>
+				<span>5</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-lux-hassix' )): ?>
+				<span>6</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-lux-hasseven' )): ?>
+				<span>7</span>
+				<?php endif ?>
+				местные
+			</span>
 		</div>
 	</div>
 </div>

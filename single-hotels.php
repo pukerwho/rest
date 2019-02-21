@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="cover p-relative">
-					<div class="cover-icon">
+					<!-- <div class="cover-icon">
 						<?php if(rwmb_meta( 'meta-hotel-mainrating' ) > 75): ?>
 							<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="">
 						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 50): ?>
@@ -21,7 +21,7 @@
 						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) < 25): ?>
 							<img src="<?php bloginfo('template_url'); ?>/img/rain.svg" alt="">
 						<?php endif ?>
-					</div>
+					</div> -->
 					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">	
 				</div>
 			</div>
@@ -52,6 +52,11 @@
 						  <li class="nav-item">
 						    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Контакты</a>
 						  </li>
+						  <?php if(rwmb_meta( 'meta-hotel-sale' )): ?>
+						  <li class="nav-item">
+						    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#sale" role="tab" aria-controls="sale" aria-selected="false">Скидки</a>
+						  </li>
+						  <?php endif ?>
 						  <li class="nav-item">
 						    <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Обсуждение</a>
 						  </li>
@@ -133,12 +138,54 @@
 					  <div class="tab-pane tab-single-hotel fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 					  	<?php get_template_part( 'blocks/single-hotel-contact', 'default' ); ?>
 					  </div>
+					  <?php if(rwmb_meta( 'meta-hotel-sale' )): ?>
+					  <div class="tab-pane tab-single-hotel fade" id="sale" role="tabpanel" aria-labelledby="sale-tab">
+					  	<?php echo rwmb_meta( 'meta-hotel-sale-text' ); ?>
+					  </div>
+					  <?php endif ?>
 					  <div class="tab-pane tab-single-hotel fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
 					  	<?php comments_template(); ?> 
 					  </div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-md-12">
+				<h3>Другие предложения в этом городе</h3>
+			</div>
+		</div>
+		<div class="row">
+			<?php 
+				$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
+				foreach ($current_term as $myterm); {
+					$current_term_slug = $myterm->slug;
+				}
+			?>
+			<?php 
+				$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
+				$custom_query = new WP_Query( array( 
+				'post_type' => 'hotels', 
+				'posts_per_page' => 4,
+				'orderby' => 'rand',
+				'order'    => 'ASC',
+				'tax_query' => array(
+			    array(
+		        'taxonomy' => 'citylist',
+				    'terms' => $current_term_slug,
+		        'field' => 'slug',
+		        'include_children' => true,
+		        'operator' => 'IN'
+			    )
+				),
+			) );
+			if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+			  	<div class="col-md-3">
+			  		<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
+			  	</div>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
 	</div>
 </div>

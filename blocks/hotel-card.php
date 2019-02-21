@@ -1,7 +1,7 @@
 <a href="<?php the_permalink(); ?>">
-	<div class="hotel-item">
+	<div class="hotel-item mb-5">
 		<div class="hotel-item__img p-relative mb-4">
-			<div class="cover-icon">
+			<!-- <div class="cover-icon">
 				<?php if(rwmb_meta( 'meta-hotel-mainrating' ) > 75): ?>
 					<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="">
 				<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 50): ?>
@@ -11,7 +11,7 @@
 				<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) < 25): ?>
 					<img src="<?php bloginfo('template_url'); ?>/img/rain.svg" alt="">
 				<?php endif ?>
-			</div>
+			</div> -->
 			<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 			<div class="hotel-item__img__city">
 				<div class="hotel-item__img__city__link">
@@ -26,8 +26,8 @@
 		<div class="hotel-item__title">
 			<a href="<?php the_permalink(); ?>" class="pb-3"><?php the_title(); ?></a>
 		</div>
-		<div class="hotel-item__rating pt-3">
-			Оценка: 
+		<div class="pt-3">
+			Цена?
 		</div>
 	</div>
 </a>

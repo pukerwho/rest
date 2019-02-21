@@ -8,6 +8,33 @@
 	<div class="nomer" style="background: url('<?php echo $image_budget['url']; ?>'); background-size: cover; background-repeat: no-repeat;" data-nomer="budget">
 		<div class="nomer__title">
 			Бюджетные номера
+			<br>
+			<span>Цена: <?php echo rwmb_meta( 'meta-hotel-budget-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-budget-maxprice_sezon' ); ?> грн</span>
+			<br>
+			<span class="nomer__qty">
+				<?php if(rwmb_meta( 'meta-hotel-budget-hasone' )): ?>
+				<span>1</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-budget-hastwo' )): ?>
+				<span>2</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-budget-hasthree' )): ?>
+				<span>3</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-budget-hasfour' )): ?>
+				<span>4</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-budget-hasfive' )): ?>
+				<span>5</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-budget-hassix' )): ?>
+				<span>6</span>
+				<?php endif ?>
+				<?php if(rwmb_meta( 'meta-hotel-budget-hasseven' )): ?>
+				<span>7</span>
+				<?php endif ?>
+				местные
+			</span>
 		</div>
 	</div>
 </div>
