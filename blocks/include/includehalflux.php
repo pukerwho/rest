@@ -22,6 +22,14 @@
 	</div>
 	<?php endif ?>
 <!-- end halflux-frize -->
+<!-- begin halflux-boiling -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-boiling' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/boiling.svg" alt="" width="45px" class="mr-3">
+		<h4>Чайник</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-boiling -->
 <!-- begin halflux-aptechka -->
 	<?php if(rwmb_meta( 'meta-hotel-halflux-aptechka' )): ?>
 	<div class="d-flex align-items-center mb-5">
@@ -110,3 +118,27 @@
 	</div>
 	<?php endif ?>
 <!-- end halflux-sanuzel -->
+<!-- begin halflux-sunset -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-sunset' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/sunset.svg" alt="" width="45px" class="mr-3">
+		<h4>Вид на море</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-sunset -->
+<!-- begin halflux-minibar -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-minibar' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/minibar.svg" alt="" width="45px" class="mr-3">
+		<h4>Минибар</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-minibar -->
+<!-- begin halflux-telephone -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-telephone' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/telephone.svg" alt="" width="45px" class="mr-3">
+		<h4>Телефон</h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-telephone -->

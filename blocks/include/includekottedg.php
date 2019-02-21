@@ -22,6 +22,14 @@
 	</div>
 	<?php endif ?>
 <!-- end kottedg-frize -->
+<!-- begin kottedg-boiling -->
+	<?php if(rwmb_meta( 'meta-hotel-kottedg-boiling' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/boiling.svg" alt="" width="45px" class="mr-3">
+		<h4>Чайник</h4>
+	</div>
+	<?php endif ?>
+<!-- end kottedg-boiling -->
 <!-- begin kottedg-aptechka -->
 	<?php if(rwmb_meta( 'meta-hotel-kottedg-aptechka' )): ?>
 	<div class="d-flex align-items-center mb-5">
@@ -110,3 +118,27 @@
 	</div>
 	<?php endif ?>
 <!-- end kottedg-sanuzel -->
+<!-- begin kottedg-sunset -->
+	<?php if(rwmb_meta( 'meta-hotel-kottedg-sunset' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/sunset.svg" alt="" width="45px" class="mr-3">
+		<h4>Вид на море</h4>
+	</div>
+	<?php endif ?>
+<!-- end kottedg-sunset -->
+<!-- begin kottedg-minibar -->
+	<?php if(rwmb_meta( 'meta-hotel-kottedg-minibar' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/minibar.svg" alt="" width="45px" class="mr-3">
+		<h4>Минибар</h4>
+	</div>
+	<?php endif ?>
+<!-- end kottedg-minibar -->
+<!-- begin kottedg-telephone -->
+	<?php if(rwmb_meta( 'meta-hotel-kottedg-telephone' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/telephone.svg" alt="" width="45px" class="mr-3">
+		<h4>Телефон</h4>
+	</div>
+	<?php endif ?>
+<!-- end kottedg-telephone -->

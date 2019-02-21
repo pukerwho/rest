@@ -22,6 +22,14 @@
 	</div>
 	<?php endif ?>
 <!-- end lux-frize -->
+<!-- begin lux-boiling -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-boiling' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/boiling.svg" alt="" width="45px" class="mr-3">
+		<h4>Чайник</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-boiling -->
 <!-- begin lux-aptechka -->
 	<?php if(rwmb_meta( 'meta-hotel-lux-aptechka' )): ?>
 	<div class="d-flex align-items-center mb-5">
@@ -110,3 +118,27 @@
 	</div>
 	<?php endif ?>
 <!-- end lux-sanuzel -->
+<!-- begin lux-sunset -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-sunset' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/sunset.svg" alt="" width="45px" class="mr-3">
+		<h4>Вид на море</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-sunset -->
+<!-- begin lux-minibar -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-minibar' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/minibar.svg" alt="" width="45px" class="mr-3">
+		<h4>Минибар</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-minibar -->
+<!-- begin lux-telephone -->
+	<?php if(rwmb_meta( 'meta-hotel-lux-telephone' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/telephone.svg" alt="" width="45px" class="mr-3">
+		<h4>Телефон</h4>
+	</div>
+	<?php endif ?>
+<!-- end lux-telephone -->

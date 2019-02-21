@@ -33,6 +33,9 @@
 	  				Номера "Полу люкс"
 	  				<span class="nomers-item__small">
 		  				(
+		  				<?php if(rwmb_meta( 'meta-hotel-halflux-hasone' )): ?>
+		  				<span>1 местный</span>
+		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-halflux-hastwo' )): ?>
 		  				<span>2-х местные</span>
 		  				<?php endif ?>
@@ -47,6 +50,9 @@
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-halflux-hassix' )): ?>
 		  				<span>6-ти местные</span>
+		  				<?php endif ?>
+		  				<?php if(rwmb_meta( 'meta-hotel-halflux-hasseven' )): ?>
+		  				<span>7-ми местные</span>
 		  				<?php endif ?>
 		  				)
 	  				</span>

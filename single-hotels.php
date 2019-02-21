@@ -101,6 +101,10 @@
 					  	<div class="nomers">
 					  		<div class="container p-0">
 					  			<div class="row">
+					  				<!-- Номер коттедж -->
+							  		<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>
+							  			<?php get_template_part('blocks/nomers/kottedg') ?>
+							  		<?php endif ?>
 							  		<!-- Номер люкс -->
 							  		<?php if(rwmb_meta( 'meta-hotel-lux-has' )): ?>
 							  			<?php get_template_part('blocks/nomers/lux') ?>
@@ -109,17 +113,13 @@
 							  		<?php if(rwmb_meta( 'meta-hotel-halflux-has' )): ?>
 							  			<?php get_template_part('blocks/nomers/half-lux') ?>
 							  		<?php endif ?>
-							  		<!-- Номер бюджетный -->
-							  		<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
-							  			<?php get_template_part('blocks/nomers/budget') ?>
-							  		<?php endif ?>
 							  		<!-- Номер стандартный -->
 							  		<?php if(rwmb_meta( 'meta-hotel-standart-has' )): ?>
 							  			<?php get_template_part('blocks/nomers/standart') ?>
 							  		<?php endif ?>
-							  		<!-- Номер коттедж -->
-							  		<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>
-							  			<?php get_template_part('blocks/nomers/kottedg') ?>
+							  		<!-- Номер бюджетный -->
+							  		<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
+							  			<?php get_template_part('blocks/nomers/budget') ?>
 							  		<?php endif ?>
 							  		<!-- Номер кемпинг -->
 							  		<?php if(rwmb_meta( 'meta-hotel-camping-has' )): ?>

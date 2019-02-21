@@ -33,6 +33,9 @@
 	  				Номера "Люкс"
 	  				<span class="nomers-item__small">
 		  				(
+		  				<?php if(rwmb_meta( 'meta-hotel-lux-hasone' )): ?>
+		  				<span>1 местный</span>
+		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-lux-hastwo' )): ?>
 		  				<span>2-х местные</span>
 		  				<?php endif ?>
@@ -47,6 +50,9 @@
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-lux-hassix' )): ?>
 		  				<span>6-ти местные</span>
+		  				<?php endif ?>
+		  				<?php if(rwmb_meta( 'meta-hotel-lux-hasseven' )): ?>
+		  				<span>7-ми местные</span>
 		  				<?php endif ?>
 		  				)
 	  				</span>

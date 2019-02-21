@@ -39,6 +39,14 @@
 	</div>
 	<?php endif ?>
 	<!-- end restzone -->
+	<!-- begin stiralka -->
+	<?php if(rwmb_meta( 'meta-hotel-stiralka' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/washer.svg" alt="" width="45px" class="mr-3">
+		<h4>Стиральная машина</h4>
+	</div>
+	<?php endif ?>
+	<!-- end stiralka -->
 	<!-- begin kitchen -->
 	<?php if(rwmb_meta( 'meta-hotel-kitchen' )): ?>
 	<div class="d-flex align-items-center mb-4">
@@ -47,14 +55,6 @@
 	</div>
 	<?php endif ?>
 	<!-- end kitchen -->
-	<!-- begin stiralka -->
-	<?php if(rwmb_meta( 'meta-hotel-stiralka' )): ?>
-	<div class="d-flex align-items-center mb-4">
-		<img src="<?php bloginfo('template_url'); ?>/img/washer.svg" alt="" width="45px" class="mr-3">
-		<h4>Стиральная машина</h4>
-	</div>
-	<?php endif ?>
-	<!-- end  -->
 	<!-- begin billiard -->
 	<?php if(rwmb_meta( 'meta-hotel-billiard' )): ?>
 	<div class="d-flex align-items-center mb-4">
@@ -79,14 +79,6 @@
 	</div>
 	<?php endif ?>
 	<!-- end sauna -->
-	<!-- begin mastercard -->
-	<?php if(rwmb_meta( 'meta-hotel-mastercard' )): ?>
-	<div class="d-flex align-items-center mb-4">
-		<img src="<?php bloginfo('template_url'); ?>/img/credit-card.svg" alt="" width="45px" class="mr-3">
-		<h4>Безналичный рассчет</h4>
-	</div>
-	<?php endif ?>
-	<!-- end mastercard -->
 	<!-- begin market -->
 	<?php if(rwmb_meta( 'meta-hotel-market' )): ?>
 	<div class="d-flex align-items-center mb-4">
@@ -95,4 +87,28 @@
 	</div>
 	<?php endif ?>
 	<!-- end market -->
+	<!-- begin beach -->
+	<?php if(rwmb_meta( 'meta-hotel-beach' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/beach.svg" alt="" width="45px" class="mr-3">
+		<h4>Частный пляж</h4>
+	</div>
+	<?php endif ?>
+	<!-- end beach -->
+	<!-- begin lejak -->
+	<?php if(rwmb_meta( 'meta-hotel-lejak' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/sunbed.svg" alt="" width="45px" class="mr-3">
+		<h4>Аренда лежаков</h4>
+	</div>
+	<?php endif ?>
+	<!-- end lejak -->
+	<!-- begin mastercard -->
+	<?php if(rwmb_meta( 'meta-hotel-mastercard' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/credit-card.svg" alt="" width="45px" class="mr-3">
+		<h4>Безналичный рассчет</h4>
+	</div>
+	<?php endif ?>
+	<!-- end mastercard -->
 </div>

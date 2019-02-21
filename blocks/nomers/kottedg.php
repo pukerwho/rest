@@ -33,6 +33,9 @@
 	  				Коттедж
 	  				<span class="nomers-item__small">
 		  				(
+		  				<?php if(rwmb_meta( 'meta-hotel-kottedg-hasone' )): ?>
+		  				<span>1 местный</span>
+		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-kottedg-hastwo' )): ?>
 		  				<span>2-х местные</span>
 		  				<?php endif ?>
@@ -47,6 +50,9 @@
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-kottedg-hassix' )): ?>
 		  				<span>6-ти местные</span>
+		  				<?php endif ?>
+		  				<?php if(rwmb_meta( 'meta-hotel-kottedg-hasseven' )): ?>
+		  				<span>7-ми местные</span>
 		  				<?php endif ?>
 		  				)
 	  				</span>

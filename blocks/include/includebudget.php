@@ -22,6 +22,14 @@
 	</div>
 	<?php endif ?>
 <!-- end budget-frize -->
+<!-- begin budget-boiling -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-boiling' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/boiling.svg" alt="" width="45px" class="mr-3">
+		<h4>Чайник</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-boiling -->
 <!-- begin budget-aptechka -->
 	<?php if(rwmb_meta( 'meta-hotel-budget-aptechka' )): ?>
 	<div class="d-flex align-items-center mb-5">
@@ -110,3 +118,27 @@
 	</div>
 	<?php endif ?>
 <!-- end budget-sanuzel -->
+<!-- begin budget-sunset -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-sunset' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/sunset.svg" alt="" width="45px" class="mr-3">
+		<h4>Вид на море</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-sunset -->
+<!-- begin budget-minibar -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-minibar' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/minibar.svg" alt="" width="45px" class="mr-3">
+		<h4>Минибар</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-minibar -->
+<!-- begin budget-telephone -->
+	<?php if(rwmb_meta( 'meta-hotel-budget-telephone' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/telephone.svg" alt="" width="45px" class="mr-3">
+		<h4>Телефон</h4>
+	</div>
+	<?php endif ?>
+<!-- end budget-telephone -->
