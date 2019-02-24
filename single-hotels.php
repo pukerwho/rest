@@ -151,10 +151,18 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container pt-5">
 		<div class="row mb-5">
 			<div class="col-md-12">
-				<h3>Другие предложения в этом городе</h3>
+				<div class="my-table">
+					<div class="my-table-cell pr-4">
+						<img src="<?php bloginfo('template_url'); ?>/img/thumbs-up.svg" alt="" width="50px">
+					</div>
+					<div class="table-text">
+						<h2>Другие предложения в этом городе</h2>
+						<p>Возможно, вам больше подойдут эти варианты</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">

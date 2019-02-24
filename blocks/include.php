@@ -111,4 +111,20 @@
 	</div>
 	<?php endif ?>
 	<!-- end mastercard -->
+	<!-- begin restrant -->
+	<?php if(rwmb_meta( 'meta-hotel-restrant' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/restrant.svg" alt="" width="45px" class="mr-3">
+		<h4>Кафе/ресторан</h4>
+	</div>
+	<?php endif ?>
+	<!-- end restrant -->
+	<!-- begin mangal -->
+	<?php if(rwmb_meta( 'meta-hotel-mangal' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/mangal.svg" alt="" width="45px" class="mr-3">
+		<h4>Мангал</h4>
+	</div>
+	<?php endif ?>
+	<!-- end mangal -->
 </div>

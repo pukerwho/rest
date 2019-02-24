@@ -418,6 +418,18 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'checkbox',
         'std'  => 0,
       ),
+      array(
+        'name'  => 'Кафе/ресторан',
+        'id' => $prefix . 'hotel-restrant',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Мангал',
+        'id' => $prefix . 'hotel-mangal',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
     ),
   );
 
