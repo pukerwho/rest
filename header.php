@@ -47,7 +47,7 @@
           </div>
           <div class="header__mobile__nav">
             <?php wp_nav_menu( array(
-              'theme_location'  => '',
+              'theme_location'  => 'head_menu',
               'menu'            => 'mainmenu', 
               'container'       => 'div', 
               'container_class' => '', 
@@ -72,12 +72,10 @@
         </div>
         <div class="header__menu pc-show">
           <?php wp_nav_menu( array(
-            'theme_location'  => '',
-            'menu'            => 'mainmenu', 
-            'container'       => 'div', 
-            'container_class' => '', 
-            'container_id'    => '',
-            'menu_class'      => 'secondemenu_wrap', 
+            'theme_location'  => 'head_menu',
+            'menu'            => '', 
+            'container'       => 'nav', 
+            'container_class' => 'secondemenu_wrap',
             'menu_id'         => '',
             'echo'            => true,
             'fallback_cb'     => 'wp_page_menu',
@@ -85,7 +83,7 @@
             'after'           => '',
             'link_before'     => '',
             'link_after'      => '',
-            'items_wrap'      => '<div class="wrap-menu">%3$s</div>',
+            'items_wrap'      => '<ul class="wrap-menu">%3$s</ul>',
             'depth'           => 0,
             'walker'          => '',
           )); ?>

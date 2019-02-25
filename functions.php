@@ -34,10 +34,10 @@ require_once __DIR__ . '/inc/CMB2-Post-Search-field/lib/init.php';
 require_once get_template_directory() . '/inc/carbon-fields/carbon-fields-plugin.php';
 require_once get_template_directory() . '/inc/custom-fields/citylist-meta.php';
 
-// Register menus, use wp_nav_menu() to display menu to your template ( cf : http://codex.wordpress.org/Function_Reference/wp_nav_menu )
 register_nav_menus( array(
-    'main_menu' => __( 'Menu principal', 'minimal-blank-theme' ) //@TODO : change i18n domain name to yours
+  'head_menu' => 'Главное меню',
 ) );
+
 // Register sidebars
 function registerThemeSidebars() {
     if( !function_exists( 'register_sidebar' ) ) {
