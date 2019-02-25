@@ -12,7 +12,24 @@
 					<img src="<?php bloginfo('template_url'); ?>/img/rain.svg" alt="">
 				<?php endif ?>
 			</div> -->
-			<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+			<div class="swiper-container hotel-item-swiper">
+				<div class="swiper-wrapper">
+					<?php 
+						$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'large' ) );
+						$title_img_territory = get_the_title();
+						foreach ( $images as $image ) {
+						    echo '<div class="swiper-slide"><img src="', $image['url'], '"></div>';
+						} 
+					?>
+				</div>
+				<div class="hotel-item__img-navigation">
+					<div class="hotel-item__img-leftbg"></div>
+					<div class="hotel-item__img-rightbg"></div>	
+				</div>
+				<div class="swiper-button-next swiper-hotelcard-button-next"></div>
+		    <div class="swiper-button-prev swiper-hotelcard-button-prev"></div>
+			</div>
+			<!-- <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""> -->
 			<div class="hotel-item__img__city">
 				<div class="hotel-item__img__city__link">
 					<?php

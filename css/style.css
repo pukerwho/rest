@@ -9353,6 +9353,35 @@ a:hover {
     object-fit: cover;
     -webkit-border-radius: .8rem;
     border-radius: .8rem; }
+  .hotel-item__img-navigation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; }
+  .hotel-item__img-leftbg {
+    display: none;
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: -webkit-gradient(linear, right top, left top, from(transparent), to(rgba(0, 0, 0, 0.25)));
+    background: -webkit-linear-gradient(right, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: -o-linear-gradient(right, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    z-index: 12; }
+  .hotel-item__img-rightbg {
+    display: none;
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.25)));
+    background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    z-index: 12; }
   .hotel-item__img .cover-icon {
     width: 50px;
     height: 50px;
@@ -9367,7 +9396,8 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 2rem;
-    text-align: center; }
+    text-align: center;
+    z-index: 1; }
     .hotel-item__img__city__link {
       display: inline-block;
       background-color: #ffffff;
@@ -9385,6 +9415,18 @@ a:hover {
         align-items: center;
         color: #575553;
         font-size: 1.4rem; }
+.hotel-item-swiper {
+  height: 285px; }
+  .hotel-item-swiper:hover .swiper-hotelcard-button-prev {
+    display: block; }
+  .hotel-item-swiper:hover .swiper-hotelcard-button-next {
+    display: block; }
+  .hotel-item-swiper:hover .hotel-item__img-rightbg {
+    display: block; }
+  .hotel-item-swiper:hover .hotel-item__img-leftbg {
+    display: block; }
+.hotel-item .swiper-hotelcard-button-prev, .hotel-item .swiper-hotelcard-button-next {
+  display: none; }
 .hotel-item__rating {
   width: 35px;
   height: 35px;

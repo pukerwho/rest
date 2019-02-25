@@ -135,6 +135,19 @@ var mySwiper = new Swiper ('.swiper-hotels-now-watch', {
   },
 });
 
+//SWIPER SINGLE CARD IMG
+var hotelcard_button_next = $('.swiper-hotelcard-button-next');
+var hotelcard_button_prev = $('.swiper-hotelcard-button-prev');
+var mySwiperHotelCard = new Swiper ('.hotel-item-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  navigation: {
+    nextEl: hotelcard_button_next,
+    prevEl: hotelcard_button_prev,
+  },
+});
+
 $(document).on('click', '.nomer', function(event){
   var nomer = $(this).attr("data-nomer");
   $('.nomer-modal-' + nomer).show();
