@@ -48,11 +48,9 @@
           <div class="header__mobile__nav">
             <?php wp_nav_menu( array(
               'theme_location'  => 'head_menu',
-              'menu'            => 'mainmenu', 
-              'container'       => 'div', 
-              'container_class' => '', 
-              'container_id'    => '',
-              'menu_class'      => 'header__mobile__nav__wrap', 
+              'menu'            => '', 
+              'container'       => 'nav', 
+              'container_class' => 'header__mobile__nav__wrap',
               'menu_id'         => '',
               'echo'            => true,
               'fallback_cb'     => 'wp_page_menu',
@@ -60,7 +58,7 @@
               'after'           => '',
               'link_before'     => '',
               'link_after'      => '',
-              'items_wrap'      => '<div class="wrap-menu">%3$s</div>',
+              'items_wrap'      => '<ul class="wrap-menu">%3$s</ul>',
               'depth'           => 0,
               'walker'          => '',
             )); ?>
