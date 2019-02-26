@@ -14,7 +14,15 @@
     wp_head();
 	?>
   <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>">
-  <?php echo get_option('google_analytics'); ?>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135287974-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135287974-1');
+  </script>
 </head>
 <body <?php echo body_class(); ?>>
   <!-- <div class="preloader"></div> -->
