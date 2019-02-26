@@ -26,10 +26,10 @@
 					<div class="hotel-item__img-leftbg"></div>
 					<div class="hotel-item__img-rightbg"></div>	
 				</div>
-		    <div class="swiper-hotelcard-button-prev">
+		    <div class="swiper-click swiper-hotelcard-button-prev swiper-prev-<?php echo the_ID(); ?>" data-swiper="<?php echo the_ID(); ?>">
 		    	<svg viewBox="0 0 18 18" role="img" aria-label="Предыдущее фото" focusable="false" style="height: 24px; width: 24px; display: block; fill: rgb(255, 255, 255);"><path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fill-rule="evenodd"></path></svg>
 		    </div>
-		    <div class="swiper-hotelcard-button-next">
+		    <div class="swiper-hotelcard-button-next swiper-next-<?php echo the_ID(); ?>" data-swiper="<?php echo the_ID(); ?>">
 					<svg viewBox="0 0 18 18" role="img" aria-label="Следующее фото" focusable="false" style="height: 24px; width: 24px; display: block; fill: rgb(255, 255, 255);"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
 				</div>
 			</div>

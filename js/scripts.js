@@ -136,17 +136,39 @@ var mySwiper = new Swiper ('.swiper-hotels-now-watch', {
 });
 
 //SWIPER SINGLE CARD IMG
-var hotelcard_button_next = $('.swiper-hotelcard-button-next');
-var hotelcard_button_prev = $('.swiper-hotelcard-button-prev');
-var mySwiperHotelCard = new Swiper ('.hotel-item-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: hotelcard_button_next,
-    prevEl: hotelcard_button_prev,
-  },
+// $(document).on('click', '.swiper-click', function(event){
+//   var swiper_id = $(this).attr("data-swiper");
+//   console.log(swiper_id);
+//   hotelcard_button_next = $('.swiper-next-' + swiper_id);
+// })
+
+$('.hotel-item-swiper').each(function(){
+  var swiper_card = $(this).attr("data-card");
+  console.log(swiper_card);
+  swiper_next = $(this).find('.swiper-hotelcard-button-next');
+  swiper_next_id = swiper_next.attr("data-swiper");
+  var mySwiperHotelCard = new Swiper($(this), {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: $('.swiper-next-'+swiper_next_id),
+      prevEl: $('.swiper-prev-'+swiper_next_id),
+    },
+  });
 });
+
+// var hotelcard_button_next = $('.swiper-hotelcard-button-next');
+// var hotelcard_button_prev = $('.swiper-hotelcard-button-prev');
+// var mySwiperHotelCard = new Swiper ('.hotel-item-swiper', {
+//   slidesPerView: 1,
+//   spaceBetween: 0,
+//   loop: true,
+//   navigation: {
+//     nextEl: hotelcard_button_next,
+//     prevEl: hotelcard_button_prev,
+//   },
+// });
 
 $(document).on('click', '.nomer', function(event){
   var nomer = $(this).attr("data-nomer");
