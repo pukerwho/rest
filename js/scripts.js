@@ -1,4 +1,3 @@
-$(function(){
 //Mobile Menu
 $('.header__mobile__menu').on('click', function(){
 	$('.header__mobile__cover').addClass('header__mobile__cover__active');
@@ -52,7 +51,7 @@ $(document).click(function(e) {
 })
 
 //Catalog filter
-$(document).on('submit','#catalog-filter',function(event){
+$(document).on('submit','#catalog-filter',function(){
   var filter = $(this);
   console.log(filter.serialize());
   $.ajax({
@@ -70,11 +69,10 @@ $(document).on('submit','#catalog-filter',function(event){
     }
   });
   return false;
-
 });
 
 //City filter
-$(document).on('submit','#city-filter',function(event){
+$(document).on('submit','#city-filter',function(){
   var filter = $(this);
   console.log(filter.serialize());
   $.ajax({
@@ -189,5 +187,4 @@ $(document).on('click', '.nomer-modal__back', function(event){
   var nomer = $(this).attr("data-nomer");
   $('.nomer-modal-' + nomer).hide();
   $('body').removeClass('nomer-modal__open');
-});
 });
