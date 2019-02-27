@@ -1,3 +1,4 @@
+$(function(){
 //Mobile Menu
 $('.header__mobile__menu').on('click', function(){
 	$('.header__mobile__cover').addClass('header__mobile__cover__active');
@@ -51,7 +52,7 @@ $(document).click(function(e) {
 })
 
 //Catalog filter
-$('#catalog-filter').submit(function(){
+$(document).on('submit','#catalog-filter',function(event){
   var filter = $(this);
   console.log(filter.serialize());
   $.ajax({
@@ -65,13 +66,15 @@ $('#catalog-filter').submit(function(){
       console.log(data);
       filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
       $('#response').html(data);
+      hotelItemSwiper();
     }
   });
   return false;
+
 });
 
-//Catalog filter
-$('#city-filter').submit(function(){
+//City filter
+$(document).on('submit','#city-filter',function(event){
   var filter = $(this);
   console.log(filter.serialize());
   $.ajax({
@@ -85,6 +88,7 @@ $('#city-filter').submit(function(){
       console.log(data);
       filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
       $('#response').html(data);
+      hotelItemSwiper();
     }
   });
   return false;
@@ -142,21 +146,26 @@ var mySwiper = new Swiper ('.swiper-hotels-now-watch', {
 //   hotelcard_button_next = $('.swiper-next-' + swiper_id);
 // })
 
-$('.hotel-item-swiper').each(function(){
-  var swiper_card = $(this).attr("data-card");
-  console.log(swiper_card);
-  swiper_next = $(this).find('.swiper-hotelcard-button-next');
-  swiper_next_id = swiper_next.attr("data-swiper");
-  var mySwiperHotelCard = new Swiper($(this), {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    navigation: {
-      nextEl: $('.swiper-next-'+swiper_next_id),
-      prevEl: $('.swiper-prev-'+swiper_next_id),
-    },
+
+
+var hotelItemSwiper = function() {
+  $('.hotel-item-swiper').each(function(){
+    swiper_next = $(this).find('.swiper-hotelcard-button-next');
+    swiper_next_id = swiper_next.attr("data-swiper");
+    console.log(swiper_next_id);
+    var mySwiperHotelCard = new Swiper($(this), {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: $('.swiper-next-'+swiper_next_id),
+        prevEl: $('.swiper-prev-'+swiper_next_id),
+      },
+    });
   });
-});
+}
+
+hotelItemSwiper();
 
 // var hotelcard_button_next = $('.swiper-hotelcard-button-next');
 // var hotelcard_button_prev = $('.swiper-hotelcard-button-prev');
@@ -180,4 +189,5 @@ $(document).on('click', '.nomer-modal__back', function(event){
   var nomer = $(this).attr("data-nomer");
   $('.nomer-modal-' + nomer).hide();
   $('body').removeClass('nomer-modal__open');
-})
+});
+});
