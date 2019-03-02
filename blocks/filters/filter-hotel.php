@@ -47,7 +47,7 @@
 	    </div>
 	  </div>
 	  <div class="btn-container">
-	  	<button class="btn bg-paster-green">Применить фильтр</button>	
+	  	<button class="btn bg-pastel-lightblue">Применить фильтр</button>	
 	  </div>
 		<input type="hidden" name="action" value="my_catalog_filter">
 	</form>
