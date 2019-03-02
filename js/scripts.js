@@ -165,26 +165,27 @@ var hotelItemSwiper = function() {
 
 hotelItemSwiper();
 
-// var hotelcard_button_next = $('.swiper-hotelcard-button-next');
-// var hotelcard_button_prev = $('.swiper-hotelcard-button-prev');
-// var mySwiperHotelCard = new Swiper ('.hotel-item-swiper', {
-//   slidesPerView: 1,
-//   spaceBetween: 0,
-//   loop: true,
-//   navigation: {
-//     nextEl: hotelcard_button_next,
-//     prevEl: hotelcard_button_prev,
-//   },
-// });
 
+//Номер Модель Инфа
 $(document).on('click', '.nomer', function(event){
   var nomer = $(this).attr("data-nomer");
   $('.nomer-modal-' + nomer).show();
   $('body').addClass('nomer-modal__open');
-})
+});
 
 $(document).on('click', '.nomer-modal__back', function(event){
   var nomer = $(this).attr("data-nomer");
   $('.nomer-modal-' + nomer).hide();
+  $('body').removeClass('nomer-modal__open');
+});
+
+//Поиск
+$(document).on('click', '.search-button', function(){
+  $('.b_search').show();
+  $('body').addClass('nomer-modal__open');
+});
+
+$(document).on('click', '.b_search__close img', function(event){
+  $('.b_search').hide();
   $('body').removeClass('nomer-modal__open');
 });
