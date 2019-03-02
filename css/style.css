@@ -9042,6 +9042,42 @@ a:hover {
 .nomer-modal__open {
   overflow: hidden; }
 
+/* Pagination */
+.b_pagination {
+  color: #484848;
+  font-size: 1.76rem; }
+  .b_pagination a {
+    color: #2a2825;
+    -webkit-border-radius: .3rem;
+    border-radius: .3rem;
+    outline: none;
+    padding: .8rem 1.5rem; }
+    .b_pagination a:hover {
+      background-color: #f3f1ee; }
+  .b_pagination .current {
+    color: #fff;
+    background-color: #e96bd4;
+    -webkit-border-radius: .3rem;
+    border-radius: .3rem;
+    outline: none;
+    padding: .8rem 1.5rem; }
+  .b_pagination .next {
+    background-image: url(../img/pagination-next.svg);
+    width: 9px;
+    height: 14px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 60% 60%;
+    background-size: 60%; }
+  .b_pagination .prev {
+    background-image: url(../img/pagination-prev.svg);
+    width: 9px;
+    height: 14px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 60% 60%;
+    background-size: 60%; }
+
 .header__content {
   display: -webkit-box;
   display: -webkit-flex;

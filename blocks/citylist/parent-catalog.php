@@ -16,10 +16,14 @@
 
 <div class="row mb-5" id="response">
 	<?php 
+		global $wp_query, $wp_rewrite;  
+		// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 		$current_term = get_queried_object_id();
 		$custom_query = new WP_Query( array( 
 		'post_type' => 'hotels', 
-		'posts_per_page' => 20,
+		'posts_per_page' => 24,
+		'paged' => $current,
 		'orderby' => 'rand',
 		'order'    => 'ASC',
 		'tax_query' => array(
@@ -39,10 +43,20 @@
 	<?php endwhile; endif; wp_reset_postdata(); ?>
 </div>
 
-<div class="row mb-5">
-	<div class="col-md-12">
-		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+<div class="row">
+	<div class="col-md-12 text-center">
+		<div class="b_pagination">
+			<?php 
+				$big = 999999999; // уникальное число
+				echo paginate_links( array(
+				'format'  => 'page/%#%',
+				'current'   => $current,
+				'total'   => $custom_query->max_num_pages,
+				'prev_next' => true,
+				'next_text' => (''),
+				'prev_text' => ('')
+				)); 
+			?>
 		</div>
 	</div>
 </div>

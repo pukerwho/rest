@@ -191,6 +191,7 @@ function your_prefix_register_taxonomy() {
     'show_in_rest' => false,
     'hierarchical' => true,
     'query_var' => true,
+    'has_archive' => true,
     'sort' => false,
     'rewrite' => array(
       'with_front' => false,
