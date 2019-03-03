@@ -12,11 +12,11 @@ jQuery(function($){
       data: data,
       type: 'POST',
       beforeSend : function ( xhr ) {
-        button.text('Загружаем...'); // change the button text, you can also add a preloader image
+        $('.catalog-more .btn').text('Загружаем...'); // change the button text, you can also add a preloader image
       },
       success : function( data ){
         if( data ) { 
-          button.text( 'Загрузить еще' ).prev().before(data); // insert new posts          
+          $('.catalog-more .btn').text( 'Загрузить еще' ).prev().before(data); // insert new posts          
           loadmore_params__catalog.current_page++;
           $('#response .col-md-3:last-child').after(data);
 
