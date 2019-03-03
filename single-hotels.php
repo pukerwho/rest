@@ -57,9 +57,11 @@
 						    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#sale" role="tab" aria-controls="sale" aria-selected="false">Скидки</a>
 						  </li>
 						  <?php endif ?>
+						  <?php if(rwmb_meta( 'meta-hotel-reviews' )): ?>
 						  <li class="nav-item">
 						    <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Обсуждение</a>
 						  </li>
+						  <?php endif ?>
 						</ul>
 					</div>
 					

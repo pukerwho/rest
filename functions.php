@@ -234,6 +234,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'id' => $prefix . 'hotel-maxprice',
         'type' => 'number',
       ),
+      array(
+        'name'  => 'Открыть отзывы?',
+        'id' => $prefix . 'hotel-reviews',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
     ),
   );
 
