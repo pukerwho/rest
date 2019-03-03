@@ -69,7 +69,7 @@
 						  	<div class="hotel-main">
 						  		<div class="row">
 						  			<div class="col-md-3">
-						  				<h3 class="mb-5">Рейтинги</h3>
+						  				<!-- <h3 class="mb-5">Рейтинги</h3>
 						  				<div class="mb-5">
 						  					<h4>Общий:</h4>
 						  					<div class="hotel-rating">
@@ -77,7 +77,7 @@
 						  							<span><?php echo rwmb_meta( 'meta-hotel-mainrating' ); ?>%</span>
 						  						</div>
 						  					</div>
-						  				</div>
+						  				</div> -->
 						  				<h3 class="mb-5">Удобства:</h3>
 						  				<?php get_template_part( 'blocks/include', 'default' ); ?>
 						  			</div>
