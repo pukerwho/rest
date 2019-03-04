@@ -61,6 +61,10 @@ function addAdminEditorStyle() {
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 function theme_name_scripts() {
     wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/style.css', false, time() );
+    wp_enqueue_style( 'jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css', false, time() );
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'jquery-ui-core' );
+    wp_enqueue_script( 'jquery-ui-touch-punch', get_template_directory_uri() . '/js/jquery-ui-touch-punch.min.js', '','',true);
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
     wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.min.js','','',true);
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js');
@@ -1482,6 +1486,22 @@ function catalog_hotels_filter_function(){
       'field' => 'slug',
       'include_children' => true,
       'operator' => 'AND'
+    );
+  }
+  if ($_POST['b_filter_price_min'] != '') { 
+    $filterargs['meta_query'][] = array(
+      'key'     => 'meta-hotel-minprice',
+      'value'   => $_POST['b_filter_price_min'],
+      'compare' => '>=', 
+      'type'    => 'NUMERIC',
+    );
+  }
+  if ($_POST['b_filter_price_max'] != '') { 
+    $filterargs['meta_query'][] = array(
+      'key'     => 'meta-hotel-maxprice',
+      'value'   => $_POST['b_filter_price_max'],
+      'compare' => '<=', 
+      'type'    => 'NUMERIC',
     );
   }
 

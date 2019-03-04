@@ -48,7 +48,24 @@ $(document).click(function(e) {
   var numers_checkboxes = $('.numers_filter_class');
   numers_checkboxes.hide();
   e.stopPropagation();
+});
+
+//Открывает и закрывает Фильтр-цены
+$('.select_price_class').on('click', function (el) {
+  var price_block = $('.price_filter_class');
+  price_block.toggle();
+  el.stopPropagation();
+});
+
+$('.price_filter_class').click(function(el) { 
+  el.stopPropagation();
 })
+
+$(document).click(function(el) {
+  var price_block = $('.price_filter_class');
+  price_block.hide();
+  el.stopPropagation();
+});
 
 //Catalog filter
 $(document).on('submit','#catalog-filter',function(){
@@ -188,4 +205,19 @@ $(document).on('click', '.search-button', function(){
 $(document).on('click', '.b_search__close img', function(event){
   $('.b_search').hide();
   $('body').removeClass('nomer-modal__open');
+});
+
+//Фильтр по цене
+$(".b_filter__range__price #slider-range").slider({
+  range: true, 
+  min: 0,
+  max: 15000,
+  values: [50, 15000],
+  step: 50,
+  slide: function( event, ui ) {
+    $( "#min-price").html(ui.values[ 0 ]);
+    $( "#max-price").html(ui.values[ 1 ]);
+    document.getElementById('price_min_value').value = ui.values[0]
+    document.getElementById('price_max_value').value = ui.values[1]
+  }
 });

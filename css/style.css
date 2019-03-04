@@ -10608,12 +10608,30 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px; }
 
+.b_filter__item {
+  width: -webkit-calc(25% - 3rem);
+  width: calc(25% - 3rem);
+  float: left;
+  margin-bottom: 2rem; }
+  .b_filter__item:last-child {
+    margin-right: 0; }
+.b_filter__range__text {
+  color: #484848;
+  font-size: 1.5rem;
+  float: left;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+  .b_filter__range__text:last-of-type {
+    float: right; }
+
 .hotel-filter {
   position: relative;
   /* Reset Select */
   /* Custom Select */
   /* Arrow */ }
   .hotel-filter form {
+    width: 100%;
+    height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -10621,8 +10639,7 @@ button.swiper-pagination-bullet {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center;
-    height: 100%; }
+    align-items: center; }
   .hotel-filter select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -10637,7 +10654,6 @@ button.swiper-pagination-bullet {
   .hotel-filter .select {
     position: relative;
     display: block;
-    width: 20em;
     height: auto;
     background: #e6eafd;
     overflow: hidden;
@@ -10670,11 +10686,10 @@ button.swiper-pagination-bullet {
     color: #444444;
     padding: 1rem; }
   .hotel-filter button {
-    position: absolute;
-    right: 0;
-    top: 0; }
+    width: 100%; }
 
 .multiselect {
+  width: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -10709,6 +10724,9 @@ button.swiper-pagination-bullet {
   border: 1px #dadada solid;
   z-index: 999;
   padding: 5px 10px; }
+
+.price_filter_class {
+  width: 25%; }
 
 /* Чекбоксы */
 .checkboxes label {
@@ -10779,6 +10797,17 @@ button.swiper-pagination-bullet {
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0; }
+
+.ui-slider .ui-slider-handle {
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  background: #484848 !important;
+  border: none !important;
+  top: -6px !important;
+  width: 18px !important;
+  height: 18px !important;
+  outline: none !important;
+  margin-left: -9px !important; }
 
 @media (max-width: 760px) {
   /* COMMON */
@@ -10940,6 +10969,10 @@ button.swiper-pagination-bullet {
 
   /* SINGLE HOTEL */
   /* FILTER HOTEL */
+  .b_filter__item {
+    width: 100%;
+    margin-bottom: 1rem; }
+
   .hotel-filter form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
