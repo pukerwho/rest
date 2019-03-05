@@ -18,6 +18,23 @@
                     ничего нет
                 <?php endif; ?>
         </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="b_pagination">
+                    <?php 
+                        $big = 999999999; // уникальное число
+                        echo paginate_links( array(
+                        'format'  => 'page/%#%',
+                        'current'   => $current,
+                        'total'   => $custom_query->max_num_pages,
+                        'prev_next' => true,
+                        'next_text' => (''),
+                        'prev_text' => ('')
+                        )); 
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
