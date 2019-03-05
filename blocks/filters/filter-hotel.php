@@ -31,7 +31,7 @@
 		    </div>
 		  </div>
 		</div>
-		<div class="b_filter__item">
+		<!-- <div class="b_filter__item">
 		  <div class="multiselect">
 		    <div class="selectBox select_numers_class">
 		    	<div class="select">
@@ -50,7 +50,7 @@
 	        <input type="checkbox" name="luxfilter" value="1" id="lux" /><span>Люкс</span></label>
 		    </div>
 		  </div>
-		</div>
+		</div> -->
 		<div class="b_filter__item">
 		  <div class="multiselect">
 		  	<div class="selectBox select_price_class">

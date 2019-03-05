@@ -1524,6 +1524,21 @@ function city_hotels_filter_function(){
     'post_type' => 'hotels',
     'meta_query' => array(
       'relation' => 'OR',
+      array(
+        'relation' => 'AND',
+        array(
+          'key'     => 'meta-hotel-minprice',
+          'value'   => $_POST['b_filter_price_max'],
+          'compare' => '<=', 
+          'type'    => 'NUMERIC',
+        ),
+        array(
+          'key'     => 'meta-hotel-maxprice',
+          'value'   => $_POST['b_filter_price_min'],
+          'compare' => '>=', 
+          'type'    => 'NUMERIC',
+        )
+      ),
     )
   );
   if ($_POST['citynamefilter'] != '') { 
