@@ -19,7 +19,7 @@ jQuery(function($){
           $('.catalog-more .btn').text( 'Загрузить еще' ).prev().before(data); // insert new posts          
           loadmore_params__catalog.current_page++;
           $('#response .col-md-3:last-child').after(data);
-
+          hotelItemSwiper();
           if ( loadmore_params__catalog.current_page == loadmore_params__catalog.max_page ) 
             button.remove(); // if last page, remove the button
  

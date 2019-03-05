@@ -10626,6 +10626,11 @@ button.swiper-pagination-bullet {
   margin-bottom: 2rem; }
   .b_filter__item:last-child {
     margin-right: 0; }
+  .b_filter__item__open:after {
+    content: '\25B2' !important;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
 .b_filter__range__text {
   color: #484848;
   font-size: 1.5rem;
@@ -10686,16 +10691,21 @@ button.swiper-pagination-bullet {
     display: none; }
   .hotel-filter .select::after {
     content: '\25BC';
+    width: 45px;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
+    text-align: center;
     padding: 0 1em;
     background: #dee2f6;
     pointer-events: none;
     font-size: 2rem;
     color: #444444;
-    padding: 1rem; }
+    padding: 1rem;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
   .hotel-filter button {
     width: 100%; }
 

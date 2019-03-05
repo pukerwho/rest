@@ -19,6 +19,8 @@ $('.header__mobile__close').on('click', function(){
 
 //Открывает и закрывает Фильтр-коллекций
 $('.select_collections_class').on('click', function (e) {
+  find_collections_select = $(this).find('.select');
+  find_collections_select.toggleClass('b_filter__item__open');
   var collections_checkboxes = $('.collections_filter_class');
   collections_checkboxes.toggle();
   e.stopPropagation();
@@ -30,12 +32,15 @@ $('.collections_filter_class').click(function(e) {
 
 $(document).click(function(e) {
   var collections_checkboxes = $('.collections_filter_class');
+  find_collections_select.removeClass('b_filter__item__open');
   collections_checkboxes.hide();
   e.stopPropagation();
 })
 
 //Открывает и закрывает Фильтр-номеров
 $('.select_numers_class').on('click', function (e) {
+  find_numers_select = $(this).find('.select');
+  find_numers_select.toggleClass('b_filter__item__open');
   var numers_checkboxes = $('.numers_filter_class');
   numers_checkboxes.toggle();
   e.stopPropagation();
@@ -47,12 +52,15 @@ $('.numers_filter_class').click(function(e) {
 
 $(document).click(function(e) {
   var numers_checkboxes = $('.numers_filter_class');
+  find_numers_select.removeClass('b_filter__item__open');
   numers_checkboxes.hide();
   e.stopPropagation();
 });
 
 //Открывает и закрывает Фильтр-цены
 $('.select_price_class').on('click', function (el) {
+  find_price_select = $(this).find('.select');
+  find_price_select.toggleClass('b_filter__item__open');
   var price_block = $('.price_filter_class');
   price_block.toggle();
   el.stopPropagation();
@@ -64,6 +72,7 @@ $('.price_filter_class').click(function(el) {
 
 $(document).click(function(el) {
   var price_block = $('.price_filter_class');
+  find_price_select.removeClass('b_filter__item__open');
   price_block.hide();
   el.stopPropagation();
 });
@@ -161,8 +170,6 @@ var mySwiper = new Swiper ('.swiper-hotels-now-watch', {
 //   console.log(swiper_id);
 //   hotelcard_button_next = $('.swiper-next-' + swiper_id);
 // })
-
-
 
 var hotelItemSwiper = function() {
   $('.hotel-item-swiper').each(function(){
