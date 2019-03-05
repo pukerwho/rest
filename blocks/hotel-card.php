@@ -47,11 +47,29 @@
 		<div class="hotel-item__title">
 			<a href="<?php the_permalink(); ?>" class="pb-3"><?php the_title(); ?></a>
 		</div>
-		<div class="lead pt-3">
+		<div class="lead pt-3 mb-3">
 			
 			<?php get_template_part('blocks/hotel-price'); ?>
 
 			<!-- Цена: <?php echo rwmb_meta( 'meta-hotel-minprice' ); ?> — <?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?> грн -->
+		</div>
+		<div class="hotel-item__hasnomer lead">
+			Номера: 
+			<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>
+				<span>Коттеджи</span>
+			<?php endif ?>
+			<?php if(rwmb_meta( 'meta-hotel-lux-has' )): ?>
+				<span>Люкс</span>
+			<?php endif ?>
+			<?php if(rwmb_meta( 'meta-hotel-halflux-has' )): ?>
+				<span>Полулюкс</span>
+			<?php endif ?>
+			<?php if(rwmb_meta( 'meta-hotel-standart-has' )): ?>
+				<span>Стандарт</span>
+			<?php endif ?>
+			<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
+				<span>Бюджетные</span>
+			<?php endif ?>
 		</div>
 	</div>
 </a>

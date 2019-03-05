@@ -9484,6 +9484,17 @@ a:hover {
         align-items: center;
         color: #575553;
         font-size: 1.4rem; }
+.hotel-item__hasnomer {
+  color: #484848;
+  font-weight: 600; }
+  .hotel-item__hasnomer span {
+    position: relative;
+    color: #49b749;
+    font-weight: 300; }
+    .hotel-item__hasnomer span:after {
+      content: ','; }
+    .hotel-item__hasnomer span:last-child:after {
+      content: ''; }
 .hotel-item-swiper {
   height: 285px; }
   .hotel-item-swiper:hover .swiper-hotelcard-button-prev {
