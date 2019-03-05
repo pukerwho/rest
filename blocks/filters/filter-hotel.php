@@ -87,8 +87,8 @@
 		  	<button class="btn bg-pastel-green">Применить фильтр</button>	
 		  </div>
 		</div>
-		<input type="hidden" id="price_min_value" name="b_filter_price_min" value="15000">
-		<input type="hidden" id="price_max_value" name="b_filter_price_max" value="300000">
+		<input type="hidden" id="price_min_value" name="b_filter_price_min" value="0">
+		<input type="hidden" id="price_max_value" name="b_filter_price_max" value="15000">
 		<input type="hidden" name="action" value="my_catalog_filter">
 	</form>
 </div>

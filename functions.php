@@ -1447,29 +1447,44 @@ function catalog_hotels_filter_function(){
     'posts_per_page' => 24,
     'meta_query' => array(
       'relation' => 'OR',
+      array(
+        'relation' => 'AND',
+        array(
+          'key'     => 'meta-hotel-minprice',
+          'value'   => $_POST['b_filter_price_max'],
+          'compare' => '<=', 
+          'type'    => 'NUMERIC',
+        ),
+        array(
+          'key'     => 'meta-hotel-maxprice',
+          'value'   => $_POST['b_filter_price_min'],
+          'compare' => '>=', 
+          'type'    => 'NUMERIC',
+        )
+      ),
     )
   );
-  if ($_POST['budgetfilter'] != '') { 
-    $filterargs['meta_query'][] = array(
-      'key'     => 'meta-hotel-budget-has',
-      'value'   => $_POST['budgetfilter'],
-      'compare' => '=', 
-    );
-  }
-  if ($_POST['halfluxfilter'] != '') { 
-    $filterargs['meta_query'][] = array(
-      'key'     => 'meta-hotel-halflux-has',
-      'value'   => $_POST['halfluxfilter'],
-      'compare' => '=', 
-    );
-  }
-  if ($_POST['luxfilter'] != '') { 
-    $filterargs['meta_query'][] = array(
-      'key'     => 'meta-hotel-lux-has',
-      'value'   => $_POST['luxfilter'],
-      'compare' => '=', 
-    );
-  }
+  // if ($_POST['budgetfilter'] != '') { 
+  //   $filterargs['meta_query'][] = array(
+  //     'key'     => 'meta-hotel-budget-has',
+  //     'value'   => $_POST['budgetfilter'],
+  //     'compare' => '=', 
+  //   );
+  // }
+  // if ($_POST['halfluxfilter'] != '') { 
+  //   $filterargs['meta_query'][] = array(
+  //     'key'     => 'meta-hotel-halflux-has',
+  //     'value'   => $_POST['halfluxfilter'],
+  //     'compare' => '=', 
+  //   );
+  // }
+  // if ($_POST['luxfilter'] != '') { 
+  //   $filterargs['meta_query'][] = array(
+  //     'key'     => 'meta-hotel-lux-has',
+  //     'value'   => $_POST['luxfilter'],
+  //     'compare' => '=', 
+  //   );
+  // }
   if ($_POST['citylistfilter'] != '') { 
     $filterargs['tax_query'][] = array(
       'taxonomy' => 'citylist',
@@ -1486,22 +1501,6 @@ function catalog_hotels_filter_function(){
       'field' => 'slug',
       'include_children' => true,
       'operator' => 'AND'
-    );
-  }
-  if ($_POST['b_filter_price_min'] != '') { 
-    $filterargs['meta_query'][] = array(
-      'key'     => 'meta-hotel-minprice',
-      'value'   => $_POST['b_filter_price_min'],
-      'compare' => '>=', 
-      'type'    => 'NUMERIC',
-    );
-  }
-  if ($_POST['b_filter_price_max'] != '') { 
-    $filterargs['meta_query'][] = array(
-      'key'     => 'meta-hotel-maxprice',
-      'value'   => $_POST['b_filter_price_max'],
-      'compare' => '<=', 
-      'type'    => 'NUMERIC',
     );
   }
 
