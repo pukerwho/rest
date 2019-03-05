@@ -11051,8 +11051,9 @@ button.swiper-pagination-bullet {
   .include-grid {
     -ms-grid-columns: 49% [2];
     grid-template-columns: repeat(2, 49%);
-    grid-gap: 1% 2%;
-    margin-bottom: 8rem; }
+    grid-row-gap: 1%;
+    grid-column-gap: 2%;
+    margin-bottom: 7.5rem; }
     .include-grid .d-flex {
       margin-bottom: 0 !important;
       margin-right: 0 !important; }

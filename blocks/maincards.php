@@ -1,6 +1,6 @@
 <div class="maincards">
 	<div class="container ">
-		<div class="row justify-content-center">
+		<div class="row justify-content-center mb-5">
 			<div class="col-md-12">
 				<h2 class="mb-5">Где отдыхать летом в Украине?</h2>
 				<!-- MAINCARDS PC VERSION -->
@@ -40,6 +40,15 @@
 				    <div class="swiper-button-next swiper-maincards-button-next"></div>
 		      	<div class="swiper-button-prev swiper-maincards-button-prev"></div>
 				  </div>	
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="button-more text-center">
+					<a href="<?php echo get_permalink( get_page_by_path( 'allcity' ) ); ?>">
+					<div class="btn">Все города</div>
+				</a>
 				</div>
 			</div>
 		</div>
