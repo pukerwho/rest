@@ -11010,10 +11010,11 @@ button.swiper-pagination-bullet {
     bottom: 0;
     width: 100%;
     background-color: #ffffff;
-    border-top: 1px solid #484848;
-    -webkit-box-shadow: 0px -2px 10px 0px #484848;
-    box-shadow: 0px -2px 10px 0px #484848;
-    z-index: 999; }
+    border-top: 1px solid #777777;
+    -webkit-box-shadow: 0px -2px 10px 0px #777777;
+    box-shadow: 0px -2px 10px 0px #777777;
+    z-index: 999;
+    padding: 1.2rem 0 0.5rem 0; }
     .mobile-link a {
       width: 100%;
       display: -webkit-box;
@@ -11032,8 +11033,7 @@ button.swiper-pagination-bullet {
       text-align: center;
       font-size: 1.5rem;
       color: #444444;
-      cursor: pointer;
-      padding: 1rem 0; }
+      cursor: pointer; }
 
   .hotel-item-light__img {
     height: 185px; } }
