@@ -59,13 +59,13 @@
 				<span>Коттеджи</span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-lux-has' )): ?>
-				<span>Люкс</span>
+				<span>Люксы</span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-halflux-has' )): ?>
-				<span>Полулюкс</span>
+				<span>Полулюксы</span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-standart-has' )): ?>
-				<span>Стандарт</span>
+				<span>Стандарты</span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
 				<span>Бюджетные</span>

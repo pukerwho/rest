@@ -15,65 +15,28 @@
 				</div>
 			</div>
 		</div>
-		<!-- PC VERSION -->
-		<div class="pc-show">
-			<div class="row mb-5">
-				<?php 
-					$custom_query = new WP_Query( array( 
-					'post_type' => 'hotels', 
-					'posts_per_page' => 4,
-					'orderby' => 'rand',
-    			'order'    => 'ASC',
-					'tax_query' => array(
-				    array(
-			        'taxonomy' => 'collections',
-			        'terms' => 'family',
-			        'field' => 'slug',
-			        'include_children' => true,
-			        'operator' => 'IN'
-				    )
-					),
-				) );
-				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-					<div class="col-md-3">
-						<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
-					</div>
-				<?php endwhile; endif; ?>
-			</div>
-		</div>
-		<!-- MOBILE VERSION -->
-		<div class="mobile-show">
-			<div class="row mb-5">
-				<div class="col-md-12">
-					<div class="swiper-container swiper-hotels">
-				    <div class="swiper-wrapper">
-				    	<?php 
-								$custom_query = new WP_Query( array( 
-								'post_type' => 'hotels', 
-								'posts_per_page' => 4,
-								'orderby' => 'rand',
-			    			'order'    => 'ASC',
-								'tax_query' => array(
-							    array(
-						        'taxonomy' => 'collections',
-						        'terms' => 'family',
-						        'field' => 'slug',
-						        'include_children' => true,
-						        'operator' => 'IN'
-							    )
-								),
-							) );
-							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-								<div class="swiper-slide">
-									<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
-			          </div>
-		          <?php endwhile; endif; ?>
-				    </div>
-				    <div class="swiper-button-next swiper-hotels-button-next"></div>
-		      	<div class="swiper-button-prev swiper-hotels-button-prev"></div>
-				  </div>
-			  </div>
-			</div>
+		<div class="row mobile-hotels-grid mb-5">
+			<?php 
+				$custom_query = new WP_Query( array( 
+				'post_type' => 'hotels', 
+				'posts_per_page' => 4,
+				'orderby' => 'rand',
+  			'order'    => 'ASC',
+				'tax_query' => array(
+			    array(
+		        'taxonomy' => 'collections',
+		        'terms' => 'family',
+		        'field' => 'slug',
+		        'include_children' => true,
+		        'operator' => 'IN'
+			    )
+				),
+			) );
+			if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+				<div class="col-md-3">
+					<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
+				</div>
+			<?php endwhile; endif; ?>
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12">
