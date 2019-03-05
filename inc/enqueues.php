@@ -32,7 +32,7 @@ function enqueueTheThemeScriptsAndStyles() {
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css' );
 
 	// Default js of your theme to add your own js scripts, add dependances if needed
-	wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js' , array( 'jquery' ), '1.0', true);
+	// wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js' , array( 'jquery' ), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueueTheThemeScriptsAndStyles');
 

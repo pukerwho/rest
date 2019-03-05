@@ -65,11 +65,11 @@ function theme_name_scripts() {
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'jquery-ui-core' );
     wp_enqueue_script( 'jquery-ui-touch-punch', get_template_directory_uri() . '/js/jquery-ui-touch-punch.min.js', '','',true);
-    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js','','',true);
     wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.min.js','','',true);
-    wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js');
+    wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js','','',true);
     wp_register_script( 'loadmore__catalog', get_stylesheet_directory_uri() . '/js/loadmore_catalog.js', array('jquery') );
-    wp_enqueue_script( 'myscripts', get_template_directory_uri() . '/js/scripts.js');
+    wp_enqueue_script( 'myscripts', get_template_directory_uri() . '/js/scripts.js', '','',true);
  
     wp_localize_script( 'loadmore__catalog', 'loadmore_params__catalog', array(
         'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
