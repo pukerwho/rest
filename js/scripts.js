@@ -7,14 +7,15 @@ $('.header__mobile__close').on('click', function(){
 	$('.header__mobile__cover').removeClass('header__mobile__cover__active');
 });
 
-$(window).scroll(function(){
-  var h_scroll = $(this).scrollTop();
-  if (h_scroll > 500) {
-    $('.mobile-link').fadeIn();
-  } else {
-    $('.mobile-link').fadeOut();
-  }
-})
+
+// $(window).scroll(function(){
+//   var h_scroll = $(this).scrollTop();
+//   if (h_scroll > 500) {
+//     $('.mobile-link').fadeIn();
+//   } else {
+//     $('.mobile-link').fadeOut();
+//   }
+// })
 
 //Открывает и закрывает Фильтр-коллекций
 $('.select_collections_class').on('click', function (e) {
@@ -212,7 +213,7 @@ $(".b_filter__range__price #slider-range").slider({
   range: true, 
   min: 0,
   max: 15000,
-  values: [50, 15000],
+  values: [0, 15000],
   step: 50,
   slide: function( event, ui ) {
     $( "#min-price").html(ui.values[ 0 ]);

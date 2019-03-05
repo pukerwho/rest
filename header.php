@@ -38,9 +38,9 @@
             </div>
           </a>
         </div>
-        <div class="header__mobile__menu mobile-show">
+        <!-- <div class="header__mobile__menu mobile-show">
           <div class="btn bg-pastel-blue">Меню</div>
-        </div>
+        </div> -->
         <div class="header__mobile__cover mobile-show">
           <div class="header__mobile__logo">
             <a href="<?php echo home_url(); ?>" class="header__logo">
