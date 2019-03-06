@@ -19,20 +19,22 @@
 					<?php endforeach; ?>
 				</div>
 				<!-- MAINCARDS MOBILE VERSION -->
-				<div class="allcity">
-					<div class="maincards__grid mobile-show">
-						<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 6 ) );
-						foreach ( $citylists as $citylist ): ?>
-						<div class="maincards__item">
-							<a href="<?php echo get_term_link($citylist); ?>">
-								<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
-									<div class="maincards__item__card__title">
-										<?php echo $citylist->name ?>
+				<div class="mobile-show">
+					<div class="allcity">
+						<div class="maincards__grid">
+							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 6 ) );
+							foreach ( $citylists as $citylist ): ?>
+							<div class="maincards__item">
+								<a href="<?php echo get_term_link($citylist); ?>">
+									<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
+										<div class="maincards__item__card__title">
+											<?php echo $citylist->name ?>
+										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
+							<?php endforeach; ?>
 						</div>
-						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
