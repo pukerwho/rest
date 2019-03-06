@@ -6,7 +6,7 @@ Template Name: Все города
 
 <?php get_header(); ?>
 
-<div class="maincards">
+<div class="allcity maincards">
 	<div class="container ">
 		<div class="row mb-5">
 			<div class="col-md-12">
