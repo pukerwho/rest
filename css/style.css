@@ -11077,6 +11077,9 @@ button.swiper-pagination-bullet {
     grid-column-gap: 4px; }
   .allcity .maincards__item__card {
     padding-bottom: 25rem; }
+    .allcity .maincards__item__card__title {
+      font-size: 2rem;
+      padding: 5rem 0 1.5rem 0; }
 
   /* FOOTER */
   .mobile-link {
