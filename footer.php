@@ -19,6 +19,8 @@
             } 
         ?> -->
     </div>
+
+    <?php if( !is_page_template( 'tpl_faq.php' )): ?>
     <footer id="footer">
     	<div class="container py-5">
     		<div class="row align-items-center mb-5">
@@ -38,6 +40,7 @@
     		</div>
     	</div>
     </footer>
+    <?php endif ?>
     <?php wp_footer(); ?>
 </body>
 </html>
