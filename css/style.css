@@ -9158,6 +9158,9 @@ a:hover {
 .mobile-link {
   display: none; }
 
+footer a {
+  color: #343a40; }
+
 .welcome {
   max-width: 128rem;
   position: relative;
@@ -11071,6 +11074,9 @@ button.swiper-pagination-bullet {
     .include-grid h4 {
       font-size: 1.2rem; }
 
+  .allcity .mobile-show {
+    display: -ms-grid;
+    display: grid; }
   .allcity .maincards__grid {
     -ms-grid-columns: 1fr [2];
     grid-template-columns: repeat(2, 1fr);
@@ -11117,6 +11123,9 @@ button.swiper-pagination-bullet {
       cursor: pointer; }
 
   .hotel-item-light__img {
-    height: 185px; } }
+    height: 185px; }
+
+  footer {
+    margin-bottom: 3.5rem; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,27 +19,21 @@
 					<?php endforeach; ?>
 				</div>
 				<!-- MAINCARDS MOBILE VERSION -->
-				<div class="mobile-show">
-					<div class="swiper-container swiper-maincards">
-				    <div class="swiper-wrapper">
-				    	<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0 ) );
-				    	foreach ( $citylists as $citylist ): ?>
-								<div class="swiper-slide">
-			          	<div class="maincards__item">
-										<a href="<?php echo get_term_link($citylist); ?>">
-											<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
-												<div class="maincards__item__card__title">
-													<?php echo $citylist->name ?>
-												</div>
-											</div>
-										</a>
+				<div class="allcity">
+					<div class="maincards__grid mobile-show">
+						<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 6 ) );
+						foreach ( $citylists as $citylist ): ?>
+						<div class="maincards__item">
+							<a href="<?php echo get_term_link($citylist); ?>">
+								<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
+									<div class="maincards__item__card__title">
+										<?php echo $citylist->name ?>
 									</div>
-			          </div>
-		          <?php endforeach; ?>
-				    </div>
-				    <div class="swiper-button-next swiper-maincards-button-next"></div>
-		      	<div class="swiper-button-prev swiper-maincards-button-prev"></div>
-				  </div>	
+								</div>
+							</a>
+						</div>
+						<?php endforeach; ?>
+					</div>
 				</div>
 			</div>
 		</div>
