@@ -9320,18 +9320,23 @@ a:hover {
 .maincards {
   padding: 6rem 0; }
   .maincards__grid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr [5];
     grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: auto;
     grid-template-rows: auto;
     grid-column-gap: 30px;
     grid-row-gap: 4px; }
   .maincards__item {
+    -webkit-border-radius: .8rem;
     border-radius: .8rem; }
     .maincards__item a {
       color: #ffffff; }
     .maincards__item__card {
       position: relative;
       padding-bottom: 30rem;
+      -webkit-background-size: cover !important;
       background-size: cover !important;
       background-position: 50% !important; }
       .maincards__item__card__title {
@@ -9341,8 +9346,14 @@ a:hover {
         right: 0px;
         font-size: 2.4rem;
         text-align: center;
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 10, 10, 0.75)), to(rgba(10, 10, 10, 0)));
+        background: -webkit-linear-gradient(bottom, rgba(10, 10, 10, 0.75) 0%, rgba(10, 10, 10, 0) 100%);
+        background: -o-linear-gradient(bottom, rgba(10, 10, 10, 0.75) 0%, rgba(10, 10, 10, 0) 100%);
         background: linear-gradient(to top, rgba(10, 10, 10, 0.75) 0%, rgba(10, 10, 10, 0) 100%);
         padding: 3rem 1.75rem 1.5rem; }
+
+.allcity .maincards__grid {
+  grid-column-gap: 4px; }
 
 .nowwatch {
   min-height: 400px;
@@ -11059,6 +11070,13 @@ button.swiper-pagination-bullet {
       margin-right: 0 !important; }
     .include-grid h4 {
       font-size: 1.2rem; }
+
+  .allcity .maincards__grid {
+    -ms-grid-columns: 1fr [2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4px; }
+  .allcity .maincards__item__card {
+    padding-bottom: 25rem; }
 
   /* FOOTER */
   .mobile-link {
