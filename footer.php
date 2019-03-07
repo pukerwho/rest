@@ -29,9 +29,14 @@
                         <img src="<?php bloginfo('template_url') ?>/img/faq.svg" alt="" width="35px" class="mr-3">
                         <h2>Есть вопросы?</h2>
                     </div>
-                    <div class="display-4 mb-5 pb-2">
+                    <div class="display-4 mb-4 pb-2">
                         <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>"><div class="btn bg-pastel-blue">Задавай!</div></a>    
                     </div>
+                    <?php if( !is_page_template( 'tpl_partner.php' )): ?>
+                        <div class="b_partner mb-5">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'partner' ) ); ?>">Партнерство</a>
+                        </div>
+                    <?php endif ?>
                     
                     <div class="lead copyright">
                         2019 &copy; Vidpochivai.com.ua
