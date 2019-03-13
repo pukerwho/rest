@@ -9931,6 +9931,39 @@ footer a {
   padding: 3rem; }
   .p_partner__rules .p_partner__text {
     color: #82817d; }
+.p_partner__other {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .p_partner__other-graph {
+    height: 150px;
+    width: 100%;
+    background-color: #f6e2e6; }
+.p_partner__we-graph {
+  height: 400px;
+  background-color: #d5f1d4; }
+.p_partner__thinkabout {
+  position: absolute;
+  top: 65px;
+  right: 55px;
+  -webkit-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg); }
+  .p_partner__thinkabout img {
+    width: 110px; }
+.p_partner .adv img {
+  width: 100%; }
 
 html.lb-disable-scrolling {
   overflow: hidden;

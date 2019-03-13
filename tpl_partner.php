@@ -100,6 +100,56 @@ Template Name: Партнерство
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
+				<img src="<?php bloginfo('template_url') ?>/img/graph.svg" width="45px" alt="">
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-md-12 text-center">
+				<h2>Большая посещаемость</h2>
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-md-12 text-center">
+				<div class="p_partner__text">Разместив свое объявление у нас - вы снимаете вопросы: "будут ли звонки? будут ли бронировать? не будет ли у меня пустых номеров?". Мы уверены в этом. Почему? Потому что знаем, сколько людей посещает наш сайт. Да, возможно, не все из вас его нашли в поиске - мы все еще достаточно молоды и активно боремся со "старичками" в поиске. Уверены, скоро и мы будет в ТОПе. Но не поиском единым - мы активно развиваем свои соцсети, делаем регулярную email-рассылку. Плюс у нас всегда запущена реклама: в Facebook, Instagram, Google. Поэтому, мы можем гарантировать результат! </div>
+			</div>
+		</div>
+		<div class="row adv mb-5">
+			<div class="col-md-6 mb-5">
+				<img src="<?php bloginfo('template_url') ?>/img/facebook-ad-1.jpeg" alt="">
+				<img src="<?php bloginfo('template_url') ?>/img/facebook-ad.jpeg" alt="">
+			</div>
+			<div class="col-md-6 mb-5">
+				<img src="<?php bloginfo('template_url') ?>/img/insta-ad.jpg" alt="">
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-md-12 text-center">
+				<h2>Наглядно показываем</h2>
+			</div>
+		</div>
+		<div class="row mobile-hotels-grid mb-5">
+			<div class="col-md-6 p-relative mb-5">
+				<div class="p_partner__other">
+					<div class="p_partner__other-graph mb-4"></div>
+					<div class="p_partner__text text-center">
+						Кол-во просмотров вашего объявления на другом сайте
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 p-relative mb-5">
+				<div class="p_partner__thinkabout">
+					<img src="<?php bloginfo('template_url') ?>/img/thinkabout.png" alt="">
+				</div>
+				<div class="p_partner__we">
+					<div class="p_partner__we-graph mb-4"></div>
+					<div class="p_partner__text text-center">
+						Кол-во просмотров вашего объявления на нашем сайте
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-md-12 text-center">
 				<h2>Тарифы</h2>
 			</div>
 		</div>
