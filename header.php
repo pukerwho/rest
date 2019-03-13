@@ -99,7 +99,7 @@
           </div> -->
           <a href="<?php echo get_permalink( get_page_by_path( 'catalog' ) ); ?>" class="text-dark mr-5"><div class="btn bg-pastel-green">Каталог</div></a>
           <div class="search-button text-dark"><div class="btn bg-pastel-red mr-5">Поиск</div></div>
-          <a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="text-dark"><div class="btn bg-pastel-blue">Добавить</div></a>
+          <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>" class="text-dark"><div class="btn bg-pastel-blue">Добавить</div></a>
         </div>
       </div>
     </div>

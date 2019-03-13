@@ -124,7 +124,7 @@ Template Name: Партнерство
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
-				<h2>Наглядно показываем</h2>
+				<h2>Давайте сравним</h2>
 			</div>
 		</div>
 		<div class="row mobile-hotels-grid mb-5">
@@ -368,11 +368,16 @@ Template Name: Партнерство
 		</div>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="text-dark">
+				<h2 class="mb-3">Узнать подробности</h2>
+				<div class="p_partner__text">
+					099-77-13-997
+					<br>098-35-00-394
+				</div>
+				<!-- <a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="text-dark">
 					<div class="btn bg-pastel-green">
 						Добавить
 					</div>
-				</a>
+				</a> -->
 			</div>
 		</div>
 	</div>

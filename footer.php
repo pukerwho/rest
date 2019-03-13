@@ -9,9 +9,9 @@
             <img src="<?php bloginfo('template_url') ?>/img/loupe.svg" width="25px" alt="" class="mb-2">
             <span>Поиск</span>
         </a>
-        <a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="mobile-link__item">
-            <img src="<?php bloginfo('template_url') ?>/img/plus.svg" width="25px" alt="" class="mb-2">
-            <span>Добавить</span>
+        <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>" class="mobile-link__item">
+            <img src="<?php bloginfo('template_url') ?>/img/faq.svg" width="25px" alt="" class="mb-2">
+            <span>Вопросы</span>
         </a>
         <!-- <?php 
             if( !is_page_template( 'tpl_catalog.php' ) ){

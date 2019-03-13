@@ -1,3 +1,14 @@
+if ($(document).width() > 760) {
+  $(window).scroll(function(){
+    var h_scroll = $(this).scrollTop();
+    if (h_scroll > 100) {
+      $('header').addClass('header__fixed')
+    } else {
+      $('header').removeClass('header__fixed')
+    }
+  })
+}
+
 //Mobile Menu
 $('.header__mobile__menu').on('click', function(){
 	$('.header__mobile__cover').addClass('header__mobile__cover__active');
@@ -6,6 +17,7 @@ $('.header__mobile__menu').on('click', function(){
 $('.header__mobile__close').on('click', function(){
 	$('.header__mobile__cover').removeClass('header__mobile__cover__active');
 });
+
 
 
 // $(window).scroll(function(){
