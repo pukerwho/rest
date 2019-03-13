@@ -267,7 +267,7 @@ Template Name: Партнерство
 							02
 						</span>
 						<span>
-							Подготовить информацию о вашем жилье и <a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank">заполнить форму</a>
+							Подготовить информацию о вашем жилье и заполнить форму.
 						</span>
 					</div>
 				</div>
