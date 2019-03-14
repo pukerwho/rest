@@ -5,7 +5,7 @@ Template Name: Партнерство
 ?>
 
 <?php get_header(); ?>
-
+<meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
 <div class="p_partner">
 	<div class="container py-5">
 		<div class="row mb-5">
