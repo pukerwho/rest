@@ -5,7 +5,6 @@ Template Name: Партнерство
 ?>
 
 <?php get_header(); ?>
-<meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
 <div class="p_partner">
 	<div class="container py-5">
 		<div class="row mb-5">
@@ -64,7 +63,7 @@ Template Name: Партнерство
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Мы активно рекламируем Вас социальных сетях</div>
+						<div>Мы активно рекламируем Вас в социальных сетях</div>
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
