@@ -399,7 +399,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'std'  => 0,
       ),
       array(
-        'name'  => 'Безналичный рассчет',
+        'name'  => 'Безналичный расчет',
         'id' => $prefix . 'hotel-mastercard',
         'type' => 'checkbox',
         'std'  => 0,

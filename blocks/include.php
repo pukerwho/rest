@@ -107,7 +107,7 @@
 	<?php if(rwmb_meta( 'meta-hotel-mastercard' )): ?>
 	<div class="d-flex align-items-center mb-4">
 		<img src="<?php bloginfo('template_url'); ?>/img/credit-card.svg" alt="" width="45px" class="mr-3">
-		<h4>Безналичный рассчет</h4>
+		<h4>Безналичный расчет</h4>
 	</div>
 	<?php endif ?>
 	<!-- end mastercard -->

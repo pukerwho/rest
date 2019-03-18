@@ -1,3 +1,17 @@
+$(function() {
+  $( ".allcity .maincards__item__card__title" ).each(function() {
+    var $quote = $(this);
+    var $numWords = $quote.text().length;
+    console.log($quote.text().length);
+    if (($numWords >= 18) && ($numWords < 28)) {
+      $quote.css("font-size", "2.4rem");
+    }
+    else if ($numWords >= 28) {
+      $quote.css("font-size", "1.85rem");
+    }
+  });
+});
+
 if ($(document).width() > 760) {
   $(window).scroll(function(){
     var h_scroll = $(this).scrollTop();
