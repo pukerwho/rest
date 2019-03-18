@@ -197,6 +197,19 @@
 			  	</div>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
+		<div class="row mb-5">
+			<div class="col-md-12">
+				<div class="button-more text-center">
+					<?php 
+						$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
+						foreach ($current_term as $myterm): ?>
+						<a href="<?php echo get_term_link($myterm) ?>">
+							<div class="btn">Все предложения</div>	
+						</a>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 

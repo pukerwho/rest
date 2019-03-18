@@ -4,7 +4,8 @@ jQuery(function($){
         data = {
       'action': 'loadmore__catalog',
       'query': loadmore_params__catalog.posts, // that's how we get params from wp_localize_script() function
-      'page' : loadmore_params__catalog.current_page
+      'page' : loadmore_params__catalog.current_page,
+      // 'citylistfilter': 19
     };
  
     $.ajax({

@@ -17,7 +17,7 @@ Template Name: Каталог
 	<div class="container">
 		<div class="row mobile-hotels-grid" id="response">
 			<?php 
-			  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 24) );
+			  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 2) );
 			  if ($custom_query_catalog->have_posts()) : while ($custom_query_catalog->have_posts()) : $custom_query_catalog->the_post(); ?>
 					<div class="col-md-3">
 						<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>

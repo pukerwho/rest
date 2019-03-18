@@ -10001,6 +10001,11 @@ footer a {
 .p_partner .adv img {
   width: 100%; }
 
+.allcity h1 {
+  color: #484848;
+  font-size: 4rem;
+  font-weight: 900; }
+
 html.lb-disable-scrolling {
   overflow: hidden;
   /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */

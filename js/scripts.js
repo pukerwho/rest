@@ -2,7 +2,6 @@ $(function() {
   $( ".allcity .maincards__item__card__title" ).each(function() {
     var $quote = $(this);
     var $numWords = $quote.text().length;
-    console.log($quote.text().length);
     if (($numWords >= 18) && ($numWords < 28)) {
       $quote.css("font-size", "2.4rem");
     }
@@ -201,7 +200,6 @@ var hotelItemSwiper = function() {
   $('.hotel-item-swiper').each(function(){
     swiper_next = $(this).find('.swiper-hotelcard-button-next');
     swiper_next_id = swiper_next.attr("data-swiper");
-    console.log(swiper_next_id);
     var mySwiperHotelCard = new Swiper($(this), {
       slidesPerView: 1,
       spaceBetween: 0,

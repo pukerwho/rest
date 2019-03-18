@@ -10,7 +10,10 @@ Template Name: Все города
 	<div class="container ">
 		<div class="row mb-5">
 			<div class="col-md-12">
-				<h1>Отдых в Украине. Куда поехать?</h1>
+				<div class="d-flex flex-column align-items-center">
+					<img src="<?php bloginfo('template_url') ?>/img/allcity.svg" width="80px" class="mb-5" alt="">
+					<h1 class="text-uppercase text-center">Отдых в Украине.<br>Куда поехать?</h1>
+				</div>
 			</div>
 		</div>
 		<div class="row justify-content-center">
