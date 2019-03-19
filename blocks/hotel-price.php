@@ -31,8 +31,8 @@
 <?php endif ?>
 
 <!-- Максимальная цена -->
-<?php if(rwmb_meta( 'meta-hotel-budget-minprice_nesezon' )): ?>
-	<?php $budget_max_sezon = rwmb_meta( 'meta-hotel-budget-minprice_nesezon' ) ?>
+<?php if(rwmb_meta( 'meta-hotel-budget-maxprice_sezon' )): ?>
+	<?php $budget_max_sezon = rwmb_meta( 'meta-hotel-budget-maxprice_sezon' ) ?>
 <? else: ?>
 		<?php $budget_max_sezon = 1 ?>
 <?php endif ?>
