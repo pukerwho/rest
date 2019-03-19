@@ -96,7 +96,7 @@ function loadmore_ajax_handler_catalog(){
   $args['post_type'] = 'hotels';
   
   query_posts( $args );
-  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 2, 'paged' => $args['paged'] ) );
+  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 24, 'paged' => $args['paged'] ) );
   if ($custom_query_catalog->have_posts()) : while ($custom_query_catalog->have_posts()) : $custom_query_catalog->the_post();
     echo '<div class="col-md-3">';
     get_template_part( 'blocks/hotel-card', 'default' );
@@ -1445,7 +1445,7 @@ function myplugin_ajaxurl() {
 function catalog_hotels_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels',
-    'posts_per_page' => 2,
+    'posts_per_page' => 24,
     'meta_query' => array(
       'relation' => 'OR',
       array(
