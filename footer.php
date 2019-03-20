@@ -46,16 +46,18 @@
     		</div>
     	</div>
     </footer>
-    <div class="modal-callback">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="m_callback__box">
-                        <div class="m_callback__title mb-4">
-                            Мы вам перезвоним
-                        </div>
-                        <div class="m_callback__form">
-                            <?php echo do_shortcode('[contact-form-7 id="2225" title="Callback"]') ?>
+    <div class="mobile-show">
+        <div class="modal-callback">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="m_callback__box">
+                            <div class="m_callback__title mb-4">
+                                Мы вам перезвоним
+                            </div>
+                            <div class="m_callback__form">
+                                <?php echo do_shortcode('[contact-form-7 id="2225" title="Callback"]') ?>
+                            </div>
                         </div>
                     </div>
                 </div>
