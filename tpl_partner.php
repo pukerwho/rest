@@ -380,6 +380,37 @@ Template Name: Партнерство
 			</div>
 		</div>
 	</div>
+	<?php if( is_page_template( 'tpl_partner.php' )): ?>
+	<div class="pc-show">
+	  <div class="callback">
+	    <div class="container">
+				<div class="row">
+				  <div class="col-md-12">
+				  	<div class="callback__inner d-flex align-items-center justify-content-center">
+				  		<div class="callback__content d-flex align-items-center mr-5">
+					  		<div class="callback__icon mr-4">
+					      	<img src="<?php bloginfo('template_url') ?>/img/callback.svg" width="35px" alt="">
+					      </div>
+					      <div class="callback__text">
+					      	Мы вам перезвоним!
+					      </div>	
+				  		</div>
+				      <div class="callback__form">
+				      	<?php echo do_shortcode('[contact-form-7 id="2225" title="Callback"]') ?>
+				      </div>
+				  	</div>
+				  </div>
+				</div>
+	    </div>
+	  </div>  
+	</div>
+	<div class="mobile-show">
+		<div class="callback modal-callback-btn">
+			<img src="<?php bloginfo('template_url') ?>/img/callback.svg" width="35px" alt="" class="modal-callback-icon-phone">
+			<img src="<?php bloginfo('template_url') ?>/img/modal-close.svg" width="35px" alt="" class="modal-callback-icon-close">
+		</div>
+	</div>
+	<?php endif ?>
 </div>
 
 <?php get_footer(); ?>
