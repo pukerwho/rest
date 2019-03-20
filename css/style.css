@@ -9081,6 +9081,53 @@ a:hover {
     -webkit-background-size: 60% 60%;
     background-size: 60%; }
 
+.modal-body p {
+  margin: 0; }
+.modal-body input {
+  width: 100%;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+  outline: none; }
+.modal-body [type="submit"] {
+  min-width: 150px;
+  display: inline-block;
+  width: auto;
+  color: #343a40;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  -webkit-border-radius: 0.6rem;
+  border-radius: 0.6rem;
+  background-color: #cdf5d4;
+  -webkit-box-shadow: 0px 3px 4px 1px #9ef6ad;
+  box-shadow: 0px 4px 3px 0px #9ef6ad;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out; }
+  .modal-body [type="submit"]:hover {
+    -webkit-box-shadow: 0px 1px 0.001px 0px #9ef6ad;
+    box-shadow: 0px 1px 0.001px 0px #9ef6ad; }
+.modal-body-standart [type="submit"] {
+  background-color: #ffe0e5;
+  -webkit-box-shadow: 0px 4px 3px 0px #d1bec2;
+  box-shadow: 0px 4px 3px 0px #d1bec2; }
+  .modal-body-standart [type="submit"]:hover {
+    -webkit-box-shadow: 0px 1px 0.001px 0px #d1bec2;
+    box-shadow: 0px 1px 0.001px 0px #d1bec2; }
+.modal-body-premium [type="submit"] {
+  background-color: #bec5e7;
+  -webkit-box-shadow: 0px 4px 3px 0px #99a5e3;
+  box-shadow: 0px 4px 3px 0px #99a5e3; }
+  .modal-body-premium [type="submit"]:hover {
+    -webkit-box-shadow: 0px 1px 0.001px 0px #99a5e3;
+    box-shadow: 0px 1px 0.001px 0px #99a5e3; }
+
 .header {
   position: absolute;
   width: 100%;

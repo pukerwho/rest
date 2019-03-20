@@ -172,7 +172,7 @@ Template Name: Партнерство
 						<li class="mb-3">До 15 фотографий</li>
 						<li class="mb-3">500-1000 просмотров за месяц</li>
 					</div>
-					<a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="text-dark">
+					<a href="#" data-toggle="modal" data-target="#budgetModal" class="text-dark">
 						<div class="btn bg-pastel-green">
 							Выбрать
 						</div>
@@ -199,7 +199,7 @@ Template Name: Партнерство
 						<li class="mb-3">Техническая поддержка</li>
 						<li class="mb-3">2500-5000 просмотров за месяц</li>
 					</div>
-					<a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="text-dark">
+					<a href="#" data-toggle="modal" data-target="#standartModal" class="text-dark">
 						<div class="btn bg-pastel-red">
 							Выбрать
 						</div>
@@ -229,7 +229,7 @@ Template Name: Партнерство
 						<li class="mb-3">Упоминание в e-mail рассылке</li>
 						<li class="mb-3">7000-10000 просмотров за месяц</li>
 					</div>
-					<a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="text-dark">
+					<a href="#" data-toggle="modal" data-target="#premiumModal" class="text-dark">
 						<div class="btn bg-pastel-blue">
 							Выбрать
 						</div>
@@ -411,6 +411,63 @@ Template Name: Партнерство
 		</div>
 	</div>
 	<?php endif ?>
+</div>
+
+<!-- Modal Бюджет тариф -->
+<div class="modal fade" id="budgetModal" tabindex="-1" role="dialog" aria-labelledby="budgetModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Тариф Базовый</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="modal-body-budget">
+	      	<?php echo do_shortcode('[contact-form-7 id="2226" title="Тариф Базовый"]') ?>	
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Стандартный тариф -->
+<div class="modal fade" id="standartModal" tabindex="-1" role="dialog" aria-labelledby="standartModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Тариф Стандартный</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="modal-body-standart">
+	      	<?php echo do_shortcode('[contact-form-7 id="2227" title="Тариф Стандарт"]') ?>	
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Премиум тариф -->
+<div class="modal fade" id="premiumModal" tabindex="-1" role="dialog" aria-labelledby="premiumModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Тариф Премиум</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="modal-body-premium">
+	      	<?php echo do_shortcode('[contact-form-7 id="2228" title="Тариф Премиум"]') ?>	
+      	</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php get_footer(); ?>
