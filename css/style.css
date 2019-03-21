@@ -9744,6 +9744,8 @@ footer a {
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase; }
+.single-hotel-mobile-info {
+  display: none; }
 .single-hotel .cover img {
   width: 100%;
   height: 500px;
@@ -11299,6 +11301,18 @@ button.swiper-pagination-bullet {
   .hotel-photo, .hotel-photos {
     -ms-grid-columns: 1fr [2] !important;
     grid-template-columns: repeat(2, 1fr) !important; }
+
+  .single-hotel-cover-grid {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    grid-gap: 0; }
+  .single-hotel-cover-item:first-child {
+    display: none; }
+  .single-hotel-mobile-info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
 
   /* FILTER HOTEL */
   .b_filter__item {

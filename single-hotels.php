@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	<div class="container my-5">
-		<!-- <div class="row pb-5">
+		<div class="row single-hotel-mobile-info pb-5">
 			<div class="col-md-12">
 				<div class="title">
 					<?php the_title(); ?>
@@ -53,7 +53,7 @@
 					<?php echo rwmb_meta( 'meta-hotel-address' ); ?>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="tabs">
