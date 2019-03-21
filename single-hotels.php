@@ -86,7 +86,7 @@
 					  	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						  	<div class="hotel-main">
 						  		<div class="row">
-						  			<div class="col-md-3">
+						  			<div class="col-md-3 single-hotel-include">
 						  				<!-- <h3 class="mb-5">Рейтинги</h3>
 						  				<div class="mb-5">
 						  					<h4>Общий:</h4>

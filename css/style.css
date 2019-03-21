@@ -11313,6 +11313,8 @@ button.swiper-pagination-bullet {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+  .single-hotel-include {
+    margin-bottom: 3rem; }
 
   /* FILTER HOTEL */
   .b_filter__item {
