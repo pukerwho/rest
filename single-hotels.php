@@ -1,34 +1,50 @@
 <?php get_header(); ?>
 
-<?php if ( $post->post_parent ) { ?>
+<!-- <?php if ( $post->post_parent ) { ?>
  <a href="<?php echo get_permalink( $post->post_parent ); ?>" >
     <?php echo get_the_title( $post->post_parent ); ?>
  </a>
-<?php } ?>
+<?php } ?> -->
 
 <div class="single-hotel">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="cover p-relative">
-					<!-- <div class="cover-icon">
-						<?php if(rwmb_meta( 'meta-hotel-mainrating' ) > 75): ?>
-							<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="">
-						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 50): ?>
-							<img src="<?php bloginfo('template_url'); ?>/img/sun-cloud.svg" alt="">
-						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 25): ?>
-							<img src="<?php bloginfo('template_url'); ?>/img/cloud.svg" alt="">
-						<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) < 25): ?>
-							<img src="<?php bloginfo('template_url'); ?>/img/rain.svg" alt="">
-						<?php endif ?>
-					</div> -->
-					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">	
+				<div class="single-hotel-cover-grid">
+					<div class="single-hotel-cover-item">
+						<div class="single-hotel-cover-subtitle mb-5">
+							Відпочивай тут
+						</div>
+						<div class="address mb-4">
+							<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
+							<?php echo rwmb_meta( 'meta-hotel-address' ); ?>
+						</div>
+						<div class="title">
+							<?php the_title(); ?>
+						</div>
+					</div>
+					<div class="single-hotel-cover-item">
+						<div class="cover p-relative">
+							<!-- <div class="cover-icon">
+								<?php if(rwmb_meta( 'meta-hotel-mainrating' ) > 75): ?>
+									<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="">
+								<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 50): ?>
+									<img src="<?php bloginfo('template_url'); ?>/img/sun-cloud.svg" alt="">
+								<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) > 25): ?>
+									<img src="<?php bloginfo('template_url'); ?>/img/cloud.svg" alt="">
+								<? elseif (rwmb_meta( 'meta-hotel-mainrating' ) < 25): ?>
+									<img src="<?php bloginfo('template_url'); ?>/img/rain.svg" alt="">
+								<?php endif ?>
+							</div> -->
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">	
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="container my-5">
-		<div class="row pb-5">
+		<!-- <div class="row pb-5">
 			<div class="col-md-12">
 				<div class="title">
 					<?php the_title(); ?>
@@ -37,7 +53,7 @@
 					<?php echo rwmb_meta( 'meta-hotel-address' ); ?>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="row">
 			<div class="col-md-12">
 				<div class="tabs">
