@@ -24,8 +24,8 @@
 		'post_type' => 'hotels', 
 		'posts_per_page' => 24,
 		'paged' => $current,
-		'orderby' => 'rand',
-		'order'    => 'ASC',
+		'orderby'        => 'meta_value',
+    'meta_key'       => 'meta-hotel-mainrating',
 		'tax_query' => array(
 	    array(
         'taxonomy' => 'citylist',

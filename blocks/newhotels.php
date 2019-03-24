@@ -19,7 +19,7 @@
 			<?php 
 		  $custom_query = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 4 ) );
 		  if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-				<div class="col-md-3">
+				<div class="col-md-12 col-lg-3">
 					<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
 				</div>
 			<?php endwhile; endif; ?>
