@@ -228,17 +228,19 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'name'  => 'Рейтинг (Главный)',
         'id' => $prefix . 'hotel-mainrating',
         'type' => 'number',
-        
+        'std'  => 1,
       ),
       array(
         'name'  => 'Минимальная стоимость',
         'id' => $prefix . 'hotel-minprice',
         'type' => 'number',
+        'std'  => 1,
       ),
       array(
         'name'  => 'Максимальная стоимость',
         'id' => $prefix . 'hotel-maxprice',
         'type' => 'number',
+        'std'  => 2,
       ),
       array(
         'name'  => 'Открыть отзывы?',
