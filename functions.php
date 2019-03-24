@@ -96,7 +96,7 @@ function loadmore_ajax_handler_catalog(){
   $args['post_type'] = 'hotels';
   
   query_posts( $args );
-  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 24, 'paged' => $args['paged'], 'orderby' => 'meta_value', 'meta_key' => 'meta-hotel-mainrating' ) );
+  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 24, 'paged' => $args['paged'] ) );
   if ($custom_query_catalog->have_posts()) : while ($custom_query_catalog->have_posts()) : $custom_query_catalog->the_post();
     echo '<div class="col-md-3">';
     get_template_part( 'blocks/hotel-card', 'default' );
@@ -1446,8 +1446,6 @@ function catalog_hotels_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels',
     'posts_per_page' => 24,
-    'orderby'        => 'meta_value',
-    'meta_key'       => 'meta-hotel-mainrating',
     'meta_query' => array(
       'relation' => 'OR',
       array(
@@ -1525,8 +1523,6 @@ add_action('wp_ajax_nopriv_my_catalog_filter', 'catalog_hotels_filter_function')
 function city_hotels_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels',
-    'orderby'        => 'meta_value',
-    'meta_key'       => 'meta-hotel-mainrating',
     'meta_query' => array(
       'relation' => 'OR',
       array(
