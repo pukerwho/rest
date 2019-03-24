@@ -14,6 +14,9 @@
 					<div class="single-hotel-cover-item">
 						<div class="single-hotel-cover-subtitle mb-5">
 							Відпочивай тут
+							<div class="lead">
+								<?php echo rwmb_meta( 'meta-hotel-mainrating' ) ?>
+							</div>
 						</div>
 						<div class="address mb-4">
 							<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">

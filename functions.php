@@ -96,7 +96,7 @@ function loadmore_ajax_handler_catalog(){
   $args['post_type'] = 'hotels';
   
   query_posts( $args );
-  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 24, 'paged' => $args['paged'] ) );
+  $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 24, 'paged' => $args['paged'], 'orderby' => 'meta_value', 'meta_key' => 'meta-hotel-mainrating' ) );
   if ($custom_query_catalog->have_posts()) : while ($custom_query_catalog->have_posts()) : $custom_query_catalog->the_post();
     echo '<div class="col-md-3">';
     get_template_part( 'blocks/hotel-card', 'default' );
@@ -228,6 +228,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'name'  => 'Рейтинг (Главный)',
         'id' => $prefix . 'hotel-mainrating',
         'type' => 'number',
+        
       ),
       array(
         'name'  => 'Минимальная стоимость',
@@ -1446,6 +1447,8 @@ function catalog_hotels_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels',
     'posts_per_page' => 24,
+    'orderby'        => 'meta_value',
+    'meta_key'       => 'meta-hotel-mainrating',
     'meta_query' => array(
       'relation' => 'OR',
       array(
@@ -1523,6 +1526,8 @@ add_action('wp_ajax_nopriv_my_catalog_filter', 'catalog_hotels_filter_function')
 function city_hotels_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels',
+    'orderby'        => 'meta_value',
+    'meta_key'       => 'meta-hotel-mainrating',
     'meta_query' => array(
       'relation' => 'OR',
       array(
@@ -1604,3 +1609,12 @@ function city_hotels_filter_function(){
  
 add_action('wp_ajax_my_city_filter', 'city_hotels_filter_function'); 
 add_action('wp_ajax_nopriv_my_city_filter', 'city_hotels_filter_function');
+
+// function change_rating_function(){
+//   $metas = get_post_meta( $post->ID );
+//   if( !isset($metas['meta-hotel-mainrating']) ){
+//     echo 'vot';
+//     update_post_meta($post->ID, 'meta-hotel-mainrating', 2);
+//   } 
+//   die;
+// }
