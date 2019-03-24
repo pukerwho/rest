@@ -53,6 +53,7 @@ $(document).on('click', '.modal-callback-btn', function(){
 // })
 
 //Открывает и закрывает Фильтр-коллекций
+if ($('.select_collections_class').length > 0) {
 $('.select_collections_class').on('click', function (e) {
   find_collections_select = $(this).find('.select');
   find_collections_select.toggleClass('b_filter__item__open');
@@ -60,6 +61,7 @@ $('.select_collections_class').on('click', function (e) {
   collections_checkboxes.toggle();
   e.stopPropagation();
 });
+}
 
 $('.collections_filter_class').click(function(e) { 
   e.stopPropagation();

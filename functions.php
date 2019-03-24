@@ -1510,7 +1510,7 @@ function catalog_hotels_filter_function(){
 
   $custom_query_afisha = new WP_Query( $filterargs );
   if ($custom_query_afisha->have_posts()) : while ($custom_query_afisha->have_posts()) : $custom_query_afisha->the_post();
-    echo '<div class="col-md-3">';
+    echo '<div class="col-md-12 col-lg-3">';
     get_template_part( 'blocks/hotel-card', 'default' );
     echo '</div>';
   endwhile; 
@@ -1526,6 +1526,7 @@ add_action('wp_ajax_nopriv_my_catalog_filter', 'catalog_hotels_filter_function')
 function city_hotels_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels',
+    'posts_per_page' => 24,
     'orderby'        => 'meta_value',
     'meta_key'       => 'meta-hotel-mainrating',
     'meta_query' => array(
@@ -1599,7 +1600,7 @@ function city_hotels_filter_function(){
 
   $custom_query_afisha = new WP_Query( $filterargs );
   if ($custom_query_afisha->have_posts()) : while ($custom_query_afisha->have_posts()) : $custom_query_afisha->the_post();
-    echo '<div class="col-md-3">';
+    echo '<div class="col-md-12 col-lg-3">';
     get_template_part( 'blocks/hotel-card', 'default' );
     echo '</div>';
   endwhile; 
