@@ -48,6 +48,14 @@
 
                         <?php endif ?>
                     </div>
+                    <div>
+                        <a href="/citylist/zatoka/">Отдых в Затоке</a>,
+                        <a href="/citylist/berdynsk/">Отдых в Бердянске</a>,
+                        <a href="/citylist/urzuf/">Отдых в Урзуфе</a>,
+                        <a href="/citylist/fedotova-kosa/">Отдых на Федотовой косе</a>,
+                        <a href="/citylist/jelezniy-port/">Отдых в железном порту</a>,
+                        <a href="/citylist/rasseika/">Отдых в Рассейке</a>
+                    </div>
                 </div>
     		</div>
     	</div>
