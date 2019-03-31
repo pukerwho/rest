@@ -10193,6 +10193,137 @@ footer a {
   font-size: 4rem;
   font-weight: 900; }
 
+.citylist__text {
+  font-size: 1.5rem; }
+  .citylist__text h2 {
+    padding: 2rem 0; }
+
+.b_instagram__img {
+  width: 100%;
+  height: 300px;
+  background: url("../img/b_instagram.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50%; }
+  .b_instagram__img:hover .b_instagram__heart-one {
+    display: none; }
+  .b_instagram__img:hover .b_instagram__heart-two {
+    display: block;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+.b_instagram__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+.b_instagram__title {
+  color: #484848;
+  font-family: 'Carolyna Pro Black';
+  font-size: 4rem;
+  margin-bottom: 5rem; }
+.b_instagram__btn {
+  display: inline-block;
+  color: #484848;
+  background-color: #ffffff;
+  -webkit-border-radius: 0.6rem;
+  border-radius: 0.6rem; }
+  .b_instagram__btn .btn {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .b_instagram__btn a {
+    color: #484848;
+    text-transform: uppercase; }
+.b_instagram__heart-two {
+  display: none; }
+
+.b_youtube__img {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background: url("../img/b_youtube.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50%; }
+  .b_youtube__img-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1); }
+  .b_youtube__img:hover .b_instagram__heart-one {
+    display: none; }
+  .b_youtube__img:hover .b_instagram__heart-two {
+    display: block;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+.b_youtube__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: relative;
+  color: #ffffff;
+  padding: 0 3rem; }
+.b_youtube__title {
+  font-size: 3rem; }
+.b_youtube__subtitle {
+  max-width: 500px;
+  font-size: 2.5rem; }
+.b_youtube__btn {
+  display: inline-block;
+  color: #484848;
+  background-color: #ffffff;
+  -webkit-border-radius: 0.6rem;
+  border-radius: 0.6rem; }
+  .b_youtube__btn .btn {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .b_youtube__btn a {
+    color: #484848;
+    text-transform: uppercase; }
+
 html.lb-disable-scrolling {
   overflow: hidden;
   /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */
@@ -11188,6 +11319,18 @@ button.swiper-pagination-bullet {
   outline: none !important;
   margin-left: -9px !important; }
 
+@font-face {
+  font-family: 'Carolyna Pro Regular';
+  src: url("../fonts/CarolynaPro.eot");
+  src: url("../fonts/CarolynaPro.eot?#iefix") format("embedded-opentype"), url("../fonts/CarolynaPro.woff") format("woff"), url("../fonts/CarolynaPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Carolyna Pro Black';
+  src: url("../fonts/CarolynaProBlack.eot");
+  src: url("../fonts/CarolynaProBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/CarolynaProBlack.woff") format("woff"), url("../fonts/CarolynaProBlack.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 @media (max-width: 992px) {
   /* COMMON */
   .pc-show {
@@ -11438,6 +11581,15 @@ button.swiper-pagination-bullet {
     .allcity .maincards__item__card__title {
       font-size: 2rem;
       padding: 5rem 0 1.5rem 0; }
+
+  .b_youtube__img {
+    height: 350px; }
+    .b_youtube__img-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.35); }
 
   /* FOOTER */
   .mobile-link {

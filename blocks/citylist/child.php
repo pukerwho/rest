@@ -24,6 +24,13 @@
 				  	<div class="mb-5 lead" id="response">
 				  		<?php get_template_part( 'blocks/citylist/child-catalog', 'default' ); ?>
 				  	</div>
+				  	<div class="row">
+							<div class="col-md-12">
+								<div class="citylist-text lead">
+									<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ?>
+								</div>
+							</div>
+						</div>
 				  </div>
 				  <div class="tab-pane tab-single-hotel fade" id="place" role="tabpanel" aria-labelledby="place-tab">
 				  	<h2>Раздел в разработке</h2>

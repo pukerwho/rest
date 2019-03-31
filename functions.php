@@ -122,6 +122,18 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
+  register_post_type( 'youtube',
+    array(
+      'labels' => array(
+          'name' => __( 'Youtube' ),
+          'singular_name' => __( 'Youtube' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    )
+  );
 }
 add_action( 'init', 'create_post_type' );
 
@@ -1397,6 +1409,22 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'id' => $prefix . 'hotel-budget-telephone',
         'type' => 'checkbox',
         'std'  => 0,
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'id' => 'youtube-video',
+    'title' => 'Видео',
+    'post_types' => array( 'youtube' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Id',
+        'id' => $prefix . 'youtube-id',
+        'type' => 'text',
       ),
     ),
   );
