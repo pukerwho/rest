@@ -5,7 +5,6 @@ jQuery(function($){
       'action': 'loadmore__catalog',
       'query': loadmore_params__catalog.posts, // that's how we get params from wp_localize_script() function
       'page' : loadmore_params__catalog.current_page,
-      // 'citylistfilter': 19
     };
  
     $.ajax({
@@ -19,7 +18,7 @@ jQuery(function($){
         if( data ) { 
           $('.catalog-more .btn').text( 'Загрузить еще' ).prev().before(data); // insert new posts          
           loadmore_params__catalog.current_page++;
-          $('#response .col-md-3:last-child').after(data);
+          $('#response .col-lg-3:last-child').after(data);
           hotelItemSwiper();
           if ( loadmore_params__catalog.current_page == loadmore_params__catalog.max_page ) 
             button.remove(); // if last page, remove the button
