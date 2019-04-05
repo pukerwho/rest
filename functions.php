@@ -98,7 +98,7 @@ function loadmore_ajax_handler_catalog(){
   query_posts( $args );
   $custom_query_catalog = new WP_Query( array( 'post_type' => 'hotels', 'posts_per_page' => 24, 'paged' => $args['paged'], 'orderby' => 'meta_value', 'meta_key' => 'meta-hotel-mainrating' ) );
   if ($custom_query_catalog->have_posts()) : while ($custom_query_catalog->have_posts()) : $custom_query_catalog->the_post();
-    echo '<div class="col-md-3">';
+    echo '<div class="col-md-12 col-lg-3">';
     get_template_part( 'blocks/hotel-card', 'default' );
     echo '</div>';
   endwhile; 
