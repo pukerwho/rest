@@ -10194,9 +10194,19 @@ footer a {
   font-weight: 900; }
 
 .citylist__text {
-  font-size: 1.5rem; }
+  color: #484848 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.4 !important; }
+  .citylist__text p {
+    color: #484848 !important;
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important; }
   .citylist__text h2 {
-    padding: 2rem 0; }
+    font-size: 2.2rem;
+    padding: 2rem 0 1rem 0; }
+    .citylist__text h2:after {
+      display: block;
+      content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
 
 .b_instagram__img {
   width: 100%;
@@ -10359,9 +10369,12 @@ footer a {
   font-weight: 900;
   text-shadow: -1px -1px 0 #484848, 1px -1px 0 #484848, -1px 1px 0 #484848, 1px 1px 0 #484848; }
 
-.b_rest__text h2 {
+.b_rest__text h3 {
   font-weight: 700;
   margin-bottom: 1rem; }
+  .b_rest__text h3:after {
+    display: block;
+    content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
 .b_rest__text p {
   color: #484848;
   font-size: 1.5rem; }
