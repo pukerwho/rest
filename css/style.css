@@ -10359,6 +10359,19 @@ footer a {
   font-weight: 900;
   text-shadow: -1px -1px 0 #484848, 1px -1px 0 #484848, -1px 1px 0 #484848, 1px 1px 0 #484848; }
 
+.b_rest__text h2 {
+  font-weight: 700;
+  margin-bottom: 1rem; }
+.b_rest__text p {
+  color: #484848;
+  font-size: 1.5rem; }
+.b_rest__text li {
+  color: #484848;
+  list-style-type: inherit;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-left: 3rem; }
+
 html.lb-disable-scrolling {
   overflow: hidden;
   /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */
