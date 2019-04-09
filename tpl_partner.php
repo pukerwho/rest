@@ -159,14 +159,14 @@ Template Name: Партнерство
 						Базовый
 					</div>
 					<div>
-						<img src="<?php bloginfo('template_url') ?>/img/growth.svg" alt="" width="55px" class="mb-4">
+						<img src="<?php bloginfo('template_url') ?>/img/growth.svg" alt="" width="55px" class="mb-5">
 					</div>
-					<div class="p_partner__text">
+					<!-- <div class="p_partner__text">
 						300 грн
 					</div>
 					<div class="mb-5">
 						за сезон
-					</div>
+					</div> -->
 					<div class="p_partner__list mb-5">
 						<li class="mb-3">Размещение жилья</li>
 						<li class="mb-3">До 15 фотографий</li>
@@ -185,14 +185,14 @@ Template Name: Партнерство
 						Стандарт
 					</div>
 					<div>
-						<img src="<?php bloginfo('template_url') ?>/img/startup.svg" alt="" width="55px" class="mb-4">
+						<img src="<?php bloginfo('template_url') ?>/img/startup.svg" alt="" width="55px" class="mb-5">
 					</div>
-					<div class="p_partner__text">
+					<!-- <div class="p_partner__text">
 						800 грн
 					</div>
 					<div class="mb-5">
 						за сезон
-					</div>
+					</div> -->
 					<div class="p_partner__list mb-5">
 						<li class="mb-3">Размещение жилья</li>
 						<li class="mb-3">До 40 фотографий</li>
@@ -212,14 +212,14 @@ Template Name: Партнерство
 						Премиум
 					</div>
 					<div>
-						<img src="<?php bloginfo('template_url') ?>/img/diamond.svg" alt="" width="55px" class="mb-4">
+						<img src="<?php bloginfo('template_url') ?>/img/diamond.svg" alt="" width="55px" class="mb-5">
 					</div>
-					<div class="p_partner__text">
+					<!-- <div class="p_partner__text">
 						1500 грн
 					</div>
 					<div class="mb-5">
 						за сезон
-					</div>
+					</div> -->
 					<div class="p_partner__list mb-5">
 						<li class="mb-3">Размещение жилья</li>
 						<li class="mb-3">До 60 фотографий</li>
