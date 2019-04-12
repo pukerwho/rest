@@ -10208,6 +10208,74 @@ footer a {
       display: block;
       content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
 
+.gocity {
+  width: 100%;
+  height: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-image: url("../img/gocity-2.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50%;
+  overflow: hidden; }
+  .gocity-second {
+    background-image: url("../img/gocity.jpg"); }
+  .gocity:hover .gocity__title {
+    -webkit-transform: rotate(-20deg) scale(0.8);
+    -ms-transform: rotate(-20deg) scale(0.8);
+    transform: rotate(-20deg) scale(0.8); }
+    .gocity:hover .gocity__title:before {
+      width: 150%; }
+    .gocity:hover .gocity__title:after {
+      width: 150%; }
+  .gocity__title {
+    position: relative;
+    color: #ffffff;
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 3px 1px 9px #484848, 1px -1px 3px #484848, -1px 1px 4px #484848, 1px 1px 0 #484848;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    padding: 5px 0; }
+    .gocity__title:before {
+      content: '';
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      -webkit-box-shadow: 1px 1px 1px #484848;
+      box-shadow: 1px 1px 1px #484848;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .gocity__title:after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #ffffff;
+      -webkit-box-shadow: 1px 1px 1px #484848;
+      box-shadow: 1px 1px 1px #484848;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+
 .b_instagram__img {
   width: 100%;
   height: 300px;

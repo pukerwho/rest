@@ -18,6 +18,9 @@ Template Name: Главная страница
 <div class="pt-5">
 	<?php get_template_part( 'blocks/popularhotels', 'default' ); ?>	
 </div>
+<!-- <div class="pc-show pt-5">
+	<?php get_template_part( 'blocks/gocity', 'default' ); ?>	
+</div> -->
 <div class="py-5">
 	<?php get_template_part( 'blocks/now-watch', 'default' ); ?>	
 </div>

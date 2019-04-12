@@ -122,11 +122,11 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
-  register_post_type( 'youtube',
+  register_post_type( 'webcamers',
     array(
       'labels' => array(
-          'name' => __( 'Youtube' ),
-          'singular_name' => __( 'Youtube' )
+          'name' => __( 'Вебкамеры' ),
+          'singular_name' => __( 'Вебкамера' )
       ),
       'public' => true,
       'has_archive' => true,
@@ -176,11 +176,10 @@ function create_taxonomy(){
 }
 
 function your_prefix_register_taxonomy() {
-
   $args = array (
-    'label' => esc_html__( 'citylists', 'text-domain' ),
+    'label' => 'Города',
     'labels' => array(
-      'menu_name' => esc_html__( 'citylists', 'text-domain' ),
+      'menu_name' => 'Города',
       'all_items' => esc_html__( 'All citylists', 'text-domain' ),
       'edit_item' => esc_html__( 'Edit citylist', 'text-domain' ),
       'view_item' => esc_html__( 'View citylist', 'text-domain' ),
@@ -195,8 +194,8 @@ function your_prefix_register_taxonomy() {
       'add_or_remove_items' => esc_html__( 'Add or remove citylists', 'text-domain' ),
       'choose_from_most_used' => esc_html__( 'Choose most used citylists', 'text-domain' ),
       'not_found' => esc_html__( 'No citylists found', 'text-domain' ),
-      'name' => esc_html__( 'citylists', 'text-domain' ),
-      'singular_name' => esc_html__( 'citylist', 'text-domain' ),
+      'name' => 'Города',
+      'singular_name' => 'Города',
     ),
     'public' => true,
     'show_ui' => true,
@@ -209,16 +208,16 @@ function your_prefix_register_taxonomy() {
     'hierarchical' => true,
     'query_var' => true,
     'has_archive' => true,
-    'sort' => false,
+    'sort' => true,
     'rewrite' => array(
       'with_front' => false,
       'hierarchical' => true,
     ),
   );
 
-  register_taxonomy( 'citylist', array( 'hotels' ), $args );
+  register_taxonomy( 'citylist', array( 'hotels', 'webcamers' ), $args );
 }
-add_action( 'init', 'your_prefix_register_taxonomy', 0 );
+add_action( 'init', 'your_prefix_register_taxonomy');
 
 function your_prefix_get_meta_box( $meta_boxes ) {
   $prefix = 'meta-';
