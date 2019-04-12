@@ -104,7 +104,7 @@
 						  					<?php the_content(); ?>	
 						  				</div>
 						  				<h3 class="text-uppercase mb-5">Фотографии территории:</h3>
-						  				<div class="hotel-photos">
+						  				<div class="hotel-photos mb-5">
 									  		<?php 
 													$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'large' ) );
 													$title_img_territory = get_the_title();
@@ -112,6 +112,12 @@
 													    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="territory" data-title="', $title_img_territory,'"><img src="', $image['url'], '"></a></div>';
 													} 
 												?>
+									  	</div>
+									  	<div class="send-message">
+									  		<img src="<?php bloginfo('template_url') ?>/img/send-message.svg" width="25px" alt="">
+									  		<div>
+									  			Сообщить о неточности
+									  		</div>
 									  	</div>
 						  			</div>
 						  		</div>

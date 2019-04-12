@@ -78,6 +78,22 @@
             </div>
         </div>
     </div>
+    <div class="send-message-modal">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-5 col-sx-6 col-lg-6">
+                    <div class="send-message-modal__box">
+                        <div class="send-message-modal__close">
+                            <img src="<?php bloginfo('template_url') ?>/img/modal-close.svg" width="20px" alt="">
+                        </div>
+                        <div class="send-message-modal__form">
+                            <?php echo do_shortcode('[contact-form-7 id="2847" title="Сообщить о неточности"]') ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal-bg"></div>
     <?php wp_footer(); ?>
 </body>

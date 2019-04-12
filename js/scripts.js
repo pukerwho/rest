@@ -81,13 +81,13 @@ $(document).on('click', '.modal-callback-btn', function(){
 
 //Открывает и закрывает Фильтр-коллекций
 if ($('.select_collections_class').length > 0) {
-$('.select_collections_class').on('click', function (e) {
-  find_collections_select = $(this).find('.select');
-  find_collections_select.toggleClass('b_filter__item__open');
-  var collections_checkboxes = $('.collections_filter_class');
-  collections_checkboxes.toggle();
-  e.stopPropagation();
-});
+  $('.select_collections_class').on('click', function (e) {
+    find_collections_select = $(this).find('.select');
+    find_collections_select.toggleClass('b_filter__item__open');
+    var collections_checkboxes = $('.collections_filter_class');
+    collections_checkboxes.toggle();
+    e.stopPropagation();
+  });
 }
 
 $('.collections_filter_class').click(function(e) { 
@@ -95,6 +95,7 @@ $('.collections_filter_class').click(function(e) {
 })
 
 $(document).click(function(e) {
+  find_collections_select = $(this).find('.select');
   var collections_checkboxes = $('.collections_filter_class');
   find_collections_select.removeClass('b_filter__item__open');
   collections_checkboxes.hide();
@@ -253,7 +254,6 @@ var hotelItemSwiper = function() {
 
 hotelItemSwiper();
 
-
 //Номер Модель Инфа
 $(document).on('click', '.nomer', function(event){
   var nomer = $(this).attr("data-nomer");
@@ -292,3 +292,19 @@ $(".b_filter__range__price #slider-range").slider({
     document.getElementById('price_max_value').value = ui.values[1]
   }
 });
+
+//Пожаловаться
+//Callback Form Open
+if ($('.send-message').length > 0) {
+  $(document).on('click', '.send-message', function(){
+    $('.send-message-modal').addClass('send-message-modal__open');
+    $('body').addClass('modal-open');
+    $('.modal-bg').addClass('modal-bg__open');
+  });
+
+  $(document).on('click', '.send-message-modal__close', function(){
+    $('.send-message-modal').removeClass('send-message-modal__open');
+    $('body').removeClass('modal-open');
+    $('.modal-bg').removeClass('modal-bg__open');
+  });  
+}
