@@ -10298,6 +10298,34 @@ footer a {
     .citylist__text h2:after {
       display: block;
       content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
+.citylist-blog {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .citylist-blog__img {
+    background-color: #f5b0ad;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 2rem; }
+  .citylist-blog__title {
+    color: #82817d;
+    font-size: 1.9rem;
+    border-bottom: .2rem solid #f3f1ee;
+    -webkit-transition: border .25s,color .25s;
+    -o-transition: border .25s,color .25s;
+    transition: border .25s,color .25s; }
+    .citylist-blog__title:hover {
+      color: #2a2825;
+      border-bottom: .2rem solid #2a2825;
+      -webkit-transition: border .25s,color .25s;
+      -o-transition: border .25s,color .25s;
+      transition: border .25s,color .25s; }
 
 .gocity {
   width: 100%;

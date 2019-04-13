@@ -78,6 +78,7 @@
             </div>
         </div>
     </div>
+    <?php if( is_singular( 'hotels' )): ?>
     <div class="send-message-modal">
         <div class="container">
             <div class="row align-items-center justify-content-center">
@@ -94,6 +95,7 @@
             </div>
         </div>
     </div>
+    <?php endif ?>
     <div class="modal-bg"></div>
     <?php wp_footer(); ?>
 </body>

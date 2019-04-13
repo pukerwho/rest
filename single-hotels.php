@@ -129,7 +129,7 @@
 					  <div class="tab-pane tab-single-hotel fade" id="nomers" role="tabpanel" aria-labelledby="nomers-tab">
 					  	<div class="nomers">
 					  		<div class="container p-0">
-					  			<div class="row">
+					  			<div class="row mb-5">
 					  				<!-- Номер коттедж -->
 							  		<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>
 							  			<?php get_template_part('blocks/nomers/kottedg') ?>
@@ -155,16 +155,30 @@
 							  			<?php get_template_part('blocks/nomers/camping') ?>
 							  		<?php endif ?>
 						  		</div>
+						  		<div class="row">
+						  			<div class="col-md-12">
+						  				<?php get_template_part('blocks/message-send') ?>
+						  			</div>
+						  		</div>
 						  	</div>
-					  		
 					  	</div>
 					  </div>
 					  <div class="tab-pane tab-single-hotel fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 					  	<?php get_template_part( 'blocks/single-hotel-contact', 'default' ); ?>
+					  	<div class="row mt-5">
+				  			<div class="col-md-12">
+				  				<?php get_template_part('blocks/message-send') ?>
+				  			</div>
+				  		</div>
 					  </div>
 					  <?php if(rwmb_meta( 'meta-hotel-sale' )): ?>
 					  <div class="tab-pane tab-single-hotel fade" id="sale" role="tabpanel" aria-labelledby="sale-tab">
 					  	<?php echo rwmb_meta( 'meta-hotel-sale-text' ); ?>
+					  	<div class="row mt-5">
+				  			<div class="col-md-12">
+				  				<?php get_template_part('blocks/message-send') ?>
+				  			</div>
+				  		</div>
 					  </div>
 					  <?php endif ?>
 					  <div class="tab-pane tab-single-hotel fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
@@ -172,6 +186,7 @@
 					  </div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</div>
