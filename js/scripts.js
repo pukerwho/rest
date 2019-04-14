@@ -317,7 +317,7 @@ var mainWeather = {
 
   getWeather: function() {
       $.get(
-      'http://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780", 
+      'https://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780", 
       function(data) {
         var json = {
           json: JSON.stringify(data),
@@ -336,7 +336,7 @@ var mainWeather = {
 var echo = function(dataPass) {
   $.ajax({
     type: "POST",
-    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780",
+    url: 'https://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780",
     data: dataPass,
     cache: false,
     success: function(json) {
