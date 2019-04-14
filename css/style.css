@@ -10316,6 +10316,29 @@ footer a {
   line-height: 1.5;
   font-weight: 300; }
 
+.weather-block {
+  position: relative;
+  color: #484848;
+  font-size: 2rem;
+  border: .2rem solid #e7e6e4;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.2rem 0 0 #e7e6e4;
+  box-shadow: 0 0.2rem 0 0 #e7e6e4;
+  padding: 4rem;
+  margin: 3rem 0; }
+  .weather-block__icon {
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: #cdf5d4;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #484848; }
+
 .citylist__text {
   color: #484848 !important;
   font-size: 1.5rem !important;

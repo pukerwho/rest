@@ -29,7 +29,9 @@
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="single-blogs__text">
-						<div id="weather"></div>	
+						<div class="weather-block" data-weather="<?php echo carbon_get_the_post_meta('crb_blogs_city'); ?>">
+							<div id="weather"></div>		
+						</div>
 						<?php the_content(); ?>
 					</div>
 				</div>

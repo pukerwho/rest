@@ -8,8 +8,8 @@ function crb_post_theme_options() {
 	Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'blogs' )
     ->add_fields( array(
-      Field::make( 'header_scripts', 'crb_blogs_scripts', 'Js для погоды' )
-
+      Field::make( 'checkbox', 'crb_blogs_whether', 'Погода?' )->set_option_value('no'),
+      Field::make( 'text', 'crb_blogs_city', 'City (для погоды)' ),
   ) );
 }
 

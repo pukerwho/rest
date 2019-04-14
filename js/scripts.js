@@ -310,6 +310,8 @@ if ($('.send-message').length > 0) {
 }
 
 // WEATHER START //
+var cityWeather = $(".weather-block").data("weather");
+console.log(cityWeather);
 var mainWeather = {
     init: function() {
       return mainWeather.getWeather();
@@ -317,7 +319,7 @@ var mainWeather = {
 
   getWeather: function() {
       $.get(
-      'https://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780", 
+      'https://api.openweathermap.org/data/2.5/weather?q=' + cityWeather + "," + 'UA' + "&lang=ru&APPID=90218217a5640940a557861baa80b780", 
       function(data) {
         var json = {
           json: JSON.stringify(data),
@@ -329,14 +331,23 @@ var mainWeather = {
   },
   //Prints result from the weatherapi, receiving as param an object
   createWeatherWidg: function(data) {
-    return "<div class='pressure'>Температура: " + (data.main.temp - 273.15).toFixed(2) + " C</div>"
+    var cityTemp = data.main.temp - 273.15;
+    for(key in data.weather) {
+      if(data.weather.hasOwnProperty(key)) {
+        var value = data.weather[key];
+        var cityStatus = value.description;
+        var cityIcons = value.icon;
+      }
+    }
+    // var cityStatus = data.weather[description];
+    return "<div class='pressure'><span class='font-weight-bold'>Температура:</span> " + cityTemp.toFixed(2) + " C</div><div><span class='font-weight-bold'>В данный момент:</span> " + cityStatus + "</div><div class='weather-block__icon'><img src='https://openweathermap.org/img/w/" + cityIcons + ".png' ></div>"
   }
 };
 
 var echo = function(dataPass) {
   $.ajax({
     type: "POST",
-    url: 'https://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780",
+    url: 'https://api.openweathermap.org/data/2.5/weather?q=' + cityWeather + "," + 'UA' + "&lang=ru&APPID=90218217a5640940a557861baa80b780",
     data: dataPass,
     cache: false,
     success: function(json) {
