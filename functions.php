@@ -33,6 +33,10 @@ require_once __DIR__ . '/inc/cmb2/init.php';
 require_once __DIR__ . '/inc/CMB2-Post-Search-field/lib/init.php';
 require_once get_template_directory() . '/inc/carbon-fields/carbon-fields-plugin.php';
 require_once get_template_directory() . '/inc/custom-fields/citylist-meta.php';
+require_once get_template_directory() . '/inc/custom-fields/post-meta.php';
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 register_nav_menus( array(
   'head_menu' => 'Главное меню',
