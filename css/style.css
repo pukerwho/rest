@@ -10321,6 +10321,21 @@ footer a {
   .single-blogs__text h2:after {
     display: block;
     content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
+.single-blogs__text .wp-caption {
+  width: 100% !important;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(204, 204, 204, 0.48);
+  box-shadow: 0px 0px 5px 0px rgba(204, 204, 204, 0.48);
+  padding: 1rem;
+  margin: 3rem 0; }
+  .single-blogs__text .wp-caption-text {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0; }
+  .single-blogs__text .wp-caption img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: 1rem; }
 
 .weather-block {
   position: relative;
