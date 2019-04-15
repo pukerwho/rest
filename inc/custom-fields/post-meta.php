@@ -9,7 +9,12 @@ function crb_post_theme_options() {
     ->where( 'post_type', '=', 'blogs' )
     ->add_fields( array(
       Field::make( 'checkbox', 'crb_blogs_whether', 'Погода?' )->set_option_value('no'),
-      Field::make( 'text', 'crb_blogs_city', 'City (для погоды)' ),
+      Field::make( 'text', 'crb_blogs_city', 'City (для погоды)' )->set_conditional_logic( array(
+        array(
+            'field' => 'crb_blogs_whether',
+            'value' => true,
+        )
+    ) ),
   ) );
 }
 

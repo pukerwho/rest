@@ -12,13 +12,15 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-8 text-center">
-					<div class="single-blogs__icon">
-						<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" width="35px" alt="">
+			<?php if(!carbon_get_the_post_meta('crb_blogs_whether')): ?>
+				<div class="row justify-content-center">
+					<div class="col-md-8 text-center">
+						<div class="single-blogs__icon">
+							<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" width="35px" alt="">
+						</div>
 					</div>
 				</div>
-			</div>
+			<?php endif ?>
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="single-blogs__title">
@@ -29,9 +31,11 @@
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="single-blogs__text">
+						<?php if(carbon_get_the_post_meta('crb_blogs_whether')): ?>
 						<div class="weather-block" data-weather="<?php echo carbon_get_the_post_meta('crb_blogs_city'); ?>">
 							<div id="weather"></div>		
 						</div>
+						<?php endif ?>
 						<?php the_content(); ?>
 					</div>
 				</div>

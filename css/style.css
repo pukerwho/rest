@@ -10315,6 +10315,12 @@ footer a {
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 300; }
+.single-blogs__text h2 {
+  font-size: 2.2rem;
+  padding: 2rem 0 1rem 0; }
+  .single-blogs__text h2:after {
+    display: block;
+    content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
 
 .weather-block {
   position: relative;
