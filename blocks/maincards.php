@@ -5,7 +5,7 @@
 				<h2 class="mb-5">Где отдыхать летом в Украине?</h2>
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
-					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 5 ) );
+					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false ) );
 					foreach ( $maincitylists as $citylist ): ?>
 					<div class="maincards__item">
 						<a href="<?php echo get_term_link($citylist); ?>">
