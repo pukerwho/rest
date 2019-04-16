@@ -248,6 +248,67 @@
 			</div>
 		</div>
 	</div>
+	<div class="container py-5">
+		<div class="row mb-5">
+			<div class="col-md-12">
+				<div class="my-table">
+					<div class="my-table-cell pr-4">
+						<img src="<?php bloginfo('template_url'); ?>/img/direction-sign.svg" alt="" width="50px">
+					</div>
+					<div class="table-text">
+						<h2>Популярные направления</h2>
+						<p>Загляните в эти города - может здесь найдете идеальное местечко?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row allcity mb-5">
+			<div class="col-md-12">
+				<div class="maincards__grid pc-show">
+					<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 5 ) );
+					foreach ( $citylists as $citylist ): ?>
+					<div class="maincards__item">
+						<a href="<?php echo get_term_link($citylist); ?>">
+							<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
+								<div class="maincards__item__card__title">
+									<?php echo $citylist->name ?>
+								</div>
+							</div>
+						</a>
+					</div>
+					<?php endforeach; ?>
+				</div>
+				<!-- MAINCARDS MOBILE VERSION -->
+				<div class="mobile-show">
+					<div class="allcity">
+						<div class="maincards__grid">
+							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 6 ) );
+							foreach ( $citylists as $citylist ): ?>
+							<div class="maincards__item">
+								<a href="<?php echo get_term_link($citylist); ?>">
+									<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
+										<div class="maincards__item__card__title">
+											<?php echo $citylist->name ?>
+										</div>
+									</div>
+								</a>
+							</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="button-more text-center">
+					<a href="<?php echo get_permalink( get_page_by_path( 'allcity' ) ); ?>">
+					<div class="btn">Все города</div>
+				</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
