@@ -126,7 +126,7 @@ Template Name: Партнерство
 				<h2>Давайте сравним</h2>
 			</div>
 		</div>
-		<div class="row mobile-hotels-grid mb-5">
+		<div id="compare" class="row mobile-hotels-grid mb-5">
 			<div class="col-md-6 p-relative mb-5">
 				<div class="p_partner__other">
 					<div class="p_partner__other-graph mb-4"></div>

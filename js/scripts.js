@@ -49,6 +49,21 @@ if ($(document).width() > 760) {
   })
 }
 
+//partner page
+if ($('.page-template-tpl_partner').length > 0) {
+  var compareHeight = $('#compare').height();
+  var compareTop = $('#compare').offset().top;
+  $(window).scroll(function(){
+    var h_scroll = $(this).scrollTop();
+    if (h_scroll > (compareTop - compareHeight/1.75)) {
+      $('.p_partner__other-graph').addClass('p_partner__other-graph__open');
+      $('.p_partner__we-graph').addClass('p_partner__we-graph__open');
+      $('.p_partner__thinkabout').addClass('p_partner__thinkabout__open');
+    }
+  })
+}
+
+
 //Mobile Menu
 $('.header__mobile__menu').on('click', function(){
 	$('.header__mobile__cover').addClass('header__mobile__cover__active');

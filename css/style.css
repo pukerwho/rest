@@ -10194,17 +10194,68 @@ footer a {
   .p_partner__other-graph {
     height: 150px;
     width: 100%;
-    background-color: #f6e2e6; }
+    background-color: #f6e2e6;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
+    .p_partner__other-graph__open {
+      -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+      transform-origin: left bottom;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
 .p_partner__we-graph {
   height: 400px;
-  background-color: #d5f1d4; }
+  background-color: #d5f1d4;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s; }
+  .p_partner__we-graph__open {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s; }
 .p_partner__thinkabout {
   position: absolute;
   top: 65px;
   right: 55px;
   -webkit-transform: rotate(6deg);
   -ms-transform: rotate(6deg);
-  transform: rotate(6deg); }
+  transform: rotate(6deg);
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
+  .p_partner__thinkabout__open {
+    opacity: 1;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    -webkit-transition-delay: 2s;
+    -o-transition-delay: 2s;
+    transition-delay: 2s; }
   .p_partner__thinkabout img {
     width: 110px; }
 .p_partner .adv img {
