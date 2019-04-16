@@ -28,7 +28,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-center">
+			<div class="row justify-content-center mb-5">
 				<div class="col-md-8">
 					<div class="single-blogs__text">
 						<?php if(carbon_get_the_post_meta('crb_blogs_whether')): ?>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div class="row justify-content-center mb-4">
-				<div class="col-md-8">
+				<div class="col-md-8 text-center">
 					<h3>Популярные предложения в этом городе</h3>
 				</div>
 			</div>
