@@ -265,8 +265,8 @@
 		<div class="row allcity mb-5">
 			<div class="col-md-12">
 				<div class="maincards__grid pc-show">
-					<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 5 ) );
-					foreach ( $citylists as $citylist ): ?>
+					<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false ) );
+					foreach ( array_slice($citylists, 0, 5) as $citylist ): ?>
 					<div class="maincards__item">
 						<a href="<?php echo get_term_link($citylist); ?>">
 							<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
@@ -282,8 +282,8 @@
 				<div class="mobile-show">
 					<div class="allcity">
 						<div class="maincards__grid">
-							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 6 ) );
-							foreach ( $citylists as $citylist ): ?>
+							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false ) );
+							foreach ( array_slice($citylists, 0, 6) as $citylist ): ?>
 							<div class="maincards__item">
 								<a href="<?php echo get_term_link($citylist); ?>">
 									<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">

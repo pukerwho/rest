@@ -5,8 +5,8 @@
 				<h2 class="mb-5">Где отдыхать летом в Украине?</h2>
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
-					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 5 ) );
-					foreach ( $maincitylists as $citylist ): ?>
+					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false) );
+					foreach ( array_slice($maincitylists, 0, 5) as $citylist ): ?>
 					<div class="maincards__item">
 						<a href="<?php echo get_term_link($citylist); ?>">
 							<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
@@ -22,8 +22,8 @@
 				<div class="mobile-show">
 					<div class="allcity">
 						<div class="maincards__grid">
-							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'number' => 6 ) );
-							foreach ( $citylists as $citylist ): ?>
+							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, ) );
+							foreach ( array_slice($citylists, 0, 6) as $citylist ): ?>
 							<div class="maincards__item">
 								<a href="<?php echo get_term_link($citylist); ?>">
 									<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
