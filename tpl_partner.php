@@ -26,7 +26,7 @@ Template Name: Партнерство
 					<img src="<?php bloginfo('template_url') ?>/img/thumbs-up.svg"  width="55px" alt="">
 				</div>
 				<div class="p_partner__subtitle text-center mb-4">
-					Самая удобная площадка
+					Самая удобная площадка	
 				</div>
 				<div class="p_partner__text mb-4">
 					Мы создали самую удобную и элегантную платформу для отдыхающих туристов.
@@ -98,12 +98,12 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.5s">
 				<img src="<?php bloginfo('template_url') ?>/img/graph.svg" width="45px" alt="">
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.7s">
 				<h2>Большая посещаемость</h2>
 			</div>
 		</div>
@@ -122,7 +122,7 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.5s">
 				<h2>Давайте сравним</h2>
 			</div>
 		</div>
@@ -148,7 +148,7 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.5s">
 				<h2>Тарифы</h2>
 			</div>
 		</div>
@@ -238,7 +238,7 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.5s">
 				<h2>Как разместить объявление</h2>
 			</div>
 		</div>
@@ -287,7 +287,7 @@ Template Name: Партнерство
 		</div>
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-9 text-center">
-				<h2>Правила размещения</h2>
+				<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Правила размещения</h2>
 				<div class="p_partner__text">
 					Мы дорожим нашими отдыхающими и своей репутацией. Поэтому наш сервис самый надежный и востребованный в Украине.
 				</div>
@@ -367,7 +367,7 @@ Template Name: Партнерство
 		</div>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h2 class="mb-3">Узнать подробности</h2>
+				<h2 class="mb-3 animate-puk" data-effect="fade-up" data-delay="0.5s">Узнать подробности</h2>
 				<div class="p_partner__text">
 					099-77-13-997
 					<br>098-35-00-394
