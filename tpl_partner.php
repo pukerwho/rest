@@ -11,7 +11,7 @@ Template Name: Партнерство
 			<div class="col-md-12">
 				<div class="d-flex flex-column align-items-center">
 					<img src="<?php bloginfo('template_url') ?>/img/rocket.svg" width="80px" class="mb-5" alt="">
-					<h1 class="text-uppercase">Партнерство</h1>
+					<h1 class="text-uppercase">Партнерство</h1>	
 				</div>
 			</div>
 		</div>
@@ -103,8 +103,10 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.7s">
-				<h2>Большая посещаемость</h2>
+			<div class="col-md-12 text-center">
+				<div class="animate-puk-mask">
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.7s">Большая посещаемость</h2>
+				</div>
 			</div>
 		</div>
 		<div class="row mb-5">
@@ -122,8 +124,10 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.5s">
-				<h2>Давайте сравним</h2>
+			<div class="col-md-12 text-center">
+				<div class="animate-puk-mask">
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Давайте сравним</h2>
+				</div>
 			</div>
 		</div>
 		<div id="compare" class="row mobile-hotels-grid mb-5">
@@ -148,8 +152,10 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.5s">
-				<h2>Тарифы</h2>
+			<div class="col-md-12 text-center">
+				<div class="animate-puk-mask">
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Тарифы</h2>
+				</div>
 			</div>
 		</div>
 		<div class="row mb-5">
@@ -238,8 +244,10 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center animate-puk" data-effect="fade-up" data-delay="0.5s">
-				<h2>Как разместить объявление</h2>
+			<div class="col-md-12 text-center">
+				<div class="animate-puk-mask">
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Как разместить объявление</h2>
+				</div>
 			</div>
 		</div>
 		<div class="row justify-content-center mb-5">
@@ -287,7 +295,9 @@ Template Name: Партнерство
 		</div>
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-9 text-center">
-				<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Правила размещения</h2>
+				<div class="animate-puk-mask">
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Правила размещения</h2>
+				</div>
 				<div class="p_partner__text">
 					Мы дорожим нашими отдыхающими и своей репутацией. Поэтому наш сервис самый надежный и востребованный в Украине.
 				</div>
@@ -367,7 +377,9 @@ Template Name: Партнерство
 		</div>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h2 class="mb-3 animate-puk" data-effect="fade-up" data-delay="0.5s">Узнать подробности</h2>
+				<div class="animate-puk-mask">
+					<h2 class="mb-3 animate-puk" data-effect="fade-up" data-delay="0.5s">Узнать подробности</h2>
+				</div>
 				<div class="p_partner__text">
 					099-77-13-997
 					<br>098-35-00-394
