@@ -9216,6 +9216,34 @@ a:hover {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    .header__logo:hover .header__logo__icon {
+      -webkit-transform: rotateY(90deg);
+      transform: rotateY(90deg);
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
+      .header__logo:hover .header__logo__icon-two {
+        -webkit-transition-delay: 0.4s;
+        -o-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+        -webkit-transition: all 0.15s;
+        -o-transition: all 0.15s;
+        transition: all 0.15s;
+        opacity: 1; }
+    .header__logo:hover .header__logo__title-first {
+      -webkit-transform: matrix(1, 0, 0, 1, 0, -30);
+      -ms-transform: matrix(1, 0, 0, 1, 0, -30);
+      transform: matrix(1, 0, 0, 1, 0, -30);
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
+    .header__logo:hover .header__logo__title-second {
+      -webkit-transform: matrix(1, 0, 0, 1, 0, -33);
+      -ms-transform: matrix(1, 0, 0, 1, 0, -33);
+      transform: matrix(1, 0, 0, 1, 0, -33);
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
     .header__logo__icon {
       display: block;
       width: 5rem;
@@ -9226,12 +9254,40 @@ a:hover {
       -webkit-background-size: contain;
       background-size: contain;
       -webkit-border-radius: 50%;
-      border-radius: 50%; }
+      border-radius: 50%;
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s;
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg); }
+      .header__logo__icon-two {
+        position: absolute;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background: url("../img/hand.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        -webkit-background-size: contain;
+        background-size: contain;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        opacity: 0; }
     .header__logo__title {
+      height: 30px;
       color: #2a2825;
       font-size: 2.2rem;
       font-weight: 500;
-      margin-left: 1rem; }
+      margin-left: 1rem;
+      overflow: hidden; }
+      .header__logo__title-first {
+        -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+        -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+        transform: matrix(1, 0, 0, 1, 0, 0); }
+      .header__logo__title-second {
+        -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+        -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+        transform: matrix(1, 0, 0, 1, 0, 0); }
   .header__menu {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -9273,7 +9329,6 @@ a:hover {
           color: #0b0b0b; }
   .header .add-button {
     margin-left: 3.7rem; }
-
 @-webkit-keyframes headerfixed {
   from {
     -webkit-transform: translateY(-110%);
