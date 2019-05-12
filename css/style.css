@@ -9113,6 +9113,9 @@ a:hover {
   .modal-body [type="submit"]:hover {
     -webkit-box-shadow: 0px 1px 0.001px 0px #9ef6ad;
     box-shadow: 0px 1px 0.001px 0px #9ef6ad; }
+.modal-body-budget .wpcf7-mail-sent-ok {
+  font-size: 1.5rem;
+  padding: 1.25rem; }
 .modal-body-standart [type="submit"] {
   background-color: #ffe0e5;
   -webkit-box-shadow: 0px 4px 3px 0px #d1bec2;
@@ -9120,6 +9123,9 @@ a:hover {
   .modal-body-standart [type="submit"]:hover {
     -webkit-box-shadow: 0px 1px 0.001px 0px #d1bec2;
     box-shadow: 0px 1px 0.001px 0px #d1bec2; }
+.modal-body-standart .wpcf7-mail-sent-ok {
+  font-size: 1.5rem;
+  padding: 1.25rem; }
 .modal-body-premium [type="submit"] {
   background-color: #bec5e7;
   -webkit-box-shadow: 0px 4px 3px 0px #99a5e3;
@@ -9127,6 +9133,9 @@ a:hover {
   .modal-body-premium [type="submit"]:hover {
     -webkit-box-shadow: 0px 1px 0.001px 0px #99a5e3;
     box-shadow: 0px 1px 0.001px 0px #99a5e3; }
+.modal-body-premium .wpcf7-mail-sent-ok {
+  font-size: 1.5rem;
+  padding: 1.25rem; }
 
 .youtube-player {
   position: relative;
