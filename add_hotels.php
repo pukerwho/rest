@@ -2,7 +2,7 @@
 
 header('Access-Control-Allow-Origin: *');
 
-$EmailTo = "pelegrin2puk@gmail";
+$EmailTo = "pelegrin2puk@gmail.com";
 $EmailFrom = 'info@timeto.top';
 $Subject = "Заполнили форму на сайте";
 
