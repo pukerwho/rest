@@ -109,58 +109,57 @@ $('.collections_filter_class').click(function(e) {
   e.stopPropagation();
 })
 
+//скрыть все фильтры
 $(document).click(function(e) {
-  find_collections_select = $(this).find('.select');
+  find_select = $(this).find('.select');
+  find_select.removeClass('b_filter__item__open');
+
   var collections_checkboxes = $('.collections_filter_class');
-  find_collections_select.removeClass('b_filter__item__open');
   collections_checkboxes.hide();
+
+  var price_block = $('.price_filter_class');
+  price_block.hide();
+
+  var numers_checkboxes = $('.numers_filter_class');
+  numers_checkboxes.hide();
+
   e.stopPropagation();
 })
 
 //Открывает и закрывает Фильтр-номеров
-$('.select_numers_class').on('click', function (e) {
-  find_numers_select = $(this).find('.select');
-  find_numers_select.toggleClass('b_filter__item__open');
-  var numers_checkboxes = $('.numers_filter_class');
-  numers_checkboxes.toggle();
-  e.stopPropagation();
-});
+if ($('.select_numers_class').length > 0 ) {
+  $('.select_numers_class').on('click', function (e) {
+    find_numers_select = $(this).find('.select');
+    find_numers_select.toggleClass('b_filter__item__open');
+    var numers_checkboxes = $('.numers_filter_class');
+    numers_checkboxes.toggle();
+    e.stopPropagation();
+  });
 
-$('.numers_filter_class').click(function(e) { 
-  e.stopPropagation();
-})
-
-$(document).click(function(e) {
-  var numers_checkboxes = $('.numers_filter_class');
-  find_numers_select.removeClass('b_filter__item__open');
-  numers_checkboxes.hide();
-  e.stopPropagation();
-});
+  $('.numers_filter_class').click(function(e) { 
+    e.stopPropagation();
+  })
+}
 
 //Открывает и закрывает Фильтр-цены
-$('.select_price_class').on('click', function (el) {
+$('.select_price_class').on('click', function (e) {
   find_price_select = $(this).find('.select');
   find_price_select.toggleClass('b_filter__item__open');
   var price_block = $('.price_filter_class');
   price_block.toggle();
-  el.stopPropagation();
+  e.stopPropagation();
 });
 
-$('.price_filter_class').click(function(el) { 
-  el.stopPropagation();
+$('.price_filter_class').click(function(e) { 
+  e.stopPropagation();
 })
 
-$(document).click(function(el) {
-  var price_block = $('.price_filter_class');
-  find_price_select.removeClass('b_filter__item__open');
-  price_block.hide();
-  el.stopPropagation();
-});
 
 //Catalog filter
 $(document).on('submit','#catalog-filter',function(){
   var filter = $(this);
-  console.log(filter.serialize());
+  var cityname_val = $('#catalog-filter #b_filter__item-cityname').val();
+  $('.cityname').data('id', cityname_val);
   $.ajax({
     url:ajaxurl, // обработчик
     data:filter.serialize(), // данные
@@ -172,6 +171,7 @@ $(document).on('submit','#catalog-filter',function(){
       console.log(data);
       filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
       $('#response').html(data);
+      // $('.cityname').data('name', 'Бердянск');
       hotelItemSwiper();
     }
   });

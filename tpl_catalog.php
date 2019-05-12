@@ -36,6 +36,7 @@ Template Name: Каталог
 					</div>
 			</div>
 		</div>
+		<div class="cityname" data-id="Коблево"></div>
 	</div>
 </div>
 

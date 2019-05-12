@@ -1,11 +1,22 @@
 jQuery(function($){
   $(document).on('click', '.catalog-more', function(event){
+    var cityname_get = $('.cityname').data('id');
+    var catalog_price_min = $('#min-price').html();
+    var catalog_price_max = $('#max-price').html();
+    var cityname = '';
+    if (cityname_get != 'Город') {
+      cityname = cityname_get
+    }
+    console.log(cityname);
     var button = $(this),
         data = {
-      'action': 'loadmore__catalog',
-      'query': loadmore_params__catalog.posts, // that's how we get params from wp_localize_script() function
-      'page' : loadmore_params__catalog.current_page,
-    };
+          'action': 'loadmore__catalog',
+          'query': loadmore_params__catalog.posts, // that's how we get params from wp_localize_script() function
+          'page' : loadmore_params__catalog.current_page,
+          'cityname' : cityname,
+          'catalog_price_min': catalog_price_min,
+          'catalog_price_max': catalog_price_max
+        };
  
     $.ajax({
       url: loadmore_params__catalog.ajaxurl, // AJAX handler

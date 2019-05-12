@@ -3,7 +3,7 @@
 		<?php if( $terms = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0 ) ) ): ?>
 			<div class="b_filter__item">
 				<div class="select">
-					<select name="citylistfilter"><option>Город</option>
+					<select id="b_filter__item-cityname" name="citylistfilter"><option>Город</option>
 						<?php foreach ($terms as $term): ?>
 							<option value="<?php echo $term->term_id ?>"><?php echo $term->name ?></option>
 						<?php endforeach; ?>
