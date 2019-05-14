@@ -375,3 +375,15 @@ var echo = function(dataPass) {
 
 mainWeather.init();
 // WEATHER END //
+
+//Add NEW
+$('.addnew__nomers_checked').change(function(){
+  var addNewNomers = $(this).data('addnewnomers');
+  if (this.checked) {
+    $('.'+addNewNomers).css({"display":"block"});
+    console.log('checked');
+  }
+  else {
+    $('.'+addNewNomers).css({"display":"none"});
+  }                   
+});

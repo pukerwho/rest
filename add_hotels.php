@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <?php 
 
 header('Access-Control-Allow-Origin: *');
@@ -9,7 +11,9 @@ $Subject = "Заполнили форму на сайте";
 $message = $_POST['myname'];
 
 $success = mail($EmailTo, $Subject, $message, "From: <$EmailFrom>");
-if($success) { echo "Success! Your e-mail was sent!"; }
+if($success) { echo $message "Success! Your e-mail was sent!"; }
 else{  echo "Error! Your e-mail was not sent!"; }
 
 ?>
+
+<?php get_footer(); ?>
