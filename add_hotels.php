@@ -1,5 +1,3 @@
-<?php get_header(); ?>
-
 <?php 
 
 header('Access-Control-Allow-Origin: *');
@@ -15,5 +13,3 @@ if($success) { echo $message "Success! Your e-mail was sent!"; }
 else{  echo "Error! Your e-mail was not sent!"; }
 
 ?>
-
-<?php get_footer(); ?>
