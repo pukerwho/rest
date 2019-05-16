@@ -9,7 +9,7 @@ $Subject = "Заполнили форму на сайте";
 $message = $_POST['owner_name'];
 
 $success = mail($EmailTo, $Subject, $message, "From: <$EmailFrom>");
-if($success) { echo $message "Success! Your e-mail was sent!"; }
+if($success) { echo "Success! Your e-mail was sent!"; }
 else{  echo "Error! Your e-mail was not sent!"; }
 
 ?>
