@@ -10435,7 +10435,7 @@ footer a {
   padding: 2rem 0 1rem 0; }
   .single-blogs__text h2:after {
     display: block;
-    content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
+    content: url(../img/h2line.svg); }
 .single-blogs__text .wp-caption {
   width: 100% !important;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(204, 204, 204, 0.48);
@@ -10531,7 +10531,7 @@ footer a {
     padding: 2rem 0 1rem 0; }
     .citylist__text h2:after {
       display: block;
-      content: url(https://static.gitbook.com/images/840c1f9b13fcd045f54b991b753a4871.svg); }
+      content: url(../img/h2line.svg); }
 .citylist-blog {
   display: -webkit-box;
   display: -webkit-flex;
