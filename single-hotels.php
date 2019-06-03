@@ -36,7 +36,7 @@
 									<img src="<?php bloginfo('template_url'); ?>/img/rain.svg" alt="">
 								<?php endif ?>
 							</div> -->
-							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">	
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 						</div>
 					</div>
 				</div>

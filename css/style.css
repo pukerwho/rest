@@ -9789,6 +9789,9 @@ footer a {
       border-radius: 1rem;
       padding: 5px 10px; }
 
+.contact-grid a {
+  font-size: 1.75rem; }
+
 .hotel-card-grid {
   display: -ms-grid;
   display: grid;
@@ -10426,6 +10429,14 @@ footer a {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 3rem; }
+.single-blogs__breadcrumb {
+  color: #484848;
+  font-size: 1.5rem;
+  text-align: center; }
+  .single-blogs__breadcrumb a {
+    color: #484848;
+    font-weight: 700;
+    border-bottom: 1px solid; }
 .single-blogs__text p {
   font-size: 2rem;
   line-height: 1.5;
