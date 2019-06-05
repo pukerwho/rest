@@ -186,7 +186,6 @@
 					  </div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</div>
@@ -216,8 +215,8 @@
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
 				'posts_per_page' => 4,
-				'orderby' => 'rand',
-				'order'    => 'ASC',
+				'orderby'        => 'meta_value',
+    		'meta_key'       => 'meta-hotel-mainrating',
 				'tax_query' => array(
 			    array(
 		        'taxonomy' => 'citylist',
