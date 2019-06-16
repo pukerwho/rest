@@ -12074,30 +12074,35 @@ button.swiper-pagination-bullet {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     border: .2rem solid #e7e6e4;
     -webkit-border-radius: .5rem;
     border-radius: .5rem;
     -webkit-box-shadow: 0 0.2rem 0 0 #e7e6e4;
     box-shadow: 0 0.2rem 0 0 #e7e6e4;
     position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-overflow-scrolling: touch;
     padding: 1rem; }
   .tabs .open .nav-item {
     display: block; }
   .tabs .open .nav-link {
     display: block; }
   .tabs .nav-item {
-    padding: 0; }
+    padding: 0;
+    padding-left: 2rem; }
   .tabs .active .nav-item:parent {
     color: red; }
   .tabs .nav-item .active:before {
     display: none; }
   .tabs .nav-link {
-    display: none;
+    display: block;
     padding: 0;
     padding-bottom: 1rem !important; }
   .tabs .nav-link.active {
