@@ -4,6 +4,11 @@
 			<div class="tabs">
 				<div class="tab-button-outer mb-5">
 					<ul class="nav nav-tabs" id="singleHotelTabs" role="tablist">
+					  <li class="nav-item nav-img">
+					    <div class="nav-link">
+					    	<img src="<?php bloginfo('template_url') ?>/img/swipe.svg" alt="">
+					    </div>
+					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link active" id="catalog-tab" data-toggle="tab" href="#catalog" role="tab" aria-controls="catalog" aria-selected="true">Каталог</a>
 					  </li>
