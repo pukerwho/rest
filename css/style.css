@@ -12085,7 +12085,7 @@ button.swiper-pagination-bullet {
     position: relative;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
-    padding: 1rem; }
+    padding: 1rem 1rem 1rem 5rem; }
     .tabs .nav-tabs::-webkit-scrollbar {
       display: none; }
   .tabs .open .nav-item {
@@ -12099,8 +12099,6 @@ button.swiper-pagination-bullet {
     padding-left: 2.5rem; }
     .tabs .nav-item:nth-of-type(1) {
       padding-left: 2rem; }
-    .tabs .nav-item:nth-of-type(2) {
-      margin-left: 2rem; }
   .tabs .active .nav-item:parent {
     color: red; }
   .tabs .nav-item .active:before {
@@ -12109,16 +12107,16 @@ button.swiper-pagination-bullet {
     display: block;
     padding: 0;
     padding-bottom: 1rem !important; }
-    .tabs .nav-link img {
-      width: 100%; }
   .tabs .nav-img {
-    position: fixed;
-    z-index: 1234;
-    background-color: #ffffff;
-    width: 5rem;
+    width: 6rem;
     height: auto;
-    margin-left: -2rem;
-    padding-left: 2rem; }
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 3;
+    padding-right: 2rem;
+    padding-top: 0.5rem; }
+    .tabs .nav-img img {
+      width: 100%; }
   .tabs .nav-link.active {
     display: block;
     border-bottom: 2px solid #da81d4;
