@@ -9993,8 +9993,6 @@ footer a {
         -o-transition: all 0.15s ease-in-out;
         transition: all 0.15s ease-in-out; }
 
-.nav-tabs .nav-img {
-  display: none; }
 .nav-tabs .nav-item {
   font-size: 2.4rem;
   padding: 0.8rem 1.3rem; }
@@ -10022,6 +10020,9 @@ footer a {
     padding: 0;
     padding-bottom: 1rem;
     margin: 0; }
+
+.nav-img {
+  display: none; }
 
 .include h4 {
   margin: 0;
@@ -12113,6 +12114,7 @@ button.swiper-pagination-bullet {
     width: 6rem;
     height: auto;
     position: absolute;
+    display: block;
     background-color: #ffffff;
     z-index: 3;
     padding-right: 2rem;
