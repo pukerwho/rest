@@ -12110,7 +12110,7 @@ button.swiper-pagination-bullet {
   .tabs .nav-img {
     width: 6rem;
     height: auto;
-    position: fixed;
+    position: absolute;
     background-color: #ffffff;
     z-index: 3;
     padding-right: 2rem;
