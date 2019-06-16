@@ -9993,6 +9993,8 @@ footer a {
         -o-transition: all 0.15s ease-in-out;
         transition: all 0.15s ease-in-out; }
 
+.nav-tabs .nav-img {
+  display: none; }
 .nav-tabs .nav-item {
   font-size: 2.4rem;
   padding: 0.8rem 1.3rem; }
