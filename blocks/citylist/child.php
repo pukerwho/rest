@@ -80,7 +80,23 @@
 					  	<h3 class="mb-4">Наслаждайтесь видео!</h3>
 					  	<div class="youtube-player" data-id="<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video') ?>"></div>
 					  	<?php else: ?>
-					  		к сожалению мы пока не подшотовили для вас хорошего видеоматериала
+				  		<div class="no-video">
+				  			<div class="mb-5">
+				  				<img src="<?php bloginfo('template_url') ?>/img/sad.svg" alt="" width="50px">
+				  			</div>
+				  			<div class="sad mb-5">
+					  			К сожалению, мы пока не подготовили для вас хорошего видеоматериала	
+				  			</div>
+				  			<div class="help mb-5">
+				  				Но вы можете помочь нам, отправив ссылку на подходящее видео
+				  			</div>
+				  			<div class="send-message mb-5">
+				  				<img src="<?php bloginfo('template_url') ?>/img/life-saver.svg" alt="" width="25px">
+				  				<div>
+				  					Отправить ссылку на видео	
+				  				</div>
+				  			</div>
+				  		</div>
 				  	<?php endif ?>
 				  </div>
 				  <div class="tab-pane tab-single-hotel fade" id="cityreviews" role="tabpanel" aria-labelledby="cityreviews-tab">
