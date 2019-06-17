@@ -19,8 +19,15 @@
 							<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
 							<?php echo rwmb_meta( 'meta-hotel-address' ); ?>
 						</div>
-						<div class="title">
+						<div class="title mb-5">
 							<?php the_title(); ?>
+						</div>
+						<div class="single-hotel-collections">
+							<?php 
+								$terms = get_the_terms( $post->ID, 'collections' );
+								foreach($terms as $term): ?>
+								  <a href="/collections/<?php echo $term->slug ?>"><?php echo $term->name; ?></a>
+							<?php endforeach; ?>
 						</div>
 					</div>
 					<div class="single-hotel-cover-item">
@@ -37,6 +44,14 @@
 								<?php endif ?>
 							</div> -->
 							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+							<div class="single-hotel-cover-more">
+								<?php 
+								$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'thumb' ) );
+								$title_img_territory = get_the_title();
+								foreach ( array_slice($images, 0, 1) as $image ): ?>
+								    <a href="<?php echo $image['full_url'] ?>" data-lightbox="territory" data-title="<?php echo $title_img_territory ?>">Фото территории</a>
+								<?php endforeach; ?>
+							</div>
 						</div>
 					</div>
 				</div>

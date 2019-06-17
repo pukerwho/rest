@@ -9861,8 +9861,33 @@ footer a {
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase; }
+.single-hotel-cover-more {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  background: #ffffff;
+  -webkit-border-radius: .4rem;
+  border-radius: .4rem;
+  -webkit-box-shadow: 0px 0px 4px 1px #404040;
+  box-shadow: 0px 0px 4px 1px #404040;
+  padding: 1rem 0; }
+  .single-hotel-cover-more a {
+    color: #484848;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1rem 1.5rem; }
 .single-hotel-mobile-info {
   display: none; }
+.single-hotel-collections a {
+  background-color: #9eacd9;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase; }
 .single-hotel .cover img {
   width: 100%;
   height: 500px;
