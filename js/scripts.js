@@ -387,3 +387,8 @@ $('.addnew__nomers_checked').change(function(){
     $('.'+addNewNomers).css({"display":"none"});
   }                   
 });
+
+$('.single-hotel-cover-more').on('click', function() {
+  console.log('yes');
+  $('.hotel-photos__item:first-child a').trigger('click');
+});

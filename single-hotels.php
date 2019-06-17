@@ -45,12 +45,7 @@
 							</div> -->
 							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 							<div class="single-hotel-cover-more">
-								<?php 
-								$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'thumb' ) );
-								$title_img_territory = get_the_title();
-								foreach ( array_slice($images, 0, 1) as $image ): ?>
-								    <a href="<?php echo $image['full_url'] ?>" data-lightbox="territory" data-title="<?php echo $title_img_territory ?>">Фото территории</a>
-								<?php endforeach; ?>
+								Фото территории
 							</div>
 						</div>
 					</div>

@@ -19,11 +19,9 @@
 					  <li class="nav-item">
 					  	<a class="nav-link" id="cityblog-tab" data-toggle="tab" href="#cityblog" role="tab" aria-controls="cityblog" aria-selected="false">Информация</a>
 					  </li>
-					  <?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
 					  <li class="nav-item">
 					    <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false">Видео</a>
 					  </li>
-					  <?php endif ?>
 					  <li class="nav-item">
 					    <a class="nav-link" id="cityreviews-tab" data-toggle="tab" href="#cityreviews" role="tab" aria-controls="cityreviews" aria-selected="false">Обсуждение</a>
 					  </li>
@@ -77,12 +75,14 @@
 							<?php endwhile; endif; wp_reset_postdata(); ?>
 				  	</div>
 				  </div>
-				  <?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
 				  <div class="tab-pane tab-single-hotel fade" id="video" role="tabpanel" aria-labelledby="video-tab">
-				  	<h3 class="mb-4">Наслаждайтесь видео!</h3>
-				  	<div class="youtube-player" data-id="<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video') ?>"></div>
+				  	<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
+					  	<h3 class="mb-4">Наслаждайтесь видео!</h3>
+					  	<div class="youtube-player" data-id="<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video') ?>"></div>
+					  	<?php else: ?>
+					  		к сожалению мы пока не подшотовили для вас хорошего видеоматериала
+				  	<?php endif ?>
 				  </div>
-				  <?php endif ?>
 				  <div class="tab-pane tab-single-hotel fade" id="cityreviews" role="tabpanel" aria-labelledby="cityreviews-tab">
 				  	<?php global $withcomments;
 						$withcomments = true;

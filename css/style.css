@@ -9017,6 +9017,14 @@ a:hover {
     -webkit-box-shadow: 0px 1px 0.001px 0px #bec7e6;
     box-shadow: 0px 1px 0.001px 0px #bec7e6; }
 
+.bg-pink {
+  background-color: #eb5ad1;
+  -webkit-box-shadow: 0px 3px 4px 1px #c248a8;
+  box-shadow: 0px 4px 3px 0px #c248a8; }
+  .bg-pink:hover {
+    -webkit-box-shadow: 0px 1px 0.001px 0px #c248a8;
+    box-shadow: 0px 1px 0.001px 0px #c248a8; }
+
 .btn {
   min-width: 150px;
   font-size: 1.8rem;
@@ -9870,14 +9878,13 @@ footer a {
   border-radius: .4rem;
   -webkit-box-shadow: 0px 0px 4px 1px #404040;
   box-shadow: 0px 0px 4px 1px #404040;
-  padding: 1rem 0; }
-  .single-hotel-cover-more a {
-    color: #484848;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 1rem 1.5rem; }
+  color: #484848;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1rem 1.5rem; }
 .single-hotel-mobile-info {
   display: none; }
 .single-hotel-collections a {
@@ -10599,6 +10606,16 @@ footer a {
       -webkit-transition: border .25s,color .25s;
       -o-transition: border .25s,color .25s;
       transition: border .25s,color .25s; }
+
+.no-video {
+  color: #484848;
+  text-align: center;
+  margin: auto; }
+  .no-video .sad {
+    font-size: 1.75rem;
+    text-transform: uppercase; }
+  .no-video .help {
+    font-size: 1.5rem; }
 
 .gocity {
   width: 100%;

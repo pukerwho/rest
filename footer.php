@@ -78,7 +78,6 @@
             </div>
         </div>
     </div>
-    <?php if( is_singular( 'hotels' )): ?>
     <div class="send-message-modal">
         <div class="container">
             <div class="row align-items-center justify-content-center">
@@ -88,14 +87,18 @@
                             <img src="<?php bloginfo('template_url') ?>/img/modal-close.svg" width="20px" alt="">
                         </div>
                         <div class="send-message-modal__form">
-                            <?php echo do_shortcode('[contact-form-7 id="2847" title="Сообщить о неточности"]') ?>
+                            <?php if( is_singular( 'hotels' )): ?>
+                                <?php echo do_shortcode('[contact-form-7 id="2847" title="Сообщить о неточности"]') ?>
+                                <?php else: ?>
+                                   <?php echo do_shortcode('[contact-form-7 id="125" title="Поделиться видео"]') ?> 
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php endif ?>
+    
     <div class="modal-bg"></div>
     <?php wp_footer(); ?>
 </body>
