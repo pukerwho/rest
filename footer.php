@@ -90,7 +90,7 @@
                             <?php if( is_singular( 'hotels' )): ?>
                                 <?php echo do_shortcode('[contact-form-7 id="2847" title="Сообщить о неточности"]') ?>
                                 <?php else: ?>
-                                   <?php echo do_shortcode('[contact-form-7 id="125" title="Поделиться видео"]') ?> 
+                                   <?php echo do_shortcode('[contact-form-7 id="3640" title="Поделиться видео"]') ?> 
                             <?php endif ?>
                         </div>
                     </div>
