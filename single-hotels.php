@@ -44,9 +44,9 @@
 								<?php endif ?>
 							</div> -->
 							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-							<div class="single-hotel-cover-more">
+							<!-- <div class="single-hotel-cover-more">
 								Фото территории
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

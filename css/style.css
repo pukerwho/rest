@@ -9888,13 +9888,15 @@ footer a {
 .single-hotel-mobile-info {
   display: none; }
 .single-hotel-collections a {
+  display: inline-block;
   background-color: #9eacd9;
   font-size: 1.4rem;
   padding: 0.5rem 1rem;
   color: #ffffff;
   -webkit-border-radius: 0.5rem;
   border-radius: 0.5rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 0.25rem; }
 .single-hotel .cover img {
   width: 100%;
   height: 500px;
