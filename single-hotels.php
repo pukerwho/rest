@@ -224,10 +224,12 @@
 				}
 			?>
 			<?php 
+				$current_id = get_the_ID();
 				$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
 				'posts_per_page' => 4,
+				'post__not_in' => array($current_id),
 				'orderby'        => 'meta_value',
     		'meta_key'       => 'meta-hotel-mainrating',
 				'tax_query' => array(

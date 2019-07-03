@@ -8,7 +8,7 @@
 							<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Скоро лето!</h2>
+							<h2>Лето в разгаре!</h2>
 							<p>Пора планировать поездку на море</p>		
 						</div>
 					</div>
