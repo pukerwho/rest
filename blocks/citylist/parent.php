@@ -103,9 +103,26 @@
 				  	<?php endif ?>
 				  </div>
 				  <div class="tab-pane tab-single-hotel fade" id="cityreviews" role="tabpanel" aria-labelledby="cityreviews-tab">
-				  	<?php global $withcomments;
-						$withcomments = true;
-						comments_template(); ?> 
+				  	<?php 
+							$current_term = get_queried_object_id();
+							$custom_query_post_comment = new WP_Query( array( 
+							'post_type' => 'post_comment', 
+							'posts_per_page' => 1,
+							'tax_query' => array(
+						    array(
+					        'taxonomy' => 'citylist',
+							    'terms' => $current_term,
+					        'field' => 'term_id',
+					        'include_children' => true,
+					        'operator' => 'IN'
+						    )
+							),
+						) );
+						if ($custom_query_post_comment->have_posts()) : while ($custom_query_post_comment->have_posts()) : $custom_query_post_comment->the_post(); ?>
+					  	<?php global $withcomments;
+							$withcomments = true;
+							comments_template(); ?> 
+						<?php endwhile; endif; wp_reset_postdata(); ?>
 				  </div>
 				</div>
 			</div>

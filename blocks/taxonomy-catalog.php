@@ -84,7 +84,7 @@
 						<div class="swiper-slide">
 							<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
 	          </div>
-          <?php endwhile; endif; ?>
+          <?php endwhile; endif; wp_reset_postdata(); ?>
 		    </div>
 		    <div class="swiper-button-next swiper-hotels-button-next"></div>
       	<div class="swiper-button-prev swiper-hotels-button-prev"></div>
