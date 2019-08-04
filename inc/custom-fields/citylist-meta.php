@@ -18,6 +18,7 @@ function crb_attach_theme_options() {
       ->add_options( array(
         'azovsea' => 'Азовское море',
         'blacksea' => 'Черное море',
+        'karpaty' => 'Карпаты',
       ) )
   ) );
 }

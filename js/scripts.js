@@ -49,6 +49,17 @@ if ($(document).width() > 760) {
   })
 }
 
+
+$('.allcity-button').mouseover(function() {
+  $('.header__allcity').css({'display':'block'});
+  $('body').addClass('modal-open');
+});
+
+$('.header__allcity').mouseleave(function() {
+  $('.header__allcity').css({'display':'none'});
+  $('body').removeClass('modal-open');
+});
+
 //partner page
 if ($('.page-template-tpl_partner').length > 0) {
   var compareHeight = $('#compare').height();

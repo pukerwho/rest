@@ -9324,6 +9324,40 @@ a:hover {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
+  .header__allcity {
+    padding-right: 15px;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding: 1rem; }
+    .header__allcity-content {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      background-color: #ffffff;
+      -webkit-box-shadow: 0px 2px 1px 0px rgba(122, 122, 122, 0.45);
+      box-shadow: 0px 2px 1px 0px rgba(122, 122, 122, 0.45);
+      -webkit-border-radius: 0.5rem;
+      border-radius: 0.5rem;
+      margin: 1.75rem auto;
+      padding: 2rem; }
+      .header__allcity-content a {
+        color: #82817d;
+        font-size: 1.75rem; }
   .header .secondemenu_wrap {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
