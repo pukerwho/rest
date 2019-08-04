@@ -138,7 +138,7 @@ Template Name: Все города
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-md-12">
-				<div class="d-flex align-items-center">
+				<div class="d-flex align-items-center mb-5">
 					<img src="<?php bloginfo('template_url') ?>/img/mountains.svg" alt="" width="40px" class="mr-3">
 					<h2 class="mb-0">В Карпаты</h2>	
 				</div>
