@@ -50,14 +50,12 @@ if ($(document).width() > 760) {
 }
 
 
-$('.allcity-button').mouseover(function() {
-  $('.header__allcity').css({'display':'block'});
-  $('body').addClass('modal-open');
-});
-
-$('.header__allcity').mouseleave(function() {
-  $('.header__allcity').css({'display':'none'});
-  $('body').removeClass('modal-open');
+$('.allcity-button').on('click', function(){
+  $('.header__allcity').toggleClass('header__allcity-open');
+  $('.allcity-button-open').toggleClass('allcity-button-open-active');
+  $('.allcity-button-close').toggleClass('allcity-button-close-active');
+  $('.modal-bg').toggleClass('modal-bg__open');
+  $('body').toggleClass('modal-open');
 });
 
 //partner page

@@ -103,7 +103,7 @@
               'walker'          => '',
             )); ?>
           </div> -->
-          <div class="allcity-button text-dark mr-5"><div class="btn bg-pastel-blue">Курорты</div></div>
+          <div class="allcity-button text-dark mr-5"><div class="btn bg-pastel-blue"><span class="allcity-button-open">Курорты</span><span class="allcity-button-close">Закрыть</span></div></div>
           <a href="<?php echo get_permalink( get_page_by_path( 'catalog' ) ); ?>" class="text-dark mr-5"><div class="btn bg-pastel-green">Каталог</div></a>
           <div class="search-button text-dark"><div class="btn bg-pastel-red">Поиск</div></div>
         </div>
