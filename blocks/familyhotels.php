@@ -16,6 +16,16 @@
 			</div>
 		</div>
 		<div class="row mobile-hotels-grid mb-5">
+			<?php $citylists_new = get_terms( array( 
+				'taxonomy' => 'citylist', 
+				'parent' => 0, 
+				'hide_empty' => false,
+				'meta_key' => '_crb_citylist_location',
+			  'meta_value' => 'karpaty'
+			) )
+			?>
+			<?php $term_ids = wp_list_pluck( $citylists_new, 'term_id' ); ?>
+
 			<?php 
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
@@ -27,6 +37,13 @@
 		        'taxonomy' => 'collections',
 		        'terms' => 'family',
 		        'field' => 'slug',
+		        'include_children' => true,
+		        'operator' => 'IN'
+			    ),
+			    array(
+		        'taxonomy' => 'citylist',
+				    'terms' => $term_ids,
+		        'field' => 'term_id',
 		        'include_children' => true,
 		        'operator' => 'IN'
 			    )

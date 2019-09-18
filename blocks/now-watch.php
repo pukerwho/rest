@@ -18,12 +18,31 @@
 				<div class="nowwatch__slider">
 					<div class="swiper-container swiper-hotels-now-watch">
 						<div class="swiper-wrapper">
+							<?php $citylists_new = get_terms( array( 
+								'taxonomy' => 'citylist', 
+								'parent' => 0, 
+								'hide_empty' => false,
+								'meta_key' => '_crb_citylist_location',
+							  'meta_value' => 'karpaty'
+							) )
+							?>
+							<?php $term_ids = wp_list_pluck( $citylists_new, 'term_id' ); ?>
+							
 							<?php 
 								$custom_query = new WP_Query( array( 
 								'post_type' => 'hotels', 
 								'posts_per_page' => 4,
 								'orderby' => 'rand',
 				  			'order'    => 'ASC',
+				  			'tax_query' => array(
+							    array(
+						        'taxonomy' => 'citylist',
+								    'terms' => $term_ids,
+						        'field' => 'term_id',
+						        'include_children' => true,
+						        'operator' => 'IN'
+							    )
+								),
 							) );
 							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 								<div class="swiper-slide">

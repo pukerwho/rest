@@ -34,14 +34,14 @@
           <a href="<?php echo home_url(); ?>" class="header__logo">
             <span class="header__logo__icon"></span>
             <span class="header__logo__icon-two"></span>
-            <div class="header__logo__title">
+            <!-- <div class="header__logo__title">
               <div class="header__logo__title-first">
                 Відпочивай  
               </div>
               <div class="header__logo__title-second">
                 Відпочивай
               </div>
-            </div>
+            </div> -->
           </a>
         </div>
         <!-- <div class="header__mobile__menu mobile-show">

@@ -5,7 +5,7 @@
 				<div class="mb-5">
 					<div class="my-table">
 						<div class="my-table-cell pr-4">
-							<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="" width="40px">
+							<img src="<?php bloginfo('template_url'); ?>/img/winter.png" alt="" width="40px">
 						</div>
 						<div class="table-text">
 							<h2>Без отдыха и конь не скачет</h2>

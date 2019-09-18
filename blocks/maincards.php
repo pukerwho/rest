@@ -2,7 +2,7 @@
 	<div class="container ">
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-12">
-				<h2 class="mb-5">Где отдыхать летом в Украине?</h2>
+				<h2 class="mb-5">Где отдыхать в Украине?</h2>
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
 					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false) );

@@ -5,6 +5,7 @@ Template Name: Карпаты
 ?>
 
 <?php get_header(); ?>
+
 <?php $citylists_new = get_terms( array( 
 	'taxonomy' => 'citylist', 
 	'parent' => 0, 
