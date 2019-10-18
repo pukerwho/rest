@@ -8,8 +8,8 @@
 							<img src="<?php bloginfo('template_url'); ?>/img/popularhotels.svg" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Популярные предложения</h2>
-							<p>Это жилье пользуется повышенным спросом!</p>	
+							<h2><?php _e( 'Популярные предложения', 'restx' ); ?></h2>
+							<p><?php _e( 'Это жилье пользуется повышенным спросом!', 'restx' ); ?></p>	
 						</div>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 					$term_slug = 'popular';
 					$term_link = get_term_link($term_slug, 'collections');
 					echo $term_link;
-					?>"><div class="btn">Смотреть больше вариантов</div></a>
+					?>"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 				</div>
 			</div>
 		</div>

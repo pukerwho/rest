@@ -62,7 +62,7 @@
 		<?php $standart_max_sezon = 1 ?>
 <?php endif ?>
 
-Цена: <?php 
+<?php _e( 'Цена', 'restx' ); ?>: <?php 
 	echo min(array(
 		$standart_min_nezon, $lux_min_nezon, $kottedg_min_nezon, $halflux_min_nezon, $camping_min_nezon, $budget_min_nezon
 	))

@@ -2,7 +2,7 @@
 	<div class="container ">
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-12">
-				<h2 class="mb-5">Где отдыхать в Украине?</h2>
+				<h2 class="mb-5"><?php _e( 'Где отдыхать в Украине?', 'restx' ); ?></h2>
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
 					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false) );
@@ -43,7 +43,7 @@
 			<div class="col-md-12">
 				<div class="button-more text-center">
 					<a href="<?php echo get_permalink( get_page_by_path( 'allcity' ) ); ?>">
-					<div class="btn">Все города</div>
+					<div class="btn"><?php _e( 'Все города', 'restx' ); ?></div>
 				</a>
 				</div>
 			</div>

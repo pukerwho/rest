@@ -32,7 +32,7 @@ Template Name: Каталог
 		<div class="row mb-5">
 			<div class="col-md-12">
 				<div class="catalog-more button-more text-center">
-						<div class="btn">Загрузить еще</div>
+						<div class="btn"><?php _e( 'Загрузить еще', 'restx' ); ?></div>
 					</div>
 			</div>
 		</div>

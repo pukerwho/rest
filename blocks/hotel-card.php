@@ -54,21 +54,21 @@
 			<!-- Цена: <?php echo rwmb_meta( 'meta-hotel-minprice' ); ?> — <?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?> грн -->
 		</div>
 		<div class="hotel-item__hasnomer lead">
-			Номера: 
+			<?php _e( 'Номера', 'restx' ); ?>: 
 			<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>
-				<span>Коттеджи</span>
+				<span><?php _e( 'Коттеджи', 'restx' ); ?></span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-lux-has' )): ?>
-				<span>Люксы</span>
+				<span><?php _e( 'Люксы', 'restx' ); ?></span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-halflux-has' )): ?>
-				<span>Полулюксы</span>
+				<span><?php _e( 'Полулюксы', 'restx' ); ?></span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-standart-has' )): ?>
-				<span>Стандарты</span>
+				<span><?php _e( 'Стандарты', 'restx' ); ?></span>
 			<?php endif ?>
 			<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
-				<span>Бюджетные</span>
+				<span><?php _e( 'Бюджетные', 'restx' ); ?></span>
 			<?php endif ?>
 		</div>
 	</div>

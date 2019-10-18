@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="alternate" hreflang="uk" href="<?php echo home_url(); ?>/uk">
 
   <?php
   // ENQUEUE your css and js in inc/enqueues.php
@@ -26,11 +27,26 @@
 </head>
 <body <?php echo body_class(); ?>>
   <!-- <div class="preloader"></div> -->
-  
-  <header id="header" class="header" role="banner">
+  <?php 
+    date_default_timezone_set('Europe/Kiev');
+    $current_hour = date('H');
+    if ($current_hour < 12 & $current_hour >= 6) {
+      $menu_class = 'dark';
+    }
+    else if ($current_hour < 19 & $current_hour >= 12) {
+      $menu_class = 'dark';
+    }
+    else if ($current_hour < 22 & $current_hour >= 19) {
+      $menu_class = 'light';
+    }
+    else if ($current_hour >= 22) {
+      $menu_class = 'light';
+    }
+  ?>
+  <header id="header" class="header <?php echo $menu_class ?>" role="banner">
     <div class="container-fluid">
       <div class="header__content">
-        <div>
+        <div class="d-flex align-items-center">
           <a href="<?php echo home_url(); ?>" class="header__logo">
             <span class="header__logo__icon"></span>
             <span class="header__logo__icon-two"></span>
@@ -43,6 +59,21 @@
               </div>
             </div> -->
           </a>
+          <div class="header__cities hero__block-cities ml-5">
+            <input list="hero_city" id="my_hero_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
+            <datalist id="hero_city">
+              <?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false) );
+                foreach ( $maincitylists as $citylist ): ?>
+                <option value="<?php echo $citylist->name ?>" data-link="<?php echo get_term_link($citylist); ?>">
+              <?php endforeach; ?>
+            <script type="text/javascript">
+              function setCity(city) {
+                var el = document.querySelector(".hero__block-cities option[value='" + city.value + "']");
+                var city_link = el.getAttribute('data-link');
+                window.location = city_link;
+              }
+            </script>
+          </div>
         </div>
         <!-- <div class="header__mobile__menu mobile-show">
           <div class="btn bg-pastel-blue">Меню</div>
@@ -57,7 +88,7 @@
             </a>
           </div>
           <div class="header__mobile__close">
-            <div class="btn bg-pastel-blue">Закрыть меню</div>
+            <div class="btn bg-pastel-blue"><?php _e( 'Закрыть меню', 'restx' ); ?></div>
           </div>
           <div class="header__mobile__nav">
             <?php wp_nav_menu( array(
@@ -83,36 +114,24 @@
           </div>
         </div>
         <div class="header__right pc-show">
-
-          
-          <!-- <div class="header__menu pc-show">
-            <?php wp_nav_menu( array(
-              'theme_location'  => 'head_menu',
-              'menu'            => '', 
-              'container'       => 'nav', 
-              'container_class' => 'secondemenu_wrap',
-              'menu_id'         => '',
-              'echo'            => true,
-              'fallback_cb'     => 'wp_page_menu',
-              'before'          => '',
-              'after'           => '',
-              'link_before'     => '',
-              'link_after'      => '',
-              'items_wrap'      => '<ul class="wrap-menu">%3$s</ul>',
-              'depth'           => 0,
-              'walker'          => '',
-            )); ?>
-          </div> -->
-          <div class="allcity-button text-dark mr-5"><div class="btn bg-pastel-blue"><span class="allcity-button-open">Курорты</span><span class="allcity-button-close">Закрыть</span></div></div>
+          <div class="header__menu">
+            <li>
+              <a href="/catalog"><?php _e( 'Каталог', 'restx' ); ?></a>
+            </li>
+            <li>
+              <a href="/faq"><?php _e( 'Вопросы', 'restx' ); ?></a>
+            </li>
+            <li>
+              <a href="/partner"><?php _e( 'Добавить предложение', 'restx' ); ?></a>
+            </li>
+          </div>
+          <!-- <div class="allcity-button text-dark mr-5"><div class="btn bg-pastel-blue"><span class="allcity-button-open">Курорты</span><span class="allcity-button-close">Закрыть</span></div></div>
           <a href="<?php echo get_permalink( get_page_by_path( 'catalog' ) ); ?>" class="text-dark mr-5"><div class="btn bg-pastel-green">Каталог</div></a>
-          <div class="search-button text-dark"><div class="btn bg-pastel-red">Поиск</div></div>
+          <div class="search-button text-dark"><div class="btn bg-pastel-red">Поиск</div></div> -->
         </div>
       </div>
     </div>
   </header>
-  <div class="header__allcity">
-    <?php get_template_part('blocks/header/header-allcity') ?>
-  </div>
   <div class="b_search">
     <div class="b_search__close">
       <img src="<?php bloginfo('template_url') ?>/img/close.svg" width="25px" alt="">

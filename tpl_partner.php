@@ -11,13 +11,13 @@ Template Name: Партнерство
 			<div class="col-md-12">
 				<div class="d-flex flex-column align-items-center">
 					<img src="<?php bloginfo('template_url') ?>/img/rocket.svg" width="80px" class="mb-5" alt="">
-					<h1 class="text-uppercase">Партнерство</h1>	
+					<h1 class="text-uppercase"><?php _e( 'Партнерство', 'restx' ); ?></h1>	
 				</div>
 			</div>
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
-				<h2>Зачем мы вам?</h2>
+				<h2><?php _e( 'Зачем мы вам?', 'restx' ); ?></h2>
 			</div>
 		</div>
 		<div class="row mb-5">
@@ -26,23 +26,23 @@ Template Name: Партнерство
 					<img src="<?php bloginfo('template_url') ?>/img/thumbs-up.svg"  width="55px" alt="">
 				</div>
 				<div class="p_partner__subtitle text-center mb-4">
-					Самая удобная площадка	
+					<?php _e( 'Самая удобная площадка', 'restx' ); ?>
 				</div>
 				<div class="p_partner__text mb-4">
-					Мы создали самую удобную и элегантную платформу для отдыхающих туристов.
+					<?php _e( 'Мы создали самую удобную и элегантную платформу для отдыхающих туристов.', 'restx' ); ?>
 				</div>
 				<div class="p_partner__list">
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Лучшая конверсия</div>
+						<div><?php _e( 'Лучшая конверсия', 'restx' ); ?></div>
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Удобный и понятный интерфейс</div>
+						<div><?php _e( 'Удобный и понятный интерфейс', 'restx' ); ?></div>
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Месячная посещаемость - более 100 000 уникальных пользователей</div>
+						<div><?php _e( 'Месячная посещаемость - более 100 000 уникальных пользователей', 'restx' ); ?></div>
 					</li>
 				</div>
 			</div>
@@ -51,23 +51,23 @@ Template Name: Партнерство
 					<img src="<?php bloginfo('template_url') ?>/img/money-bag.svg"  width="55px" alt="">
 				</div>
 				<div class="p_partner__subtitle text-center mb-4">
-					Быстрая окупаемость
+					<?php _e( 'Быстрая окупаемость', 'restx' ); ?>
 				</div>
 				<div class="p_partner__text mb-4">
-					Наши услуги позволяют вам быстро забыть о своих затратах на размещение объявления.
+					<?php _e( 'Наши услуги позволяют вам быстро забыть о своих затратах на размещение объявления.', 'restx' ); ?>
 				</div>
 				<div class="p_partner__list">
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Вас легко найти в поиске</div>
+						<div><?php _e( 'Вас легко найти в поиске', 'restx' ); ?></div>
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Мы активно рекламируем Вас в социальных сетях</div>
+						<div><?php _e( 'Мы активно рекламируем Вас в социальных сетях', 'restx' ); ?></div>
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Дополнительное привлечение клиентов через e-mail рассылку</div>
+						<div><?php _e( 'Дополнительное привлечение клиентов через e-mail рассылку', 'restx' ); ?></div>
 					</li>
 				</div>
 			</div>
@@ -76,23 +76,23 @@ Template Name: Партнерство
 					<img src="<?php bloginfo('template_url') ?>/img/shield.svg"  width="55px" alt="">
 				</div>
 				<div class="p_partner__subtitle text-center mb-4">
-					Надежность
+					<?php _e( 'Надежность', 'restx' ); ?>
 				</div>
 				<div class="p_partner__text mb-4">
-					У нас самая надежная платформа для поиска курортного жилья.
+					<?php _e( 'У нас самая надежная платформа для поиска курортного жилья.', 'restx' ); ?>
 				</div>
 				<div class="p_partner__list">
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Мы гарантируем результат</div>
+						<div><?php _e( 'Мы гарантируем результат', 'restx' ); ?></div>
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>От вас нужна лишь полная и достоверная информация</div>
+						<div><?php _e( 'От вас нужна лишь полная и достоверная информация', 'restx' ); ?></div>
 					</li>
 					<li class="d-flex align-items-center">
 						<img src="<?php bloginfo('template_url') ?>/img/check.svg" width="30px" alt="" class="mr-3">
-						<div>Наши отдыхающие доверяют нам. Мы хотим довериться вам.</div>
+						<div><?php _e( 'Наши отдыхающие доверяют нам. Мы хотим довериться вам.', 'restx' ); ?></div>
 					</li>
 				</div>
 			</div>
@@ -105,13 +105,13 @@ Template Name: Партнерство
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
 				<div class="animate-puk-mask">
-					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.7s">Большая посещаемость</h2>
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.7s"><?php _e( 'Большая посещаемость', 'restx' ); ?></h2>
 				</div>
 			</div>
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
-				<div class="p_partner__text">Разместив свое объявление у нас - вы снимаете вопросы: "будут ли звонки? будут ли бронировать? не будет ли у меня пустых номеров?". Мы уверены в этом. Почему? Потому что знаем, сколько людей посещает наш сайт. Да, возможно, не все из вас его нашли в поиске - мы все еще достаточно молоды и активно боремся со "старичками" в поиске. Уверены, скоро и мы будет в ТОПе. Но не поиском единым - мы активно развиваем свои соцсети, делаем регулярную email-рассылку. Плюс у нас всегда запущена реклама: в Facebook, Instagram, Google. Поэтому, мы можем гарантировать результат! </div>
+				<div class="p_partner__text"><?php _e( 'Разместив свое объявление у нас - вы снимаете вопросы: будут ли звонки? будут ли бронировать? не будет ли у меня пустых номеров?. Мы уверены в этом. Почему? Потому что знаем, сколько людей посещает наш сайт. Да, возможно, не все из вас его нашли в поиске - мы все еще достаточно молоды и активно боремся со "старичками" в поиске. Уверены, скоро и мы будет в ТОПе. Но не поиском единым - мы активно развиваем свои соцсети, делаем регулярную email-рассылку. Плюс у нас всегда запущена реклама: в Facebook, Instagram, Google. Поэтому, мы можем гарантировать результат!', 'restx' ); ?> </div>
 			</div>
 		</div>
 		<div class="row adv mb-5">
@@ -126,7 +126,7 @@ Template Name: Партнерство
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
 				<div class="animate-puk-mask">
-					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Давайте сравним</h2>
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s"><?php _e( 'Давайте сравним', 'restx' ); ?></h2>
 				</div>
 			</div>
 		</div>
@@ -135,7 +135,7 @@ Template Name: Партнерство
 				<div class="p_partner__other">
 					<div class="p_partner__other-graph mb-4"></div>
 					<div class="p_partner__text text-center">
-						Кол-во просмотров вашего объявления на другом сайте
+						<?php _e( 'Кол-во просмотров вашего объявления на другом сайте', 'restx' ); ?>
 					</div>
 				</div>
 			</div>
@@ -146,7 +146,7 @@ Template Name: Партнерство
 				<div class="p_partner__we">
 					<div class="p_partner__we-graph mb-4"></div>
 					<div class="p_partner__text text-center">
-						Кол-во просмотров вашего объявления на нашем сайте
+						<?php _e( 'Кол-во просмотров вашего объявления на нашем сайте', 'restx' ); ?>
 					</div>
 				</div>
 			</div>
@@ -154,7 +154,7 @@ Template Name: Партнерство
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
 				<div class="animate-puk-mask">
-					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Тарифы</h2>
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s"><?php _e( 'Тарифы', 'restx' ); ?></h2>
 				</div>
 			</div>
 		</div>
@@ -162,7 +162,7 @@ Template Name: Партнерство
 			<div class="col-md-4 text-center">
 				<div class="p_partner__box">
 					<div class="p_partner__subtitle mb-4">
-						Базовый
+						<?php _e( 'Базовый', 'restx' ); ?>
 					</div>
 					<div>
 						<img src="<?php bloginfo('template_url') ?>/img/growth.svg" alt="" width="55px" class="mb-5">
@@ -171,16 +171,16 @@ Template Name: Партнерство
 						300 грн
 					</div>
 					<div class="mb-5">
-						за сезон
+						<?php _e( 'за сезон', 'restx' ); ?>
 					</div>
 					<div class="p_partner__list mb-5">
-						<li class="mb-3">Размещение жилья</li>
-						<li class="mb-3">До 15 фотографий</li>
-						<li class="mb-3">500-1000 просмотров за месяц</li>
+						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'До 15 фотографий', 'restx' ); ?></li>
+						<li class="mb-3">500-1000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
 					</div>
 					<a href="#" data-toggle="modal" data-target="#budgetModal" class="text-dark">
 						<div class="btn bg-pastel-green">
-							Выбрать
+							<?php _e( 'Выбрать', 'restx' ); ?>
 						</div>
 					</a>
 				</div>
@@ -188,7 +188,7 @@ Template Name: Партнерство
 			<div class="col-md-4 text-center">
 				<div class="p_partner__box">
 					<div class="p_partner__subtitle mb-4">
-						Стандарт
+						<?php _e( 'Стандарт', 'restx' ); ?>
 					</div>
 					<div>
 						<img src="<?php bloginfo('template_url') ?>/img/startup.svg" alt="" width="55px" class="mb-5">
@@ -197,17 +197,17 @@ Template Name: Партнерство
 						800 грн
 					</div>
 					<div class="mb-5">
-						за сезон
+						<?php _e( 'за сезон', 'restx' ); ?>
 					</div>
 					<div class="p_partner__list mb-5">
-						<li class="mb-3">Размещение жилья</li>
-						<li class="mb-3">До 40 фотографий</li>
-						<li class="mb-3">Техническая поддержка</li>
-						<li class="mb-3">2500-5000 просмотров за месяц</li>
+						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'До 40 фотографий', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'Техническая поддержка', 'restx' ); ?></li>
+						<li class="mb-3">2500-5000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
 					</div>
 					<a href="#" data-toggle="modal" data-target="#standartModal" class="text-dark">
 						<div class="btn bg-pastel-red">
-							Выбрать
+							<?php _e( 'Выбрать', 'restx' ); ?>
 						</div>
 					</a>
 				</div>
@@ -215,7 +215,7 @@ Template Name: Партнерство
 			<div class="col-md-4 text-center">
 				<div class="p_partner__box">
 					<div class="p_partner__subtitle mb-4">
-						Премиум
+						<?php _e( 'Премиум', 'restx' ); ?>
 					</div>
 					<div>
 						<img src="<?php bloginfo('template_url') ?>/img/diamond.svg" alt="" width="55px" class="mb-5">
@@ -224,20 +224,20 @@ Template Name: Партнерство
 						1500 грн
 					</div>
 					<div class="mb-5">
-						за сезон
+						<?php _e( 'за сезон', 'restx' ); ?>
 					</div>
 					<div class="p_partner__list mb-5">
-						<li class="mb-3">Размещение жилья</li>
-						<li class="mb-3">До 60 фотографий</li>
-						<li class="mb-3">Техническая поддержка</li>
-						<li class="mb-3">Ссылка на ваш сайт</li>
-						<li class="mb-3">Реклама в наших соцсетях</li>
-						<li class="mb-3">Упоминание в e-mail рассылке</li>
-						<li class="mb-3">7000-10000 просмотров за месяц</li>
+						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'До 60 фотографий', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'Техническая поддержка', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'Ссылка на ваш сайт', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'Реклама в наших соцсетях', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'Упоминание в e-mail рассылке', 'restx' ); ?></li>
+						<li class="mb-3">7000-10000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
 					</div>
 					<a href="#" data-toggle="modal" data-target="#premiumModal" class="text-dark">
 						<div class="btn bg-pastel-blue">
-							Выбрать
+							<?php _e( 'Выбрать', 'restx' ); ?>
 						</div>
 					</a>
 				</div>
@@ -246,7 +246,7 @@ Template Name: Партнерство
 		<div class="row mb-5">
 			<div class="col-md-12 text-center">
 				<div class="animate-puk-mask">
-					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Как разместить объявление</h2>
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s"><?php _e( 'Как разместить объявление', 'restx' ); ?></h2>
 				</div>
 			</div>
 		</div>
@@ -261,7 +261,7 @@ Template Name: Партнерство
 							01
 						</span>
 						<span>
-							Выбрать наиболее подходящий тариф для вас.
+							<?php _e( 'Выбрать наиболее подходящий тариф для вас.', 'restx' ); ?>
 						</span>
 					</div>
 				</div>
@@ -274,7 +274,7 @@ Template Name: Партнерство
 							02
 						</span>
 						<span>
-							Подготовить информацию о вашем жилье и заполнить форму.
+							<?php _e( 'Подготовить информацию о вашем жилье и заполнить форму.', 'restx' ); ?>
 						</span>
 					</div>
 				</div>
@@ -287,7 +287,7 @@ Template Name: Партнерство
 							03
 						</span>
 						<span>
-							Дождаться одобрения объявления и подготовить табличку "мест нет" ;)
+							<?php _e( 'Дождаться одобрения объявления и подготовить табличку мест нет ;)', 'restx' ); ?>
 						</span>
 					</div>	
 				</div>
@@ -296,10 +296,10 @@ Template Name: Партнерство
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-9 text-center">
 				<div class="animate-puk-mask">
-					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s">Правила размещения</h2>
+					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s"><?php _e( 'Правила размещения', 'restx' ); ?></h2>
 				</div>
 				<div class="p_partner__text">
-					Мы дорожим нашими отдыхающими и своей репутацией. Поэтому наш сервис самый надежный и востребованный в Украине.
+					<?php _e( 'Мы дорожим нашими отдыхающими и своей репутацией. Поэтому наш сервис самый надежный и востребованный в Украине.', 'restx' ); ?>
 				</div>
 			</div>
 		</div>
@@ -308,68 +308,67 @@ Template Name: Партнерство
 				<div class="p_partner__rules">
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							1. Только достоверная информация
+							1. <?php _e( 'Только достоверная информация', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Наши специалисты проверяют Ваше объявление. В случае подачи не правдивой или неправильно заполненной информации, Вам будет предоставлена возможность исправить информацию. В случае повторной дезинформации наших отдыхающих, мы не допустим объявление к публикации.
+							<?php _e( 'Наши специалисты проверяют Ваше объявление. В случае подачи не правдивой или неправильно заполненной информации, Вам будет предоставлена возможность исправить информацию. В случае повторной дезинформации наших отдыхающих, мы не допустим объявление к публикации.', 'restx' ); ?>
 						</div>
 					</div>
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							2. Цены
+							2. <?php _e( 'Цены', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Мы следим за отзывами отдыхающих и жалобами на подачу неверной цены. На время повторной проверки объявления, оно будет временно заблокировано и, в случае подтверждения, будет деактивировано без возврата стоимости тарифа.
+							<?php _e( 'Мы следим за отзывами отдыхающих и жалобами на подачу неверной цены. На время повторной проверки объявления, оно будет временно заблокировано и, в случае подтверждения, будет деактивировано без возврата стоимости тарифа.', 'restx' ); ?>
 						</div>
 					</div>
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							3. Фотографии
+							3. <?php _e( 'Фотографии', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Запрещено размещение стоковых фотографий и фотографий, которые не относятся к Вашему объекту. Просим обратить внимание, что фотографии не должны содержать ссылки, телефоны и какие-либо водяные знаки.
+							<?php _e( 'Запрещено размещение стоковых фотографий и фотографий, которые не относятся к Вашему объекту. Просим обратить внимание, что фотографии не должны содержать ссылки, телефоны и какие-либо водяные знаки.', 'restx' ); ?>
 						</div>
 					</div>
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							4. Отзывы
+							4. <?php _e( 'Отзывы', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Мы не удаляем отзывы, кроме случаем спама, содержащих оскорбления и не несущих полезность для ресурса
+							<?php _e( 'Мы не удаляем отзывы, кроме случаев спама, содержащих оскорбления и ненесущих полезность для ресурса.', 'restx' ); ?>
 						</div>
 					</div>
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							5. Тексты
+							5. <?php _e( 'Тексты', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Текст, который вы размещаете о своем жилье, должен быть уникален. Мы проверяем наличие такого же текста на других ресурсах. В случае не уникальности текста, мы не опубликуем объявление.
+							<?php _e( 'Текст, который вы размещаете о своем жилье, должен быть уникален. Мы проверяем наличие такого же текста на других ресурсах. В случае не уникальности текста, мы не опубликуем объявление.', 'restx' ); ?>
 						</div>
 					</div>
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							6. Возврат денежных средств
+							6. <?php _e( 'Возврат денежных средств', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Вы можете вернуть оплату за тариф в течение 14 дней.
+							<?php _e( 'Вы можете вернуть оплату за тариф в течение 14 дней.', 'restx' ); ?>
 						</div>
 					</div>
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							7. Переход на новый тариф
+							7. <?php _e( 'Переход на новый тариф', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Вы можете перейти на любой тариф. Переход на более дорогой тариф осуществляется по следующей формуле:
-							стоимость перехода = стоимость нового тарифа - стоимость старого тарифа.
-							<br>В случае перехода на более низкий тариф, плата не взымается.
+							<?php _e( 'Вы можете перейти на любой тариф. Переход на более дорогой тариф осуществляется по следующей формуле: стоимость перехода = стоимость нового тарифа - стоимость старого тарифа.', 'restx' ); ?>
+							<br><?php _e( 'В случае перехода на более низкий тариф, плата не взымается.', 'restx' ); ?>
 						</div>
 					</div>
 					<div class="mb-5">
 						<div class="p_partner__subtitle">
-							8. Расширение функционала своего объявления
+							8. <?php _e( 'Расширение функционала своего объявления', 'restx' ); ?>
 						</div>
 						<div class="p_partner__text">
-							Все владельцы бизнеса на нашем ресурсе находятся в одинаковых условиях и размещают свои объявления согласно действующих правил сервиса vidpochivai.com.ua. Отличие заключается только в выборе тарифного плана.
+							<?php _e( 'Все владельцы бизнеса на нашем ресурсе находятся в одинаковых условиях и размещают свои объявления согласно действующих правил сервиса vidpochivai.com.ua. Отличие заключается только в выборе тарифного плана.', 'restx' ); ?>
 						</div>
 					</div>
 				</div>
@@ -378,7 +377,7 @@ Template Name: Партнерство
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<div class="animate-puk-mask">
-					<h2 class="mb-3 animate-puk" data-effect="fade-up" data-delay="0.5s">Узнать подробности</h2>
+					<h2 class="mb-3 animate-puk" data-effect="fade-up" data-delay="0.5s"><?php _e( 'Узнать подробности', 'restx' ); ?></h2>
 				</div>
 				<div class="p_partner__text">
 					<!-- 093-77-12-218
@@ -406,7 +405,7 @@ Template Name: Партнерство
 					      	<img src="<?php bloginfo('template_url') ?>/img/callback.svg" width="35px" alt="">
 					      </div>
 					      <div class="callback__text">
-					      	Мы вам перезвоним!
+					      	<?php _e( 'Мы вам перезвоним!', 'restx' ); ?>
 					      </div>	
 				  		</div>
 				      <div class="callback__form">
@@ -432,7 +431,7 @@ Template Name: Партнерство
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Тариф Базовый</h3>
+        <h3 class="modal-title" id="exampleModalLabel"><?php _e( 'Тариф Базовый', 'restx' ); ?></h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -451,7 +450,7 @@ Template Name: Партнерство
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Тариф Стандартный</h3>
+        <h3 class="modal-title" id="exampleModalLabel"><?php _e( 'Тариф Стандартный', 'restx' ); ?></h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -470,7 +469,7 @@ Template Name: Партнерство
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Тариф Премиум</h3>
+        <h3 class="modal-title" id="exampleModalLabel"><?php _e( 'Тариф Премиум', 'restx' ); ?></h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

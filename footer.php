@@ -3,15 +3,15 @@
     <div class="mobile-link">
         <a href="<?php echo get_permalink( get_page_by_path( 'catalog' ) ); ?>" class="mobile-link__item">
             <img src="<?php bloginfo('template_url') ?>/img/catalogue.svg" width="25px" alt="" class="mb-2">
-            <span>Каталог</span>
+            <span><?php _e( 'Каталог', 'restx' ); ?></span>
         </a>
         <a class="mobile-link__item search-button">
             <img src="<?php bloginfo('template_url') ?>/img/loupe.svg" width="25px" alt="" class="mb-2">
-            <span>Поиск</span>
+            <span><?php _e( 'Поиск', 'restx' ); ?></span>
         </a>
         <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>" class="mobile-link__item">
             <img src="<?php bloginfo('template_url') ?>/img/faq.svg" width="25px" alt="" class="mb-2">
-            <span>Вопросы</span>
+            <span><?php _e( 'Вопросы', 'restx' ); ?></span>
         </a>
         <!-- <?php 
             if( !is_page_template( 'tpl_catalog.php' ) ){
@@ -27,15 +27,15 @@
                     <?php if( !is_page_template( 'tpl_faq.php' )): ?>
                     <div class="d-flex align-items-center mb-4">
                         <img src="<?php bloginfo('template_url') ?>/img/faq.svg" alt="" width="35px" class="mr-3">
-                        <h2>Есть вопросы?</h2>
+                        <h2><?php _e( 'Есть вопросы?', 'restx' ); ?></h2>
                     </div>
                     <div class="display-4 mb-4 pb-2">
-                        <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>"><div class="btn bg-pastel-blue">Задавай!</div></a>    
+                        <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>"><div class="btn bg-pastel-blue"><?php _e( 'Задавай', 'restx' ); ?>!</div></a>    
                     </div>
                     <?php endif ?>
                     <?php if( !is_page_template( 'tpl_partner.php' )): ?>
                         <div class="b_partner mb-5">
-                            <a href="<?php echo get_permalink( get_page_by_path( 'partner' ) ); ?>">Партнерство</a>
+                            <a href="<?php echo get_permalink( get_page_by_path( 'partner' ) ); ?>"><?php _e( 'Партнерство', 'restx' ); ?></a>
                         </div>
                     <?php endif ?>
                     
@@ -44,7 +44,7 @@
                             2019 &copy; Vidpochivai.com.ua
                         <? else: ?>
                             2019 &copy; 
-                            <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"> Vidpochivai.com.ua</a> › </span> <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua//#best" rel="v:url" property="v:title">Только проверенные предложения!</a> </span>
+                            <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"> Vidpochivai.com.ua</a> › </span> <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua//#best" rel="v:url" property="v:title"><?php _e( 'Только проверенные предложения!', 'restx' ); ?></a> </span>
 
                         <?php endif ?>
                     </div>
@@ -66,7 +66,7 @@
                     <div class="col-md-12">
                         <div class="m_callback__box">
                             <div class="m_callback__title mb-4">
-                                Мы вам перезвоним
+                                <?php _e( 'Мы вам перезвоним', 'restx' ); ?>
                             </div>
                             <div class="m_callback__form">
                                 <?php echo do_shortcode('[contact-form-7 id="2225" title="Callback"]') ?>

@@ -8,8 +8,8 @@
 							<img src="<?php bloginfo('template_url'); ?>/img/nearsea.svg" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Возле моря</h2>
-							<p>До моря рукой подать!</p>		
+							<h2><?php _e( 'Возле моря', 'restx' ); ?></h2>
+							<p><?php _e( 'До моря рукой подать!', 'restx' ); ?></p>		
 						</div>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 					$term_link = get_term_link($term_slug, 'collections');
 					echo $term_link;
 					?>">
-					<div class="btn">Смотреть больше вариантов</div>
+					<div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div>
 				</a>
 				</div>
 			</div>

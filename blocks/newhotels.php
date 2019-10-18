@@ -8,8 +8,8 @@
 							<img src="<?php bloginfo('template_url'); ?>/img/newhotels.svg" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Недавно добавленные на сайт</h2>
-							<p>Поприветствуем новичков!</p>		
+							<h2><?php _e( 'Недавно добавленные на сайт', 'restx' ); ?></h2>
+							<p><?php _e( 'Поприветствуем новичков!', 'restx' ); ?></p>		
 						</div>
 					</div>
 				</div>

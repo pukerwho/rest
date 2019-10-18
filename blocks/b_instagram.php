@@ -6,8 +6,8 @@
 					<div class="my-table">
 						
 						<div class="table-text">
-							<h2>Подписывайтесь на наш Instagram</h2>
-							<p>Там много-много полезного!</p>
+							<h2><?php _e( 'Подписывайтесь на наш Instagram', 'restx' ); ?></h2>
+							<p><?php _e( 'Там много-много полезного!', 'restx' ); ?></p>
 						</div>
 					</div>
 				</div>
@@ -23,7 +23,7 @@
 							</div>
 							<div class="b_instagram__btn text-center">
 								<div class="btn">
-									<span class="mr-2">Подписаться</span> 
+									<span class="mr-2"><?php _e( 'Подписаться', 'restx' ); ?></span> 
 									<img src="<?php bloginfo('template_url') ?>/img/b_instagram__heart-one.svg" width="20px" alt="" class="b_instagram__heart-one">
 									<img src="<?php bloginfo('template_url') ?>/img/b_instagram__heart-two.svg" width="20px" alt="" class="b_instagram__heart-two">
 								</div>

@@ -51,7 +51,7 @@
 			</div>
 			<div class="row justify-content-center mb-4">
 				<div class="col-md-8 text-center">
-					<h3>Популярные предложения в этом городе</h3>
+					<h3><?php _e( 'Популярные предложения в этом городе', 'restx' ); ?></h3>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -94,21 +94,21 @@
 						  				<?php get_template_part('blocks/hotel-price'); ?>	
 						  			</div>	
 						  			<div class="single-blogs-hotel-nomer">
-						  				Номера: 
+						  				<?php _e( 'Номера', 'restx' ); ?>: 
 											<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>
-												<span>Коттеджи</span>
+												<span><?php _e( 'Коттеджи', 'restx' ); ?></span>
 											<?php endif ?>
 											<?php if(rwmb_meta( 'meta-hotel-lux-has' )): ?>
-												<span>Люксы</span>
+												<span><?php _e( 'Люксы', 'restx' ); ?></span>
 											<?php endif ?>
 											<?php if(rwmb_meta( 'meta-hotel-halflux-has' )): ?>
-												<span>Полулюксы</span>
+												<span><?php _e( 'Полулюксы', 'restx' ); ?></span>
 											<?php endif ?>
 											<?php if(rwmb_meta( 'meta-hotel-standart-has' )): ?>
-												<span>Стандарты</span>
+												<span><?php _e( 'Стандарты', 'restx' ); ?></span>
 											<?php endif ?>
 											<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
-												<span>Бюджетные</span>
+												<span><?php _e( 'Бюджетные', 'restx' ); ?></span>
 											<?php endif ?>
 						  			</div>
 					  			</div>

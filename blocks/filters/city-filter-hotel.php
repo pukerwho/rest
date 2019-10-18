@@ -5,7 +5,7 @@
 		    <div class="selectBox select_collections_class">
 		    	<div class="select">
 			      <select>
-			        <option>Категория</option>
+			        <option><?php _e( 'Категория', 'restx' ); ?></option>
 			      </select>
 			    </div>
 		      <div class="overSelect"></div>
@@ -45,7 +45,7 @@
 		  	<div class="selectBox select_price_class">
 		    	<div class="select">
 			      <select>
-			        <option>Цена</option>
+			        <option><?php _e( 'Цена', 'restx' ); ?></option>
 			      </select>
 			    </div>
 		      <div class="overSelect"></div>
@@ -74,7 +74,7 @@
 	  <input type="hidden" name="citynamefilter" value="<?php echo get_queried_object_id() ?>">
 	  <div class="b_filter__item">
 		  <div class="btn-container">
-		  	<button class="btn bg-pastel-green">Применить фильтр</button>	
+		  	<button class="btn bg-pastel-green"><?php _e( 'Применить фильтр', 'restx' ); ?></button>	
 		  </div>
 		</div>
 	  <input type="hidden" id="price_min_value" name="b_filter_price_min" value="0">

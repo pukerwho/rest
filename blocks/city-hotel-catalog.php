@@ -7,8 +7,8 @@
 					<img src="<?php bloginfo('template_url'); ?>/img/newhotels.svg" alt="" width="40px">
 				</div>
 				<div class="table-text">
-					<h2>Недавно добавленные на сайт</h2>
-					<p>Поприветствуем новичков!</p>		
+					<h2><?php _e( 'Недавно добавленные на сайт', 'restx' ); ?></h2>
+					<p><?php _e( 'Поприветствуем новичков!', 'restx' ); ?></p>		
 				</div>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="#"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 		</div>
 	</div>
 </div>
@@ -92,8 +92,8 @@
 					<img src="<?php bloginfo('template_url'); ?>/img/popularhotels.svg" alt="" width="40px">
 				</div>
 				<div class="table-text">
-					<h2>Популярные предложения</h2>
-					<p>Эти пансионаты пользуются повышенным спросом!</p>	
+					<h2><?php _e( 'Популярные предложения', 'restx' ); ?></h2>
+					<p><?php _e( 'Эти пансионаты пользуются повышенным спросом!', 'restx' ); ?></p>	
 				</div>
 			</div>
 		</div>
@@ -181,7 +181,7 @@
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="<?php echo $term_link_popular ?>"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="<?php echo $term_link_popular ?>"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 
 			<?php $terms = get_terms('collections');
 foreach ($terms as $term) {
@@ -201,8 +201,8 @@ foreach ($terms as $term) {
 					<img src="<?php bloginfo('template_url'); ?>/img/familyhotels.svg" alt="" width="40px">
 				</div>
 				<div class="table-text">
-					<h2>Семейный отдых</h2>
-					<p>Лучшие предложения для тех, кто едет отдыхать с детьми!</p>		
+					<h2><?php _e( 'Семейный отдых', 'restx' ); ?></h2>
+					<p><?php _e( 'Лучшие предложения для тех, кто едет отдыхать с детьми!', 'restx' ); ?></p>		
 				</div>
 			</div>
 		</div>
@@ -290,7 +290,7 @@ foreach ($terms as $term) {
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="#"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 		</div>
 	</div>
 </div>
@@ -304,8 +304,8 @@ foreach ($terms as $term) {
 					<img src="<?php bloginfo('template_url'); ?>/img/crown.svg" alt="" width="40px">
 				</div>
 				<div class="table-text">
-					<h2>Премиум отдых</h2>
-					<p>Комфортный отдых за соответствующую цену!</p>		
+					<h2><?php _e( 'Премиум отдых', 'restx' ); ?></h2>
+					<p><?php _e( 'Комфортный отдых за соответствующую цену!', 'restx' ); ?></p>		
 				</div>
 			</div>
 		</div>
@@ -393,7 +393,7 @@ foreach ($terms as $term) {
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="#"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 		</div>
 	</div>
 </div>
@@ -407,8 +407,8 @@ foreach ($terms as $term) {
 					<img src="<?php bloginfo('template_url'); ?>/img/nearsea.svg" alt="" width="40px">
 				</div>
 				<div class="table-text">
-					<h2>Возле моря</h2>
-					<p>До моря рукой подать!</p>		
+					<h2><?php _e( 'Возле моря', 'restx' ); ?></h2>
+					<p><?php _e( 'До моря рукой подать!', 'restx' ); ?></p>		
 				</div>
 			</div>
 		</div>
@@ -496,7 +496,7 @@ foreach ($terms as $term) {
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="#"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 		</div>
 	</div>
 </div>
@@ -510,8 +510,8 @@ foreach ($terms as $term) {
 					<img src="<?php bloginfo('template_url'); ?>/img/animals.svg" alt="" width="40px">
 				</div>
 				<div class="table-text">
-					<h2>С животными</h2>
-					<p>Здесь любят пухнастых!</p>		
+					<h2><?php _e( 'С животными', 'restx' ); ?></h2>
+					<p><?php _e( 'Здесь любят пухнастых!', 'restx' ); ?></p>		
 				</div>
 			</div>
 		</div>
@@ -598,7 +598,7 @@ foreach ($terms as $term) {
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="#"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 		</div>
 	</div>
 </div>

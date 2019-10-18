@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-12">
-                <h1>Результаты поиска</h1>
+                <h1><?php _e( 'Результаты поиска', 'restx' ); ?></h1>
             </div>
         </div>
         <div class="row">
@@ -15,7 +15,7 @@
                     </div>
                 <?php endwhile; ?>
                 <?php else : ?>
-                    ничего нет
+                    <?php _e( 'ничего нет', 'restx' ); ?>
                 <?php endif; ?>
         </div>
         <div class="row">

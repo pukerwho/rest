@@ -8,8 +8,8 @@
 							<img src="<?php bloginfo('template_url'); ?>/img/winter.png" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Без отдыха и конь не скачет</h2>
-							<p>Пора планировать отпуск</p>		
+							<h2><?php _e( 'Без отдыха и конь не скачет', 'restx' ); ?></h2>
+							<p><?php _e( 'Пора планировать отпуск', 'restx' ); ?></p>		
 						</div>
 					</div>
 				</div>
@@ -17,12 +17,25 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 mb-4">
+				<a href="<?php echo get_permalink( get_page_by_path( 'karpaty' ) ); ?>">
+					<div class="b_rest__img" style="background: url('<?php bloginfo('template_url') ?>/img/karpaty.jpg'); background-size: cover;">
+						<!-- <div class="b_rest__img-bg"></div> -->
+						<div class="b_rest__content">
+							<img src="<?php bloginfo('template_url') ?>/img/mountains.svg" alt="" width="40px" class="mb-4">
+							<div class="b_rest__title">
+								<?php _e( 'Карпаты', 'restx' ); ?>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-4 mb-4">
 				<a href="<?php echo get_permalink( get_page_by_path( 'azovsea' ) ); ?>">
 					<div class="b_rest__img" style="background: url('<?php bloginfo('template_url') ?>/img/azovsea.jpg'); background-size: cover;">
 						<div class="b_rest__content">
 							<img src="<?php bloginfo('template_url') ?>/img/azovsea.svg" alt="" width="40px" class="mb-4">
 							<div class="b_rest__title">
-								Азовское море
+								<?php _e( 'Азовское море', 'restx' ); ?>
 							</div>
 						</div>
 					</div>
@@ -35,20 +48,7 @@
 						<div class="b_rest__content">
 							<img src="<?php bloginfo('template_url') ?>/img/blacksea.svg" alt="" width="40px" class="mb-4">
 							<div class="b_rest__title">
-								Черное море
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 mb-4">
-				<a href="<?php echo get_permalink( get_page_by_path( 'karpaty' ) ); ?>">
-					<div class="b_rest__img" style="background: url('<?php bloginfo('template_url') ?>/img/karpaty.jpg'); background-size: cover;">
-						<!-- <div class="b_rest__img-bg"></div> -->
-						<div class="b_rest__content">
-							<img src="<?php bloginfo('template_url') ?>/img/mountains.svg" alt="" width="40px" class="mb-4">
-							<div class="b_rest__title">
-								Карпаты
+								<?php _e( 'Черное море', 'restx' ); ?>
 							</div>
 						</div>
 					</div>

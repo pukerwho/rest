@@ -8,8 +8,8 @@
 							<img src="<?php bloginfo('template_url'); ?>/img/crown.svg" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Премиум отдых</h2>
-							<p>Комфортный отдых за соответствующую цену!</p>		
+							<h2><?php _e( 'Премиум отдых', 'restx' ); ?></h2>
+							<p><?php _e( 'Комфортный отдых за соответствующую цену!', 'restx' ); ?></p>		
 						</div>
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 					$term_slug = 'premium';
 					$term_link = get_term_link($term_slug, 'collections');
 					echo $term_link;
-					?>"><div class="btn">Смотреть больше вариантов</div></a>
+					?>"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 				</div>
 			</div>
 		</div>

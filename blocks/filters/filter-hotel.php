@@ -3,7 +3,7 @@
 		<?php if( $terms = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0 ) ) ): ?>
 			<div class="b_filter__item">
 				<div class="select">
-					<select id="b_filter__item-cityname" name="citylistfilter"><option>Город</option>
+					<select id="b_filter__item-cityname" name="citylistfilter"><option><?php _e( 'Город', 'restx' ); ?></option>
 						<?php foreach ($terms as $term): ?>
 							<option value="<?php echo $term->term_id ?>"><?php echo $term->name ?></option>
 						<?php endforeach; ?>
@@ -16,7 +16,7 @@
 		    <div class="selectBox select_collections_class">
 		    	<div class="select">
 			      <select>
-			        <option>Категория</option>
+			        <option><?php _e( 'Категория', 'restx' ); ?></option>
 			      </select>
 			    </div>
 		      <div class="overSelect"></div>
@@ -56,7 +56,7 @@
 		  	<div class="selectBox select_price_class">
 		    	<div class="select">
 			      <select>
-			        <option>Цена</option>
+			        <option><?php _e( 'Цена', 'restx' ); ?></option>
 			      </select>
 			    </div>
 		      <div class="overSelect"></div>
@@ -84,7 +84,7 @@
 		</div>
 		<div class="b_filter__item">
 		  <div class="btn-container">
-		  	<button class="btn bg-pastel-green">Применить фильтр</button>	
+		  	<button class="btn bg-pastel-green"><?php _e( 'Применить фильтр', 'restx' ); ?></button>	
 		  </div>
 		</div>
 		<input type="hidden" id="price_min_value" name="b_filter_price_min" value="0">

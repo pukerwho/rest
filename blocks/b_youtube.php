@@ -11,11 +11,11 @@
 								<span>Youtube</span>
 							</div>
 							<div class="b_youtube__subtitle mb-4">
-								Подписывайтесь на наш канал: здесь классные видео про украинские курорты
+								<?php _e( 'Подписывайтесь на наш канал: здесь классные видео про украинские курорты', 'restx' ); ?>
 							</div>
 							<div class="b_youtube__btn">
 								<div class="btn">
-									<span class="mr-2">Подписаться</span> 
+									<span class="mr-2"><?php _e( 'Подписаться', 'restx' ); ?></span> 
 									<img src="<?php bloginfo('template_url') ?>/img/b_instagram__heart-one.svg" width="20px" alt="" class="b_instagram__heart-one">
 									<img src="<?php bloginfo('template_url') ?>/img/b_instagram__heart-two.svg" width="20px" alt="" class="b_instagram__heart-two">
 								</div>

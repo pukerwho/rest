@@ -7,9 +7,9 @@
 <div class="col-md-4 mb-5">
 	<div class="nomer" style="background: url('<?php echo $image_standart['url']; ?>'); background-size: cover; background-repeat: no-repeat;" data-nomer="standart">
 		<div class="nomer__title">
-			Номера Стандарт
+			<?php _e( 'Номера Стандарт', 'restx' ); ?>
 			<br>
-			<span>Цена: <?php echo rwmb_meta( 'meta-hotel-standart-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-standart-maxprice_sezon' ); ?> грн</span>
+			<span><?php _e( 'Цена', 'restx' ); ?>: <?php echo rwmb_meta( 'meta-hotel-standart-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-standart-maxprice_sezon' ); ?> грн</span>
 			<br>
 			<span class="nomer__qty">
 				<?php if(rwmb_meta( 'meta-hotel-standart-hasone' )): ?>
@@ -33,7 +33,7 @@
 				<?php if(rwmb_meta( 'meta-hotel-standart-hasseven' )): ?>
 				<span>7</span>
 				<?php endif ?>
-				местные
+				<?php _e( 'местные', 'restx' ); ?>
 			</span>
 		</div>
 	</div>
@@ -57,29 +57,29 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="mb-4 pb-3">
-	  				Стандартный номер
+	  				<?php _e( 'Стандартный номер', 'restx' ); ?>
 	  				<span class="nomers-item__small">
 		  				(
 		  				<?php if(rwmb_meta( 'meta-hotel-standart-hasone' )): ?>
-		  				<span>1 местный</span>
+		  				<span>1 <?php _e( 'местный', 'restx' ); ?></span>
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-standart-hastwo' )): ?>
-		  				<span>2-х местные</span>
+		  				<span>2-х <?php _e( 'местные', 'restx' ); ?></span>
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-standart-hasthree' )): ?>
-		  				<span>3-х местные</span>
+		  				<span>3-х <?php _e( 'местные', 'restx' ); ?></span>
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-standart-hasfour' )): ?>
-		  				<span>4-х местные</span>
+		  				<span>4-х <?php _e( 'местные', 'restx' ); ?></span>
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-standart-hasfive' )): ?>
-		  				<span>5-ти местные</span>
+		  				<span>5-ти <?php _e( 'местные', 'restx' ); ?></span>
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-standart-hassix' )): ?>
-		  				<span>6-ти местные</span>
+		  				<span>6-ти <?php _e( 'местные', 'restx' ); ?></span>
 		  				<?php endif ?>
 		  				<?php if(rwmb_meta( 'meta-hotel-standart-hasseven' )): ?>
-		  				<span>7-ми местные</span>
+		  				<span>7-ми <?php _e( 'местные', 'restx' ); ?></span>
 		  				<?php endif ?>
 		  				)
 	  				</span>
@@ -88,7 +88,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<h3 class="mb-5">Цены</h3>
+					<h3 class="mb-5"><?php _e( 'Цены', 'restx' ); ?></h3>
 				</div>
 			</div>
 			<div class="nomer-price mb-5">
@@ -103,7 +103,7 @@
 								</div>
 							</div>
 							<div class="nomer-price__text">
-								Минимальная цена не в сезон
+								<?php _e( 'Минимальная цена не в сезон', 'restx' ); ?>
 							</div>
 						</div>
 					</div>
@@ -117,7 +117,7 @@
 								</div>
 							</div>
 							<div class="nomer-price__text">
-								Максимальная цена не в сезон
+								<?php _e( 'Максимальная цена не в сезон', 'restx' ); ?>
 							</div>
 						</div>
 					</div>
@@ -131,7 +131,7 @@
 								</div>
 							</div>
 							<div class="nomer-price__text">
-								Минимальная цена в сезон
+								<?php _e( 'Минимальная цена в сезон', 'restx' ); ?>
 							</div>
 						</div>
 					</div>
@@ -145,7 +145,7 @@
 								</div>
 							</div>
 							<div class="nomer-price__text">
-								Максимальная цена в сезон
+								<?php _e( 'Максимальная цена в сезон', 'restx' ); ?>
 							</div>
 						</div>
 					</div>
@@ -153,7 +153,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<h3 class="mb-5">Удобства:</h3>
+					<h3 class="mb-5"><?php _e( 'Удобства:', 'restx' ); ?></h3>
 			  	<div class="include-grid">
 			  		<?php get_template_part( 'blocks/include/includestandart', 'default' ); ?>
 			  	</div>
@@ -161,7 +161,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<h3 class="mb-5">Фотографии:</h3>
+					<h3 class="mb-5"><?php _e( 'Фотографии:', 'restx' ); ?></h3>
 					<div class="hotel-photos mb-5">
 			  		<?php 
 							$images_standart_list = rwmb_meta( 'meta-hotel-standart-photos', array( 'size' => 'large' ) );

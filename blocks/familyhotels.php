@@ -8,8 +8,8 @@
 							<img src="<?php bloginfo('template_url'); ?>/img/familyhotels.svg" alt="" width="40px">
 						</div>
 						<div class="table-text">
-							<h2>Семейный отдых</h2>
-							<p>Лучшие предложения для тех, кто едет отдыхать с детьми!</p>
+							<h2><?php _e( 'Семейный отдых', 'restx' ); ?></h2>
+							<p><?php _e( 'Лучшие предложения для тех, кто едет отдыхать с детьми!', 'restx' ); ?></p>
 						</div>
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 					$term_link = get_term_link($term_slug, 'collections');
 					echo $term_link;
 					?>">
-						<div class="btn">Смотреть больше вариантов</div>
+						<div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div>
 					</a>
 				</div>
 			</div>

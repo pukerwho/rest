@@ -3,7 +3,7 @@
 		<div class="mb-5">
 			<div class="d-flex align-items-center mb-5">
 				<img src="<?php bloginfo('template_url'); ?>/img/map.svg" alt="" width="40px" class="mr-3">
-				<h3>Карта:</h3>
+				<h3><?php _e( 'Карта', 'restx' ); ?>:</h3>
 			</div>
 			<div class="contact-grid">
 				<?php 
@@ -25,7 +25,7 @@
 		<div class="mb-5">
 			<div class="d-flex align-items-center mb-5">
 				<img src="<?php bloginfo('template_url'); ?>/img/phone-call.svg" alt="" width="40px" class="mr-3">
-				<h3>Телефоны:</h3>
+				<h3><?php _e( 'Телефоны', 'restx' ); ?>:</h3>
 			</div>
 			<div class="contact-grid">
 				<?php

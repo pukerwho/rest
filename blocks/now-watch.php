@@ -3,11 +3,11 @@
 		<div class="row">
 			<div class="col-md-4">
 				<h2 class="nowwatch__title mb-4">
-					Сейчас смотрят
+					<?php _e( 'Сейчас смотрят', 'restx' ); ?>
 				</h2>
 				<div class="nowwatch__line"></div>
 				<p class="nowwatch__text mb-4">
-					Это предложения уже заинтересовали посетителей. Стоит присмотреться к ним внимательней?
+					<?php _e( 'Эти предложения уже заинтересовали посетителей. Стоит присмотреться к ним внимательней!', 'restx' ); ?>
 				</p>
 				<div class="nowwatch-buttons">
 					<div class="swiper-button-prev swiper-nowwatch-button-prev" style="width: 40px; background-size: 40px 40px; ;background-image: url(<?php bloginfo('template_url'); ?>/img/left-arrow.svg");"></div>
@@ -60,10 +60,10 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<h2 class="nowwatch__title mb-4">
-					Сейчас смотрят
+					<?php _e( 'Сейчас смотрят', 'restx' ); ?>
 				</h2>
 				<p class="nowwatch__text mb-4">
-					Это предложения уже заинтересовали посетителей. Стоит присмотреться к ним внимательней?
+					<?php _e( 'Эти предложения уже заинтересовали посетителей. Стоит присмотреться к ним внимательней!', 'restx' ); ?>
 				</p>
 			</div>
 		</div>

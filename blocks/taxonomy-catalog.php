@@ -96,7 +96,7 @@
 <div class="row mb-5">
 	<div class="col-md-12">
 		<div class="button-more text-center">
-			<a href="#"><div class="btn">Смотреть больше вариантов</div></a>
+			<a href="#"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 		</div>
 	</div>
 </div>

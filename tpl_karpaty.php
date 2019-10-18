@@ -23,8 +23,8 @@ Template Name: Карпаты
 				<div class="mb-4">
 					<div class="my-table">
 						<div class="table-text">
-							<h1>Отдых в Карпатах</h1>
-							<p>Популярные направления</p>
+							<h1><?php _e( 'Отдых в Карпатах', 'restx' ); ?></h1>
+							<p><?php _e( 'Популярные направления', 'restx' ); ?></p>
 						</div>
 					</div>
 				</div>
@@ -89,8 +89,8 @@ Template Name: Карпаты
 				<div class="mb-4">
 					<div class="my-table">
 						<div class="table-text">
-							<h1>Популярные предложения</h1>
-							<p>Где отдохнуть в Карпатах?</p>
+							<h1><?php _e( 'Популярные предложения', 'restx' ); ?></h1>
+							<p><?php _e( 'Где отдохнуть в Карпатах?', 'restx' ); ?></p>
 						</div>
 					</div>
 				</div>
