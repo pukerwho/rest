@@ -39,7 +39,6 @@ Template Name: Карпаты
 								'taxonomy' => 'citylist', 
 								'parent' => 0, 
 								'hide_empty' => false,
-								'number' => 5,
 								'meta_key' => '_crb_citylist_location',
 							  'meta_value' => 'karpaty'
 							) );
