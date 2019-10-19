@@ -9708,7 +9708,7 @@ footer a {
       margin-bottom: 0px; }
 
 .maincards {
-  padding: 6rem 0; }
+  padding: 6rem 0 2rem 0; }
   .maincards__grid {
     display: -ms-grid;
     display: grid;
