@@ -6,7 +6,6 @@
 	$day_bg = get_bloginfo('template_url').'/img/day_bg.jpg';
 	$evening_bg = get_bloginfo('template_url').'/img/evening_bg.jpg';
 	$night_bg = get_bloginfo('template_url').'/img/night_bg.jpg';
-	
 	if ($current_hour < 12 & $current_hour >= 6) {
 		$current_bg = $morning_bg;
 		$menu_class = 'morning';
@@ -20,6 +19,10 @@
 		$menu_class = 'evening';
 	}
 	else if ($current_hour >= 22) {
+		$current_bg = $night_bg;
+		$menu_class = 'night';
+	}
+	else if ($current_hour >= 0 & $current_hour < 6) {
 		$current_bg = $night_bg;
 		$menu_class = 'night';
 	}
