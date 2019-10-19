@@ -250,6 +250,30 @@ if ($(document).width() < 960) {
   });
 };
 
+//SWIPER REGION
+if ($(document).width() > 960) {
+  var myRegionSwiper = new Swiper ('.swiper-region', {
+    slidesPerView: 5,
+    spaceBetween: 15,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-region-button-next',
+      prevEl: '.swiper-region-button-prev',
+    },
+  });
+};
+if ($(document).width() < 960) {
+  var myRegionSwiper = new Swiper ('.swiper-region', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-region-button-next',
+      prevEl: '.swiper-region-button-prev',
+    },
+  });
+};
+
 //SWIPER NOW WATCH
 var nowwatch_button_next = $('.swiper-nowwatch-button-next');
 var nowwatch_button_prev = $('.swiper-nowwatch-button-prev');

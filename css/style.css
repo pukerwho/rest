@@ -8970,6 +8970,11 @@ p {
 a:hover {
   text-decoration: none; }
 
+#hero_city {
+  width: 100%; }
+  #hero_city option {
+    width: 100%; }
+
 #content {
   padding-top: 100px; }
 
@@ -9157,6 +9162,24 @@ a:hover {
 .modal-body-premium .wpcf7-mail-sent-ok {
   font-size: 1.5rem;
   padding: 1.25rem; }
+
+/* SLIDER */
+.swiper-region-button-next, .swiper-region-button-prev {
+  width: 50px !important;
+  height: 50px !important;
+  -webkit-background-size: 25px 25px !important;
+  background-size: 25px 25px !important;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.46);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.46);
+  -webkit-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  transform: translateY(-25%);
+  margin-top: 0 !important; }
+  .swiper-region-button-next:focus, .swiper-region-button-prev:focus {
+    outline: none; }
 
 .youtube-player {
   position: relative;
@@ -12641,6 +12664,12 @@ button.swiper-pagination-bullet {
       .modal-callback .m_callback__form [type="submit"]:hover {
         -webkit-box-shadow: 0px 1px 0.001px 0px #9ef6ad;
         box-shadow: 0px 1px 0.001px 0px #9ef6ad; }
+
+  .swiper-region-button-next, .swiper-region-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+    -webkit-background-size: 20px 20px !important;
+    background-size: 20px 20px !important; }
 
   .modal-bg__open {
     width: 100%;

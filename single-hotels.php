@@ -148,7 +148,7 @@
 	  				<h3 class="mb-5"><?php _e( 'Удобства:', 'restx' ); ?></h3>
 	  				<?php get_template_part( 'blocks/include', 'default' ); ?>
 	  				<div class="nomers d-flex flex-column">
-	  					<h3 class="mb-5"><?php _e( 'Номера', 'restx' ); ?></h3>
+	  					<h3 class="mb-5"><?php _e( 'Номера (кликните, чтобы посмотреть всю информацию', 'restx' ); ?></h3>
 	  					<div class="row">
 			  				<!-- Номер коттедж -->
 					  		<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>

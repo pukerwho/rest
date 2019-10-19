@@ -32,29 +32,32 @@ Template Name: Карпаты
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12">
-				<!-- MAINCARDS PC VERSION -->
 				<div class="allcity">
-					<div class="maincards__grid pc-show">
-						<?php $citylists = get_terms( array( 
-							'taxonomy' => 'citylist', 
-							'parent' => 0, 
-							'hide_empty' => false,
-							'number' => 5,
-							'meta_key' => '_crb_citylist_location',
-						  'meta_value' => 'karpaty'
-						) );
-						foreach ( $citylists as $citylist ): ?>
-						<div class="maincards__item">
-							<a href="<?php echo get_term_link($citylist); ?>">
-								<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
-									<div class="maincards__item__card__title">
-										<?php echo $citylist->name ?>
+					<div class="swiper-container swiper-region">
+						<div class="swiper-wrapper maincards__grid">
+							<?php $citylists = get_terms( array( 
+								'taxonomy' => 'citylist', 
+								'parent' => 0, 
+								'hide_empty' => false,
+								'number' => 5,
+								'meta_key' => '_crb_citylist_location',
+							  'meta_value' => 'karpaty'
+							) );
+							foreach ( $citylists as $citylist ): ?>
+							<div class="swiper-slide maincards__item">
+								<a href="<?php echo get_term_link($citylist); ?>">
+									<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
+										<div class="maincards__item__card__title">
+											<?php echo $citylist->name ?>
+										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
+							<?php endforeach; ?>
 						</div>
-						<?php endforeach; ?>
 					</div>
+					<div class="swiper-button-prev swiper-region-button-prev" style="background-position: 40% 50%; background-image: url(<?php bloginfo('template_url'); ?>/img/slider-left-arrow.svg");"></div>
+					<div class="swiper-button-next swiper-region-button-next" style="background-position: 55% 50%; background-image: url(<?php bloginfo('template_url'); ?>/img/slider-right-arrow.svg");"></div>
 				</div>
 				<!-- MAINCARDS MOBILE VERSION -->
 				<div class="mobile-show">
