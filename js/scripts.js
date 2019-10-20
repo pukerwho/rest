@@ -427,9 +427,29 @@ $('.addnew__nomers_checked').change(function(){
 //   containerSelector: '.single-hotem-content',
 // });
 
-var sidebar = new StickySidebar('.single-hotel-sidebar', {
-  topSpacing: 60,
-  bottomSpacing: 0,
-  containerSelector: '.col-md-12',
-  innerWrapperSelector: '.single-hotel-sidebar'
+// var sidebar = new StickySidebar('.single-hotel-sidebar', {
+//   topSpacing: 60,
+//   bottomSpacing: 560,
+//   containerSelector: '.single-hotel-content',
+//   innerWrapperSelector: '.single-hotel-sidebar'
+// });
+
+var singleHotelMain = document.querySelector('.single-hotel-main');
+var singleHotelSibebar = document.querySelector('.single-hotel-cover-item');
+var userHeight = window.innerHeight - 50;
+var mainHeight = singleHotelMain.offsetHeight - 250;
+console.log('userHeight', userHeight);
+console.log('singleHotelMain.offsetHeight', singleHotelMain.offsetHeight);
+
+window.addEventListener('scroll', function() {
+  var h_scroll = $(this).scrollTop();
+  if (h_scroll > 0 & h_scroll <= 95 ) {
+    singleHotelSibebar.setAttribute('style', 'position: absolute; top: 0');
+  }
+  if (h_scroll > 95) {
+    singleHotelSibebar.setAttribute('style', 'position: fixed; top: 95px;')  
+  }
+  if (h_scroll > mainHeight) {
+    singleHotelSibebar.setAttribute('style', 'position: absolute; top: -30px; transform: translate3d(0,' + mainHeight + 'px, 0)');
+  }
 });
