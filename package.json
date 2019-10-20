@@ -14,5 +14,4 @@
     "gulp-sass": "^4.0.1",
     "sass-watch": "^0.1.0"
   },
-  "dependencies": {}
 }
