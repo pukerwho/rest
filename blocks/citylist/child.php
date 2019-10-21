@@ -1,6 +1,44 @@
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
+			<div class="citylist_wrapper">
+				<div class="citylist_content">
+					<div id="response" class="lead mb-5">
+			  		<?php get_template_part( 'blocks/citylist/child-catalog', 'default' ); ?>
+			  	</div>
+				</div>
+				<div class="citylist_sidebar">
+					<div class="lead">
+						Информация
+					</div>
+					<div>
+						<?php 
+							global $wp_query, $wp_rewrite;  
+							// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+							$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+							$current_term = get_queried_object_id();
+							$custom_query = new WP_Query( array( 
+							'post_type' => 'blogs', 
+							'posts_per_page' => 24,
+							'paged' => $current,
+							'tax_query' => array(
+						    array(
+					        'taxonomy' => 'citylist',
+							    'terms' => $current_term,
+					        'field' => 'term_id',
+					        'include_children' => true,
+					        'operator' => 'IN'
+						    )
+							),
+						) );
+						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+					  	<div class="col-md-12">
+				  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
+				  		</div>
+						<?php endwhile; endif; wp_reset_postdata(); ?>
+					</div>
+				</div>
+			</div>
 			<div class="tabs">
 				<div class="tab-button-outer mb-5">
 					<div class="nav-img">
