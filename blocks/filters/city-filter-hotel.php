@@ -1,4 +1,4 @@
-<div class="hotel-filter">
+<div class="hotel-filter mb-5 mb-md-4">
 	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="city-filter">
 		<div class="b_filter__item">
 			<div class="multiselect">
