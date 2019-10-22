@@ -8,7 +8,7 @@
 			<div class="citylist_wrapper">
 				<div class="citylist_content mb-5">
 					<?php get_template_part( 'blocks/filters/city-filter-hotel', 'default' ); ?>	
-					<div id="response" class="lead mb-5">
+					<div id="response" class="lead">
 			  		<?php get_template_part( 'blocks/citylist/child-catalog', 'default' ); ?>
 			  	</div>
 			  	<div class="mobile-show">
@@ -40,7 +40,7 @@
 				  		</div>
 						<?php endwhile; endif; wp_reset_postdata(); ?>
 			  	</div>
-			  	<div class="mobile-show mb-4">
+			  	<div class="mobile-show mb-5">
 			  		<div class="title mb-4">
 							Видео
 						</div>

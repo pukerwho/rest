@@ -1,4 +1,4 @@
-<div class="row mobile-hotels-grid mb-5" id="response">
+<div class="row mobile-hotels-grid" id="response">
 	<?php 
 		global $wp_query, $wp_rewrite;  
 		// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
