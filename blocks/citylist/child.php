@@ -154,8 +154,8 @@
 							),
 						) );
 						if ($custom_query_post_comment->have_posts()) : while ($custom_query_post_comment->have_posts()) : $custom_query_post_comment->the_post(); ?>
-					  	<?php global $comment;
-							$comment = true;
+					  	<?php global $withcomments;
+							$withcomments = true;
 							comments_template(); ?> 
 						<?php endwhile; endif; wp_reset_postdata(); ?>
 				  </div>
