@@ -8996,6 +8996,52 @@ a:hover {
 .mobile-show {
   display: none; }
 
+.lang a {
+  position: relative;
+  padding: 3px 52px 0 0; }
+  .lang a:hover {
+    opacity: 1 !important; }
+  .lang a.active:before {
+    border-color: #4b96ff;
+    background: #4b96ff; }
+  .lang a.active:after {
+    right: 0; }
+  .lang a:before {
+    content: '';
+    width: 42px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+    -webkit-transition: .16s;
+    -o-transition: .16s;
+    transition: .16s;
+    padding: 0; }
+  .lang a:after {
+    content: '';
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 17px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    -webkit-transition: .16s;
+    -o-transition: .16s;
+    transition: .16s;
+    margin: auto;
+    padding: 0; }
+
 .bg-pastel-blue {
   background-color: #bec5e7;
   -webkit-box-shadow: 0px 3px 4px 1px #99a5e3;
@@ -9096,7 +9142,6 @@ a:hover {
     height: 14px;
     background-position: 50%;
     background-repeat: no-repeat;
-    -webkit-background-size: 60% 60%;
     background-size: 60%; }
   .b_pagination .prev {
     background-image: url(../img/pagination-prev.svg);
@@ -9104,7 +9149,6 @@ a:hover {
     height: 14px;
     background-position: 50%;
     background-repeat: no-repeat;
-    -webkit-background-size: 60% 60%;
     background-size: 60%; }
 
 .modal-body p {
@@ -9167,7 +9211,6 @@ a:hover {
 .swiper-region-button-next, .swiper-region-button-prev {
   width: 50px !important;
   height: 50px !important;
-  -webkit-background-size: 25px 25px !important;
   background-size: 25px 25px !important;
   background-color: #ffffff;
   -webkit-border-radius: 50%;

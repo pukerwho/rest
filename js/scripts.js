@@ -57,6 +57,14 @@ $('.allcity-button').on('click', function(){
   $('body').toggleClass('modal-open');
 });
 
+$('.lang').on('click', function(){
+  if ($('.lang a').hasClass('active')){
+    $('.lang a').removeClass('active');  
+  } else {
+    $('.lang a').addClass('active');
+  }
+});
+
 //partner page
 if ($('.page-template-tpl_partner').length > 0) {
   var compareHeight = $('#compare').height();
