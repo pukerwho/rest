@@ -1,6 +1,10 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
+			<div class="table-text mb-5">
+				<h1><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_title') ?></h1>
+				<p><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_description') ?></p>
+			</div>
 			<div class="citylist_wrapper">
 				<div class="citylist_content">
 					<div id="response" class="lead mb-5">

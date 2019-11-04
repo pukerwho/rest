@@ -8,8 +8,8 @@
 		'post_type' => 'hotels', 
 		'posts_per_page' => 24,
 		'paged' => $current,
-		'orderby'        => 'meta_value',
-    'meta_key'       => 'meta-hotel-mainrating',
+		'orderby' => 'date',
+		'order' => 'DESC',
 		'tax_query' => array(
 	    array(
         'taxonomy' => 'citylist',
@@ -21,7 +21,7 @@
 		),
 	) );
 	if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-	  	<div class="col-md-3">
+	  	<div class="col-md-4">
 	  		<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
 	  	</div>
 	<?php endwhile; endif; wp_reset_postdata(); ?>

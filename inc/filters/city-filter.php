@@ -1,5 +1,78 @@
 <?php
 
+add_action( 'wp_enqueue_scripts', 'city_filter_scripts' );
+function city_filter_scripts() {
+  wp_register_script( 'forms', get_template_directory_uri() . '/js/city_filter.js', '','',true);
+  wp_localize_script( 'forms', 'filter_params', array(
+    'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+    
+    'selected' => $custom_query_city->selected,
+    'city_id' => $custom_query_city->city_id,
+
+    'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+  ) );
+  wp_enqueue_script( 'forms' );
+}
+
+//city sort filter 
+function city_sort_filter_function(){
+  $city_id = $_POST['city_id'];
+  $selected = $_POST['selected'];
+  $filterargs = array(
+    'post_type' => 'hotels',
+    'orderby' => 'date',
+    // 'meta_key'       => 'meta-hotel-mainrating',
+  );
+
+  if ($_POST['selected'] === 'date') {
+    $filterargs = array(
+      'post_type' => 'hotels',
+      'posts_per_page' => -1,
+      'orderby' => 'date',
+    ); 
+  }
+  
+  if ($_POST['selected'] === 'rating') {
+    $filterargs = array(
+      'post_type' => 'hotels',
+      'posts_per_page' => -1,
+      'orderby' => 'meta_value',
+      'meta_key' => 'meta-hotel-mainrating',
+    );
+  }
+
+  if ($_POST['selected'] === 'price') {
+    $filterargs = array(
+      'post_type' => 'hotels',
+      'posts_per_page' => -1,
+      'orderby' => 'meta_value',
+      'meta_key' => 'meta-hotel-maxprice',
+    );
+  }
+
+  if ($_POST['city_id'] != '') { 
+    $filterargs['tax_query'][] = array(
+      'taxonomy' => 'citylist',
+      'terms' => $city_id,
+      'field' => 'term_id',
+      'include_children' => true,
+      'operator' => 'IN'
+    );
+  }
+
+  $custom_query_city = new WP_Query( $filterargs );
+  if ($custom_query_city->have_posts()) : while ($custom_query_city->have_posts()) : $custom_query_city->the_post();
+    echo '<div class="col-md-4">';
+    get_template_part( 'blocks/hotel-card', 'default' );
+    echo '</div>';
+  endwhile; 
+  endif;
+  die;
+}
+
+add_action('wp_ajax_city_sort_filter', 'city_sort_filter_function');
+add_action('wp_ajax_nopriv_city_sort_filter', 'city_sort_filter_function');
+
 //city filter
 function city_hotels_filter_function(){
   $filterargs = array(

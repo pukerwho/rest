@@ -115,9 +115,16 @@
         </div>
         <div class="header__right pc-show">
           <div class="header__menu">
-            <li>
-              <a href="/catalog"><?php _e( 'Каталог', 'restx' ); ?></a>
-            </li>
+            <div class="has-submenu">
+              <li>
+                <a href="#"><?php _e( 'Курорты', 'restx' ); ?></a>
+              </li>
+              <div class="submenu">
+                <li><a href="<?php echo get_permalink( get_page_by_path( 'karpaty' ) ); ?>"><?php _e( 'Карпаты', 'restx' ); ?></a></li>
+                <li><a href="<?php echo get_permalink( get_page_by_path( 'blacksea' ) ); ?>"><?php _e( 'Черное море', 'restx' ); ?></a>
+                <li><a href="<?php echo get_permalink( get_page_by_path( 'azovsea' ) ); ?>"><?php _e( 'Азовское море', 'restx' ); ?></a></li>
+              </div>
+            </div>
             <li>
               <a href="/faq"><?php _e( 'Вопросы', 'restx' ); ?></a>
             </li>

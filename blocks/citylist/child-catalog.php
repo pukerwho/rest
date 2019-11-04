@@ -6,8 +6,7 @@
 		$custom_query = new WP_Query( array( 
 		'post_type' => 'hotels', 
 		'posts_per_page' => 24,
-		'orderby'        => 'meta_value',
-    'meta_key'       => 'meta-hotel-mainrating',
+		'orderby'        => 'date',
 		'tax_query' => array(
 	    array(
         'taxonomy' => 'citylist',

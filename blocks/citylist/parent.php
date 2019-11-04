@@ -7,9 +7,9 @@
 			</div>
 			<div class="citylist_wrapper">
 				<div class="citylist_content mb-5">
-					<?php get_template_part( 'blocks/filters/city-filter-hotel', 'default' ); ?>	
-					<div id="response" class="lead">
-			  		<?php get_template_part( 'blocks/citylist/child-catalog', 'default' ); ?>
+					<?php get_template_part( 'blocks/filters/city_filter', 'default' ); ?>	
+					<div class="lead">
+			  		<?php get_template_part( 'blocks/citylist/parent-catalog', 'default' ); ?>
 			  	</div>
 			  	<div class="mobile-show">
 			  		<?php 

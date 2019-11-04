@@ -8984,6 +8984,37 @@ a:hover {
 .home .dark.header__fixed .header__menu a {
   text-shadow: none; }
 
+.select_container {
+  position: relative; }
+  .select_container:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: #c4c3c0; }
+
+.select {
+  color: #2a2825;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem; }
+
+.Select-icon {
+  position: absolute;
+  top: 37%;
+  right: 5px;
+  vertical-align: middle;
+  display: block;
+  pointer-events: none;
+  margin-top: -.2em; }
+
 .nav-tabs {
   border: none; }
 
@@ -9351,7 +9382,6 @@ a:hover {
       background: url("../img/restx-logo.png");
       background-repeat: no-repeat;
       background-position: 50%;
-      -webkit-background-size: contain;
       background-size: contain;
       -webkit-border-radius: 50%;
       border-radius: 50%;
@@ -9368,7 +9398,6 @@ a:hover {
         background: url("../img/hand.svg");
         background-repeat: no-repeat;
         background-position: 50%;
-        -webkit-background-size: contain;
         background-size: contain;
         -webkit-border-radius: 50%;
         border-radius: 50%;
@@ -9412,6 +9441,29 @@ a:hover {
         -webkit-transition: all 0.75s;
         -o-transition: all 0.75s;
         transition: all 0.75s; }
+    .header__menu .has-submenu {
+      position: relative;
+      padding-bottom: 2rem;
+      margin-bottom: -2rem; }
+      .header__menu .has-submenu li {
+        margin-right: 5rem; }
+      .header__menu .has-submenu:hover .submenu {
+        display: block; }
+    .header__menu .submenu {
+      min-width: 220px;
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      -webkit-border-radius: 0.75rem;
+      border-radius: 0.75rem;
+      border: 1px solid #EBEBEB;
+      -webkit-box-shadow: 0 0.2rem 0 0 #e7e6e4;
+      box-shadow: 0 0.2rem 0 0 #e7e6e4;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem; }
+      .header__menu .submenu a {
+        color: #484848 !important;
+        text-shadow: none !important; }
   .header__right {
     width: 100%;
     display: -webkit-box;
@@ -9842,13 +9894,11 @@ footer a {
   line-height: 1.3;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #e7e6e4), color-stop(0, #fff));
-  background-image: -webkit-linear-gradient(left, #e7e6e4 33%, #fff 0);
   background-image: -o-linear-gradient(left, #e7e6e4 33%, #fff 0);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #e7e6e4), color-stop(0, #fff));
   background-image: linear-gradient(90deg, #e7e6e4 33%, #fff 0);
   background-position: bottom;
   background-repeat: repeat-x;
-  -webkit-background-size: .6rem .2rem;
   background-size: .6rem .2rem; }
 .hotel-item__icon {
   width: 25px !important;
@@ -9876,9 +9926,8 @@ footer a {
     height: 100%;
     top: 0;
     left: 0;
-    background: -webkit-gradient(linear, right top, left top, from(transparent), to(rgba(0, 0, 0, 0.25)));
-    background: -webkit-linear-gradient(right, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
     background: -o-linear-gradient(right, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: -webkit-gradient(linear, right top, left top, from(transparent), to(rgba(0, 0, 0, 0.25)));
     background: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
     z-index: 12;
     pointer-events: none; }
@@ -9889,9 +9938,8 @@ footer a {
     height: 100%;
     top: 0;
     right: 0;
-    background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.25)));
-    background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
     background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.25)));
     background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
     z-index: 12;
     pointer-events: none; }
@@ -9912,7 +9960,19 @@ footer a {
     text-align: center;
     z-index: 1; }
     .hotel-item__img__city__link {
-      display: inline-block;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       background-color: #ffffff;
       -webkit-border-radius: 8px;
       border-radius: 8px;
@@ -10046,14 +10106,11 @@ footer a {
     border-radius: 2px; }
 
 .nomers-item {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #e7e6e4), color-stop(0, #fff));
-  background-image: -webkit-linear-gradient(left, #e7e6e4 33%, #fff 0);
   background-image: -o-linear-gradient(left, #e7e6e4 33%, #fff 0);
   background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #e7e6e4), color-stop(0, #fff));
   background-image: linear-gradient(90deg, #e7e6e4 33%, #fff 0);
   background-position: bottom;
   background-repeat: repeat-x;
-  -webkit-background-size: .6rem .2rem;
   background-size: .6rem .2rem; }
   .nomers-item:last-child {
     background: none; }
@@ -10883,13 +10940,13 @@ footer a {
   .citylist-blog__title {
     color: #82817d;
     font-size: 1.9rem;
-    border-bottom: .2rem solid #f3f1ee;
+    /*border-bottom: .2rem solid #f3f1ee;*/
     -webkit-transition: border .25s,color .25s;
     -o-transition: border .25s,color .25s;
     transition: border .25s,color .25s; }
     .citylist-blog__title:hover {
       color: #2a2825;
-      border-bottom: .2rem solid #2a2825;
+      /*border-bottom: .2rem solid #2a2825;*/
       -webkit-transition: border .25s,color .25s;
       -o-transition: border .25s,color .25s;
       transition: border .25s,color .25s; }
@@ -12234,6 +12291,18 @@ button.swiper-pagination-bullet {
   height: 18px !important;
   outline: none !important;
   margin-left: -9px !important; }
+
+.city_filter_items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #82817d;
+  font-size: 1.75rem; }
 
 @font-face {
   font-family: 'Carolyna Pro Regular';
