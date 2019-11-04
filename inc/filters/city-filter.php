@@ -46,7 +46,7 @@ function city_sort_filter_function(){
       'post_type' => 'hotels',
       'posts_per_page' => -1,
       'orderby' => 'meta_value',
-      'meta_key' => 'meta-hotel-maxprice',
+      'meta_key' => 'meta-hotel-minprice',
     );
   }
 
