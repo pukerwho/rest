@@ -47,7 +47,7 @@ function city_sort_filter_function(){
       'posts_per_page' => -1,
       'orderby' => 'meta_value',
       'meta_key' => 'meta-hotel-minprice',
-      'order' => 'DESC',
+      'order' => 'ASC',
     );
   }
 
