@@ -12301,8 +12301,58 @@ button.swiper-pagination-bullet {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   color: #82817d;
   font-size: 1.75rem; }
+
+.city_filter_minmax_price {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  padding: 3px 52px 0 0; }
+  .city_filter_minmax_price:before {
+    content: '';
+    width: 42px;
+    height: 26px;
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+    -webkit-transition: .16s;
+    -o-transition: .16s;
+    transition: .16s;
+    padding: 0; }
+  .city_filter_minmax_price:after {
+    content: '';
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 17px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    -webkit-transition: .16s;
+    -o-transition: .16s;
+    transition: .16s;
+    margin: auto;
+    padding: 0; }
+  .city_filter_minmax_price.active:before {
+    border-color: #4b96ff;
+    background: #4b96ff; }
+  .city_filter_minmax_price.active:after {
+    right: 0; }
 
 @font-face {
   font-family: 'Carolyna Pro Regular';

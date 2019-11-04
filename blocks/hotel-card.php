@@ -49,9 +49,9 @@
 		</div>
 		<div class="lead pt-3 mb-3">
 			
-			<?php get_template_part('blocks/hotel-price'); ?>
+			<?php /* get_template_part('blocks/hotel-price'); */ ?>
 
-			<!-- Цена: <?php echo rwmb_meta( 'meta-hotel-minprice' ); ?> — <?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?> грн -->
+			Цена: <?php echo rwmb_meta( 'meta-hotel-minprice' ); ?> — <?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?> грн 
 		</div>
 		<div class="hotel-item__hasnomer lead">
 			<?php _e( 'Номера', 'restx' ); ?>: 

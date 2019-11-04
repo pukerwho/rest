@@ -8,6 +8,7 @@ function city_filter_scripts() {
     
     'selected' => $custom_query_city->selected,
     'city_id' => $custom_query_city->city_id,
+    'price_sort' => $custom_query_city->price_sort,
 
     'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
   ) );
@@ -73,6 +74,45 @@ function city_sort_filter_function(){
 
 add_action('wp_ajax_city_sort_filter', 'city_sort_filter_function');
 add_action('wp_ajax_nopriv_city_sort_filter', 'city_sort_filter_function');
+
+//price sort 
+function city_price_filter_function(){
+  $selected = $_POST['selected'];
+  $price_sort = $_POST['price_sort'];
+  $city_id = $_POST['city_id'];
+
+  if ($_POST['selected'] === 'price') {
+    $filterargs = array(
+      'post_type' => 'hotels',
+      'posts_per_page' => -1,
+      'orderby' => 'meta_value',
+      'meta_key' => 'meta-hotel-minprice',
+      'order' => $price_sort,
+    ); 
+  }
+
+  if ($_POST['city_id'] != '') { 
+    $filterargs['tax_query'][] = array(
+      'taxonomy' => 'citylist',
+      'terms' => $city_id,
+      'field' => 'term_id',
+      'include_children' => true,
+      'operator' => 'IN'
+    );
+  }
+
+  $custom_query_city = new WP_Query( $filterargs );
+  if ($custom_query_city->have_posts()) : while ($custom_query_city->have_posts()) : $custom_query_city->the_post();
+    echo '<div class="col-md-4">';
+    get_template_part( 'blocks/hotel-card', 'default' );
+    echo '</div>';
+  endwhile; 
+  endif;
+  die;
+}
+
+add_action('wp_ajax_city_price_filter', 'city_price_filter_function');
+add_action('wp_ajax_nopriv_city_price_filter', 'city_price_filter_function');
 
 //city filter
 function city_hotels_filter_function(){
