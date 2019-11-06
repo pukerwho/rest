@@ -42,7 +42,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="button-more text-center">
-					<a href="<?php echo get_permalink( get_page_by_path( 'allcity' ) ); ?>">
+					<a href="<?php echo get_page_url('tpl_allcity') ?>">
 					<div class="btn"><?php _e( 'Все города', 'restx' ); ?></div>
 				</a>
 				</div>

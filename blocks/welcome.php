@@ -53,9 +53,9 @@
 					</div>
 					<div class="hero__block-advice">
 						<?php _e( 'Например', 'restx' ); ?>: 
-						<li><a href="/citylist/jaremche"><?php _e( 'Яремче', 'restx' ); ?></a></li>
-						<li><a href="/citylist/verhovina"><?php _e( 'Верховина', 'restx' ); ?></a></li>
-						<li><a href="/citylist/vorohta"><?php _e( 'Ворохта', 'restx' ); ?></a></li>
+						<li><a href="<?php echo get_term_link(223, 'citylist') ?>"><?php _e( 'Яремче', 'restx' ); ?></a></li>
+						<li><a href="<?php echo get_term_link(237, 'citylist') ?>"><?php _e( 'Верховина', 'restx' ); ?></a></li>
+						<li><a href="<?php echo get_term_link(227, 'citylist') ?>"><?php _e( 'Ворохта', 'restx' ); ?></a></li>
 					</div>
 				</div>
 			</div>
