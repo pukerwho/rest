@@ -1,9 +1,9 @@
     </section>
     <hr>
     <div class="mobile-link">
-        <a href="<?php echo get_permalink( get_page_by_path( 'catalog' ) ); ?>" class="mobile-link__item">
-            <img src="<?php bloginfo('template_url') ?>/img/catalogue.svg" width="25px" alt="" class="mb-2">
-            <span><?php _e( 'Каталог', 'restx' ); ?></span>
+        <a href="<?php echo get_permalink( get_page_by_path( 'partner' ) ); ?>" class="mobile-link__item">
+            <img src="<?php bloginfo('template_url') ?>/img/plus.svg" width="25px" alt="" class="mb-2">
+            <span><?php _e( 'Добавить', 'restx' ); ?></span>
         </a>
         <a class="mobile-link__item search-button">
             <img src="<?php bloginfo('template_url') ?>/img/loupe.svg" width="25px" alt="" class="mb-2">
