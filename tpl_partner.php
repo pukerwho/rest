@@ -168,7 +168,7 @@ Template Name: Партнерство
 						<img src="<?php bloginfo('template_url') ?>/img/growth.svg" alt="" width="55px" class="mb-5">
 					</div>
 					<div class="p_partner__text">
-						300 грн
+						0 грн
 					</div>
 					<div class="mb-5">
 						<?php _e( 'за сезон', 'restx' ); ?>
