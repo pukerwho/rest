@@ -4,8 +4,6 @@ Template Name: Успешно добавили
 */
 ?>
 
-<?php get_header(); ?>
-
 <?php 
 
 header('Access-Control-Allow-Origin: *');
