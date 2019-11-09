@@ -97,7 +97,31 @@
             </div>
         </div>
     </div>
-    
+    <?php if( is_page_template( 'tpl_add.php' )): ?>
+        <!-- Succass add hotel -->
+        <div class="rest_modal">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6">
+                        <div class="rest_modal_box">
+                            <div class="mb-4">
+                                <img src="<?php bloginfo('template_url') ?>/img/checked.svg" alt="" width="45px">
+                            </div>
+                            <h3 class="mb-4">Успешно отправлено</h3>
+                            <div>
+                                Спасибо, мы получили вашу заявку. В течении 24 часов, ваше предложение будет размещено на нашем сайте.
+                            </div>
+                        </div>
+                        <div class="rest_modal_close">
+                            <img src="<?php bloginfo('template_url') ?>/img/close.svg" alt="" width="15px" class="mr-3">
+                            <span>Закрыть</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <div class="rest_modal_bg"></div>
     <div class="modal-bg"></div>
     <?php wp_footer(); ?>
 </body>

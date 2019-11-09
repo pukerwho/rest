@@ -428,6 +428,11 @@ $('.addnew__nomers_checked').change(function(){
   }                   
 });
 
+$('.rest_modal_close').on('click', function(){
+  $('.rest_modal').removeClass('open');
+  $('.rest_modal_bg').removeClass('open');
+})
+
 
 // $('.single-hotel-sidebar').stickySidebar({
 //   topSpacing: 60,
