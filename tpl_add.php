@@ -32,8 +32,8 @@ Template Name: Добавить предложение
 						<?php _e( 'Общая информация', 'restx' ); ?>
 					</div>
 					<div>
-						<label for="owner_name"><?php _e( 'Как к вам обращаться?', 'restx' ); ?></label>
-						<input type="text" name="owner_name" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>">
+						<label for="Как обращаться к вам"><?php _e( 'Как к вам обращаться?', 'restx' ); ?></label>
+						<input type="text" name="Как обращаться к вам" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>">
 					</div>
 					<div>
 						<label for="owner_mail"><?php _e( 'Адрес электронной почты (обязательно)', 'restx' ); ?>:</label>
