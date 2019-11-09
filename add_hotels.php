@@ -1,3 +1,11 @@
+<?php
+/*
+Template Name: Успешно добавили
+*/
+?>
+
+<?php get_header(); ?>
+
 <?php 
 
 header('Access-Control-Allow-Origin: *');
@@ -9,7 +17,9 @@ $Subject = "Добавить предложение";
 $message = print_r($_POST,true);
 
 $success = mail($EmailTo, $Subject, $message, "From: <$EmailFrom>");
-if($success) { echo "Success! Your e-mail was sent!"; }
+if($success) { include 'blocks/add/success_add.php'; }
 else{  echo "Error! Your e-mail was not sent!"; }
 
 ?>
+
+<?php get_footer(); ?>
