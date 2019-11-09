@@ -27,7 +27,7 @@ Template Name: Добавить предложение
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-md-8">
-				<form method="POST" id="add_hotels" action="/success-add/" enctype="multipart/form-data">
+				<form method="POST" id="add_hotels" action="/success-add" enctype="multipart/form-data">
 					<div class="addnew__heading">
 						<?php _e( 'Общая информация', 'restx' ); ?>
 					</div>
