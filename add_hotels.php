@@ -4,9 +4,9 @@ header('Access-Control-Allow-Origin: *');
 
 $EmailTo = "pelegrin2puk@gmail.com";
 $EmailFrom = 'info@timeto.top';
-$Subject = "Заполнили форму на сайте";
+$Subject = "Добавить предложение";
 
-$message = $_POST['owner_name'];
+$message = print_r($_POST,true);
 
 $success = mail($EmailTo, $Subject, $message, "From: <$EmailFrom>");
 if($success) { echo "Success! Your e-mail was sent!"; }
