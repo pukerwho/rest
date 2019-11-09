@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Успешно добавили
-*/
-?>
-
 <?php 
 
 header('Access-Control-Allow-Origin: *');
