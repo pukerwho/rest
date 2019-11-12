@@ -13,11 +13,11 @@ try {
   $mail->CharSet = "UTF-8";                                          
   $mail->SMTPAuth   = true;
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера GMAIL
-  $mail->Username   = 'nawwesele'; // Логин на почте
-  $mail->Password   = 'apes97abcd'; // Пароль на почте
+  $mail->Host       = 'mail.vidpochivai.com.ua'; // SMTP сервера GMAIL
+  $mail->Username   = 'partner@vidpochivai.com.ua'; // Логин на почте
+  $mail->Password   = 'partner57329'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
-  $mail->Port       = 465;
+  $mail->Port       = 25;
   $mail->setFrom('partner@vidpochivai.com.ua', 'YOUR NAME'); // Адрес самой почты и имя отправителя
   // Получатель письма
   $mail->addAddress('pelegrin2puk@gmail.com');  
