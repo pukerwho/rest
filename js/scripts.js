@@ -262,7 +262,7 @@ if ($(document).width() > 960) {
 if ($(document).width() < 960) {
   var myRegionSwiper = new Swiper ('.swiper-region', {
     slidesPerView: 2,
-    spaceBetween: 30,
+    spaceBetween: 15,
     loop: true,
     navigation: {
       nextEl: '.swiper-region-button-next',
@@ -433,6 +433,31 @@ $('.rest_modal_close').on('click', function(){
   $('.rest_modal_bg').removeClass('open');
 })
 
+
+//Image display
+function readURL(input) {
+  $(input).nextAll().remove();
+  console.log(input);
+  var inputFiles = input.files;
+  if (inputFiles) {
+    for (inputFile of inputFiles) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+
+        fileImg = document.createElement('img');
+        fileImg.className = 'add_hotel_thumb';
+        $(fileImg).attr('src', e.target.result);
+        $(input).after(fileImg);
+        // $('.add_hotel_file_in.'+dataInput).attr('src', e.target.result);
+      }
+      reader.readAsDataURL(inputFile);
+    }
+  }
+}
+
+$(".add_hotel_file").change(function() {
+  readURL(this);
+});
 
 // $('.single-hotel-sidebar').stickySidebar({
 //   topSpacing: 60,

@@ -9143,7 +9143,6 @@ a:hover {
   top: 50%;
   left: 0;
   right: 0;
-  z-index: 9;
   opacity: 0;
   -webkit-transform: translateY(-160%);
   -ms-transform: translateY(-160%);
@@ -9155,7 +9154,8 @@ a:hover {
     opacity: 1;
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
-    transform: translateY(-100%); }
+    transform: translateY(-100%);
+    z-index: 9; }
   .rest_modal_box {
     display: -webkit-box;
     display: -webkit-flex;
@@ -11364,6 +11364,12 @@ footer a {
   .addnew__cotedg, .addnew__lux, .addnew__halflux, .addnew__standart, .addnew__budget {
     display: none; }
 
+.add_hotel_thumb {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
 html.lb-disable-scrolling {
   overflow: hidden;
   /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */
@@ -12766,6 +12772,19 @@ button.swiper-pagination-bullet {
       -webkit-border-radius: .8rem;
       border-radius: .8rem; }
 
+  .city_filter_items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .city_filter_items .city_filter_minmax_price {
+      margin-top: 2rem; }
+
   /* Nomers */
   .nomers .nomer-price .row {
     display: -ms-grid;
@@ -12940,7 +12959,6 @@ button.swiper-pagination-bullet {
   .swiper-region-button-next, .swiper-region-button-prev {
     width: 40px !important;
     height: 40px !important;
-    -webkit-background-size: 20px 20px !important;
     background-size: 20px 20px !important; }
 
   .modal-bg__open {

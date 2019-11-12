@@ -36,8 +36,8 @@ Template Name: Добавить предложение
 						<input type="text" name="Как обращаться к вам" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>">
 					</div>
 					<div>
-						<label for="owner_mail"><?php _e( 'Адрес электронной почты (обязательно)', 'restx' ); ?>:</label>
-						<input type="email" name="owner_mail" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>" >	
+						<label for="Адрес электронной почты"><?php _e( 'Адрес электронной почты (обязательно)', 'restx' ); ?>:</label>
+						<input type="email" name="Адрес электронной почты" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>" >	
 					</div>
 					<div>
 						<label for="owner_phone"><?php _e( 'Ваш номер телефона (обязательно)', 'restx' ); ?>:</label>
@@ -114,14 +114,14 @@ Template Name: Добавить предложение
 						<div class="addnew__description">
 							<?php _e( 'Разрешается фото без текстовых подписей или водяных знаков', 'restx' ); ?>
 						</div>
-						<input type="file" name="hotels_cover" >
+						<input type="file" name="myfile[]" class="add_hotel_file">
 					</div>
 					<div>
 						<label for="hotels_territoria"><?php _e( 'Фотографии террритории (обязательно)', 'restx' ); ?>:</label>
 						<div class="addnew__description">
 							<?php _e( 'Только территория объекта, без стоковых фотографий и фотографий номеров. Также запрещено наличие текста или водяных знаков', 'restx' ); ?>.
 						</div>
-						<input type="file" name="hotels_territoria"  multiple>
+						<input type="file" name="hotels_territoria" class="add_hotel_file" multiple>
 					</div>
 					<div>
 						<label for="hotels_collections"><?php _e( 'Выберите категорию отдыха, максимально подходящую для ваших посетителей (обязательно)', 'restx' ); ?>:</label>
