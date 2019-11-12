@@ -2,3 +2,4 @@ node_modules/
 sass/
 .sass-cache/
 add_hotels.php
+add_hotels_sheet.php

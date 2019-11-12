@@ -27,7 +27,7 @@ Template Name: Добавить предложение
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-md-8">
-				<form method="POST" id="add_hotels" action="<?php bloginfo('template_url') ?>/add_hotels.php" enctype="multipart/form-data">
+				<form id="add_hotels" name="submit-to-google-sheet" enctype="multipart/form-data">
 					<div class="addnew__heading">
 						<?php _e( 'Общая информация', 'restx' ); ?>
 					</div>
@@ -41,7 +41,7 @@ Template Name: Добавить предложение
 					</div>
 					<div>
 						<label for="owner_phone"><?php _e( 'Ваш номер телефона (обязательно)', 'restx' ); ?>:</label>
-						<input type="text" name="owner_phone" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>" >
+						<input type="text" name="owner_phone" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>">
 					</div>
 					<div class="addnew__heading">
 						<?php _e( 'Информация об объекте', 'restx' ); ?>
@@ -110,11 +110,11 @@ Template Name: Добавить предложение
 						<input type="text" name="hotels_whatsapp" placeholder="<?php _e( 'Мой ответ', 'restx' ); ?>">
 					</div>
 					<div>
-						<label for="hotels_cover"><?php _e( 'Главная фотография, обложка (обязательно)', 'restx' ); ?>:</label>
+						<label for="hotels_cover1"><?php _e( 'Главная фотография, обложка (обязательно)', 'restx' ); ?>:</label>
 						<div class="addnew__description">
 							<?php _e( 'Разрешается фото без текстовых подписей или водяных знаков', 'restx' ); ?>
 						</div>
-						<input type="file" name="myfile[]" class="add_hotel_file">
+						<input type="file" name="hotels_cover1" class="add_hotel_file">
 					</div>
 					<div>
 						<label for="hotels_territoria"><?php _e( 'Фотографии террритории (обязательно)', 'restx' ); ?>:</label>

@@ -443,11 +443,16 @@ function readURL(input) {
     for (inputFile of inputFiles) {
       var reader = new FileReader();
       reader.onload = function(e) {
-
         fileImg = document.createElement('img');
+        fileInput = document.createElement('input');
+        fileInput.setAttribute('name', 'hotels_cover');
+        fileInput.setAttribute('value', e.target.result);
+        fileInput.setAttribute('crossorigin', 'anonymous');
         fileImg.className = 'add_hotel_thumb';
+        $(input).attr('value', e.target.result);
         $(fileImg).attr('src', e.target.result);
         $(input).after(fileImg);
+        $(input).after(fileInput);
         // $('.add_hotel_file_in.'+dataInput).attr('src', e.target.result);
       }
       reader.readAsDataURL(inputFile);
