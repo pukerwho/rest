@@ -448,8 +448,8 @@ function readURL(input) {
         fileInput.setAttribute('name', 'hotels_cover');
         fileInput.setAttribute('value', e.target.result);
         fileInput.setAttribute('crossorigin', 'anonymous');
+        fileInput.setAttribute('type', 'hidden');
         fileImg.className = 'add_hotel_thumb';
-        $(input).attr('value', e.target.result);
         $(fileImg).attr('src', e.target.result);
         $(input).after(fileImg);
         $(input).after(fileInput);

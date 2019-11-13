@@ -10989,6 +10989,22 @@ footer a {
     .citylist__text h2:after {
       display: block;
       content: url(../img/h2line.svg); }
+  .citylist__text li {
+    position: relative;
+    padding-left: 15px; }
+    .citylist__text li:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background-color: #5fcc7d;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 .citylist-blog {
   display: -webkit-box;
   display: -webkit-flex;

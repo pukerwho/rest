@@ -91,7 +91,7 @@
 					</div>
 					<div>
 						<div class="citylist__text lead">
-							<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ?>
+							<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ); ?>
 						</div>
 					</div>
 				</div>
