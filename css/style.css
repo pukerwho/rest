@@ -11314,10 +11314,9 @@ footer a {
   font-size: 1.5rem; }
 .b_rest__text li {
   color: #484848;
-  list-style-type: inherit;
+  list-style-type: none;
   font-size: 1.5rem;
-  line-height: 1.4;
-  margin-left: 3rem; }
+  line-height: 1.4; }
 
 .addnew {
   padding: 6rem 0; }
