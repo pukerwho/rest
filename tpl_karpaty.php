@@ -117,6 +117,17 @@ Template Name: Карпаты
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="b_rest__text">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; else: ?>
+						<p><?php _e('Ничего не найдено'); ?></p>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
