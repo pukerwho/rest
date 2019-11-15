@@ -119,7 +119,7 @@ Template Name: Азовское море
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="b_rest__text">
+				<div class="b_rest__text citylist__text">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
 					<?php endwhile; else: ?>
