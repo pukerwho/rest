@@ -175,7 +175,7 @@ Template Name: Партнерство
 					</div>
 					<div class="p_partner__list mb-5">
 						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
-						<li class="mb-3"><?php _e( 'До 15 фотографий', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'До 5 фотографий', 'restx' ); ?></li>
 						<li class="mb-3">500-1000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
 					</div>
 					<a href="#" data-toggle="modal" data-target="#budgetModal" class="text-dark">
@@ -201,7 +201,7 @@ Template Name: Партнерство
 					</div>
 					<div class="p_partner__list mb-5">
 						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
-						<li class="mb-3"><?php _e( 'До 40 фотографий', 'restx' ); ?></li>
+						<li class="mb-3"><?php _e( 'До 15 фотографий', 'restx' ); ?></li>
 						<li class="mb-3"><?php _e( 'Техническая поддержка', 'restx' ); ?></li>
 						<li class="mb-3">2500-5000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
 					</div>
