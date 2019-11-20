@@ -9380,7 +9380,7 @@ a:hover {
   .header__fixed {
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 9;
     background-color: #ffffff;
     -webkit-box-shadow: 1px 1px 10px 0px #9E9E9E;
     box-shadow: 1px 1px 10px 0px #9E9E9E;

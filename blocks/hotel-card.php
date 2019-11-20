@@ -18,7 +18,7 @@
 						$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'medium' ) );
 						$title_img_territory = get_the_title();
 						foreach ( $images as $image ) {
-						    echo '<div class="swiper-slide"><img src="', $image['url'], '"></div>';
+						    echo '<div class="swiper-slide"><img src="', $image['url'], '" loading="lazy"></div>';
 						} 
 					?>
 				</div>

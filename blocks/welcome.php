@@ -53,9 +53,16 @@
 					</div>
 					<div class="hero__block-advice">
 						<?php _e( 'Например', 'restx' ); ?>: 
-						<li><a href="<?php echo get_term_link(223, 'citylist') ?>"><?php _e( 'Яремче', 'restx' ); ?></a></li>
-						<li><a href="<?php echo get_term_link(237, 'citylist') ?>"><?php _e( 'Верховина', 'restx' ); ?></a></li>
-						<li><a href="<?php echo get_term_link(227, 'citylist') ?>"><?php _e( 'Ворохта', 'restx' ); ?></a></li>
+						<?php if (get_locale() == 'ru_RU'): ?>
+							<li><a href="<?php echo get_term_link(109, 'citylist') ?>"><?php _e( 'Яремче', 'restx' ); ?></a></li>
+							<li><a href="<?php echo get_term_link(64, 'citylist') ?>"><?php _e( 'Верховина', 'restx' ); ?></a></li>
+							<li><a href="<?php echo get_term_link(65, 'citylist') ?>"><?php _e( 'Ворохта', 'restx' ); ?></a></li>
+						<?php endif; ?>
+						<?php if (get_locale() == 'uk'): ?>
+							<li><a href="<?php echo get_term_link(223, 'citylist') ?>"><?php _e( 'Яремче', 'restx' ); ?></a></li>
+							<li><a href="<?php echo get_term_link(237, 'citylist') ?>"><?php _e( 'Верховина', 'restx' ); ?></a></li>
+							<li><a href="<?php echo get_term_link(227, 'citylist') ?>"><?php _e( 'Ворохта', 'restx' ); ?></a></li>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
