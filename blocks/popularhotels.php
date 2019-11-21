@@ -27,6 +27,7 @@
 
 		<div class="row mobile-hotels-grid mb-5">
 			<?php 
+				$popular_slud = 'popular';
 				if (get_locale() == 'ru_RU'); {
 					$popular_slud = 'popular';
 				} else {
