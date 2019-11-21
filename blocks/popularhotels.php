@@ -40,7 +40,7 @@
 				'tax_query' => array(
 			    array(
 		        'taxonomy' => 'collections',
-		        'terms' => $popular_slud,
+		        'terms' => 'popular',
 		        'field' => 'slug',
 		        'include_children' => true,
 		        'operator' => 'IN'
@@ -64,7 +64,7 @@
 			<div class="col-md-12">
 				<div class="button-more text-center">
 					<a href="<?php 
-					$term_link = get_term_link($popular_slud, 'collections');
+					$term_link = get_term_link('popular', 'collections');
 					echo $term_link;
 					?>"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 				</div>
