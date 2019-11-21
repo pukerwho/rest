@@ -27,6 +27,11 @@
 
 		<div class="row mobile-hotels-grid mb-5">
 			<?php 
+				if (get_locale() == 'ru_RU'); {
+					$popular_slud = 'popular';
+				} else {
+					$popular_slud = 'populjarni';
+				}
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
 				'posts_per_page' => 4,
@@ -34,7 +39,7 @@
 				'tax_query' => array(
 			    array(
 		        'taxonomy' => 'collections',
-		        'terms' => 'popular',
+		        'terms' => $popular_slud,
 		        'field' => 'slug',
 		        'include_children' => true,
 		        'operator' => 'IN'
@@ -58,8 +63,7 @@
 			<div class="col-md-12">
 				<div class="button-more text-center">
 					<a href="<?php 
-					$term_slug = 'popular';
-					$term_link = get_term_link($term_slug, 'collections');
+					$term_link = get_term_link($popular_slud, 'collections');
 					echo $term_link;
 					?>"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 				</div>
