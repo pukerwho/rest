@@ -184,7 +184,7 @@ function create_taxonomy(){
     'show_ui'               => true, // равен аргументу public
     'show_in_menu'          => true, // равен аргументу show_ui
     'show_tagcloud'         => true, // равен аргументу show_ui
-    'show_in_rest'          => null, // добавить в REST API
+    'show_in_rest'          => true, // добавить в REST API
     'rest_base'             => null, // $taxonomy
     'hierarchical'          => true,
     'update_count_callback' => '',
@@ -225,8 +225,8 @@ function your_prefix_register_taxonomy() {
     'show_in_nav_menus' => true,
     'show_tagcloud' => true,
     'show_in_quick_edit' => true,
-    'show_admin_column' => false,
-    'show_in_rest' => false,
+    'show_admin_column' => true,
+    'show_in_rest' => true,
     'hierarchical' => true,
     'query_var' => true,
     'has_archive' => true,

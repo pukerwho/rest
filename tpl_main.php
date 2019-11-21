@@ -30,9 +30,9 @@ Template Name: Главная страница
 <div class="pt-5">
 	<?php get_template_part( 'blocks/premiumhotels', 'default' ); ?>	
 </div>
-<div class="pt-5">
-	<?php get_template_part( 'blocks/nearseahotels', 'default' ); ?>	
-</div>
+<!-- <div class="pt-5">
+	<?php /* get_template_part( 'blocks/nearseahotels', 'default' ); */ ?>	
+</div> -->
 <div class="py-5">
 	<?php get_template_part( 'blocks/b_youtube', 'default' ); ?>	
 </div>
