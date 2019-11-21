@@ -131,13 +131,17 @@
             <li>
               <a href="/partner"><?php _e( 'Добавить предложение', 'restx' ); ?></a>
             </li>
-            <?php
+            <?php 
               $currentlang = get_bloginfo('language'); 
               $home_path = home_url();
+              $translations = pll_the_languages( array( 'hide_current' => 1, 'raw' => 1 ) ); 
+              foreach ($translations as $translation):
             ?>
-            <li class="lang">
-              <a href="<?php echo ($currentlang === 'uk') ? '/main' : '/uk' ?>" class="<?php echo ($currentlang === 'uk') ? 'active' : '' ?>">Українською</a>
-            </li>
+              <li class="lang">
+                <a href="<?php echo $translation['url'] ?>" class="<?php echo ($currentlang === 'uk') ? 'active' : '' ?>">Українською</a>
+              </li>
+              
+            <?php endforeach; ?>
           </div>
           <!-- <div class="allcity-button text-dark mr-5"><div class="btn bg-pastel-blue"><span class="allcity-button-open">Курорты</span><span class="allcity-button-close">Закрыть</span></div></div>
           <a href="<?php echo get_permalink( get_page_by_path( 'catalog' ) ); ?>" class="text-dark mr-5"><div class="btn bg-pastel-green">Каталог</div></a>
