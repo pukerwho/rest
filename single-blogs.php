@@ -29,10 +29,8 @@
 							<?php 
 							$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
 							foreach ($current_term as $myterm); {
-								$current_term_slug = $myterm->slug;
-								$current_term_name = $myterm->name;
 							} ?>
-							<span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/citylist/<?php echo $current_term_slug ?>" rel="v:url" property="v:title"> <?php echo $current_term_name ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
+							<span typeof="v:Breadcrumb"> <a href="<?php echo get_term_link($myterm->term_id, 'citylist') ?>" rel="v:url" property="v:title"> <?php echo $myterm->name; ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
 						</div>
 					</div>
 				</div>

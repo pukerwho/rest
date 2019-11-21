@@ -42,7 +42,7 @@
 			  	</div>
 			  	<div class="mobile-show mb-5">
 			  		<div class="title mb-4">
-							Видео
+							<?php _e( 'Видео', 'restx' ); ?>
 						</div>
 						<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
 					  	<h3 class="mb-4"><?php _e( 'Наслаждайтесь видео!', 'restx' ); ?></h3>
@@ -115,7 +115,7 @@
 						?>
 						<?php if ($custom_query->have_posts()): ?>
 							<div class="title mb-4">
-								Информация
+								<?php _e( 'Информация', 'restx' ); ?>
 							</div>
 						<?php endif; ?>
 						<?php

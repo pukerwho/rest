@@ -35,7 +35,7 @@
                     <?php endif ?>
                     <?php if( !is_page_template( 'tpl_partner.php' )): ?>
                         <div class="b_partner mb-5">
-                            <a href="<?php echo get_permalink( get_page_by_path( 'partner' ) ); ?>"><?php _e( 'Партнерство', 'restx' ); ?></a>
+                            <a href="<?php echo get_page_url( 'tpl_partner' ); ?>"><?php _e( 'Партнерство', 'restx' ); ?></a>
                         </div>
                     <?php endif ?>
                     
@@ -49,11 +49,18 @@
                         <?php endif ?>
                     </div>
                     <div>
-                        <a href="/citylist/jaremche/">Отдых в Яремче</a>,
-                        <a href="/citylist/dragobrat/">Отдых в Драгобрате</a>,
-                        <a href="/citylist/vorohta/">Отдых в Ворохте</a>,
-                        <a href="/citylist/bukovel/">Отдых в Буковели</a>,
-                        <a href="/citylist/jablunica/">Отдых в Яблонице</a>
+                        <?php if (get_locale() == 'ru_RU'): ?>
+                            <a href="/citylist/jaremche/">Отдых в Яремче</a>,
+                            <a href="/citylist/dragobrat/">Отдых в Драгобрате</a>,
+                            <a href="/citylist/vorohta/">Отдых в Ворохте</a>,
+                            <a href="/citylist/bukovel/">Отдых в Буковели</a>
+                        <?php endif; ?>
+                        <?php if (get_locale() == 'uk'): ?>
+                            <a href="/uk/citylist/jaremche-uk/">Відпочинок в Яремче</a>,
+                            <a href="/uk/citylist/dragobrat-uk/">Відпочинок у Драгобраті</a>,
+                            <a href="/uk/citylist/vorohta-uk/">Відпочинок у Ворохті</a>,
+                            <a href="/uk/citylist/bukovel-uk/">Відпочинок у Буковелі</a>
+                        <?php endif; ?>
                     </div>
                 </div>
     		</div>

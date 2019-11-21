@@ -120,9 +120,9 @@
                 <a href="#"><?php _e( 'Курорты', 'restx' ); ?></a>
               </li>
               <div class="submenu">
-                <li><a href="<?php echo get_permalink( get_page_by_path( 'karpaty' ) ); ?>"><?php _e( 'Карпаты', 'restx' ); ?></a></li>
-                <li><a href="<?php echo get_permalink( get_page_by_path( 'blacksea' ) ); ?>"><?php _e( 'Черное море', 'restx' ); ?></a>
-                <li><a href="<?php echo get_permalink( get_page_by_path( 'azovsea' ) ); ?>"><?php _e( 'Азовское море', 'restx' ); ?></a></li>
+                <li><a href="<?php echo get_page_url( 'tpl_karpaty' ); ?>"><?php _e( 'Карпаты', 'restx' ); ?></a></li>
+                <li><a href="<?php echo get_page_url( 'tpl_blacksea' ); ?>"><?php _e( 'Черное море', 'restx' ); ?></a>
+                <li><a href="<?php echo get_page_url( 'tpl_azovsea' ); ?>"><?php _e( 'Азовское море', 'restx' ); ?></a></li>
               </div>
             </div>
             <li>

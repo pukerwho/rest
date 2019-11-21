@@ -18,7 +18,7 @@
 							$current_term_name = $myterm->name;
 						} 
 					?>
-					<span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title">Главная</a> › </span><span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/citylist/<?php echo $current_term_slug ?>" rel="v:url" property="v:title"> <?php echo $current_term_name ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
+					<span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"><?php _e( 'Главная', 'restx' ); ?></a> › </span><span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/citylist/<?php echo $current_term_slug ?>" rel="v:url" property="v:title"> <?php echo $current_term_name ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
 				</div>
 			</div>
 		</div>
