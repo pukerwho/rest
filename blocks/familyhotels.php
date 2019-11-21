@@ -27,6 +27,11 @@
 			<?php $term_ids = wp_list_pluck( $citylists_new, 'term_id' ); ?>
 
 			<?php 
+				if (get_locale() == 'ru_RU') {
+					$family_slug = 'family';
+				} else {
+					$family_slug = 'simejni';
+				}
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
 				'posts_per_page' => 4,
@@ -35,7 +40,7 @@
 				'tax_query' => array(
 			    array(
 		        'taxonomy' => 'collections',
-		        'terms' => 'family',
+		        'terms' => $family_slug,
 		        'field' => 'slug',
 		        'include_children' => true,
 		        'operator' => 'IN'
@@ -59,8 +64,7 @@
 			<div class="col-md-12">
 				<div class="button-more text-center">
 					<a href="<?php 
-					$term_slug = 'family';
-					$term_link = get_term_link($term_slug, 'collections');
+					$term_link = get_term_link($family_slug, 'collections');
 					echo $term_link;
 					?>">
 						<div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div>

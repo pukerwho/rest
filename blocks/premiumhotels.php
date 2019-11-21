@@ -27,6 +27,11 @@
 			<?php $term_ids = wp_list_pluck( $citylists_new, 'term_id' ); ?>
 
 			<?php 
+				if (get_locale() == 'ru_RU') {
+					$premium_slug = 'premium';
+				} else {
+					$premium_slug = 'premium-uk';
+				}
 				$id_city = get_the_id();
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
@@ -36,7 +41,7 @@
 				'tax_query' => array(
 			    array(
 		        'taxonomy' => 'collections',
-		        'terms' => 'premium',
+		        'terms' => $premium_slug,
 		        'field' => 'slug',
 		        'include_children' => true,
 		        'operator' => 'IN'
@@ -60,8 +65,7 @@
 			<div class="col-md-12">
 				<div class="button-more text-center">
 					<a href="<?php 
-					$term_slug = 'premium';
-					$term_link = get_term_link($term_slug, 'collections');
+					$term_link = get_term_link($premium_slug, 'collections');
 					echo $term_link;
 					?>"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
 				</div>
