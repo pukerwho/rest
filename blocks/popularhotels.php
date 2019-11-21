@@ -27,8 +27,11 @@
 
 		<div class="row mobile-hotels-grid mb-5">
 			<?php 
-				$popular_slud = 'popular';
-				
+				if (get_locale() == 'ru_RU') {
+					$popular_slud = 'popular';
+				} else {
+					$popular_slud = 'populjarni';
+				}
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
 				'posts_per_page' => 4,
