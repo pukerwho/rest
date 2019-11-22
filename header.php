@@ -126,10 +126,10 @@
               </div>
             </div>
             <li>
-              <a href="/faq"><?php _e( 'Вопросы', 'restx' ); ?></a>
+              <a href="<?php echo get_page_url( 'tpl_faq' ); ?>"><?php _e( 'Вопросы', 'restx' ); ?></a>
             </li>
             <li>
-              <a href="/partner"><?php _e( 'Добавить предложение', 'restx' ); ?></a>
+              <a href="<?php echo get_page_url( 'tpl_partner' ); ?>"><?php _e( 'Добавить предложение', 'restx' ); ?></a>
             </li>
             <?php 
               $currentlang = get_bloginfo('language'); 
