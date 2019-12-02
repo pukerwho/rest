@@ -116,7 +116,7 @@ function create_post_type() {
       'public' => true,
       'has_archive' => true,
       'hierarchical' => true,
-      'show_in_rest' => true,
+      'show_in_rest' => false,
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
