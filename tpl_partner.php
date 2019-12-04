@@ -171,7 +171,7 @@ Template Name: Партнерство
 						0 грн
 					</div>
 					<div class="mb-5">
-						<?php _e( 'за сезон', 'restx' ); ?>
+						<?php _e( 'за год', 'restx' ); ?>
 					</div>
 					<div class="p_partner__list mb-5">
 						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
@@ -197,7 +197,7 @@ Template Name: Партнерство
 						800 грн
 					</div>
 					<div class="mb-5">
-						<?php _e( 'за сезон', 'restx' ); ?>
+						<?php _e( 'за год', 'restx' ); ?>
 					</div>
 					<div class="p_partner__list mb-5">
 						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
@@ -224,7 +224,7 @@ Template Name: Партнерство
 						1500 грн
 					</div>
 					<div class="mb-5">
-						<?php _e( 'за сезон', 'restx' ); ?>
+						<?php _e( 'за год', 'restx' ); ?>
 					</div>
 					<div class="p_partner__list mb-5">
 						<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>

@@ -11412,6 +11412,9 @@ footer a {
       margin-top: 0; }
     .addnew__content .wpcf7-radio label, .addnew__content .wpcf7-checkbox label {
       width: auto; }
+    .addnew__content a {
+      color: #000000;
+      text-decoration: underline; }
   .addnew__heading {
     background-color: #eeeeee;
     font-size: 2rem;
