@@ -428,6 +428,13 @@ $('.addnew__nomers_checked').change(function(){
   }                   
 });
 
+//Form 
+$(".wpcf7-form-control-wrap.nomers input[name = 'nomers[]']").change(function(){
+  if($(this).is(':checked')) {
+    console.log(this);
+  }
+});
+
 $('.rest_modal_close').on('click', function(){
   $('.rest_modal').removeClass('open');
   $('.rest_modal_bg').removeClass('open');

@@ -1,12 +1,14 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzcFaNN-7qsLF4QEdVGzgcJiqGRpjBZMXbKPlWFlpaKfKY2iNl3/exec'
 const form = document.forms['submit-to-google-sheet']
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', mode: 'cors', body: new FormData(form)})
-    .then(response => showSuccessMessage())
-    .catch(error => console.error('Error!', error.message))
-})
+if (form) {
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', mode: 'cors', body: new FormData(form)})
+	    .then(response => showSuccessMessage())
+	    .catch(error => console.error('Error!', error.message))
+	})	
+}
 
 function showSuccessMessage(){
   $('.rest_modal').addClass('open');
