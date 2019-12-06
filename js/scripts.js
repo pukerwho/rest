@@ -77,8 +77,7 @@ if ($('.page-template-tpl_partner').length > 0) {
       $('.p_partner__thinkabout').addClass('p_partner__thinkabout__open');
     }
   })
-}
-
+};
 
 //Mobile Menu
 $('.header__mobile__menu').on('click', function(){
@@ -489,7 +488,8 @@ $(".add_hotel_file").change(function() {
 var singleHotelMain = document.querySelector('.single-hotel-main');
 var singleHotelSibebar = document.querySelector('.single-hotel-cover-item');
 if (singleHotelMain) {
-  var mainHeight = singleHotelMain.offsetHeight - 250;  
+  var mainHeight = singleHotelMain.clientHeight - 380;
+  console.log(singleHotelMain.clientHeight);  
 }
 
 window.addEventListener('scroll', function() {

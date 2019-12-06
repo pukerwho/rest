@@ -30,7 +30,7 @@
                         <h2><?php _e( 'Есть вопросы?', 'restx' ); ?></h2>
                     </div>
                     <div class="display-4 mb-4 pb-2">
-                        <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>"><div class="btn bg-pastel-blue"><?php _e( 'Задавай', 'restx' ); ?>!</div></a>    
+                        <a href="<?php echo get_page_url( 'tpl_faq' ); ?>"><div class="btn bg-pastel-blue"><?php _e( 'Задавай', 'restx' ); ?>!</div></a>    
                     </div>
                     <?php endif ?>
                     <?php if( !is_page_template( 'tpl_partner.php' )): ?>

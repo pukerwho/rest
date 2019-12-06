@@ -10296,7 +10296,11 @@ footer a {
   .single-hotel .hotel-photos__item {
     width: 100%;
     height: 200px;
-    display: none; }
+    display: block; }
+    .single-hotel .hotel-photos__item.nomer_photos {
+      width: 100%;
+      height: 200px;
+      display: none; }
     .single-hotel .hotel-photos__item:first-of-type {
       display: block; }
     .single-hotel .hotel-photos__item-bg {

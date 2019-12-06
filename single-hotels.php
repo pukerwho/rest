@@ -19,7 +19,7 @@
 						} 
 					?>
 					<?php $getCurrentTermId = pll_get_term($myterm->term_id); ?>
-					<span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"><?php _e( 'Главная', 'restx' ); ?></a> › </span><span typeof="v:Breadcrumb"> <a href="<?php echo get_term_link($getCurrentTermId, 'citylist') ?>" rel="v:url" property="v:title"> <?php echo $current_term_name ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
+					<span typeof="v:Breadcrumb"> <a href="<?php echo home_url(); ?>" rel="v:url" property="v:title"><?php _e( 'Главная', 'restx' ); ?></a> › </span><span typeof="v:Breadcrumb"> <a href="<?php echo get_term_link($getCurrentTermId, 'citylist') ?>" rel="v:url" property="v:title"> <?php echo $current_term_name ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
 				</div>
 			</div>
 		</div>
@@ -38,77 +38,7 @@
 							<div class="title mb-5">
 								<?php the_title(); ?>
 							</div>
-							<?php if(rwmb_meta( 'meta-hotel-phones' )): ?>
-							<div class="mb-5">
-								<div class="d-flex align-items-center mb-4">
-									<img src="<?php bloginfo('template_url'); ?>/img/phone-call.svg" alt="" width="25px" class="mr-3">
-									<h4><?php _e( 'Телефоны', 'restx' ); ?>:</h4>
-								</div>
-								<div class="contact-grid">
-									<?php
-										$metaphones = rwmb_meta( 'meta-hotel-phones' );
-										foreach ( $metaphones as $metaphone ): ?>
-										<div class="lead">
-											<a href="tel:<?php echo $metaphone ?>"><?php echo $metaphone ?></a>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							</div>
-							<?php endif ?>
-
-							<?php if(rwmb_meta( 'meta-hotel-viber' )): ?>
-							<div class="mb-5">
-								<div class="d-flex align-items-center mb-4">
-									<img src="<?php bloginfo('template_url'); ?>/img/viber.svg" alt="" width="25px" class="mr-3">
-									<h4>Viber:</h4>
-								</div>
-								<div class="contact-grid">
-									<?php
-										$metaviber = rwmb_meta( 'meta-hotel-viber' );
-										foreach ( $metaviber as $metav ): ?>
-										<div class="lead">
-											<a href="viber://chat?number=<?php echo $metav ?>"><?php echo $metav ?></a>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							</div>
-							<?php endif ?>
-
-							<?php if(rwmb_meta( 'meta-hotel-whatsapp' )): ?>
-							<div class="mb-5">
-								<div class="d-flex align-items-center mb-4">
-									<img src="<?php bloginfo('template_url'); ?>/img/whatsapp.svg" alt="" width="25px" class="mr-3">
-									<h4>Whatsapp:</h4>
-								</div>
-								<div class="contact-grid">
-									<?php
-										$metawhatsapp = rwmb_meta( 'meta-hotel-whatsapp' );
-										foreach ( $metawhatsapp as $metawh ): ?>
-										<div class="lead">
-											<a href="https://api.whatsapp.com/send?phone=<?php echo $metawh ?>"><?php echo $metawh ?></a>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							</div>
-							<?php endif ?>
-
-							<?php if(rwmb_meta( 'meta-hotel-telegram' )): ?>
-							<div class="mb-5">
-								<div class="d-flex align-items-center mb-4">
-									<img src="<?php bloginfo('template_url'); ?>/img/telegram.svg" alt="" width="25px" class="mr-3">
-									<h4>Telegram:</h4>
-								</div>
-								<div class="contact-grid">
-									<?php
-										$metatelegram = rwmb_meta( 'meta-hotel-telegram' );
-										foreach ( $metatelegram as $metat ): ?>
-										<div class="lead">
-											<a href="tg://resolve?domain=<?php echo $metat ?>"><?php echo $metat ?></a>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							</div>
-							<?php endif ?>
+							<?php get_template_part('blocks/single-hotel/contact') ?>
 							<!-- <div class="single-hotel-collections">
 								<?php 
 									$terms = get_the_terms( $post->ID, 'collections' );
@@ -137,7 +67,7 @@
 										$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'large' ) );
 										$title_img_territory = get_the_title();
 										foreach ( $images as $image ) {
-										    echo '<div class="hotel-photos__item"><a href="', $image['full_url'], '" data-lightbox="territory" data-title="', $title_img_territory,'"><div class="hotel-photos__item-bg"></div><div class="hotel-photos__item-title">Фото территории</div><img src="', $image['url'], '"></a></div>';
+										    echo '<div class="hotel-photos__item nomer_photos"><a href="', $image['full_url'], '" data-lightbox="territory" data-title="', $title_img_territory,'"><div class="hotel-photos__item-bg"></div><div class="hotel-photos__item-title">Фото территории</div><img src="', $image['url'], '"></a></div>';
 										} 
 									?>
 								</div>
@@ -158,6 +88,9 @@
 						</div>
 					</div>
 					<div class="tabs mt-5">
+						<div class="mobile-show">
+							<?php get_template_part('blocks/single-hotel/contact') ?>	
+						</div>
 						<div class="hotel-content mb-5">
 							<h3 class="mb-5"><?php _e( 'Описание', 'restx' ); ?></h3>
 	  					<?php the_content(); ?>	
