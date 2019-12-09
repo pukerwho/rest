@@ -111,6 +111,64 @@ Template Name: Выбрать тариф
 	</div>
 </div>
 
+<!-- Modal Бюджет тариф -->
+<div class="modal fade" id="budgetModal" tabindex="-1" role="dialog" aria-labelledby="budgetModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel"><?php _e( 'Тариф Базовый', 'restx' ); ?></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="modal-body-budget">
+	      	<?php echo do_shortcode('[contact-form-7 id="2226" title="Тариф Базовый"]') ?>	
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Стандартный тариф -->
+<div class="modal fade" id="standartModal" tabindex="-1" role="dialog" aria-labelledby="standartModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel"><?php _e( 'Тариф Стандартный', 'restx' ); ?></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="modal-body-standart">
+	      	<?php echo do_shortcode('[contact-form-7 id="2227" title="Тариф Стандарт"]') ?>	
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Премиум тариф -->
+<div class="modal fade" id="premiumModal" tabindex="-1" role="dialog" aria-labelledby="premiumModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel"><?php _e( 'Тариф Премиум', 'restx' ); ?></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="modal-body-premium">
+	      	<?php echo do_shortcode('[contact-form-7 id="2228" title="Тариф Премиум"]') ?>	
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <?php endwhile; else: ?>
 	<p><?php _e('Ничего не найдено'); ?></p>
 <?php endif; ?>

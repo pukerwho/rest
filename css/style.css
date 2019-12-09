@@ -9099,7 +9099,8 @@ a:hover {
   .modal_menu_item {
     background-color: #ffffff;
     border-bottom: 1px solid #e2e2e2;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
     .modal_menu_item:last-of-type {
       border-bottom: 1px solid transparent; }
     .modal_menu_item a {
