@@ -65,6 +65,17 @@ $('.lang').on('click', function(){
   }
 });
 
+//Settings
+$('.settings_btn').on('click', function(){
+  $('.settings').addClass('open');
+  $('.modal-bg').addClass('modal-bg__open');
+});
+
+$('.settings_bottom').on('click', function(){
+  $('.settings').removeClass('open');
+  $('.modal-bg').removeClass('modal-bg__open');
+});
+
 //partner page
 if ($('.page-template-tpl_partner').length > 0) {
   var compareHeight = $('#compare').height();

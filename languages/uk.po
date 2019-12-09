@@ -334,6 +334,9 @@ msgstr "Телефони"
 msgid "Вопросы"
 msgstr "Питання"
 
+msgid "Настройки"
+msgstr "Налаштування"
+
 msgid "Поиск"
 msgstr "Пошук"
 

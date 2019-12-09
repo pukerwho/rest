@@ -312,6 +312,9 @@ msgstr "Телефоны"
 msgid "Вопросы"
 msgstr "Вопросы"
 
+msgid "Настройки"
+msgstr "Настройки"
+
 msgid "Поиск"
 msgstr "Поиск"
 

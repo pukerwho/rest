@@ -17,7 +17,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 mb-4">
-				<a href="<?php echo get_permalink( get_page_by_path( 'karpaty' ) ); ?>">
+				<a href="<?php echo get_page_url('tpl_karpaty') ?>">
 					<div class="b_rest__img" style="background: url('<?php bloginfo('template_url') ?>/img/karpaty.jpg'); background-size: cover;">
 						<!-- <div class="b_rest__img-bg"></div> -->
 						<div class="b_rest__content">
@@ -30,7 +30,7 @@
 				</a>
 			</div>
 			<div class="col-md-4 mb-4">
-				<a href="<?php echo get_permalink( get_page_by_path( 'azovsea' ) ); ?>">
+				<a href="<?php echo get_page_url('tpl_azovsea') ?>">
 					<div class="b_rest__img" style="background: url('<?php bloginfo('template_url') ?>/img/azovsea.jpg'); background-size: cover;">
 						<div class="b_rest__content">
 							<img src="<?php bloginfo('template_url') ?>/img/azovsea.svg" alt="" width="40px" class="mb-4">
@@ -42,7 +42,7 @@
 				</a>
 			</div>
 			<div class="col-md-4 mb-4">
-				<a href="<?php echo get_permalink( get_page_by_path( 'blacksea' ) ); ?>">
+				<a href="<?php echo get_page_url('tpl_blacksea') ?>">
 					<div class="b_rest__img" style="background: url('<?php bloginfo('template_url') ?>/img/blacksea.jpg'); background-size: cover;">
 						<!-- <div class="b_rest__img-bg"></div> -->
 						<div class="b_rest__content">

@@ -1,13 +1,41 @@
     </section>
     <hr>
+    <div class="mobile-show">
+        <div class="settings">
+            <div class="settings_top">
+                <div class="settings_item">
+                    <?php 
+                        $currentlang = get_bloginfo('language'); 
+                        $home_path = home_url();
+                        $translations = pll_the_languages( array( 'hide_current' => 1, 'raw' => 1 ) ); 
+                        foreach ($translations as $translation):
+                        ?>
+                        <li class="lang">
+                            <a href="<?php echo $translation['url'] ?>" class="<?php echo ($currentlang === 'uk') ? 'active' : '' ?>">Українською</a>
+                        </li>
+                    <?php endforeach; ?>
+                    </div>
+                <div class="settings_item search-button">
+                    <a href="#"><?php _e( 'Поиск', 'restx' ); ?></a>
+                </div>
+            </div>
+            <div class="settings_bottom">
+                <div class="settings_item">
+                    <a href="#">
+                        <?php _e( 'Закрыть', 'restx' ); ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="mobile-link">
         <a href="<?php echo get_permalink( get_page_by_path( 'partner' ) ); ?>" class="mobile-link__item">
             <img src="<?php bloginfo('template_url') ?>/img/plus.svg" width="25px" alt="" class="mb-2">
             <span><?php _e( 'Добавить', 'restx' ); ?></span>
         </a>
-        <a class="mobile-link__item search-button">
-            <img src="<?php bloginfo('template_url') ?>/img/loupe.svg" width="25px" alt="" class="mb-2">
-            <span><?php _e( 'Поиск', 'restx' ); ?></span>
+        <a class="mobile-link__item settings_btn">
+            <img src="<?php bloginfo('template_url') ?>/img/setting.svg" width="25px" alt="" class="mb-2">
+            <span><?php _e( 'Настройки', 'restx' ); ?></span>
         </a>
         <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>" class="mobile-link__item">
             <img src="<?php bloginfo('template_url') ?>/img/faq.svg" width="25px" alt="" class="mb-2">
