@@ -1,9 +1,32 @@
     </section>
     <hr>
     <div class="mobile-show">
-        <div class="settings">
-            <div class="settings_top">
-                <div class="settings_item">
+        <div class="add modal_menu">
+            <div class="modal_menu_top add_top">
+                <div class="modal_menu_item add_item">
+                    <a href="<?php echo get_page_url('tpl_choose') ?>">
+                        <?php _e( 'Добавить предложение', 'restx' ); ?>
+                    </a>
+                </div>
+                <div class="modal_menu_item add_item">
+                    <a href="<?php echo get_page_url('tpl_partner') ?>">
+                        <?php _e( 'Условия размещения', 'restx' ); ?>
+                    </a>
+                </div>
+            </div>
+            <div class="modal_menu_bottom add_bottom">
+                <div class="modal_menu_item add_item">
+                    <a href="#">
+                        <?php _e( 'Закрыть', 'restx' ); ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-show">
+        <div class="settings modal_menu">
+            <div class="modal_menu_top settings_top">
+                <div class="modal_menu_item settings_item">
                     <?php 
                         $currentlang = get_bloginfo('language'); 
                         $home_path = home_url();
@@ -15,12 +38,12 @@
                         </li>
                     <?php endforeach; ?>
                     </div>
-                <div class="settings_item search-button">
+                <div class="modal_menu_item settings_item search-button">
                     <a href="#"><?php _e( 'Поиск', 'restx' ); ?></a>
                 </div>
             </div>
-            <div class="settings_bottom">
-                <div class="settings_item">
+            <div class="modal_menu_bottom settings_bottom">
+                <div class="modal_menu_item settings_item">
                     <a href="#">
                         <?php _e( 'Закрыть', 'restx' ); ?>
                     </a>
@@ -29,7 +52,7 @@
         </div>
     </div>
     <div class="mobile-link">
-        <a href="<?php echo get_permalink( get_page_by_path( 'partner' ) ); ?>" class="mobile-link__item">
+        <a class="mobile-link__item add_btn">
             <img src="<?php bloginfo('template_url') ?>/img/plus.svg" width="25px" alt="" class="mb-2">
             <span><?php _e( 'Добавить', 'restx' ); ?></span>
         </a>
@@ -37,7 +60,7 @@
             <img src="<?php bloginfo('template_url') ?>/img/setting.svg" width="25px" alt="" class="mb-2">
             <span><?php _e( 'Настройки', 'restx' ); ?></span>
         </a>
-        <a href="<?php echo get_permalink( get_page_by_path( 'faq' ) ); ?>" class="mobile-link__item">
+        <a href="<?php echo get_page_url('tpl_faq') ?>" class="mobile-link__item">
             <img src="<?php bloginfo('template_url') ?>/img/faq.svg" width="25px" alt="" class="mb-2">
             <span><?php _e( 'Вопросы', 'restx' ); ?></span>
         </a>

@@ -76,6 +76,17 @@ $('.settings_bottom').on('click', function(){
   $('.modal-bg').removeClass('modal-bg__open');
 });
 
+//Add Mobile Btn 
+$('.add_btn').on('click', function(){
+  $('.add').addClass('open');
+  $('.modal-bg').addClass('modal-bg__open');
+});
+
+$('.add_bottom').on('click', function(){
+  $('.add').removeClass('open');
+  $('.modal-bg').removeClass('modal-bg__open');
+});
+
 //partner page
 if ($('.page-template-tpl_partner').length > 0) {
   var compareHeight = $('#compare').height();
