@@ -8,7 +8,7 @@ Template Name: Выбрать тариф
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="container">
+<div class="container mt-5">
 	<div class="row mb-5">
 		<div class="col-md-12">
 			<div class="d-flex flex-column align-items-center">

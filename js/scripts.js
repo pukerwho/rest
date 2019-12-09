@@ -82,6 +82,15 @@ $('.add_btn').on('click', function(){
   $('.modal-bg').addClass('modal-bg__open');
 });
 
+$(document).click(function(event) {
+  if (!$(event.target).closest(".add, .add_btn, .settings, .settings_btn").length) {
+    $("body").find(".add").removeClass("open");
+    $("body").find(".settings").removeClass("open");
+    $('.modal-bg').removeClass('modal-bg__open');
+  }
+});
+
+
 $('.add_bottom').on('click', function(){
   $('.add').removeClass('open');
   $('.modal-bg').removeClass('modal-bg__open');
