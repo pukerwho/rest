@@ -124,6 +124,10 @@
 					  		<?php if(rwmb_meta( 'meta-hotel-camping-has' )): ?>
 					  			<?php get_template_part('blocks/nomers/camping') ?>
 					  		<?php endif ?>
+					  		<!-- Номер Квартира -->
+					  		<?php if(rwmb_meta( 'meta-hotel-appartment-has' )): ?>
+					  			<?php get_template_part('blocks/nomers/appartment') ?>
+					  		<?php endif ?>
 				  		</div>
 			  		</div>
 			  		<div>

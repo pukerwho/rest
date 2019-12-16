@@ -142,3 +142,27 @@
 	</div>
 	<?php endif ?>
 <!-- end standart-telephone -->
+<!-- begin standart-kamin -->
+	<?php if(rwmb_meta( 'meta-hotel-standart-kamin' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/fireplace.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Камин', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end standart-kamin -->
+<!-- begin standart-sputnik -->
+	<?php if(rwmb_meta( 'meta-hotel-standart-sputnik' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/radio-antenna.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Спутниковое ТВ', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end standart-sputnik -->
+<!-- begin standart-mountview -->
+	<?php if(rwmb_meta( 'meta-hotel-standart-mountview' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/mountains-view.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Вид на горы', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end standart-sputnik -->

@@ -78,12 +78,19 @@
 		<h4><?php _e( 'Сауна', 'restx' ); ?></h4>
 	</div>
 	<?php endif ?>
-	<!-- end sauna -->
+	<!-- begin lockers -->
+	<?php if(rwmb_meta( 'meta-hotel-lockers' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/lockers.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Камера хранения', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+	<!-- end lockers -->
 	<!-- begin market -->
 	<?php if(rwmb_meta( 'meta-hotel-market' )): ?>
 	<div class="d-flex align-items-center mb-4">
 		<img src="<?php bloginfo('template_url'); ?>/img/market.svg" alt="" width="45px" class="mr-3">
-		<h4><?php _e( 'Рядом рынок', 'restx' ); ?></h4>
+		<h4><?php _e( 'Рядом рынок/супермаркет', 'restx' ); ?></h4>
 	</div>
 	<?php endif ?>
 	<!-- end market -->

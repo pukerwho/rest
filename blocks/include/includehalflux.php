@@ -142,3 +142,27 @@
 	</div>
 	<?php endif ?>
 <!-- end halflux-telephone -->
+<!-- begin halflux-kamin -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-kamin' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/fireplace.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Камин', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-kamin -->
+<!-- begin halflux-sputnik -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-sputnik' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/radio-antenna.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Спутниковое ТВ', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-sputnik -->
+<!-- begin halflux-mountview -->
+	<?php if(rwmb_meta( 'meta-hotel-halflux-mountview' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/mountains-view.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Вид на горы', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end halflux-sputnik -->

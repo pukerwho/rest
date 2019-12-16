@@ -194,13 +194,19 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'std'  => 0,
       ),
       array(
+        'name'  => 'Камера хранения',
+        'id' => $prefix . 'hotel-lockers',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
         'name'  => 'Безналичный расчет',
         'id' => $prefix . 'hotel-mastercard',
         'type' => 'checkbox',
         'std'  => 0,
       ),
       array(
-        'name'  => 'Рядом рынок',
+        'name'  => 'Рядом рынок/супермаркет',
         'id' => $prefix . 'hotel-market',
         'type' => 'checkbox',
         'std'  => 0,
@@ -247,7 +253,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'std'  => 0,
       ),
       array(
-        'name'  => 'Фотографии люксовых номеров',
+        'name'  => 'Фотографии коттеджных номеров',
         'id' => $prefix . 'hotel-kottedg-photos',
         'type' => 'image_advanced',
       ),
@@ -418,6 +424,24 @@ function your_prefix_get_meta_box( $meta_boxes ) {
       array(
         'name'  => 'Телефон',
         'id' => $prefix . 'hotel-kottedg-telephone',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Вид на горы',
+        'id' => $prefix . 'hotel-kottedg-mountview',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Камин',
+        'id' => $prefix . 'hotel-kottedg-kamin',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Спутниковое ТВ',
+        'id' => $prefix . 'hotel-kottedg-sputnik',
         'type' => 'checkbox',
         'std'  => 0,
       ),
@@ -613,6 +637,24 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'checkbox',
         'std'  => 0,
       ),
+      array(
+        'name'  => 'Вид на горы',
+        'id' => $prefix . 'hotel-lux-mountview',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Камин',
+        'id' => $prefix . 'hotel-lux-kamin',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Спутниковое ТВ',
+        'id' => $prefix . 'hotel-lux-sputnik',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
     ),
   );
 
@@ -631,7 +673,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'std'  => 0,
       ),
       array(
-        'name'  => 'Фотографии люксовых номеров',
+        'name'  => 'Фотографии полулюксовых номеров',
         'id' => $prefix . 'hotel-halflux-photos',
         'type' => 'image_advanced',
       ),
@@ -805,6 +847,24 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'checkbox',
         'std'  => 0,
       ),
+      array(
+        'name'  => 'Вид на горы',
+        'id' => $prefix . 'hotel-halflux-mountview',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Камин',
+        'id' => $prefix . 'hotel-halflux-kamin',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Спутниковое ТВ',
+        'id' => $prefix . 'hotel-halflux-sputnik',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
     ),
   );
 
@@ -823,7 +883,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'std'  => 0,
       ),
       array(
-        'name'  => 'Фотографии люксовых номеров',
+        'name'  => 'Фотографии стандартных номеров',
         'id' => $prefix . 'hotel-standart-photos',
         'type' => 'image_advanced',
       ),
@@ -997,6 +1057,24 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'checkbox',
         'std'  => 0,
       ),
+      array(
+        'name'  => 'Вид на горы',
+        'id' => $prefix . 'hotel-standart-mountview',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Камин',
+        'id' => $prefix . 'hotel-standart-kamin',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Спутниковое ТВ',
+        'id' => $prefix . 'hotel-standart-sputnik',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
     ),
   );
 
@@ -1015,7 +1093,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'std'  => 0,
       ),
       array(
-        'name'  => 'Фотографии люксовых номеров',
+        'name'  => 'Фотографии бюджетных номеров',
         'id' => $prefix . 'hotel-budget-photos',
         'type' => 'image_advanced',
       ),
@@ -1186,6 +1264,234 @@ function your_prefix_get_meta_box( $meta_boxes ) {
       array(
         'name'  => 'Телефон',
         'id' => $prefix . 'hotel-budget-telephone',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Вид на горы',
+        'id' => $prefix . 'hotel-budget-mountview',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Камин',
+        'id' => $prefix . 'hotel-budget-kamin',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Спутниковое ТВ',
+        'id' => $prefix . 'hotel-budget-sputnik',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'id' => 'hotels-appartment',
+    'title' => esc_html__( 'Квартира', 'hotels-appartment' ),
+    'post_types' => array( 'hotels' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Есть такие?',
+        'id' => $prefix . 'hotel-appartment-has',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Фотографии квартиры',
+        'id' => $prefix . 'hotel-appartment-photos',
+        'type' => 'image_advanced',
+      ),
+      array(
+        'name'  => 'Минимальная стоимость в сезон',
+        'id' => $prefix . 'hotel-appartment-minprice_sezon',
+        'type' => 'number',
+      ),
+      array(
+        'name'  => 'Максимальная стоимость в сезон',
+        'id' => $prefix . 'hotel-appartment-maxprice_sezon',
+        'type' => 'number',
+      ),
+      array(
+        'name'  => 'Минимальная стоимость в не сезон',
+        'id' => $prefix . 'hotel-appartment-minprice_nesezon',
+        'type' => 'number',
+      ),
+      array(
+        'name'  => 'Максимальная стоимость в не сезон',
+        'id' => $prefix . 'hotel-appartment-maxprice_nesezon',
+        'type' => 'number',
+      ),
+      array(
+        'name'  => 'Одноместные',
+        'id' => $prefix . 'hotel-appartment-hasone',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Двуместные',
+        'id' => $prefix . 'hotel-appartment-hastwo',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Трехместные',
+        'id' => $prefix . 'hotel-appartment-hasthree',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Четырехместные',
+        'id' => $prefix . 'hotel-appartment-hasfour',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Пятиместные',
+        'id' => $prefix . 'hotel-appartment-hasfive',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Шестиместные',
+        'id' => $prefix . 'hotel-appartment-hassix',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Семиместные',
+        'id' => $prefix . 'hotel-appartment-hasseven',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Кондиционер',
+        'id' => $prefix . 'hotel-appartment-conder',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Телевизор',
+        'id' => $prefix . 'hotel-appartment-tv',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Холодильник',
+        'id' => $prefix . 'hotel-appartment-frize',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Чайник',
+        'id' => $prefix . 'hotel-appartment-boiling',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Аптечка',
+        'id' => $prefix . 'hotel-appartment-aptechka',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Фен',
+        'id' => $prefix . 'hotel-appartment-fen',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Микроволновая печь',
+        'id' => $prefix . 'hotel-appartment-micro',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Кофеварка',
+        'id' => $prefix . 'hotel-appartment-coffee',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Утюг',
+        'id' => $prefix . 'hotel-appartment-utug',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Санузел',
+        'id' => $prefix . 'hotel-appartment-sanuzel',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Душ',
+        'id' => $prefix . 'hotel-appartment-dush',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Сейф',
+        'id' => $prefix . 'hotel-appartment-safe',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Вентилятор',
+        'id' => $prefix . 'hotel-appartment-fan',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Уборка в номере',
+        'id' => $prefix . 'hotel-appartment-clean',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Wi-Fi',
+        'id' => $prefix . 'hotel-appartment-wifi',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Вид на море',
+        'id' => $prefix . 'hotel-appartment-sunset',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Минибар',
+        'id' => $prefix . 'hotel-appartment-minibar',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Телефон',
+        'id' => $prefix . 'hotel-appartment-telephone',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Вид на горы',
+        'id' => $prefix . 'hotel-appartment-mountview',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Камин',
+        'id' => $prefix . 'hotel-appartment-kamin',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Спутниковое ТВ',
+        'id' => $prefix . 'hotel-appartment-sputnik',
         'type' => 'checkbox',
         'std'  => 0,
       ),

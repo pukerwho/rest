@@ -142,3 +142,27 @@
 	</div>
 	<?php endif ?>
 <!-- end kottedg-telephone -->
+<!-- begin kottedg-kamin -->
+	<?php if(rwmb_meta( 'meta-hotel-kottedg-kamin' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/fireplace.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Камин', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end kottedg-kamin -->
+<!-- begin kottedg-sputnik -->
+	<?php if(rwmb_meta( 'meta-hotel-kottedg-sputnik' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/radio-antenna.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Спутниковое ТВ', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end kottedg-sputnik -->
+<!-- begin kottedg-mountview -->
+	<?php if(rwmb_meta( 'meta-hotel-kottedg-mountview' )): ?>
+	<div class="d-flex align-items-center mb-5">
+		<img src="<?php bloginfo('template_url'); ?>/img/mountains-view.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Вид на горы', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+<!-- end kottedg-sputnik -->
