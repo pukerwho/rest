@@ -91,6 +91,15 @@
 						<div class="mobile-show">
 							<?php get_template_part('blocks/single-hotel/contact') ?>	
 						</div>
+						<?php if(rwmb_meta( 'meta-hotel-gps' )): ?>
+						<div class="d-flex align-items-center mb-5">
+							<img src="<?php bloginfo('template_url') ?>/img/map.svg" alt="" width="35px" class="mr-2">
+							<h3 class="mb-0"><?php _e( 'GPS:', 'restx' ); ?></h3>	
+						</div>
+						<div class="lead mb-5">
+							<?php echo rwmb_meta( 'meta-hotel-gps' ); ?>
+						</div>
+						<?php endif ?>
 						<div class="hotel-content mb-5">
 							<h3 class="mb-5"><?php _e( 'Описание', 'restx' ); ?></h3>
 	  					<?php the_content(); ?>	

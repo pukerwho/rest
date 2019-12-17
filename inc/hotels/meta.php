@@ -70,6 +70,11 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'api_key'       => 'AIzaSyA7ofGxkOMREhswh27U_aOa-eLyzBfyZkI',
       ),
       array(
+        'id' => $prefix . 'hotel-gps',
+        'type' => 'text',
+        'name' => esc_html__( 'GPS', 'hotels-contact' ),
+      ),
+      array(
         'name'  => 'Телефоны',
         'id'    => $prefix . 'hotel-phones',
         'size'        => 50,
@@ -232,6 +237,18 @@ function your_prefix_get_meta_box( $meta_boxes ) {
       array(
         'name'  => 'Мангал',
         'id' => $prefix . 'hotel-mangal',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Аренда лыжного снаряжения',
+        'id' => $prefix . 'hotel-arendaski',
+        'type' => 'checkbox',
+        'std'  => 0,
+      ),
+      array(
+        'name'  => 'Доставка продуктов',
+        'id' => $prefix . 'hotel-deliveryfoods',
         'type' => 'checkbox',
         'std'  => 0,
       ),

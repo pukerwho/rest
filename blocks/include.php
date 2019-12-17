@@ -86,6 +86,22 @@
 	</div>
 	<?php endif ?>
 	<!-- end lockers -->
+	<!-- begin arendaski -->
+	<?php if(rwmb_meta( 'meta-hotel-arendaski' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/alpine.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Аренда лыжного снаряжения', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+	<!-- end arendaski -->
+	<!-- begin deliveryfoods -->
+	<?php if(rwmb_meta( 'meta-hotel-deliveryfoods' )): ?>
+	<div class="d-flex align-items-center mb-4">
+		<img src="<?php bloginfo('template_url'); ?>/img/parachute.svg" alt="" width="45px" class="mr-3">
+		<h4><?php _e( 'Доставка продуктов', 'restx' ); ?></h4>
+	</div>
+	<?php endif ?>
+	<!-- end deliveryfoods -->
 	<!-- begin market -->
 	<?php if(rwmb_meta( 'meta-hotel-market' )): ?>
 	<div class="d-flex align-items-center mb-4">
