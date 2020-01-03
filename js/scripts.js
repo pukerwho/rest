@@ -121,14 +121,14 @@ $('.header__mobile__close').on('click', function(){
 
 
 if ($('.modal-callback-btn').length > 0) {
-$(document).on('click', '.modal-callback-btn', function(){
-  $('.modal-callback').toggleClass('modal-callback__open');
-  $('body').toggleClass('modal-open');
-  $('.modal-bg').toggleClass('modal-bg__open');
-  // $('.modal-callback-icon').attr('src', 'https://vidpochivai.com.ua/wp-content/themes/rest/img/modal-close.svg');
-  $('.modal-callback-icon-phone').toggleClass('modal-callback-icon-hide');
-  $('.modal-callback-icon-close').toggleClass('modal-callback-icon-show');
-});
+  $(document).on('click', '.modal-callback-btn', function(){
+    $('.modal-callback').toggleClass('modal-callback__open');
+    $('body').toggleClass('modal-open');
+    $('.modal-bg').toggleClass('modal-bg__open');
+    // $('.modal-callback-icon').attr('src', 'https://vidpochivai.com.ua/wp-content/themes/rest/img/modal-close.svg');
+    $('.modal-callback-icon-phone').toggleClass('modal-callback-icon-hide');
+    $('.modal-callback-icon-close').toggleClass('modal-callback-icon-show');
+  });
 }
 
 // $(window).scroll(function(){
