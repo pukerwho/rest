@@ -51,7 +51,7 @@
 			
 			<?php /* get_template_part('blocks/hotel-price'); */ ?>
 
-			Цена: <?php echo rwmb_meta( 'meta-hotel-minprice' ); ?> — <?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?> грн 
+			Цена: <span class="get_hotel_minprice"><?php echo rwmb_meta( 'meta-hotel-minprice' ); ?></span> — <?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?> грн 
 		</div>
 		<div class="hotel-item__hasnomer lead">
 			<?php _e( 'Номера', 'restx' ); ?>: 

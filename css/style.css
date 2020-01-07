@@ -9263,6 +9263,32 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.35); }
 
 /* Pagination */
+.breadcrumbs ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .breadcrumbs ul li {
+    position: relative;
+    font-size: 1.5rem;
+    margin-right: 1rem; }
+    .breadcrumbs ul li:after {
+      content: '>';
+      position: absolute;
+      top: 50%;
+      font-size: 1rem;
+      font-weight: 700;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .breadcrumbs ul li a {
+      color: #484848;
+      font-weight: 700;
+      border-bottom: 1px solid;
+      margin-right: 0.5rem; }
+    .breadcrumbs ul li:last-of-type:after {
+      content: none; }
+
 .b_pagination {
   color: #484848;
   font-size: 1.76rem; }

@@ -1,3 +1,4 @@
+<!-- Основной город -->
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -93,6 +94,30 @@
 						<div class="citylist__text lead">
 							<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ); ?>
 						</div>
+						<!-- Вопросы и ответы -->
+						<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq')): ?>
+							<div id="citylist-faq" class="mt-5">
+								<h3 class="mb-4">Вопросы и ответы</h3>
+								<div>
+									<ul itemscope itemtype="https://schema.org/FAQPage">
+										<?php 
+										$city_faqs = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq');
+										foreach( $city_faqs as $city_faq ): ?>
+											<li itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+												<h4 itemprop="name">
+													<?php echo $city_faq['crb_citylist_faq_question'] ?>
+												</h4>
+												<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+													<div class="lead" itemprop="text">
+														<?php echo $city_faq['crb_citylist_faq_answer'] ?>
+													</div>
+												</div>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 				<div class="citylist_sidebar">
@@ -154,4 +179,57 @@
 			</div>
 		</div>
 	</div>
+	<!-- Хлебные крошки -->
+	<div class="row mt-3">
+		<div class="col-md-12">
+			<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <ul>
+					<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+						<a itemprop="item" href="<?php echo home_url(); ?>">
+							<span itemprop="name"><?php _e( 'Снять жилье', 'restx' ); ?></span>
+						</a>                        
+						<meta itemprop="position" content="1">
+					</li>
+          <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+          	<?php 
+          		$term_link = get_term_link(get_queried_object_id(), 'citylist');
+          	?>
+            <a itemprop="item" href="<?php echo $term_link ?>">
+              <span itemprop="name"><?php single_term_title(); ?></span>
+            </a>
+            <meta itemprop="position" content="2">
+          </li>
+        </ul>
+      </div>
+		</div>
+	</div>
+	<!-- Микроразметка Цена -->
+	<script>
+		createProductSchema = function(min, max) {
+			var el = document.createElement('script');
+			el.type = 'application/ld+json';
+			el.text = JSON.stringify({
+			    "@context": "https://schema.org/",
+			    "@type": "Product",
+			    "name":"<?php single_term_title(); ?>: снять жилье",
+			    "offers": {
+			        "@type": "AggregateOffer",
+			        "priceCurrency": "UAH",
+			        "lowPrice": min,
+			        "highPrice":max
+			    }
+			});
+			document.querySelector('head').appendChild(el);
+			console.log(el);
+		};
+		let getHotelsMinprice = document.querySelectorAll('.get_hotel_minprice');
+		let arrayHotelsMinprice = [];
+		for (getHotelMinprice of getHotelsMinprice) {
+			arrayHotelsMinprice.push(getHotelMinprice.innerText);
+		}
+		var minHotelPrice = Math.min.apply(Math, arrayHotelsMinprice);
+		var maxHotelPrice = Math.max.apply(Math, arrayHotelsMinprice);
+
+		createProductSchema(minHotelPrice, maxHotelPrice);
+	</script>
 </div>

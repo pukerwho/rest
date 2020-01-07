@@ -302,15 +302,6 @@ function get_page_url($template_name) {
   return get_bloginfo('url');
 }
 
-add_filter('allowed_http_origins', 'add_allowed_origins');
-
-function add_allowed_origins($origins) {
-    $origins[] = 'https://vidpochivai.com.ua/';
-    return $origins;
-}
-
-@ini_set( 'upload_max_size' , '64M' );
-
 // function change_rating_function(){
 //   $metas = get_post_meta( $post->ID );
 //   if( !isset($metas['meta-hotel-mainrating']) ){
