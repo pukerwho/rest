@@ -11181,6 +11181,11 @@ footer a {
   margin-top: 1.5rem;
   margin-bottom: 1rem; }
 
+#citylist-faq li {
+  padding-left: 0; }
+  #citylist-faq li:before {
+    content: none; }
+
 .gocity {
   width: 100%;
   height: 250px;

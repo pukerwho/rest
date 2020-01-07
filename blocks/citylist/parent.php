@@ -93,31 +93,31 @@
 					<div>
 						<div class="citylist__text lead">
 							<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ); ?>
-						</div>
-						<!-- Вопросы и ответы -->
-						<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq')): ?>
-							<div id="citylist-faq" class="mt-5">
-								<h3 class="mb-4">Вопросы и ответы</h3>
-								<div>
-									<ul itemscope itemtype="https://schema.org/FAQPage">
-										<?php 
-										$city_faqs = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq');
-										foreach( $city_faqs as $city_faq ): ?>
-											<li itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-												<h4 class="zag" itemprop="name">
-													<?php echo $city_faq['crb_citylist_faq_question'] ?>
-												</h4>
-												<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-													<div class="lead" itemprop="text">
-														<p><?php echo $city_faq['crb_citylist_faq_answer'] ?></p>
+							<!-- Вопросы и ответы -->
+							<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq')): ?>
+								<div id="citylist-faq" class="mt-5">
+									<h2 class="mb-4">Вопросы и ответы</h2>
+									<div>
+										<ul itemscope itemtype="https://schema.org/FAQPage">
+											<?php 
+											$city_faqs = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq');
+											foreach( $city_faqs as $city_faq ): ?>
+												<li itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+													<h4 class="zag" itemprop="name">
+														<?php echo $city_faq['crb_citylist_faq_question'] ?>
+													</h4>
+													<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+														<div class="lead" itemprop="text">
+															<p><?php echo $city_faq['crb_citylist_faq_answer'] ?></p>
+														</div>
 													</div>
-												</div>
-											</li>
-										<?php endforeach; ?>
-									</ul>
+												</li>
+											<?php endforeach; ?>
+										</ul>
+									</div>
 								</div>
-							</div>
-						<?php endif; ?>
+							<?php endif; ?>
+						</div>
 					</div>
 				</div>
 				<div class="citylist_sidebar">
