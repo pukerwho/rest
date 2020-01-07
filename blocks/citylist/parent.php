@@ -203,33 +203,9 @@
       </div>
 		</div>
 	</div>
+	<div class="micro_price"></div>
 	<!-- Микроразметка Цена -->
 	<script>
-		createProductSchema = function(min, max) {
-			var el = document.createElement('script');
-			el.type = 'application/ld+json';
-			el.text = JSON.stringify({
-			    "@context": "https://schema.org/",
-			    "@type": "Product",
-			    "name":"<?php single_term_title(); ?>: снять жилье",
-			    "offers": {
-			        "@type": "AggregateOffer",
-			        "priceCurrency": "UAH",
-			        "lowPrice": min,
-			        "highPrice":max
-			    }
-			});
-			document.querySelector('head').appendChild(el);
-			console.log(el);
-		};
-		let getHotelsMinprice = document.querySelectorAll('.get_hotel_minprice');
-		let arrayHotelsMinprice = [];
-		for (getHotelMinprice of getHotelsMinprice) {
-			arrayHotelsMinprice.push(getHotelMinprice.innerText);
-		}
-		var minHotelPrice = Math.min.apply(Math, arrayHotelsMinprice);
-		var maxHotelPrice = Math.max.apply(Math, arrayHotelsMinprice);
-
-		createProductSchema(minHotelPrice, maxHotelPrice);
+		
 	</script>
 </div>
