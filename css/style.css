@@ -11502,9 +11502,23 @@ footer a {
       margin-top: 0; }
     .addnew__content .wpcf7-radio label, .addnew__content .wpcf7-checkbox label {
       width: auto; }
+    .addnew__content .ajax-loader:after {
+      content: '';
+      background-image: url(../img/load-notice.png);
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%); }
     .addnew__content a {
       color: #000000;
       text-decoration: underline; }
+    .addnew__content p {
+      position: relative; }
   .addnew__heading {
     background-color: #eeeeee;
     font-size: 2rem;
@@ -12669,6 +12683,9 @@ button.swiper-pagination-bullet {
 
   .mobile-show {
     display: block; }
+
+  .addnew__content .ajax-loader:after {
+    background-size: contain; }
 
   /* HEADER */
   .header__content {
