@@ -104,12 +104,12 @@
 										$city_faqs = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq');
 										foreach( $city_faqs as $city_faq ): ?>
 											<li itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-												<h4 itemprop="name">
+												<h4 class="zag" itemprop="name">
 													<?php echo $city_faq['crb_citylist_faq_question'] ?>
 												</h4>
 												<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 													<div class="lead" itemprop="text">
-														<?php echo $city_faq['crb_citylist_faq_answer'] ?>
+														<p><?php echo $city_faq['crb_citylist_faq_answer'] ?></p>
 													</div>
 												</div>
 											</li>
