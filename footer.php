@@ -92,9 +92,9 @@
                     
                     <div class="lead copyright">
                         <?php if( !is_page_template( 'tpl_main.php' )): ?>
-                            2019 &copy; Vidpochivai.com.ua
+                            2020 &copy; Vidpochivai.com.ua
                         <? else: ?>
-                            2019 &copy; 
+                            2020 &copy; 
                             <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"> Vidpochivai.com.ua</a> › </span> <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua//#best" rel="v:url" property="v:title"><?php _e( 'Только проверенные предложения!', 'restx' ); ?></a> </span>
 
                         <?php endif ?>
