@@ -11530,7 +11530,7 @@ footer a {
   .addnew__description {
     color: #82817d;
     font-size: 1.5rem; }
-  .addnew__cotedg, .addnew__lux, .addnew__halflux, .addnew__standart, .addnew__budget {
+  .addnew__cotedg, .addnew__lux, .addnew__halflux, .addnew__standart, .addnew__budget, .addnew__appartment {
     display: none; }
   .addnew .lux {
     display: none; }
