@@ -11,30 +11,34 @@
 			<br>
 			<span><?php _e( 'Цена', 'restx' ); ?>: <?php echo rwmb_meta( 'meta-hotel-budget-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-budget-maxprice_sezon' ); ?> грн</span>
 			<br>
-			<span class="nomer__qty">
-				<?php if(rwmb_meta( 'meta-hotel-budget-hasone' )): ?>
-				<span>1</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-budget-hastwo' )): ?>
-				<span>2</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-budget-hasthree' )): ?>
-				<span>3</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-budget-hasfour' )): ?>
-				<span>4</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-budget-hasfive' )): ?>
-				<span>5</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-budget-hassix' )): ?>
-				<span>6</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-budget-hasseven' )): ?>
-				<span>7</span>
-				<?php endif ?>
-				<?php _e( 'местные', 'restx' ); ?>
-			</span>
+			<?php if (rwmb_meta('meta-hotel-budget-nomers-qty')): ?>
+				<span>Кол-во мест: <?php echo rwmb_meta('meta-hotel-budget-nomers-qty'); ?></span>
+			<?php else: ?>
+				<span class="nomer__qty">
+					<?php if(rwmb_meta( 'meta-hotel-budget-hasone' )): ?>
+					<span>1</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-budget-hastwo' )): ?>
+					<span>2</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-budget-hasthree' )): ?>
+					<span>3</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-budget-hasfour' )): ?>
+					<span>4</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-budget-hasfive' )): ?>
+					<span>5</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-budget-hassix' )): ?>
+					<span>6</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-budget-hasseven' )): ?>
+					<span>7</span>
+					<?php endif ?>
+					<?php _e( 'местные', 'restx' ); ?>
+				</span>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
@@ -59,29 +63,33 @@
 					<h2 class="mb-4 pb-3">
 	  				<?php _e( 'Бюджетные номера', 'restx' ); ?>
 	  				<span class="nomers-item__small">
-		  				(
-		  				<?php if(rwmb_meta( 'meta-hotel-budget-hasone' )): ?>
-		  				<span>1 <?php _e( 'местный', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-budget-hastwo' )): ?>
-		  				<span>2-х <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-budget-hasthree' )): ?>
-		  				<span>3-х <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-budget-hasfour' )): ?>
-		  				<span>4-х <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-budget-hasfive' )): ?>
-		  				<span>5-ти <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-budget-hassix' )): ?>
-		  				<span>6-ти <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-budget-hasseven' )): ?>
-		  				<span>7-ми <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				)
+	  					<?php if (rwmb_meta('meta-hotel-budget-nomers-qty')): ?>
+								<span>Кол-во мест: <?php echo rwmb_meta('meta-hotel-budget-nomers-qty'); ?></span>
+							<?php else: ?>
+			  				(
+			  				<?php if(rwmb_meta( 'meta-hotel-budget-hasone' )): ?>
+			  				<span>1 <?php _e( 'местный', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-budget-hastwo' )): ?>
+			  				<span>2-х <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-budget-hasthree' )): ?>
+			  				<span>3-х <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-budget-hasfour' )): ?>
+			  				<span>4-х <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-budget-hasfive' )): ?>
+			  				<span>5-ти <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-budget-hassix' )): ?>
+			  				<span>6-ти <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-budget-hasseven' )): ?>
+			  				<span>7-ми <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				)
+			  			<?php endif; ?>
 	  				</span>
 	  			</h2>
 				</div>

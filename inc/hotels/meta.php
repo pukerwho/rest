@@ -295,6 +295,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'number',
       ),
       array(
+        'name'  => 'Кол-во мест',
+        'id'    => $prefix . 'hotel-kottedg-nomers-qty',
+        'size'        => 50,
+        'field_type' => 'text',
+      ),
+      array(
         'name'  => 'Одноместные',
         'id' => $prefix . 'hotel-kottedg-hasone',
         'type' => 'checkbox',
@@ -503,6 +509,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'name'  => 'Максимальная стоимость в не сезон',
         'id' => $prefix . 'hotel-lux-maxprice_nesezon',
         'type' => 'number',
+      ),
+      array(
+        'name'  => 'Кол-во мест',
+        'id'    => $prefix . 'hotel-lux-nomers-qty',
+        'size'        => 50,
+        'field_type' => 'text',
       ),
       array(
         'name'  => 'Одноместные',
@@ -715,6 +727,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'number',
       ),
       array(
+        'name'  => 'Кол-во мест',
+        'id'    => $prefix . 'hotel-halflux-nomers-qty',
+        'size'        => 50,
+        'field_type' => 'text',
+      ),
+      array(
         'name'  => 'Одноместные',
         'id' => $prefix . 'hotel-halflux-hasone',
         'type' => 'checkbox',
@@ -923,6 +941,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'name'  => 'Максимальная стоимость в не сезон',
         'id' => $prefix . 'hotel-standart-maxprice_nesezon',
         'type' => 'number',
+      ),
+      array(
+        'name'  => 'Кол-во мест',
+        'id'    => $prefix . 'hotel-standart-nomers-qty',
+        'size'        => 50,
+        'field_type' => 'text',
       ),
       array(
         'name'  => 'Одноместные',
@@ -1135,6 +1159,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'number',
       ),
       array(
+        'name'  => 'Кол-во мест',
+        'id'    => $prefix . 'hotel-budget-nomers-qty',
+        'size'        => 50,
+        'field_type' => 'text',
+      ),
+      array(
         'name'  => 'Одноместные',
         'id' => $prefix . 'hotel-budget-hasone',
         'type' => 'checkbox',
@@ -1343,6 +1373,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'name'  => 'Максимальная стоимость в не сезон',
         'id' => $prefix . 'hotel-appartment-maxprice_nesezon',
         'type' => 'number',
+      ),
+      array(
+        'name'  => 'Кол-во мест',
+        'id'    => $prefix . 'hotel-appartment-nomers-qty',
+        'size'        => 50,
+        'field_type' => 'text',
       ),
       array(
         'name'  => 'Одноместные',

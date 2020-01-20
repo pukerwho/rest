@@ -11,30 +11,34 @@
 			<br>
 			<span><?php _e( 'Цена', 'restx' ); ?>: <?php echo rwmb_meta( 'meta-hotel-lux-minprice_nesezon' ); ?> — <?php echo rwmb_meta( 'meta-hotel-lux-maxprice_sezon' ); ?> грн</span>
 			<br>
-			<span class="nomer__qty">
-				<?php if(rwmb_meta( 'meta-hotel-lux-hasone' )): ?>
-				<span>1</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-lux-hastwo' )): ?>
-				<span>2</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-lux-hasthree' )): ?>
-				<span>3</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-lux-hasfour' )): ?>
-				<span>4</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-lux-hasfive' )): ?>
-				<span>5</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-lux-hassix' )): ?>
-				<span>6</span>
-				<?php endif ?>
-				<?php if(rwmb_meta( 'meta-hotel-lux-hasseven' )): ?>
-				<span>7</span>
-				<?php endif ?>
-				<?php _e( 'местные', 'restx' ); ?>
-			</span>
+			<?php if (rwmb_meta('meta-hotel-lux-nomers-qty')): ?>
+				<span>Кол-во мест: <?php echo rwmb_meta('meta-hotel-lux-nomers-qty'); ?></span>
+			<?php else: ?>
+				<span class="nomer__qty">
+					<?php if(rwmb_meta( 'meta-hotel-lux-hasone' )): ?>
+					<span>1</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-lux-hastwo' )): ?>
+					<span>2</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-lux-hasthree' )): ?>
+					<span>3</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-lux-hasfour' )): ?>
+					<span>4</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-lux-hasfive' )): ?>
+					<span>5</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-lux-hassix' )): ?>
+					<span>6</span>
+					<?php endif ?>
+					<?php if(rwmb_meta( 'meta-hotel-lux-hasseven' )): ?>
+					<span>7</span>
+					<?php endif ?>
+					<?php _e( 'местные', 'restx' ); ?>
+				</span>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
@@ -59,29 +63,33 @@
 					<h2 class="mb-4 pb-3">
 	  				<?php _e( 'Номера Люкс', 'restx' ); ?>
 	  				<span class="nomers-item__small">
-		  				(
-		  				<?php if(rwmb_meta( 'meta-hotel-lux-hasone' )): ?>
-		  				<span>1 <?php _e( 'местный', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-lux-hastwo' )): ?>
-		  				<span>2-х <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-lux-hasthree' )): ?>
-		  				<span>3-х <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-lux-hasfour' )): ?>
-		  				<span>4-х <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-lux-hasfive' )): ?>
-		  				<span>5-ти <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-lux-hassix' )): ?>
-		  				<span>6-ти <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				<?php if(rwmb_meta( 'meta-hotel-lux-hasseven' )): ?>
-		  				<span>7-ми <?php _e( 'местные', 'restx' ); ?></span>
-		  				<?php endif ?>
-		  				)
+	  					<?php if (rwmb_meta('meta-hotel-lux-nomers-qty')): ?>
+								<span>Кол-во мест: <?php echo rwmb_meta('meta-hotel-lux-nomers-qty'); ?></span>
+							<?php else: ?>
+			  				(
+			  				<?php if(rwmb_meta( 'meta-hotel-lux-hasone' )): ?>
+			  				<span>1 <?php _e( 'местный', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-lux-hastwo' )): ?>
+			  				<span>2-х <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-lux-hasthree' )): ?>
+			  				<span>3-х <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-lux-hasfour' )): ?>
+			  				<span>4-х <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-lux-hasfive' )): ?>
+			  				<span>5-ти <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-lux-hassix' )): ?>
+			  				<span>6-ти <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				<?php if(rwmb_meta( 'meta-hotel-lux-hasseven' )): ?>
+			  				<span>7-ми <?php _e( 'местные', 'restx' ); ?></span>
+			  				<?php endif ?>
+			  				)
+			  			<?php endif; ?>
 	  				</span>
 	  			</h2>
 				</div>
