@@ -180,23 +180,7 @@
 		</div>
 	</div>
 	<!-- Хлебные крошки -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "BreadcrumbList",
-	  "itemListElement": [{
-	    "@type": "ListItem",
-	    "position": 1,
-	    "name": "<?php _e( 'Снять жилье', 'restx' ); ?>",
-	    "item": "<?php echo home_url(); ?>"
-	  },{
-	    "@type": "ListItem",
-	    "position": 2,
-	    "name": "<?php single_term_title(); ?>",
-	    "item": "<?php $term_link = get_term_link(get_queried_object_id(), 'citylist'); echo $term_link ?>"
-	  }]
-	}
-	</script>
+	
 	<div class="row mt-3">
 		<div class="col-md-12">
 			<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
@@ -220,9 +204,5 @@
       </div>
 		</div>
 	</div>
-	<div class="micro_price"></div>
-	<!-- Микроразметка Цена -->
-	<script>
-		
-	</script>
+	
 </div>

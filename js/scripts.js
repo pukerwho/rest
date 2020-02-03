@@ -560,38 +560,38 @@ window.addEventListener('scroll', function() {
 })
 
 
-$(document).ready(function(){
-  let isThisCitylistItem = document.querySelector('.tax-citylist');
-  if (isThisCitylistItem) {
-    createProductSchema = function(min, max) {
-      var el = document.createElement('script');
-      el.type = 'application/ld+json';
-      el.text = JSON.stringify({
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name":"<?php single_term_title(); ?>: снять жилье",
-          "offers": {
-              "@type": "AggregateOffer",
-              "priceCurrency": "UAH",
-              "lowPrice": min,
-              "highPrice":max
-          }
-      });
-      document.head.appendChild(el);
-    };
-    let getHotelsMinprice = document.querySelectorAll('.get_hotel_minprice');
-    let getHotelsMaxprice = document.querySelectorAll('.get_hotel_maxprice');
-    let arrayHotelsMinprice = [];
-    let arrayHotelsMaxprice = [];
-    for (getHotelMinprice of getHotelsMinprice) {
-      arrayHotelsMinprice.push(getHotelMinprice.innerText);
-    }
-    for (getHotelMaxprice of getHotelsMaxprice) {
-      arrayHotelsMaxprice.push(getHotelMaxprice.innerText);
-    }
-    var minHotelPrice = Math.min.apply(Math, arrayHotelsMinprice);
-    var maxHotelPrice = Math.max.apply(Math, arrayHotelsMaxprice);
+// $(document).ready(function(){
+//   let isThisCitylistItem = document.querySelector('.tax-citylist');
+//   if (isThisCitylistItem) {
+//     createProductSchema = function(min, max) {
+//       var el = document.createElement('script');
+//       el.type = 'application/ld+json';
+//       el.text = JSON.stringify({
+//           "@context": "https://schema.org/",
+//           "@type": "Product",
+//           "name":"<?php single_term_title(); ?>: снять жилье",
+//           "offers": {
+//               "@type": "AggregateOffer",
+//               "priceCurrency": "UAH",
+//               "lowPrice": min,
+//               "highPrice":max
+//           }
+//       });
+//       document.head.appendChild(el);
+//     };
+//     let getHotelsMinprice = document.querySelectorAll('.get_hotel_minprice');
+//     let getHotelsMaxprice = document.querySelectorAll('.get_hotel_maxprice');
+//     let arrayHotelsMinprice = [];
+//     let arrayHotelsMaxprice = [];
+//     for (getHotelMinprice of getHotelsMinprice) {
+//       arrayHotelsMinprice.push(getHotelMinprice.innerText);
+//     }
+//     for (getHotelMaxprice of getHotelsMaxprice) {
+//       arrayHotelsMaxprice.push(getHotelMaxprice.innerText);
+//     }
+//     var minHotelPrice = Math.min.apply(Math, arrayHotelsMinprice);
+//     var maxHotelPrice = Math.max.apply(Math, arrayHotelsMaxprice);
 
-    createProductSchema(minHotelPrice, maxHotelPrice)
-  }
-});
+//     createProductSchema(minHotelPrice, maxHotelPrice)
+//   }
+// });
