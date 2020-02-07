@@ -24,7 +24,7 @@
 
 						$custom_query = new WP_Query( array( 
 						'post_type' => 'blogs', 
-						'posts_per_page' => 5,
+						'posts_per_page' => 10,
 						'order'    => 'DESC',
 						'paged' => $current,
 					) );

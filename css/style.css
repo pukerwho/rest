@@ -10963,11 +10963,11 @@ footer a {
 .blog_item {
   position: relative;
   padding: 5px; }
-  .blog_item:nth-of-type(1), .blog_item:nth-of-type(2) {
+  .blog_item:nth-of-type(1), .blog_item:nth-of-type(2), .blog_item:nth-of-type(6), .blog_item:nth-of-type(7) {
     width: 50%; }
-    .blog_item:nth-of-type(1) .blog_item_img, .blog_item:nth-of-type(2) .blog_item_img {
+    .blog_item:nth-of-type(1) .blog_item_img, .blog_item:nth-of-type(2) .blog_item_img, .blog_item:nth-of-type(6) .blog_item_img, .blog_item:nth-of-type(7) .blog_item_img {
       height: 350px; }
-  .blog_item:nth-of-type(3), .blog_item:nth-of-type(4), .blog_item:nth-of-type(5) {
+  .blog_item:nth-of-type(3), .blog_item:nth-of-type(4), .blog_item:nth-of-type(5), .blog_item:nth-of-type(8), .blog_item:nth-of-type(9), .blog_item:nth-of-type(10) {
     width: 33.3333333%;
     width: -webkit-calc(100%/3);
     width: calc(100%/3); }
