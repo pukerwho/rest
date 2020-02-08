@@ -22,7 +22,7 @@
 			  		<?php get_template_part( 'blocks/citylist/parent-catalog', 'default' ); ?>
 			  	</div>
 			  	<!-- end Catalog Hotels -->
-			  	
+
 				</div>
 				
 				<!-- Сайдбар -->
@@ -126,7 +126,7 @@
 					$current_term = get_queried_object_id();
 					$custom_query_post_comment = new WP_Query( array( 
 					'post_type' => 'post_comment', 
-					'posts_per_page' => 1,
+					'posts_per_page' => 2,
 					'tax_query' => array(
 				    array(
 			        'taxonomy' => 'citylist',
@@ -138,6 +138,7 @@
 					),
 				) );
 				if ($custom_query_post_comment->have_posts()) : while ($custom_query_post_comment->have_posts()) : $custom_query_post_comment->the_post(); ?>
+					<?php the_title(); ?>
 			  	<?php 
 				  	global $withcomments;
 						$withcomments = true;
