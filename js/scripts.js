@@ -538,26 +538,30 @@ window.addEventListener('scroll', function() {
   }
 });
 
-//sidebar fixed (taxonomy-citylist)
-var singleCityWrapper = document.querySelector('.citylist_content');
-var singleCitySidebar = document.querySelector('.citylist_sidebar');
-var singleCitySidebarWidth = singleCitySidebar.offsetWidth;
-if (singleCityWrapper) {
-  var wrapperHeight = singleCityWrapper.offsetHeight - 500;  
-}
-console.log(wrapperHeight);
-window.addEventListener('scroll', function() {
-  var h_scroll = $(this).scrollTop();
-  if (h_scroll > 0 & h_scroll <= 100 ) {
-    singleCitySidebar.setAttribute('style', 'position: absolute; top: 0');
-  }
-  if (h_scroll > 100) {
-    singleCitySidebar.setAttribute('style', 'width:'+singleCitySidebarWidth+'px; position: fixed; top: 95px; right: 15px;')  
-  }
-  if (h_scroll > wrapperHeight) {
-    singleCitySidebar.setAttribute('style', 'position: absolute; top: -90px; transform: translate3d(0,' + wrapperHeight + 'px, 0)');
-  }
-})
+// sidebar fixed (taxonomy-citylist)
+
+// var singleCityWrapper = document.querySelector('.citylist_content');
+// var singleCitySidebar = document.querySelector('.citylist_sidebar');
+// var singleCitySidebarWidth = singleCitySidebar.offsetWidth;
+// if (singleCityWrapper) {
+//   var wrapperHeight = singleCityWrapper.offsetHeight - 500;  
+// }
+
+// window.addEventListener('scroll', function() {
+//   var h_scroll = $(this).scrollTop();
+//   if (h_scroll > 0 & h_scroll <= 100 ) {
+//     singleCitySidebar.setAttribute('style', 'position: absolute; top: 0');
+//   }
+//   if (h_scroll > 100) {
+//     singleCitySidebar.setAttribute('style', 'width:'+singleCitySidebarWidth+'px; position: fixed; top: 95px; right: 15px;')  
+//   }
+//   if (h_scroll > wrapperHeight) {
+//     singleCitySidebar.setAttribute('style', 'position: absolute; top: -90px; transform: translate3d(0,' + wrapperHeight + 'px, 0)');
+//   }
+// });
+
+// end sidebar fixed (taxonomy-citylist)
+
 
 
 // $(document).ready(function(){

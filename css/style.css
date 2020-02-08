@@ -11190,29 +11190,29 @@ footer a {
   display: flex;
   position: relative; }
 .citylist_content {
-  width: -webkit-calc(70% - 3rem);
-  width: calc(70% - 3rem); }
-  .citylist_content .b_filter__item {
-    width: -webkit-calc(33.333333333% - 3rem);
-    width: calc(33.333333333% - 3rem); }
+  -webkit-box-flex: 2.75;
+  -webkit-flex: 2.75;
+  -ms-flex: 2.75;
+  flex: 2.75;
+  padding-right: 3rem; }
 .citylist_sidebar {
-  width: 30%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(230, 234, 253, 0.67);
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  padding: 4rem;
-  margin-left: 70%; }
+  -webkit-box-flex: 1.1;
+  -webkit-flex: 1.1;
+  -ms-flex: 1.1;
+  flex: 1.1; }
+  .citylist_sidebar_box {
+    border: .2rem solid #e7e6e4;
+    -webkit-border-radius: 0.75rem;
+    border-radius: 0.75rem;
+    -webkit-box-shadow: 0 0.2rem 0 0 #e7e6e4;
+    box-shadow: 0 0.2rem 0 0 #e7e6e4;
+    padding: 3rem 3rem 2.5rem 3rem; }
   .citylist_sidebar .title {
     color: #484848;
     font-size: 2.5rem;
     text-transform: uppercase; }
   .citylist_sidebar .citylist-blog__title {
     font-style: 1.4rem; }
-  .citylist_sidebar .citylist-blog__img img {
-    width: 30px; }
 
 .no-video {
   color: #484848;
@@ -13030,16 +13030,21 @@ button.swiper-pagination-bullet {
     .include-grid h4 {
       font-size: 1.2rem; }
 
+  .citylist_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   .citylist_content {
-    width: 100%; }
+    width: 100%;
+    padding-right: 0; }
     .citylist_content .title {
       color: #484848;
       font-size: 2.5rem;
       text-transform: uppercase; }
     .citylist_content .b_filter__item {
       width: 100%; }
-  .citylist_sidebar {
-    display: none; }
 
   .allcity .mobile-show {
     display: -ms-grid;

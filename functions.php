@@ -195,6 +195,41 @@ function create_taxonomy(){
     '_builtin'              => false,
     'show_in_quick_edit'    => null, // по умолчанию значение show_ui
   ) );
+
+  register_taxonomy('blog-categories', array('blogs'), array(
+    'label'                 => '', // определяется параметром $labels->name
+    'labels'                => array(
+      'name'              => 'Категории',
+      'singular_name'     => 'Категория',
+      'search_items'      => 'Поиск категории',
+      'all_items'         => 'Все категории',
+      'view_item '        => 'Посмотреть Категорию',
+      'parent_item'       => 'Родительская категория',
+      'parent_item_colon' => 'Родительская категория:',
+      'edit_item'         => 'Редактировать категорию',
+      'update_item'       => 'Одновить категорию',
+      'add_new_item'      => 'Добавить',
+      'new_item_name'     => 'Новая',
+      'menu_name'         => 'Категории',
+    ),
+    'description'           => '', // описание таксономии
+    'public'                => true,
+    'publicly_queryable'    => null, // равен аргументу public
+    'show_in_nav_menus'     => true, // равен аргументу public
+    'show_ui'               => true, // равен аргументу public
+    'show_in_menu'          => true, // равен аргументу show_ui
+    'show_tagcloud'         => true, // равен аргументу show_ui
+    'show_in_rest'          => true, // добавить в REST API
+    'rest_base'             => null, // $taxonomy
+    'hierarchical'          => true,
+    'update_count_callback' => '',
+    //'query_var'             => $taxonomy, // название параметра запроса
+    'capabilities'          => array(),
+    'meta_box_cb'           => null, // callback функция. Отвечает за html код метабокса (с версии 3.8): post_categories_meta_box или post_tags_meta_box. Если указать false, то метабокс будет отключен вообще
+    'show_admin_column'     => false, // Позволить или нет авто-создание колонки таксономии в таблице ассоциированного типа записи. (с версии 3.5)
+    '_builtin'              => false,
+    'show_in_quick_edit'    => null, // по умолчанию значение show_ui
+  ) );
 }
 
 function your_prefix_register_taxonomy() {
