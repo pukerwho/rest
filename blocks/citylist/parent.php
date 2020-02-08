@@ -22,7 +22,7 @@
 			  		<?php get_template_part( 'blocks/citylist/parent-catalog', 'default' ); ?>
 			  	</div>
 			  	<!-- end Catalog Hotels -->
-
+			  	
 				</div>
 				
 				<!-- Сайдбар -->
