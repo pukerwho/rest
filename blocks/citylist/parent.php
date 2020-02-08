@@ -139,11 +139,7 @@
 				) );
 				if ($custom_query_post_comment->have_posts()) : while ($custom_query_post_comment->have_posts()) : $custom_query_post_comment->the_post(); ?>
 					<?php the_title(); ?>
-			  	<?php 
-				  	global $withcomments;
-						$withcomments = true;
-						comments_template(); 
-					?> 
+			  	<?php echo do_shortcode('[anycomment]'); ?>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div>
 		</div>
