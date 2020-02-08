@@ -15,7 +15,7 @@ Template Name: Вопросы-Ответы
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<?php comments_template(); ?> 
+				<?php echo do_shortcode('[anycomment]'); ?>
 			</div>
 		</div>
 	</div>

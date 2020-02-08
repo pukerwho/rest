@@ -1,10 +1,3 @@
-<?php
-// Almost the same version as in twentytwelve
-
-if ( post_password_required() ):
-    return false;
-endif;
-?>
 <div id="comments" class="comments-area">
 
     <?php // You can start editing here -- including this comment! ?>

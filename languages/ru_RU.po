@@ -837,8 +837,8 @@ msgstr "Самая удобная площадка"
 msgid "Зачем мы вам?"
 msgstr "Зачем мы вам?"
 
-msgid ""
-msgstr ""
+msgid "Снять жилье"
+msgstr "Снять жилье"
 
 msgid ""
 msgstr ""
