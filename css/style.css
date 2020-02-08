@@ -13070,6 +13070,8 @@ button.swiper-pagination-bullet {
   /* BLOG */
   .blog_item {
     width: 100% !important; }
+    .blog_item_img {
+      height: 275px !important; }
 
   /* FOOTER */
   .mobile-link {

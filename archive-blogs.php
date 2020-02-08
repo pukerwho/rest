@@ -30,7 +30,7 @@
 						<a href="<?php the_permalink() ?>" class="blog_item">
 							<div>
 								<div class="blog_item_img">
-									<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="w-100 h-100">
+									<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="w-100 h-100">
 								</div>
 								<div class="blog_item_title">
 									<?php the_title(); ?>	
