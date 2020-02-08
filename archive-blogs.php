@@ -18,18 +18,16 @@
 			<div class="col-md-12">
 				<div class="blog_grid">
 					<?php 
-					global $wp_query, $wp_rewrite;  
-					// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+						$current_page = !empty( $_GET['page'] ) ? $_GET['page'] : 1;
 
-						$custom_query = new WP_Query( array( 
-						'post_type' => 'blogs', 
-						'posts_per_page' => 10,
-						'order'    => 'DESC',
-						'paged' => $current,
-					) );
-					if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-						<a href="<?php the_permalink() ?>"  class="blog_item">
+						$query = new WP_Query( array( 
+							'post_type' => 'blogs', 
+							'posts_per_page' => 5,
+							'order'    => 'DESC',
+							'paged' => $current_page,
+						) );
+					if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+						<a href="<?php the_permalink() ?>" class="blog_item">
 							<div>
 								<div class="blog_item_img">
 									<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="w-100 h-100">
@@ -47,14 +45,14 @@
 			<div class="col-md-12 text-center">
 				<div class="b_pagination">
 					<?php 
-						$big = 999999999; // уникальное число
+						$big = 9999999991; // уникальное число
 						echo paginate_links( array(
-						'format'  => 'page/%#%',
-						'current'   => $current,
-						'total'   => $custom_query->max_num_pages,
-						'prev_next' => true,
-						'next_text' => (''),
-						'prev_text' => ('')
+							'format' => '?page=%#%',
+							'total' => $query->max_num_pages,
+							'current' => $current_page,
+							'prev_next' => true,
+							'next_text' => (''),
+							'prev_text' => (''),
 						)); 
 					?>
 				</div>
