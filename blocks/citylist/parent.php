@@ -124,7 +124,7 @@
 			<div>
 				<?php 
 					$current_term = get_queried_object_id();
-					$custom_query_post_comment = new WP_Query( array( 
+					$post_comment_query = new WP_Query( array( 
 					'post_type' => 'post_comment', 
 					'posts_per_page' => 1,
 					'tax_query' => array(
@@ -137,9 +137,13 @@
 				    )
 					),
 				) );
-				if ($custom_query_post_comment->have_posts()) : while ($custom_query_post_comment->have_posts()) : $custom_query_post_comment->the_post(); ?>
+				if ($post_comment_query->have_posts()) : while ($post_comment_query->have_posts()) : $post_comment_query->the_post(); ?>
 					<?php the_title(); ?>
-			  	<?php echo do_shortcode('[anycomment]'); ?>
+			  	<?php 
+				  	global $withcomments;	
+						$withcomments = true;	
+						comments_template(); 	
+					?> 
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div>
 		</div>
