@@ -126,7 +126,7 @@
 					$current_term = get_queried_object_id();
 					$post_comment_query = new WP_Query( array( 
 					'post_type' => 'post_comment', 
-					'posts_per_page' => 10,
+					'posts_per_page' => 1,
 					'tax_query' => array(
 				    array(
 			        'taxonomy' => 'citylist',
@@ -138,8 +138,7 @@
 					),
 				) );
 				if ($post_comment_query->have_posts()) : while ($post_comment_query->have_posts()) : $post_comment_query->the_post(); ?>
-					<?php the_title(); ?>
-			  	<?php comments_template(); ?>
+			  	<?php echo do_shortcode('[anycomment]'); ?>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div>
 		</div>
