@@ -40,7 +40,7 @@
 						<!-- Сайдбар Блог выводим из этого города -->
 						<?php 
 							$current_term = get_queried_object_id();
-							$custom_query = new WP_Query( array( 
+							$blog_current_query = new WP_Query( array( 
 							'post_type' => 'blogs', 
 							'posts_per_page' => 5,
 							'tax_query' => array(
@@ -55,7 +55,7 @@
 						) );
 						?>
 						<?php
-						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+						if ($blog_current_query->have_posts()) : while ($blog_current_query->have_posts()) : $blog_current_query->the_post(); ?>
 					  	<div class="mb-2">
 				  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
 				  		</div>
@@ -64,7 +64,7 @@
 
 						<!-- Сайдбар Блог выводим из категории Общее -->
 							<?php 
-								$custom_query = new WP_Query( array( 
+								$blog_all_query = new WP_Query( array( 
 								'post_type' => 'blogs', 
 								'posts_per_page' => 3,
 								'tax_query' => array(
@@ -79,7 +79,7 @@
 							) );
 							?>
 							<?php
-							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+							if ($blog_all_query->have_posts()) : while ($blog_all_query->have_posts()) : $blog_all_query->the_post(); ?>
 						  	<div class="mb-2">
 					  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
 					  		</div>
