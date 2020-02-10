@@ -139,7 +139,7 @@
 				) );
 				if ($post_comment_query->have_posts()) : while ($post_comment_query->have_posts()) : $post_comment_query->the_post(); ?>
 					<?php the_title(); ?>
-			  	<?php comments_template(); ?>
+			  	<?php echo do_shortcode('[anycomment]'); ?>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div>
 		</div>

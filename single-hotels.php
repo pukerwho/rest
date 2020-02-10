@@ -150,7 +150,7 @@
 					  <div>
 					  	<h3 class="mb-5"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
 					  	<div class="mb-5">
-					  		<?php comments_template(); ?> 		
+					  		<?php echo do_shortcode('[anycomment]'); ?> 		
 					  	</div>
 					  </div>
 					  
