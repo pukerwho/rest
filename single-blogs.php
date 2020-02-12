@@ -51,6 +51,9 @@
 							<div id="weather"></div>		
 						</div>
 						<?php endif ?>
+						<div class="single-blogs__mainimg mb-5">
+							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="" loading="lazy">
+						</div>
 						<?php the_content(); ?>
 					</div>
 				</div>
