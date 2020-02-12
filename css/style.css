@@ -11034,15 +11034,25 @@ footer a {
     font-weight: 700;
     border-bottom: 1px solid; }
 .single-blogs__text p {
-  font-size: 2rem;
-  line-height: 1.5;
-  font-weight: 300; }
+  color: #1b1b1b;
+  font-size: 2.1rem;
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 1.5rem; }
 .single-blogs__text h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   padding: 2rem 0 1rem 0; }
   .single-blogs__text h2:after {
     display: block;
     content: url(../img/h2line.svg); }
+.single-blogs__text blockquote {
+  background-color: #f0f2f6;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem; }
+  .single-blogs__text blockquote p {
+    padding: 1rem 2rem; }
+.single-blogs__text strong {
+  font-weight: 700; }
 .single-blogs__text .wp-caption {
   width: 100% !important;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(204, 204, 204, 0.48);
@@ -11587,6 +11597,17 @@ footer a {
   height: 100px;
   -o-object-fit: cover;
   object-fit: cover; }
+
+.comment {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 html.lb-disable-scrolling {
   overflow: hidden;

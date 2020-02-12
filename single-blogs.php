@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<div class="single-blogs">
-		<div class="container-fluid">
+	<div class="single-blogs pt-5">
+		<!-- <div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="single-blogs__img">
@@ -10,11 +10,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="container">
 			<?php if(!carbon_get_the_post_meta('crb_blogs_whether')): ?>
 				<div class="row justify-content-center">
-					<div class="col-md-8 text-center">
+					<div class="col-md-9 text-center">
 						<div class="single-blogs__icon">
 							<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" width="35px" alt="">
 						</div>
@@ -22,7 +22,7 @@
 				</div>
 			<?php endif ?>
 			<div class="row justify-content-center">
-				<div class="col-md-8">
+				<div class="col-md-9">
 					<div class="single-blogs__title">
 						<h1><?php the_title(); ?></h1>	
 						<div class="single-blogs__breadcrumb mb-5">
@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			<div class="row justify-content-center mb-5">
-				<div class="col-md-8">
+				<div class="col-md-9">
 					<div class="single-blogs__text">
 						<?php if(carbon_get_the_post_meta('crb_blogs_whether')): ?>
 						<div class="weather-block" data-weather="<?php echo carbon_get_the_post_meta('crb_blogs_city'); ?>">

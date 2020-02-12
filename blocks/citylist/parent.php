@@ -53,13 +53,12 @@
 						    )
 							),
 						) );
-						?>
-						<?php
+						
 						if ($blog_current_query->have_posts()) : while ($blog_current_query->have_posts()) : $blog_current_query->the_post(); ?>
 					  	<div class="mb-2">
 				  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
 				  		</div>
-						<?php endwhile; endif; wp_reset_postdata(); ?>
+						<?php wp_reset_postdata(); endwhile; endif;  ?>
 						<!-- end Сайдбар Блог выводим из этого города -->
 
 						<!-- Сайдбар Блог выводим из категории Общее -->
@@ -77,13 +76,12 @@
 							    )
 								),
 							) );
-							?>
-							<?php
+							
 							if ($blog_all_query->have_posts()) : while ($blog_all_query->have_posts()) : $blog_all_query->the_post(); ?>
 						  	<div class="mb-2">
 					  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
 					  		</div>
-							<?php endwhile; endif; wp_reset_postdata(); ?>
+							<?php wp_reset_postdata();  endwhile; endif; ?>
 						<!-- end Сайдбар Блог выводим из категории Общее -->
 					</div>
 					<!-- end Сайдбар блог -->
@@ -132,14 +130,19 @@
 			        'taxonomy' => 'citylist',
 					    'terms' => $current_term,
 			        'field' => 'term_id',
-			        'include_children' => true,
-			        'operator' => 'IN'
+			        
 				    )
 					),
 				) );
-				if ($post_comment_query->have_posts()) : while ($post_comment_query->have_posts()) : $post_comment_query->the_post(); ?>
-			  	<?php echo do_shortcode('[anycomment]'); ?>
-				<?php endwhile; endif; wp_reset_postdata(); ?>
+				?>
+				<?php if ($post_comment_query->have_posts()): ?>
+					<?php while ($post_comment_query->have_posts()) : $post_comment_query->the_post(); ?>
+						<?php the_title(); ?>
+						<?php echo $current_term; ?>
+				  	<?php echo do_shortcode('[anycomment]'); ?>
+				  	<?php wp_reset_postdata(); ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
