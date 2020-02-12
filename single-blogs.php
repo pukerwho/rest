@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-9">
-					<div class="single-blogs__breadcrumb d-flex mb-4">
+					<div class="single-blogs__breadcrumb d-flex mb-5">
 						<?php 
 						$current_term = wp_get_post_terms(  get_the_ID() , 'blog-categories', array( 'parent' => 0 ) );
 						foreach (array_slice($current_term, 0,1) as $myterm); {
@@ -58,74 +58,40 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-center mb-4">
+			<div class="row justify-content-center mb-5">
 				<div class="col-md-8 text-center">
-					<h3><?php _e( 'Популярные предложения в этом городе', 'restx' ); ?></h3>
+					<h3 class="display-4"><?php _e( 'Похожие записи', 'restx' ); ?></h3>
 				</div>
 			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-8">
-					<div class="single-blogs-hotels">
-						<?php 
-							$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
-							foreach ($current_term as $myterm); {
-								$current_term_slug = $myterm->slug;
-							}
-						?>
-						<?php 
-							$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
-							$custom_query = new WP_Query( array( 
-							'post_type' => 'hotels', 
-							'posts_per_page' => 6,
-							'orderby' => 'rand',
-							'order'    => 'ASC',
-							'tax_query' => array(
-						    array(
-					        'taxonomy' => 'citylist',
-							    'terms' => $current_term_slug,
-					        'field' => 'slug',
-					        'include_children' => true,
-					        'operator' => 'IN'
-						    )
-							),
-						) );
-						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-							<a href="<?php echo get_permalink(); ?>">
-					  		<div class="single-blogs-hotel">
-					  			<div class="single-blogs-hotel-img">
-						  			<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">	
-					  			</div>
-					  			<div class="single-blogs-hotel-content">
-						  			<div class="single-blogs-hotel-title">
-						  				<?php the_title(); ?>	
-						  			</div>
-						  			<div class="single-blogs-hotel-price">
-						  				<?php get_template_part('blocks/hotel-price'); ?>	
-						  			</div>	
-						  			<div class="single-blogs-hotel-nomer">
-						  				<?php _e( 'Номера', 'restx' ); ?>: 
-											<?php if(rwmb_meta( 'meta-hotel-kottedg-has' )): ?>
-												<span><?php _e( 'Коттеджи', 'restx' ); ?></span>
-											<?php endif ?>
-											<?php if(rwmb_meta( 'meta-hotel-lux-has' )): ?>
-												<span><?php _e( 'Люксы', 'restx' ); ?></span>
-											<?php endif ?>
-											<?php if(rwmb_meta( 'meta-hotel-halflux-has' )): ?>
-												<span><?php _e( 'Полулюксы', 'restx' ); ?></span>
-											<?php endif ?>
-											<?php if(rwmb_meta( 'meta-hotel-standart-has' )): ?>
-												<span><?php _e( 'Стандарты', 'restx' ); ?></span>
-											<?php endif ?>
-											<?php if(rwmb_meta( 'meta-hotel-budget-has' )): ?>
-												<span><?php _e( 'Бюджетные', 'restx' ); ?></span>
-											<?php endif ?>
-						  			</div>
-					  			</div>
-					  		</div>
-				  		</a>
-						<?php endwhile; endif; wp_reset_postdata(); ?>
-					</div>
-				</div>
+			<div class="row justify-content-center mb-5">
+				<?php 
+					$current_term = get_the_category();
+					foreach ($current_term as $myterm); {
+						$current_term_slug = $myterm->cat_ID;
+					}
+				?>
+				<?php 
+					$current_id = get_the_ID();
+					$custom_query = new WP_Query( array( 
+					'post_type' => 'blogs', 
+					'posts_per_page' => 3,
+					'post__not_in' => array($current_id),
+					'cat' => $current_term_slug
+				) );
+				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+        	<div class="col-md-4">
+        		<a href="<?php the_permalink(); ?>">
+        			<div class="single-blogs__other">
+        				<div class="single-blogs__other-img mb-4">
+        					<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>" alt="" loading="lazy">
+        				</div>
+        				<div class="single-blogs__other-title text-center mb-4">
+        					<?php the_title(); ?>	
+        				</div>
+	        		</div>
+	        	</a>
+        	</div>
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
 	</div>
