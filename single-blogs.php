@@ -63,23 +63,25 @@
 					<h3 class="display-4"><?php _e( 'Похожие записи', 'restx' ); ?></h3>
 				</div>
 			</div>
-			<div class="row justify-content-center mb-5">
-				<?php 
-					$current_term = get_the_category();
-					foreach ($current_term as $myterm); {
-						$current_term_slug = $myterm->cat_ID;
-					}
-				?>
+			<div class="row justify-content-center">
 				<?php 
 					$current_id = get_the_ID();
 					$custom_query = new WP_Query( array( 
 					'post_type' => 'blogs', 
 					'posts_per_page' => 3,
 					'post__not_in' => array($current_id),
-					'cat' => $current_term_slug
+					'tax_query' => array(
+				    array(
+			        'taxonomy' => 'blog-categories',
+					    'terms' => $myterm->term_id,
+			        'field' => 'term_id',
+			        'include_children' => true,
+			        'operator' => 'IN'
+				    )
+					),
 				) );
 				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-        	<div class="col-md-4">
+        	<div class="col-md-4 mb-5">
         		<a href="<?php the_permalink(); ?>">
         			<div class="single-blogs__other">
         				<div class="single-blogs__other-img mb-4">

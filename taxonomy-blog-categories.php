@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+<?php 
+	$blog_cats = get_terms(array(
+		'taxonomy' => 'blog-categories',
+	));
+	$current_blog_cat_id = get_queried_object_id();
+	$current_blog_cat = get_term($current_blog_cat_id, 'blog-categories'); 
+?>
+
 <div class="blog">
 	<div class="container">
 		<div class="row pt-5 mb-5">
@@ -11,7 +19,7 @@
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12">
-				<h1 class="text-uppercase text-center"><?php _e('Блог', 'restx') ?></h1>
+				<h1 class="text-uppercase text-center"><?php _e('Категория', 'restx') ?>: <?php echo $current_blog_cat->name ?></h1>
 			</div>
 		</div>
 		<div class="row flex-column-reverse flex-lg-row mb-5">
@@ -25,6 +33,15 @@
 							'posts_per_page' => 5,
 							'order'    => 'DESC',
 							'paged' => $current_page,
+							'tax_query' => array(
+						    array(
+					        'taxonomy' => 'blog-categories',
+							    'terms' => $current_blog_cat_id,
+					        'field' => 'term_id',
+					        'include_children' => true,
+					        'operator' => 'IN'
+						    )
+							),
 						) );
 					if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 						<a href="<?php the_permalink() ?>" class="blog_item">
@@ -50,11 +67,6 @@
 							<div class="blog_sidebar_box_subtitle"><?php _e('Категории', 'restx'); ?>:</div>
 						</div>
 						<div>
-							<?php 
-								$blog_cats = get_terms(array(
-									'taxonomy' => 'blog-categories',
-								));
-							?>
 							<?php foreach ($blog_cats as $blog_cat): ?>
 								<div class="blog_sidebar_box_item">
 									<a href="<?php echo get_term_link($blog_cat->term_id, 'blog-categories') ?>"><?php echo $blog_cat->name; ?></a>

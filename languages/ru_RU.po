@@ -840,6 +840,18 @@ msgstr "Зачем мы вам?"
 msgid "Снять жилье"
 msgstr "Снять жилье"
 
+msgid "Похожие записи"
+msgstr "Похожие записи"
+
+msgid "Категория"
+msgstr "Категория"
+
+msgid "Категории"
+msgstr "Категории"
+
+msgid ""
+msgstr ""
+
 msgid ""
 msgstr ""
 

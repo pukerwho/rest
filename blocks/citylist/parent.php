@@ -60,29 +60,6 @@
 				  		</div>
 						<?php wp_reset_postdata(); endwhile; endif;  ?>
 						<!-- end Сайдбар Блог выводим из этого города -->
-
-						<!-- Сайдбар Блог выводим из категории Общее -->
-							<?php 
-								$blog_all_query = new WP_Query( array( 
-								'post_type' => 'blogs', 
-								'posts_per_page' => 3,
-								'tax_query' => array(
-							    array(
-						        'taxonomy' => 'blog-categories',
-								    'terms' => 'other',
-						        'field' => 'slug',
-						        'include_children' => true,
-						        'operator' => 'IN'
-							    )
-								),
-							) );
-							
-							if ($blog_all_query->have_posts()) : while ($blog_all_query->have_posts()) : $blog_all_query->the_post(); ?>
-						  	<div class="mb-2">
-					  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
-					  		</div>
-							<?php wp_reset_postdata();  endwhile; endif; ?>
-						<!-- end Сайдбар Блог выводим из категории Общее -->
 					</div>
 					<!-- end Сайдбар блог -->
 
@@ -104,6 +81,40 @@
 				  	<?php endif ?>
 					</div>
 			  	<!-- end Сайдбар видео -->
+			  	<!-- общий Блог -->
+			  	<div class="citylist_sidebar_box mb-5">
+			  		<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #cdf5d4;">
+								<img src="<?php bloginfo('template_url') ?>/img/organize.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Блог', 'restx' ); ?>
+							</div>
+						</div>
+						<div>
+							<?php 
+								$blog_all_query = new WP_Query( array( 
+								'post_type' => 'blogs', 
+								'posts_per_page' => 5,
+								'tax_query' => array(
+							    array(
+						        'taxonomy' => 'blog-categories',
+								    'terms' => 'common',
+						        'field' => 'slug',
+						        'include_children' => true,
+						        'operator' => 'IN'
+							    )
+								),
+							) );
+							
+							if ($blog_all_query->have_posts()) : while ($blog_all_query->have_posts()) : $blog_all_query->the_post(); ?>
+						  	<div class="mb-2">
+					  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
+					  		</div>
+							<?php wp_reset_postdata();  endwhile; endif; ?>
+						</div>
+					</div>
+			  	<!-- end общий Блог -->
 				</div>
 				<!-- end Сайдбар -->
 			</div>
