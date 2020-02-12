@@ -11050,6 +11050,12 @@ footer a {
     .single-blogs__text h2:after {
       display: block;
       content: url(../img/h2line.svg); }
+  .single-blogs__text h3 {
+    font-size: 1.8rem;
+    padding: 1rem 0; }
+    .single-blogs__text h3:after {
+      display: block;
+      content: url(../img/h2line.svg); }
   .single-blogs__text blockquote {
     background-color: #f0f2f6;
     -webkit-border-radius: 0.5rem;
