@@ -2,36 +2,44 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="single-blogs pt-5">
-		<!-- <div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="single-blogs__img">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-					</div>
-				</div>
-			</div>
-		</div> -->
 		<div class="container">
-			<?php if(!carbon_get_the_post_meta('crb_blogs_whether')): ?>
-				<div class="row justify-content-center">
-					<div class="col-md-9 text-center">
-						<div class="single-blogs__icon">
-							<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" width="35px" alt="">
-						</div>
-					</div>
-				</div>
-			<?php endif ?>
 			<div class="row justify-content-center">
 				<div class="col-md-9">
-					<div class="single-blogs__title">
+					<div class="single-blogs__breadcrumb d-flex mb-4">
+						<?php 
+						$current_term = wp_get_post_terms(  get_the_ID() , 'blog-categories', array( 'parent' => 0 ) );
+						foreach (array_slice($current_term, 0,1) as $myterm); {
+						} ?>
+						<?php if ($myterm): ?>
+							<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+					      <ul>
+									<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+										<a itemprop="item" href="<?php echo home_url(); ?>">
+											<span itemprop="name"><?php _e( 'Главная', 'restx' ); ?></span>
+										</a>                        
+										<meta itemprop="position" content="1">
+									</li>
+									<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+										<a itemprop="item" href="<?php echo get_post_type_archive_link('blogs'); ?>">
+											<span itemprop="name"><?php _e( 'Блог', 'restx' ); ?></span>
+										</a>                        
+										<meta itemprop="position" content="2">
+									</li>
+					        <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+					          <a itemprop="item" href="<?php echo get_term_link($myterm->term_id, 'blog-categories') ?>">
+											<span itemprop="name"><?php echo $myterm->name; ?></span>
+										</a>                        
+										<meta itemprop="position" content="3">
+					        </li>
+					      </ul>
+					    </div>
+						<?php endif; ?>
+					</div>
+					<div class="single-blogs__title d-flex">
 						<h1><?php the_title(); ?></h1>	
-						<div class="single-blogs__breadcrumb mb-5">
-							<?php 
-							$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
-							foreach ($current_term as $myterm); {
-							} ?>
-							<span typeof="v:Breadcrumb"> <a href="<?php echo get_term_link($myterm->term_id, 'citylist') ?>" rel="v:url" property="v:title"> <?php echo $myterm->name; ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
-						</div>
+					</div>
+					<div class="single-blogs__date mb-5">
+						<?php _e('Дата', 'restx') ?>: <?php echo get_the_modified_time('j/n/Y') ?>
 					</div>
 				</div>
 			</div>

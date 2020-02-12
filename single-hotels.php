@@ -10,7 +10,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="single-blogs__breadcrumb text-left mb-4">
+				<div class="single-hotel__breadcrumb text-left mb-4">
 					<?php 
 						$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
 						foreach ($current_term as $myterm); {
