@@ -32,5 +32,4 @@ Template Name: Форма
 	<p><?php _e('Ничего не найдено'); ?></p>
 <?php endif; ?>
 
-<script src="//code.jivosite.com/widget/kxtPXXIqyU" async></script>
 <?php get_footer(); ?>
