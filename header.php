@@ -15,6 +15,11 @@
     wp_head();
 	?>
   <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>">
+  <?php if (is_singular('blogs')): ?>
+    <meta property="og:article:published_time" content="<?php echo get_post_time('Y/n/j'); ?>" />
+    <meta property="og:article:article:modified_time" content="<?php echo get_the_modified_time('Y/n/j'); ?>" />
+    <meta property="og:article:author" content="<?php echo get_the_author(); ?>" />
+  <?php endif; ?>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135287974-1"></script>
   <script>

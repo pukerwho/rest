@@ -115,6 +115,37 @@
 						</div>
 					</div>
 			  	<!-- end общий Блог -->
+			  	<!-- Ближайшие города -->
+			  	<div class="citylist_sidebar_box mb-5">
+			  		<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #c5eefa;">
+								<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Ближайшие курорты', 'restx' ); ?>
+							</div>
+						</div>
+						<div>
+							<?php 
+					  		$near_cities_array = [];
+					  		$near_cities = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_association'); 
+					  		foreach($near_cities as $near_city) {
+						  		$near_city_id = $near_city['id'];
+						  		array_push($near_cities_array, $near_city_id);
+						  	}
+					  	?>
+					  	<?php $near_city_terms = get_terms(array(
+					  		'taxonomy' => 'citylist',
+					  		'include' => $near_cities_array,
+					  	)) ?>
+					  	<?php foreach($near_city_terms as $near_city_term): ?>
+					  		<div class="citylist-blog__item">
+					  			<a href="<?php echo get_term_link($near_city_term->term_id, 'citylist') ?>"><div class="citylist-blog__title"><?php echo $near_city_term->name ?></div></a>	
+					  		</div>
+					  	<?php endforeach; ?>
+						</div>
+					</div>
+			  	<!-- end Ближайшие города -->
 				</div>
 				<!-- end Сайдбар -->
 			</div>
@@ -148,8 +179,6 @@
 				?>
 				<?php if ($post_comment_query->have_posts()): ?>
 					<?php while ($post_comment_query->have_posts()) : $post_comment_query->the_post(); ?>
-						<?php the_title(); ?>
-						<?php echo $current_term; ?>
 				  	<?php echo do_shortcode('[anycomment]'); ?>
 				  	<?php wp_reset_postdata(); ?>
 					<?php endwhile; ?>

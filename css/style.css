@@ -11089,6 +11089,25 @@ footer a {
     .single-blogs__text h3:after {
       display: block;
       content: url(../img/h2line.svg); }
+  .single-blogs__text ul {
+    color: #1b1b1b;
+    font-size: 2.1rem;
+    line-height: 1.65;
+    font-weight: 300;
+    margin-bottom: 1.5rem; }
+  .single-blogs__text li {
+    position: relative;
+    padding-left: 2rem; }
+    .single-blogs__text li:before {
+      content: '';
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: 14px;
+      left: 0;
+      background-color: #60cc7d;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
   .single-blogs__text blockquote {
     background-color: #f0f2f6;
     -webkit-border-radius: 0.5rem;

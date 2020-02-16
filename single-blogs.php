@@ -38,6 +38,9 @@
 					<div class="single-blogs__title d-flex">
 						<h1><?php the_title(); ?></h1>	
 					</div>
+					<div class="single-blogs__date">
+						<?php _e('Автор', 'restx') ?>: <?php echo get_the_author(); ?>
+					</div>
 					<div class="single-blogs__date mb-5">
 						<?php _e('Дата', 'restx') ?>: <?php echo get_the_modified_time('j/n/Y') ?>
 					</div>
@@ -55,6 +58,14 @@
 							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="" loading="lazy">
 						</div>
 						<?php the_content(); ?>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-10 text-center">
+					<h3 class="display-4 mb-4"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
+					<div>
+						<?php echo do_shortcode('[anycomment]'); ?>
 					</div>
 				</div>
 			</div>

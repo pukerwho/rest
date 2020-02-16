@@ -23,6 +23,14 @@ function crb_attach_theme_options() {
         'azovsea' => 'Азовское море',
         'blacksea' => 'Черное море',
         'karpaty' => 'Карпаты',
+      ) ),
+      Field::make( 'association', 'crb_citylist_association', 'Города рядом' )
+      ->set_duplicates_allowed( true )
+      ->set_types( array(
+          array(
+            'type'      => 'term',
+            'taxonomy' => 'citylist',
+          )
       ) )
   ) );
 }
