@@ -37,6 +37,7 @@ require_once __DIR__ . '/inc/CMB2-Post-Search-field/lib/init.php';
 require_once get_template_directory() . '/inc/carbon-fields/carbon-fields-plugin.php';
 require_once get_template_directory() . '/inc/custom-fields/citylist-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/post-meta.php';
+require_once get_template_directory() . '/inc/custom-fields/page-meta.php';
 require_once get_template_directory() . '/inc/hotels/meta.php';
 require_once get_template_directory() . '/inc/filters/catalog-filter.php';
 require_once get_template_directory() . '/inc/filters/city-filter.php';
