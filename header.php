@@ -55,14 +55,6 @@
           <a href="<?php echo home_url(); ?>" class="header__logo">
             <span class="header__logo__icon"></span>
             <span class="header__logo__icon-two"></span>
-            <!-- <div class="header__logo__title">
-              <div class="header__logo__title-first">
-                Відпочивай  
-              </div>
-              <div class="header__logo__title-second">
-                Відпочивай
-              </div>
-            </div> -->
           </a>
           <div class="header__cities hero__block-cities ml-5">
             <input list="hero_city" id="my_hero_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
@@ -80,44 +72,7 @@
             </script>
           </div>
         </div>
-        <!-- <div class="header__mobile__menu mobile-show">
-          <div class="btn bg-pastel-blue">Меню</div>
-        </div> -->
-        <div class="header__mobile__cover mobile-show">
-          <div class="header__mobile__logo">
-            <a href="<?php echo home_url(); ?>" class="header__logo">
-              <span class="header__logo__icon"></span>
-              <div class="header__logo__title">
-                
-              </div>
-            </a>
-          </div>
-          <div class="header__mobile__close">
-            <div class="btn bg-pastel-blue"><?php _e( 'Закрыть меню', 'restx' ); ?></div>
-          </div>
-          <div class="header__mobile__nav">
-            <?php wp_nav_menu( array(
-              'theme_location'  => 'head_menu',
-              'menu'            => '', 
-              'container'       => 'nav', 
-              'container_class' => 'header__mobile__nav__wrap',
-              'menu_id'         => '',
-              'echo'            => true,
-              'fallback_cb'     => 'wp_page_menu',
-              'before'          => '',
-              'after'           => '',
-              'link_before'     => '',
-              'link_after'      => '',
-              'items_wrap'      => '<ul class="wrap-menu">%3$s</ul>',
-              'depth'           => 0,
-              'walker'          => '',
-            )); ?>
-          </div>
-          <div class="header__mobile__wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1170 193">
-      <path d="M1175 131.2c0 0-81-89.4-224.3-103.4S713 72 665 97c-86 46-148 63-271 7C221.7 25.5 56 104.5-4 197.4 -4 58.7-3.3 0.3-3.3 0.3L1175 0V131.2z"></path>
-          </div>
-        </div>
+        
         <div class="header__right pc-show">
           <div class="header__menu">
             <div class="has-submenu">
