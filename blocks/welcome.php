@@ -32,7 +32,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="hero__block">
-					<h1 class="mb-3"><?php _e( 'Зимний отдых в Украине:', 'restx' ); ?></h1>
+					<h1 class="mb-3"><?php _e( 'Отдых в Украине', 'restx' ); ?></h1>
 					<div class="hero__block-subtitle mb-4">
 						<?php _e( 'Самый удобный сайт по отдыху', 'restx' ); ?>
 					</div>
