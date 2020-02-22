@@ -21,7 +21,8 @@
 				'parent' => 0, 
 				'hide_empty' => false,
 				'meta_key' => '_crb_citylist_location',
-			  'meta_value' => 'karpaty'
+			  'meta_value' => array('blacksea','azovsea'),
+			  'meta_compare' => 'IN'
 			) )
 			?>
 			<?php $term_ids = wp_list_pluck( $citylists_new, 'term_id' ); ?>

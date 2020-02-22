@@ -1,4 +1,4 @@
-<!-- <div class="nearseahotels">
+<div class="nearseahotels">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -17,7 +17,6 @@
 		</div>
 		<div class="row mobile-hotels-grid mb-5">
 			<?php 
-			/*
 				$id_city = get_the_id();
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'hotels', 
@@ -38,7 +37,7 @@
 			  	<div class="col-md-12 col-lg-3">
 			  		<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
 			  	</div>
-			<?php endwhile; endif; wp_reset_postdata(); */ ?>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
 		<div class="row mb-5">
 			<div class="col-md-12">
@@ -54,4 +53,4 @@
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>

@@ -101,16 +101,16 @@
                     </div>
                     <div>
                         <?php if (get_locale() == 'ru_RU'): ?>
-                            <a href="/citylist/jaremche/">Отдых в Яремче</a>,
-                            <a href="/citylist/dragobrat/">Отдых в Драгобрате</a>,
-                            <a href="/citylist/vorohta/">Отдых в Ворохте</a>,
-                            <a href="/citylist/bukovel/">Отдых в Буковели</a>
+                            <a href="/citylist/kirillovka/">Отдых в Кирилловке</a>,
+                            <a href="/citylist/berdynsk/">Отдых в Бердянске</a>,
+                            <a href="/citylist/zatoka/">Отдых в Затоке</a>,
+                            <a href="/citylist/jelezniy-port/">Отдых в Железном порту</a>
                         <?php endif; ?>
                         <?php if (get_locale() == 'uk'): ?>
-                            <a href="/uk/citylist/jaremche-uk/">Відпочинок в Яремче</a>,
-                            <a href="/uk/citylist/dragobrat-uk/">Відпочинок у Драгобраті</a>,
-                            <a href="/uk/citylist/vorohta-uk/">Відпочинок у Ворохті</a>,
-                            <a href="/uk/citylist/bukovel-uk/">Відпочинок у Буковелі</a>
+                            <a href="/uk/citylist/kirilivka/">Відпочинок у Кирилівці</a>,
+                            <a href="/uk/citylist/berdjansk/">Відпочинок у Бердянську</a>,
+                            <a href="/uk/citylist/zatoka-uk/">Відпочинок у Затоці</a>,
+                            <a href="/uk/citylist/zaliznij-port/">Відпочинок у Залізному порту</a>
                         <?php endif; ?>
                     </div>
                 </div>
