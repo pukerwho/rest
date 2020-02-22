@@ -43,7 +43,12 @@
 			<div class="col-md-12">
 				<div class="button-more text-center">
 					<a href="<?php 
-					$term_slug = 'nearsea';
+					if (get_locale() == 'ru_RU') {
+						$term_slug = 'nearsea';	
+					} else {
+						$term_slug = 'bilja-morja';	
+					}
+					
 					$term_link = get_term_link($term_slug, 'collections');
 					echo $term_link;
 					?>">
