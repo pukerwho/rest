@@ -13148,6 +13148,8 @@ button.swiper-pagination-bullet {
       text-transform: uppercase; }
     .citylist_content .b_filter__item {
       width: 100%; }
+  .citylist_sidebar {
+    width: 100%; }
 
   .allcity .mobile-show {
     display: -ms-grid;
