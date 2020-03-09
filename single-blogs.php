@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="single-blogs pt-5">
-		<div class="container">
+		<div class="container" itemscope itemtype="http://schema.org/Article">
 			<div class="row justify-content-center">
 				<div class="col-md-9">
 					<div class="single-blogs__breadcrumb d-flex mb-5">
@@ -35,32 +35,46 @@
 					    </div>
 						<?php endif; ?>
 					</div>
-					<div class="single-blogs__title d-flex">
-						<h1><?php the_title(); ?></h1>	
-					</div>
-					<div class="single-blogs__date">
-						<?php _e('Автор', 'restx') ?>: <?php echo get_the_author(); ?>
-					</div>
-					<div class="single-blogs__date mb-5">
-						<?php _e('Дата', 'restx') ?>: <?php echo get_the_modified_time('j/n/Y') ?>
-					</div>
 				</div>
 			</div>
-			<div class="row justify-content-center mb-5">
-				<div class="col-md-9">
-					<div class="single-blogs__text">
-						<?php if(carbon_get_the_post_meta('crb_blogs_whether')): ?>
-						<div class="weather-block" data-weather="<?php echo carbon_get_the_post_meta('crb_blogs_city'); ?>">
-							<div id="weather"></div>		
+			<article>
+				<div class="row justify-content-center">
+					<div class="col-md-9">
+						<div class="single-blogs__title d-flex">
+							<h1 itemprop="headline"><?php the_title(); ?></h1>	
 						</div>
-						<?php endif ?>
-						<div class="single-blogs__mainimg mb-5">
-							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="" loading="lazy">
+						<div class="single-blogs__date">
+							<?php _e('Автор', 'restx') ?>: <?php echo get_the_author(); ?>
 						</div>
-						<?php the_content(); ?>
+						<div class="single-blogs__date mb-5">
+							<?php _e('Дата', 'restx') ?>: <?php echo get_the_modified_time('j/n/Y') ?>
+						</div>
 					</div>
 				</div>
-			</div>
+				<div class="row justify-content-center mb-5">
+					<div class="col-md-9">
+						<div class="single-blogs__text">
+							<?php if(carbon_get_the_post_meta('crb_blogs_whether')): ?>
+							<div class="weather-block" data-weather="<?php echo carbon_get_the_post_meta('crb_blogs_city'); ?>">
+								<div id="weather"></div>		
+							</div>
+							<?php endif ?>
+							<div class="single-blogs_subjects mb-5">
+								<div class="single-blogs_subjects_subtitle font-weight-bold mb-3">
+									Содержание:
+								</div>
+								<div class="single-blogs_subjects_inner"></div>
+							</div>
+							<div class="single-blogs__mainimg mb-5">
+								<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="" loading="lazy" itemprop="image">
+							</div>
+							<div itemprop="articleBody">
+								<?php the_content(); ?>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
 			<div class="row justify-content-center mb-5">
 				<div class="col-md-10 text-center">
 					<h3 class="display-4 mb-4"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
