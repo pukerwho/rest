@@ -234,7 +234,7 @@
 		<div class="row">
 			<?php 
 				$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
-				foreach ($current_term as $myterm); {
+				foreach (array_slice($current_term, 0,1) as $myterm); {
 					$current_term_slug = $myterm->slug;
 				}
 			?>
@@ -268,7 +268,7 @@
 				<div class="button-more text-center">
 					<?php 
 						$current_term = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
-						foreach ($current_term as $myterm): ?>
+						foreach (array_slice($current_term, 0,1) as $myterm): ?>
 						<a href="<?php echo get_term_link($myterm) ?>">
 							<div class="btn"><?php _e( 'Все предложения', 'restx' ); ?></div>	
 						</a>
