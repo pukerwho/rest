@@ -541,9 +541,14 @@ window.addEventListener('scroll', function() {
 });
 
 //BLOG SUBJECTS 
+let blogSubjects = document.querySelector('.single-blogs_subjects');
 let blogH2 = document.querySelectorAll('.single-blogs__text h2');
 let blogSubjectsBlock = document.querySelector('.single-blogs_subjects_inner');
 let blogH2Array = [];
+
+if (blogH2.length > 0) {
+  blogSubjects.style.display = 'block';
+}
 
 if (blogH2) {
   for (const[index, bH2] of blogH2.entries()) {
