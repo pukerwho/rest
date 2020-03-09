@@ -9073,28 +9073,21 @@ a:hover {
     margin: auto;
     padding: 0; }
 
-.settings {
-  display: none; }
-  .settings.open {
-    display: block; }
-  .settings .lang a:before {
-    content: '';
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-
-.add {
-  display: none; }
-  .add.open {
-    display: block; }
+.settings .lang a:before {
+  content: '';
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .modal_menu {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   left: 0;
   right: 0;
   bottom: 90px;
-  z-index: 99;
+  z-index: -1;
   margin: 0 15px; }
   .modal_menu_item {
     background-color: #ffffff;
@@ -9119,6 +9112,10 @@ a:hover {
     border-radius: 1.5rem; }
     .modal_menu_bottom a {
       color: #fe3824; }
+  .modal_menu.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99; }
 
 .bg-pastel-blue {
   background-color: #bec5e7;
