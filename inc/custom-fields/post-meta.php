@@ -16,6 +16,33 @@ function crb_post_theme_options() {
         )
     ) ),
   ) );
+  Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'way' )
+    ->add_fields( array(
+      Field::make( 'complex', 'crb_way', 'Рейсы' )->add_fields( array(
+        Field::make( 'text', 'crb_way_start_time', 'Время отправления' ),
+        Field::make( 'text', 'crb_way_end_time', 'Время прибытия' ),
+        Field::make( 'text', 'crb_way_when', 'Регулярность' ),
+        Field::make( 'text', 'crb_way_perevozhik', 'Перевозчик' ),
+        Field::make( 'complex', 'crb_way_phones', 'Телефоны' )->add_fields( array(
+          Field::make( 'text', 'crb_way_phone', 'Телефон' ),
+        )),
+      )),
+      Field::make( 'association', 'crb_way_start_city', 'Город отправления' )
+        ->set_types( array(
+          array(
+            'type'      => 'term',
+            'taxonomy' => 'citylist',
+          )
+        ) ),
+        Field::make( 'association', 'crb_way_end_city', 'Город прибытия' )
+        ->set_types( array(
+          array(
+            'type'      => 'term',
+            'taxonomy' => 'citylist',
+          )
+        ) ),
+  ) );
 }
 
 ?>

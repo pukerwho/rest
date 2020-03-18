@@ -145,6 +145,18 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
+  register_post_type( 'way',
+    array(
+      'labels' => array(
+          'name' => __( 'Направления' ),
+          'singular_name' => __( 'Направление' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    )
+  );
   register_post_type( 'post_comment',
     array(
       'labels' => array(
@@ -273,7 +285,7 @@ function your_prefix_register_taxonomy() {
     ),
   );
 
-  register_taxonomy( 'citylist', array( 'hotels', 'webcamers', 'blogs', 'post_comment' ), $args );
+  register_taxonomy( 'citylist', array( 'hotels', 'webcamers', 'blogs', 'post_comment', 'way' ), $args );
 }
 add_action( 'init', 'your_prefix_register_taxonomy');
 
