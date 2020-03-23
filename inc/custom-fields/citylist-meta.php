@@ -20,6 +20,7 @@ function crb_attach_theme_options() {
       Field::make( 'text', 'crb_citylist_video', 'Видео (id YouTube)' ),
       Field::make( 'select', 'crb_citylist_location', 'Курорт' )
       ->add_options( array(
+        'none' => 'Ни моря, ни гор',
         'azovsea' => 'Азовское море',
         'blacksea' => 'Черное море',
         'karpaty' => 'Карпаты',
