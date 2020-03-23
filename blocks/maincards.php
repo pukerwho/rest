@@ -5,7 +5,7 @@
 				<h2 class="mb-5"><?php _e( 'Где отдыхать в Украине?', 'restx' ); ?></h2>
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
-					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false) );
+					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'meta_key' => '_crb_citylist_iscurort', 'meta_value' => 'yes') );
 					foreach ( array_slice($maincitylists, 0, 5) as $citylist ): ?>
 					<div class="maincards__item">
 						<a href="<?php echo get_term_link($citylist); ?>">
@@ -22,7 +22,7 @@
 				<div class="mobile-show">
 					<div class="allcity">
 						<div class="maincards__grid">
-							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, ) );
+							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'meta_key' => '_crb_citylist_iscurort', 'meta_value' => 'yes' ) );
 							foreach ( array_slice($citylists, 0, 6) as $citylist ): ?>
 							<div class="maincards__item">
 								<a href="<?php echo get_term_link($citylist); ?>">
