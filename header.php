@@ -59,7 +59,7 @@
           <div class="header__cities hero__block-cities ml-5">
             <input list="hero_city" id="my_hero_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
             <datalist id="hero_city">
-              <?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'order' => 'ASC') );
+              <?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'order' => 'ASC', 'meta_key' => '_crb_citylist_iscurort', 'meta_value' => 'yes') );
                 foreach ( $maincitylists as $citylist ): ?>
                 <option value="<?php echo $citylist->name ?>" data-link="<?php echo get_term_link($citylist); ?>">
               <?php endforeach; ?>

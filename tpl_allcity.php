@@ -217,8 +217,6 @@ Template Name: Все города
 				</div>
 			</div>
 		</details>
-		
-		
 	</div>
 </div>
 

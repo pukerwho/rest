@@ -31,7 +31,8 @@ function crb_attach_theme_options() {
             'type'      => 'term',
             'taxonomy' => 'citylist',
           )
-      ) )
+      ) ),
+      Field::make( 'checkbox', 'crb_citylist_iscurort', 'Курорт?' ),
   ) );
 }
 
