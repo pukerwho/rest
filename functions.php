@@ -360,12 +360,12 @@ function get_page_url($template_name) {
 // }
 
 
-function updateTermMeta() {
-  $terms_citylist = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false));
-  foreach ($terms_citylist as $term_citylist) {
-    $temp_citylist_id = $term_citylist->term_id;
-    update_term_meta($temp_citylist_id, '_crb_citylist_iscurort', 'yes', false);
-  }  
-}
+// function updateTermMeta() {
+//   $terms_citylist = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false));
+//   foreach ($terms_citylist as $term_citylist) {
+//     $temp_citylist_id = $term_citylist->term_id;
+//     update_term_meta($temp_citylist_id, '_crb_citylist_iscurort', 'yes', false);
+//   }  
+// }
 
-add_action('init', 'updateTermMeta');
+// add_action('init', 'updateTermMeta');
