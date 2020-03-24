@@ -33,7 +33,7 @@
 			<div class="row">
 				<div class="col-md-8">
 				<?php $ways = carbon_get_the_post_meta('crb_way'); 
-				foreach($ways as $way): ?>
+				foreach($ways as $key => $way): ?>
 					<div class="way_block d-flex flex-column flex-md-row justify-content-between p-4 pl-5 mb-5">
 						<div class="way_block_left mb-5 mb-md-0">
 							<div class="way_block_start position-relative d-flex align-items-start mb-4">
@@ -84,7 +84,7 @@
 								<?php echo $way['crb_way_price']; ?>
 							</div>
 							<div class="d-flex justify-content-center justify-content-md-end">
-								<div class="way_block_contacts" data-toggle="modal" data-target="#wayModal">
+								<div class="way_block_contacts" data-toggle="modal" data-target="#wayModal_<?php echo $key; ?>">
 									<?php _e('Контакты', 'restx'); ?>
 								</div>
 							</div>
@@ -169,22 +169,23 @@
 	</div>
 
 	<!-- Modal -->
-<div class="modal fade way_modal" id="wayModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel"><?php _e('Контакты', 'restx'); ?></h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body py-5">
-      	<div class="d-flex align-items-center mb-3">
-	      	<img src="<?php bloginfo('template_url'); ?>/img/phone-call.svg" alt="" width="25px" class="mr-3">
-	        <h3><?php _e('Телефоны', 'restx'); ?>:</h3>	
-      	</div>
-        <?php $oh_ways = carbon_get_the_post_meta('crb_way');
-        foreach($oh_ways as $oh_way): ?>
+<?php $oh_ways = carbon_get_the_post_meta('crb_way');
+foreach($oh_ways as $key => $oh_way): ?>
+
+	<div class="modal fade way_modal" id="wayModal_<?php echo $key ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h3 class="modal-title" id="exampleModalLabel"><?php _e('Контакты', 'restx'); ?></h3>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body py-5">
+	      	<div class="d-flex align-items-center mb-3">
+		      	<img src="<?php bloginfo('template_url'); ?>/img/phone-call.svg" alt="" width="25px" class="mr-3">
+		        <h3><?php _e('Телефоны', 'restx'); ?>:</h3>	
+	      	</div>
 	        <?php 
 	        	$ways_phones = $oh_way['crb_way_phones']; 
 	        	foreach($ways_phones as $ways_phone): 
@@ -193,11 +194,11 @@
 		        	<a href="tel:<?php echo $ways_phone['crb_way_phone']; ?>"><?php echo $ways_phone['crb_way_phone']; ?></a>
 		        </div>
 		      <?php endforeach; ?>
-	    	<?php endforeach; ?>
-      </div>
-    </div>
-  </div>
-</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<?php endforeach; ?>
 <?php endwhile; else: ?>
 	<p><?php _e('Ничего не найдено'); ?></p>
 <?php endif; ?>
