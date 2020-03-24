@@ -160,26 +160,7 @@
             </div>
         </div>
     </div>
-    <div class="send-message-modal">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-5 col-sx-6 col-lg-6">
-                    <div class="send-message-modal__box">
-                        <div class="send-message-modal__close">
-                            <img src="<?php bloginfo('template_url') ?>/img/modal-close.svg" width="20px" alt="">
-                        </div>
-                        <div class="send-message-modal__form">
-                            <?php if( is_singular( 'hotels' )): ?>
-                                <?php echo do_shortcode('[contact-form-7 id="2847" title="Сообщить о неточности"]') ?>
-                                <?php else: ?>
-                                   <?php echo do_shortcode('[contact-form-7 id="3640" title="Поделиться видео"]') ?> 
-                            <?php endif ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <?php if( is_page_template( 'tpl_add.php' )): ?>
         <!-- Succass add hotel -->
         <div class="rest_modal">

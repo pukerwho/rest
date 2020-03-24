@@ -106,7 +106,7 @@
 							</div>
 						</div>
 						<?php 
-			  			$current_city_for_way = 'term:citylist:'. get_queried_object_id() .'';
+			  			$current_city_for_way = 'term:citylist:'. $city_from_term->term_id .'';
 							$custom_query = new WP_Query( array( 
 							'post_type' => 'way', 
 							'posts_per_page' => 10,
@@ -141,7 +141,7 @@
 							</div>
 						</div>
 						<?php 
-			  			$current_city_for_way = 'term:citylist:'. get_queried_object_id() .'';
+			  			$current_city_for_way = 'term:citylist:'. $city_to_term->term_id .'';
 							$custom_query = new WP_Query( array( 
 							'post_type' => 'way', 
 							'posts_per_page' => 10,
