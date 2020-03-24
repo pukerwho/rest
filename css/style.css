@@ -10464,6 +10464,7 @@ footer a {
     transform: translateY(-25%);
     z-index: -1;
     opacity: 0;
+    visibility: hidden;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s; }
@@ -10473,6 +10474,7 @@ footer a {
       transform: translateY(0%);
       z-index: 9;
       opacity: 1;
+      visibility: visible;
       -webkit-transition: all 0.35s;
       -o-transition: all 0.35s;
       transition: all 0.35s; }
@@ -11302,7 +11304,7 @@ footer a {
     padding: 3rem 3rem 2.5rem 3rem; }
   .citylist_sidebar .title {
     color: #484848;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase; }
   .citylist_sidebar .citylist-blog__title {
     font-style: 1.4rem; }

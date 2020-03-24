@@ -152,37 +152,78 @@
 			  	<div class="citylist_sidebar_box mb-5">
 			  		<div class="citylist-blog mb-4">
 							<div class="citylist-blog__img" style="background-color: #c5eefa;">
-								<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
+								<img src="<?php bloginfo('template_url') ?>/img/bus.svg" width="30px" alt="">
 							</div>
 							<div class="title">
-								<?php _e( 'Автобусы из города', 'restx' ); ?>
+								<?php _e( 'Автобусы из г.', 'restx' ); ?> <?php single_term_title(); ?>
 							</div>
 						</div>
 						<div>
 				  		<?php 
+				  			$current_city_for_way = 'term:citylist:'. get_queried_object_id() .'';
 								$custom_query = new WP_Query( array( 
 								'post_type' => 'way', 
-								'posts_per_page' => 5,
-								'tax_query' => array(
-							    array(
-						        'taxonomy' => 'citylist',
-								    'terms' => get_queried_object_id(),
-						        'field' => 'term_id',
-						        'include_children' => true,
-						        'operator' => 'IN'
-							    )
-								),
+								'posts_per_page' => 10,
+								'meta_query' => array(
+									'relation' => 'AND',
+									array(
+										'key'     => 'crb_way_start_city',
+							      'value'   => array($current_city_for_way),
+							      'compare' => 'IN', 
+									)
+								)
 							) );
 							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		        		<a href="<?php the_permalink(); ?>">
-	        				<div class="single-blogs__other-title mb-2">
+	        				<div class="single-blogs__other-title mb-2 p-0">
 	        					<?php the_title(); ?>	
 	        				</div>
 			        	</a>
-							<?php endwhile; endif; ?>
+							<?php endwhile; ?>
+							<?php else: ?>
+								<p><?php _e('Пока ничего нет', 'restx'); ?></p>
+							<?php endif; ?>
 						</div>
 					</div>
 			  	<!-- end автобусы из города -->
+			  	<!-- автобусы в города -->
+			  	<div class="citylist_sidebar_box mb-5">
+			  		<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #c5eefa;">
+								<img src="<?php bloginfo('template_url') ?>/img/bus.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Автобусы в г.', 'restx' ); ?> <?php single_term_title(); ?>
+							</div>
+						</div>
+						<div>
+				  		<?php 
+				  			$current_city_for_way = 'term:citylist:'. get_queried_object_id() .'';
+								$custom_query = new WP_Query( array( 
+								'post_type' => 'way', 
+								'posts_per_page' => 10,
+								'meta_query' => array(
+									'relation' => 'AND',
+									array(
+										'key'     => 'crb_way_end_city',
+							      'value'   => array($current_city_for_way),
+							      'compare' => 'IN', 
+									)
+								)
+							) );
+							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+		        		<a href="<?php the_permalink(); ?>">
+	        				<div class="single-blogs__other-title mb-2 p-0">
+	        					<?php the_title(); ?>	
+	        				</div>
+			        	</a>
+							<?php endwhile; ?>
+							<?php else: ?>
+								<p><?php _e('Пока ничего нет', 'restx'); ?></p>
+							<?php endif; ?>
+						</div>
+					</div>
+			  	<!-- end автобусы в города -->
 				</div>
 				<!-- end Сайдбар -->
 			</div>

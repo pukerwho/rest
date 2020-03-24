@@ -106,20 +106,18 @@
 							</div>
 						</div>
 						<?php 
-							$current_id = get_the_ID();
+			  			$current_city_for_way = 'term:citylist:'. get_queried_object_id() .'';
 							$custom_query = new WP_Query( array( 
 							'post_type' => 'way', 
-							'posts_per_page' => 5,
-							'post__not_in' => array($current_id),
-							'tax_query' => array(
-						    array(
-					        'taxonomy' => 'citylist',
-							    'terms' => $city_from_term->term_id,
-					        'field' => 'term_id',
-					        'include_children' => true,
-					        'operator' => 'IN'
-						    )
-							),
+							'posts_per_page' => 10,
+							'meta_query' => array(
+								'relation' => 'AND',
+								array(
+									'key'     => 'crb_way_start_city',
+						      'value'   => array($current_city_for_way),
+						      'compare' => 'IN', 
+								)
+							)
 						) );
 						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 	        		<a href="<?php the_permalink(); ?>">
@@ -143,19 +141,18 @@
 							</div>
 						</div>
 						<?php 
+			  			$current_city_for_way = 'term:citylist:'. get_queried_object_id() .'';
 							$custom_query = new WP_Query( array( 
 							'post_type' => 'way', 
-							'posts_per_page' => 5,
-							'post__not_in' => array($current_id),
-							'tax_query' => array(
-						    array(
-					        'taxonomy' => 'citylist',
-							    'terms' => $city_to_term->term_id,
-					        'field' => 'term_id',
-					        'include_children' => true,
-					        'operator' => 'IN'
-						    )
-							),
+							'posts_per_page' => 10,
+							'meta_query' => array(
+								'relation' => 'AND',
+								array(
+									'key'     => 'crb_way_end_city',
+						      'value'   => array($current_city_for_way),
+						      'compare' => 'IN', 
+								)
+							)
 						) );
 						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 	        		<a href="<?php the_permalink(); ?>">
