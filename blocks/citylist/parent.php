@@ -148,6 +148,41 @@
 						</div>
 					<?php endif; ?>
 			  	<!-- end Ближайшие города -->
+			  	<!-- автобусы из города -->
+			  	<div class="citylist_sidebar_box mb-5">
+			  		<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #c5eefa;">
+								<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Автобусы из города', 'restx' ); ?>
+							</div>
+						</div>
+						<div>
+				  		<?php 
+								$custom_query = new WP_Query( array( 
+								'post_type' => 'way', 
+								'posts_per_page' => 5,
+								'tax_query' => array(
+							    array(
+						        'taxonomy' => 'citylist',
+								    'terms' => get_queried_object_id(),
+						        'field' => 'term_id',
+						        'include_children' => true,
+						        'operator' => 'IN'
+							    )
+								),
+							) );
+							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+		        		<a href="<?php the_permalink(); ?>">
+	        				<div class="single-blogs__other-title mb-2">
+	        					<?php the_title(); ?>	
+	        				</div>
+			        	</a>
+							<?php endwhile; endif; ?>
+						</div>
+					</div>
+			  	<!-- end автобусы из города -->
 				</div>
 				<!-- end Сайдбар -->
 			</div>

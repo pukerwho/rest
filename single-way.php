@@ -69,15 +69,21 @@
 								</div>
 							</div>
 						</div>
-						<div class="way_block_middle mb-5 mb-md-0">
-							<div class="text-muted"><?php _e('Перевозчик', 'restx'); ?>:</div>
-							<div><?php echo $way['crb_way_perevozhik']; ?></div>
+						<div class="way_block_middle d-flex flex-row flex-md-column justify-content-between mb-5 mb-md-0">
+							<div>
+								<div class="text-muted"><?php _e('Перевозчик', 'restx'); ?>:</div>
+								<div><?php echo $way['crb_way_perevozhik']; ?></div>	
+							</div>
+							<div>
+								<div class="text-muted"><?php _e('Регулярность', 'restx'); ?>:</div>
+								<div><?php echo $way['crb_way_when']; ?></div>	
+							</div>
 						</div>
 						<div class="way_block_right d-flex flex-column justify-content-between">
 							<div class="way_block_when mb-4 mb-md-0">
-								<?php echo $way['crb_way_when']; ?>
+								<?php echo $way['crb_way_price']; ?>
 							</div>
-							<div class="d-flex justify-content-end">
+							<div class="d-flex justify-content-center justify-content-md-end">
 								<div class="way_block_contacts" data-toggle="modal" data-target="#wayModal">
 									<?php _e('Контакты', 'restx'); ?>
 								</div>

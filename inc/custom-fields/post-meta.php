@@ -24,6 +24,7 @@ function crb_post_theme_options() {
         Field::make( 'text', 'crb_way_end_time', 'Время прибытия' ),
         Field::make( 'text', 'crb_way_when', 'Регулярность' ),
         Field::make( 'text', 'crb_way_perevozhik', 'Перевозчик' ),
+        Field::make( 'text', 'crb_way_price', 'Стоимость' ),
         Field::make( 'complex', 'crb_way_phones', 'Телефоны' )->add_fields( array(
           Field::make( 'text', 'crb_way_phone', 'Телефон' ),
         )),
