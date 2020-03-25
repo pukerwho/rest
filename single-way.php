@@ -93,6 +93,37 @@
 				<?php endforeach; ?>
 				</div>
 				<div class="col-md-4">
+					<div class="citylist_sidebar_box before_green position-relative mb-5">
+						<div class="title text-center mb-4"><h3><?php _e('Обратное направление', 'restx'); ?>:</h3></div>
+					<!-- Обратный маршрут -->
+					<?php 
+		  			$back_city_from = 'term:citylist:'. $city_from_term->term_id .'';
+		  			$back_city_to = 'term:citylist:'. $city_to_term->term_id .'';
+						$custom_query = new WP_Query( array( 
+						'post_type' => 'way', 
+						'posts_per_page' => 1,
+						'meta_query' => array(
+							'relation' => 'AND',
+							array(
+								'key'     => 'crb_way_end_city',
+					      'value'   => array($back_city_from),
+					      'compare' => 'IN', 
+							),
+							array(
+								'key'     => 'crb_way_start_city',
+					      'value'   => array($back_city_to),
+					      'compare' => 'IN', 
+							)
+						)
+					) );
+					if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+        		<a href="<?php the_permalink(); ?>">
+      				<div class="single-blogs__other-title text-center mb-2">
+      					<?php the_title(); ?>	
+      				</div>
+	        	</a>
+					<?php endwhile; endif; ?>
+				</div>
 					<!-- start Из города другие рейсы -->
 					<div class="citylist_sidebar_box mb-5">
 			  		<div class="citylist-blog mb-5">

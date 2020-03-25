@@ -11302,6 +11302,14 @@ footer a {
     -webkit-box-shadow: 0 0.2rem 0 0 #e7e6e4;
     box-shadow: 0 0.2rem 0 0 #e7e6e4;
     padding: 3rem 3rem 2.5rem 3rem; }
+    .citylist_sidebar_box.before_green:before {
+      content: '';
+      width: 10px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #cdf5d3; }
   .citylist_sidebar .title {
     color: #484848;
     font-size: 2rem;

@@ -35,14 +35,15 @@ function crb_post_theme_options() {
             'type'      => 'term',
             'taxonomy' => 'citylist',
           )
-        ) ),
-        Field::make( 'association', 'crb_way_end_city', 'Город прибытия' )
+      ) ),
+      Field::make( 'association', 'crb_way_end_city', 'Город прибытия' )
         ->set_types( array(
           array(
             'type'      => 'term',
             'taxonomy' => 'citylist',
           )
-        ) ),
+      ) ),
+      
   ) );
 }
 
