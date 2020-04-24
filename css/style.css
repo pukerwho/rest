@@ -11831,6 +11831,37 @@ a:hover {
   -o-object-fit: cover;
   object-fit: cover; }
 
+.custom-page h1 {
+  color: #484848;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 3rem; }
+.custom-page p {
+  color: #1b1b1b;
+  font-size: 2.1rem;
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 1.5rem; }
+.custom-page ul {
+  color: #1b1b1b;
+  font-size: 2.1rem;
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 1.5rem; }
+.custom-page li {
+  position: relative;
+  padding-left: 2rem; }
+  .custom-page li:before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    background-color: #60cc7d;
+    border-radius: 50%; }
+
 .comment {
   display: -webkit-box;
   display: -webkit-flex;

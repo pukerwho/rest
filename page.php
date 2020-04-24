@@ -1,15 +1,22 @@
 <?php get_header(); ?>
-<section class="entry-section">
 
-    <?php
-    if( have_posts() ): the_post();
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<div class="custom-page pt-5">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<h1><?php the_title(); ?></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<?php the_content(); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endwhile; else: ?>
+	<p><?php _e('Ничего не найдено'); ?></p>
+<?php endif; ?>
 
-        // Load default block template page
-        get_template_part('blocks/page/page', 'default');
-
-    endif;
-    ?>
-
-	<?php wp_link_pages(); ?>
-</section>
 <?php get_footer(); ?>
