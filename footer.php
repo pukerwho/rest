@@ -1,5 +1,4 @@
     </section>
-    <hr>
     <div class="mobile-show">
         <div class="add modal_menu" data-bottom-btn="add_btn">
             <div class="modal_menu_top add_top">
@@ -96,47 +95,91 @@
         ?> -->
     </div>
 
-    <footer id="footer">
+    <footer id="footer" class="footer bg-light">
     	<div class="container py-5">
-    		<div class="row align-items-center mb-5">
-    			<div class="col-md-12 d-flex align-items-center flex-column text-center">
-                    <?php if( !is_page_template( 'tpl_faq.php' )): ?>
-                    <div class="d-flex align-items-center mb-4">
-                        <img src="<?php bloginfo('template_url') ?>/img/faq.svg" alt="" width="35px" class="mr-3">
-                        <h2><?php _e( 'Есть вопросы?', 'restx' ); ?></h2>
+            <div class="row footer_top">
+                <div class="col-lg-3 mb-5">
+                    <h3 class="mb-3"><?php _e('Популярные курорты', 'restx'); ?></h3>
+                    <ul class="mb-3">
+                        <?php if (get_locale() == 'ru_RU'): ?>
+                            <li><a href="/citylist/kirillovka/">Отдых в Кирилловке</a></li>
+                            <li><a href="/citylist/berdynsk/">Отдых в Бердянске</a></li>
+                            <li><a href="/citylist/zatoka/">Отдых в Затоке</a></li>
+                            <li><a href="/citylist/jelezniy-port/">Отдых в Железном порту</a></li>
+                        <?php endif; ?>
+                        <?php if (get_locale() == 'uk'): ?>
+                            <li><a href="/uk/citylist/kirilivka/">Відпочинок у Кирилівці</a></li>
+                            <li><a href="/uk/citylist/berdjansk/">Відпочинок у Бердянську</a></li>
+                            <li><a href="/uk/citylist/zatoka-uk/">Відпочинок у Затоці</a></li>
+                            <li><a href="/uk/citylist/zaliznij-port/">Відпочинок у Залізному порту</a></li>
+                        <?php endif; ?>
+                    </ul>
+                    <div>
+                        <a href="<?php echo get_page_url('tpl_allcity') ?>" class="footer_text_md"><?php _e('Все курорты','restx'); ?></a>
                     </div>
-                    <div class="display-4 mb-4 pb-2">
-                        <a href="<?php echo get_page_url( 'tpl_faq' ); ?>"><div class="btn bg-pastel-blue"><?php _e( 'Задавай', 'restx' ); ?>!</div></a>    
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <h3 class="mb-3"><?php _e('Автобусные перевозки', 'restx'); ?></h3>
+                    <ul class="mb-3">
+                        <?php 
+                        $query_bus_footer = new WP_Query( array( 
+                            'post_type' => 'way', 
+                            'posts_per_page' => 4,
+                            'order'    => 'DESC',
+                        ) );
+                        if ($query_bus_footer->have_posts()) : while ($query_bus_footer->have_posts()) : $query_bus_footer->the_post(); ?>
+                            <li><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></li>
+                        <?php endwhile; endif; wp_reset_postdata(); ?>
+                    </ul>
+                    <div>
+                        <a href="<?php echo get_post_type_archive_link('way'); ?>" class="footer_text_md"><?php _e('Все маршруты','restx'); ?></a>
                     </div>
-                    <?php endif ?>
-                    <?php if( !is_page_template( 'tpl_partner.php' )): ?>
-                        <div class="b_partner mb-5">
-                            <a href="<?php echo get_page_url( 'tpl_partner' ); ?>"><?php _e( 'Партнерство', 'restx' ); ?></a>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <h3 class="mb-3"><?php _e('Наш блог', 'restx'); ?></h3>
+                    <ul class="mb-3">
+                        <?php 
+                        $query_blog_footer = new WP_Query( array( 
+                            'post_type' => 'blogs', 
+                            'posts_per_page' => 4,
+                            'order'    => 'DESC',
+                        ) );
+                        if ($query_blog_footer->have_posts()) : while ($query_blog_footer->have_posts()) : $query_blog_footer->the_post(); ?>
+                            <li><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></li>
+                        <?php endwhile; endif; wp_reset_postdata(); ?>
+                    </ul>
+                    <div>
+                        <a href="<?php echo get_post_type_archive_link('blogs'); ?>" class="footer_text_md"><?php _e('Все записи','restx'); ?></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <h3 class="mb-3"><?php _e('Полезные ссылки', 'restx'); ?></h3>
+                    <ul>
+                        <li><a href="<?php echo get_page_url('tpl_partner') ?>"><?php _e('Условия размещения','restx'); ?></a></li>
+                        <li><a href="/policy"><?php _e('Политика конфиденциальности','restx'); ?></a></li>
+                    </ul>
+                </div>
+            </div>
+    		<div class="row footer_bottom align-items-center mb-5 mb-lg-0">
+    			<div class="col-md-12 d-flex align-items-start flex-column-reverse flex-lg-row justify-content-between">
+                    <div class="mr-0 mr-lg-4">
+                        <div class="mb-4 mb-lg-0">
+                            <?php _e('Эл. почта для связи', 'restx'); ?>: <a href="mailto:partner@vidpochivai.com.ua">partner@vidpochivai.com.ua</a>
                         </div>
-                    <?php endif ?>
-                    
-                    <div class="lead copyright">
                         <?php if( !is_page_template( 'tpl_main.php' )): ?>
                             2020 &copy; Vidpochivai.com.ua
                         <? else: ?>
                             2020 &copy; 
                             <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"> Vidpochivai.com.ua</a> › </span> <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua//#best" rel="v:url" property="v:title"><?php _e( 'Только проверенные предложения!', 'restx' ); ?></a> </span>
-
                         <?php endif ?>
                     </div>
-                    <div>
-                        <?php if (get_locale() == 'ru_RU'): ?>
-                            <a href="/citylist/kirillovka/">Отдых в Кирилловке</a>,
-                            <a href="/citylist/berdynsk/">Отдых в Бердянске</a>,
-                            <a href="/citylist/zatoka/">Отдых в Затоке</a>,
-                            <a href="/citylist/jelezniy-port/">Отдых в Железном порту</a>
-                        <?php endif; ?>
-                        <?php if (get_locale() == 'uk'): ?>
-                            <a href="/uk/citylist/kirilivka/">Відпочинок у Кирилівці</a>,
-                            <a href="/uk/citylist/berdjansk/">Відпочинок у Бердянську</a>,
-                            <a href="/uk/citylist/zatoka-uk/">Відпочинок у Затоці</a>,
-                            <a href="/uk/citylist/zaliznij-port/">Відпочинок у Залізному порту</a>
-                        <?php endif; ?>
+                    <div class="ml-0 ml-lg-4 mb-4 mb-lg-0">
+                        <div>
+                            ФОП ЧЕРЕПАХІН КИРИЛО СЕРГІЙОВИЧ, 3210414835    
+                        </div>
+                        <div>
+                            ПЕЧЕРСЬКА ФIЛIЯ АТ КБ "ПРИВАТБАНК", UA803007110000026007052768086
+                        </div>
                     </div>
                 </div>
     		</div>

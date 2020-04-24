@@ -9708,8 +9708,19 @@ a:hover {
 .mobile-link {
   display: none; }
 
-footer a {
-  color: #343a40; }
+.footer {
+  border-top: 1px solid #ccc; }
+  .footer a {
+    color: #343a40; }
+  .footer_top {
+    margin-bottom: 1.5rem; }
+    .footer_top a {
+      font-size: 1.25rem; }
+  .footer_bottom {
+    font-size: 1.25rem; }
+  .footer_text_md {
+    font-size: 1.35rem;
+    font-weight: 600; }
 
 .home .header {
   background-color: transparent; }
