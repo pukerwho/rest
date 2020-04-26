@@ -10290,32 +10290,27 @@ a:hover {
     color: #484848;
     font-weight: 700;
     border-bottom: 1px solid; }
+.single-hotel-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem; }
 .single-hotel-cover-grid {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-.single-hotel-cover-item {
-  width: 30%;
-  min-height: 600px;
-  position: absolute; }
-  .single-hotel-cover-item:first-child {
-    background-color: rgba(230, 234, 253, 0.67);
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    padding: 4rem; }
-  .single-hotel-cover-item__bottom {
-    position: absolute;
-    bottom: 0; }
+.single-hotel-cover-item:first-child {
+  background-color: rgba(230, 234, 253, 0.67);
+  border-radius: 8px;
+  padding: 4rem; }
+.single-hotel-cover-item__bottom {
+  position: absolute;
+  bottom: 0; }
 .single-hotel-cover-right {
-  width: 70%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  margin-left: -webkit-calc(30% + 3rem);
-  margin-left: calc(30% + 3rem);
-  padding-right: 10px; }
+  display: flex; }
   .single-hotel-cover-right .cover {
     width: 55%; }
   .single-hotel-cover-right .right {
@@ -10331,7 +10326,6 @@ a:hover {
   right: 2rem;
   bottom: 2rem;
   background: #ffffff;
-  -webkit-border-radius: .4rem;
   border-radius: .4rem;
   -webkit-box-shadow: 0px 0px 4px 1px #404040;
   box-shadow: 0px 0px 4px 1px #404040;
@@ -10350,7 +10344,6 @@ a:hover {
   font-size: 1.4rem;
   padding: 0.5rem 1rem;
   color: #ffffff;
-  -webkit-border-radius: 0.5rem;
   border-radius: 0.5rem;
   text-transform: uppercase;
   margin-bottom: 0.25rem; }
@@ -10359,7 +10352,6 @@ a:hover {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  -webkit-border-radius: 8px;
   border-radius: 8px; }
 .single-hotel .cover-icon {
   width: 50px;
@@ -10416,9 +10408,6 @@ a:hover {
       object-fit: cover;
       -o-object-position: top;
       object-position: top; }
-.single-hotel .tabs {
-  margin-left: -webkit-calc(30% + 3rem);
-  margin-left: calc(30% + 3rem); }
 .single-hotel .include {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10450,7 +10439,6 @@ a:hover {
   color: #484848;
   font-size: 1.2rem;
   border: 2px solid #484848;
-  -webkit-border-radius: 0.8rem;
   border-radius: 0.8rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -10507,7 +10495,6 @@ a:hover {
         margin: 0; }
       .send-message-modal__form input, .send-message-modal__form textarea {
         width: 100%;
-        -webkit-border-radius: 1rem;
         border-radius: 1rem;
         border: 1px solid #ccc;
         padding: 10px 15px;
@@ -10519,7 +10506,6 @@ a:hover {
         color: #343a40;
         font-size: 1.8rem;
         padding: 1rem 2rem;
-        -webkit-border-radius: 0.6rem;
         border-radius: 0.6rem;
         background-color: #cdf5d4;
         -webkit-box-shadow: 0px 3px 4px 1px #9ef6ad;

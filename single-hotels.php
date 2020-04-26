@@ -24,31 +24,27 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 single-hotel-content">
+			<div class="col-md-4">
+				<!-- САЙДБАР СТАРТ -->
 				<div class="single-hotel-sidebar">
-					<div class="single-sidebar-inner-wrapper">
-						<div class="single-hotel-cover-item">
-							<div class="single-hotel-cover-subtitle mb-5">
-								Відпочивай тут
-							</div>
-							<div class="address mb-4">
-								<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
-								<?php echo rwmb_meta( 'meta-hotel-address' ); ?>
-							</div>
-							<div class="title mb-5">
-								<?php the_title(); ?>
-							</div>
-							<?php get_template_part('blocks/single-hotel/contact') ?>
-							<!-- <div class="single-hotel-collections">
-								<?php 
-									$terms = get_the_terms( $post->ID, 'collections' );
-									foreach($terms as $term): ?>
-									  <a href="/collections/<?php echo $term->slug ?>"><?php echo $term->name; ?></a>
-								<?php endforeach; ?>
-							</div> -->
-						</div>	
-					</div>
+					<div class="single-hotel-cover-item">
+						<div class="single-hotel-cover-subtitle mb-5">
+							Відпочивай тут
+						</div>
+						<div class="address mb-4">
+							<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
+							<?php echo rwmb_meta( 'meta-hotel-address' ); ?>
+						</div>
+						<div class="title mb-5">
+							<?php the_title(); ?>
+						</div>
+						<?php get_template_part('blocks/single-hotel/contact') ?>
+					</div>	
 				</div>
+				<!-- САЙДБАР КОНЕЦ -->
+			</div>
+			<div class="col-md-8">
+				<!-- ОСНОВНОЙ КОНТЕНТ СТАРТ -->
 				<div class="single-hotel-main">
 					<div class="single-hotel-cover-grid">
 						<div class="single-hotel-cover-right">
@@ -214,6 +210,12 @@
 						</div>
 					</div>
 				</div>
+				<!-- ОСНОВНОЙ КОНТЕНТ КОНЕЦ -->
+			</div>
+			<div class="col-md-12 single-hotel-content">
+				
+
+				
 			</div>
 		</div>
 	</div>

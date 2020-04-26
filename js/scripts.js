@@ -518,27 +518,27 @@ $(".add_hotel_file").change(function() {
 
 
 //sibebar fixed (single-hotel)
-var singleHotelMain = document.querySelector('.single-hotel-main');
-var singleHotelSibebar = document.querySelector('.single-hotel-cover-item');
-if (singleHotelMain) {
-  var mainHeight = singleHotelMain.clientHeight - 380;
-  console.log(singleHotelMain.clientHeight);  
-}
+// var singleHotelMain = document.querySelector('.single-hotel-main');
+// var singleHotelSibebar = document.querySelector('.single-hotel-cover-item');
+// if (singleHotelMain) {
+//   var mainHeight = singleHotelMain.clientHeight - 380;
+//   console.log(singleHotelMain.clientHeight);  
+// }
 
-window.addEventListener('scroll', function() {
-  var h_scroll = $(this).scrollTop();
-  if (singleHotelSibebar) {
-    if (h_scroll > 0 & h_scroll <= 95 ) {
-      singleHotelSibebar.setAttribute('style', 'position: absolute; top: 0');
-    }
-    if (h_scroll > 95) {
-      singleHotelSibebar.setAttribute('style', 'position: fixed; top: 95px;')  
-    }
-    if (h_scroll > mainHeight) {
-      singleHotelSibebar.setAttribute('style', 'position: absolute; top: -30px; transform: translate3d(0,' + mainHeight + 'px, 0)');
-    }
-  }
-});
+// window.addEventListener('scroll', function() {
+//   var h_scroll = $(this).scrollTop();
+//   if (singleHotelSibebar) {
+//     if (h_scroll > 0 & h_scroll <= 95 ) {
+//       singleHotelSibebar.setAttribute('style', 'position: absolute; top: 0');
+//     }
+//     if (h_scroll > 95) {
+//       singleHotelSibebar.setAttribute('style', 'position: fixed; top: 95px;')  
+//     }
+//     if (h_scroll > mainHeight) {
+//       singleHotelSibebar.setAttribute('style', 'position: absolute; top: -30px; transform: translate3d(0,' + mainHeight + 'px, 0)');
+//     }
+//   }
+// });
 
 //BLOG SUBJECTS 
 let blogSubjects = document.querySelector('.single-blogs_subjects');
@@ -580,66 +580,3 @@ for (anchor of anchors) {
     })
   }
 }
-
-
-// sidebar fixed (taxonomy-citylist)
-
-// var singleCityWrapper = document.querySelector('.citylist_content');
-// var singleCitySidebar = document.querySelector('.citylist_sidebar');
-// var singleCitySidebarWidth = singleCitySidebar.offsetWidth;
-// if (singleCityWrapper) {
-//   var wrapperHeight = singleCityWrapper.offsetHeight - 500;  
-// }
-
-// window.addEventListener('scroll', function() {
-//   var h_scroll = $(this).scrollTop();
-//   if (h_scroll > 0 & h_scroll <= 100 ) {
-//     singleCitySidebar.setAttribute('style', 'position: absolute; top: 0');
-//   }
-//   if (h_scroll > 100) {
-//     singleCitySidebar.setAttribute('style', 'width:'+singleCitySidebarWidth+'px; position: fixed; top: 95px; right: 15px;')  
-//   }
-//   if (h_scroll > wrapperHeight) {
-//     singleCitySidebar.setAttribute('style', 'position: absolute; top: -90px; transform: translate3d(0,' + wrapperHeight + 'px, 0)');
-//   }
-// });
-
-// end sidebar fixed (taxonomy-citylist)
-
-
-
-// $(document).ready(function(){
-//   let isThisCitylistItem = document.querySelector('.tax-citylist');
-//   if (isThisCitylistItem) {
-//     createProductSchema = function(min, max) {
-//       var el = document.createElement('script');
-//       el.type = 'application/ld+json';
-//       el.text = JSON.stringify({
-//           "@context": "https://schema.org/",
-//           "@type": "Product",
-//           "name":"<?php single_term_title(); ?>: снять жилье",
-//           "offers": {
-//               "@type": "AggregateOffer",
-//               "priceCurrency": "UAH",
-//               "lowPrice": min,
-//               "highPrice":max
-//           }
-//       });
-//       document.head.appendChild(el);
-//     };
-//     let getHotelsMinprice = document.querySelectorAll('.get_hotel_minprice');
-//     let getHotelsMaxprice = document.querySelectorAll('.get_hotel_maxprice');
-//     let arrayHotelsMinprice = [];
-//     let arrayHotelsMaxprice = [];
-//     for (getHotelMinprice of getHotelsMinprice) {
-//       arrayHotelsMinprice.push(getHotelMinprice.innerText);
-//     }
-//     for (getHotelMaxprice of getHotelsMaxprice) {
-//       arrayHotelsMaxprice.push(getHotelMaxprice.innerText);
-//     }
-//     var minHotelPrice = Math.min.apply(Math, arrayHotelsMinprice);
-//     var maxHotelPrice = Math.max.apply(Math, arrayHotelsMaxprice);
-
-//     createProductSchema(minHotelPrice, maxHotelPrice)
-//   }
-// });
