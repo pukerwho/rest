@@ -152,7 +152,7 @@ Template Name: Партнерство
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center mb-3">
 				<div class="animate-puk-mask">
 					<h2 class="animate-puk" data-effect="fade-up" data-delay="0.5s"><?php _e( 'Тарифы', 'restx' ); ?></h2>
 				</div>

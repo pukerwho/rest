@@ -10730,10 +10730,30 @@ a:hover {
 .p_partner__list {
   font-size: 1.3rem; }
 .p_partner__box {
+  position: relative;
   border: .2rem solid #f3f1ee;
-  -webkit-border-radius: .5rem;
   border-radius: .5rem;
   padding: 4.5rem 1.5rem; }
+.p_partner__sale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%) rotate(-5deg);
+  -ms-transform: translateY(-50%) rotate(-5deg);
+  transform: translateY(-50%) rotate(-5deg); }
+  .p_partner__sale p {
+    display: inline;
+    color: #343a40;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 1px 1px 5px #eee;
+    box-shadow: 1px 1px 5px #eee;
+    padding: 0.75rem; }
+    .p_partner__sale p.p_partner__sale-second {
+      background: #ffe0e5; }
+    .p_partner__sale p.p_partner__sale-third {
+      background: #bec5e7; }
 .p_partner__circle {
   min-width: 70px;
   height: 70px;
@@ -10750,7 +10770,6 @@ a:hover {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-border-radius: 50%;
   border-radius: 50%; }
   .p_partner__circle-first:after {
     content: '';
@@ -10764,7 +10783,6 @@ a:hover {
   font-weight: 900; }
 .p_partner__rules {
   border: .2rem solid #f3f1ee;
-  -webkit-border-radius: 1rem;
   border-radius: 1rem;
   background-color: #f9f8f6;
   padding: 3rem; }
@@ -10878,7 +10896,6 @@ a:hover {
     .p_partner .callback__form form p {
       margin: 0; }
     .p_partner .callback__form form input {
-      -webkit-border-radius: 1rem;
       border-radius: 1rem;
       border: 1px solid #ccc;
       padding: 10px 15px;
@@ -10889,7 +10906,6 @@ a:hover {
       color: #343a40;
       font-size: 1.8rem;
       padding: 1rem 2rem;
-      -webkit-border-radius: 0.6rem;
       border-radius: 0.6rem;
       background-color: #bec5e7;
       -webkit-box-shadow: 0px 3px 4px 1px #99a5e3;

@@ -27,6 +27,9 @@
 	</div>
 	<div class="col-md-4 text-center">
 		<div class="p_partner__box">
+			<div class="p_partner__sale">
+				<p class="p_partner__sale-second"><?php _e('Скидка', 'restx'); ?>!</p>
+			</div>
 			<div class="p_partner__subtitle mb-4">
 				<?php _e( 'Стандарт', 'restx' ); ?>
 			</div>
@@ -34,7 +37,8 @@
 				<img src="<?php bloginfo('template_url') ?>/img/startup.svg" alt="" width="55px" class="mb-5">
 			</div>
 			<div class="p_partner__text">
-				800 грн
+				<del class="text-muted">800 грн</del>
+				<div>699 грн</div>
 			</div>
 			<div class="mb-5">
 				<?php _e( 'за год', 'restx' ); ?>
@@ -54,6 +58,9 @@
 	</div>
 	<div class="col-md-4 text-center">
 		<div class="p_partner__box">
+			<div class="p_partner__sale">
+				<p class="p_partner__sale-third"><?php _e('Скидка', 'restx'); ?>!</p>
+			</div>
 			<div class="p_partner__subtitle mb-4">
 				<?php _e( 'Премиум', 'restx' ); ?>
 			</div>
@@ -61,7 +68,8 @@
 				<img src="<?php bloginfo('template_url') ?>/img/diamond.svg" alt="" width="55px" class="mb-5">
 			</div>
 			<div class="p_partner__text">
-				1500 грн
+				<del class="text-muted">1500 грн</del>
+				<div>1299 грн</div>
 			</div>
 			<div class="mb-5">
 				<?php _e( 'за год', 'restx' ); ?>
