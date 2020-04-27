@@ -1,5 +1,5 @@
 <div class="row mb-5">
-	<div class="col-md-4 text-center">
+	<div class="col-md-4 text-center mb-5 mb-md-0">
 		<div class="p_partner__box">
 			<div class="p_partner__subtitle mb-4">
 				<?php _e( 'Базовый', 'restx' ); ?>
@@ -25,7 +25,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="col-md-4 text-center">
+	<div class="col-md-4 text-center mb-5 mb-md-0">
 		<div class="p_partner__box">
 			<div class="p_partner__sale">
 				<p class="p_partner__sale-second"><?php _e('Скидка', 'restx'); ?>!</p>
@@ -56,7 +56,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="col-md-4 text-center">
+	<div class="col-md-4 text-center mb-5 mb-md-0">
 		<div class="p_partner__box">
 			<div class="p_partner__sale">
 				<p class="p_partner__sale-third"><?php _e('Скидка', 'restx'); ?>!</p>
