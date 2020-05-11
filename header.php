@@ -39,6 +39,7 @@
           <a href="<?php echo home_url(); ?>" class="header__logo">
             <span class="header__logo__icon"></span>
             <span class="header__logo__icon-two"></span>
+            <span class="header__logo__text text-2xl ml-5">Vidpochivai.com.ua</span>
           </a>
           <div class="header__cities hero__block-cities ml-5">
             <input list="hero_city" id="my_hero_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>

@@ -2,9 +2,9 @@
 <?php 
 	date_default_timezone_set('Europe/Kiev');
 	$current_hour = date('H');
-	$morning_bg = get_bloginfo('template_url').'/img/morning_bg.jpg';
-	$day_bg = get_bloginfo('template_url').'/img/day_bg.jpg';
-	$evening_bg = get_bloginfo('template_url').'/img/evening_bg.jpg';
+	$morning_bg = get_bloginfo('template_url').'/img/morning_bg_sea.jpg';
+	$day_bg = get_bloginfo('template_url').'/img/day_bg_sea.jpg';
+	$evening_bg = get_bloginfo('template_url').'/img/evening_bg_sea.jpg';
 	$night_bg = get_bloginfo('template_url').'/img/night_bg.jpg';
 	if ($current_hour < 12 & $current_hour >= 6) {
 		$current_bg = $morning_bg;
@@ -27,11 +27,11 @@
 		$menu_class = 'night';
 	}
 ?>
-<div class="hero mb-5" style="background: url(<?php echo $current_bg ?>); background-size: cover; -webkit-background-size: cover;">
+<div class="hero mb-5" style="background: url(<?php echo $current_bg ?>); background-size: cover; -webkit-background-size: cover; background-position-y: 40%;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="text-center mb-5"><?php _e( 'Отдых в Украине', 'restx' ); ?></h1>
+				<h1 class="<?php echo $menu_class; ?> text-center text-uppercase mb-5"><?php _e( 'Отдых в Украине', 'restx' ); ?></h1>
 				<div class="hero__block">
 					<div class="hero__block-cities mb-4">
 						<input list="hero_city" id="my_hero_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
@@ -50,16 +50,7 @@
 					</div>
 					<div class="hero__block-advice">
 						<?php _e( 'Например', 'restx' ); ?>: 
-						<?php if (get_locale() == 'ru_RU'): ?>
-							<li><a href="<?php echo get_term_link(14, 'citylist') ?>"><?php _e( 'Кирилловка', 'restx' ); ?></a></li>
-							<li><a href="<?php echo get_term_link(12, 'citylist') ?>"><?php _e( 'Бердянск', 'restx' ); ?></a></li>
-							<li><a href="<?php echo get_term_link(17, 'citylist') ?>"><?php _e( 'Затока', 'restx' ); ?></a></li>
-						<?php endif; ?>
-						<?php if (get_locale() == 'uk'): ?>
-							<li><a href="<?php echo get_term_link(370, 'citylist') ?>">Кирилівка</a></li>
-							<li><a href="<?php echo get_term_link(399, 'citylist') ?>">Бердянськ</a></li>
-							<li><a href="<?php echo get_term_link(372, 'citylist') ?>">Затока</a></li>
-						<?php endif; ?>
+						
 					</div>
 				</div>
 			</div>

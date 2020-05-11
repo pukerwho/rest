@@ -2,10 +2,28 @@
 	<div class="container-fluid cf_px">
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-12">
-				<h2 class="mb-5"><?php _e( 'Где отдыхать в Украине?', 'restx' ); ?></h2>
+				<h2><?php _e( 'Куда поехать летом на море', 'restx' ); ?></h2>
+				<p class="mb-5"><?php _e( 'Где отдыхать в Украине?', 'restx' ); ?></p>		
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
-					<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'meta_key' => '_crb_citylist_iscurort', 'meta_value' => 'yes') );
+					<?php $maincitylists = get_terms( array( 
+						'taxonomy' => 'citylist', 
+						'parent' => 0, 
+						'hide_empty' => false,
+						'meta_query' => array(
+							'relation' => 'OR',
+				      array(
+								'key'       => '_crb_citylist_location',
+								'value'     => 'azovsea',
+								'compare'   => '='
+				      ),
+				      array(
+								'key'       => '_crb_citylist_location',
+								'value'     => 'blacksea',
+								'compare'   => '='
+				      )
+				    )
+					));
 					foreach ( array_slice($maincitylists, 0, 5) as $citylist ): ?>
 					<div class="maincards__item">
 						<a href="<?php echo get_term_link($citylist); ?>">
@@ -22,7 +40,24 @@
 				<div class="mobile-show">
 					<div class="allcity">
 						<div class="maincards__grid">
-							<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false, 'meta_key' => '_crb_citylist_iscurort', 'meta_value' => 'yes' ) );
+							<?php $maincitylists = get_terms( array( 
+								'taxonomy' => 'citylist', 
+								'parent' => 0, 
+								'hide_empty' => false,
+								'meta_query' => array(
+									'relation' => 'OR',
+						      array(
+										'key'       => '_crb_citylist_location',
+										'value'     => 'azovsea',
+										'compare'   => '='
+						      ),
+						      array(
+										'key'       => '_crb_citylist_location',
+										'value'     => 'blacksea',
+										'compare'   => '='
+						      )
+						    )
+							));
 							foreach ( array_slice($citylists, 0, 6) as $citylist ): ?>
 							<div class="maincards__item">
 								<a href="<?php echo get_term_link($citylist); ?>">

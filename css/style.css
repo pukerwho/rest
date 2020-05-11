@@ -8970,6 +8970,15 @@ p {
 a:hover {
   text-decoration: none; }
 
+.text-xl {
+  font-size: 1.5rem; }
+
+.text-2xl {
+  font-size: 1.75rem; }
+
+.text-3xl {
+  font-size: 2rem; }
+
 #hero_city {
   width: 100%; }
   #hero_city option {
@@ -9459,6 +9468,8 @@ a:hover {
       padding: 1rem 1.2rem; }
     .header__fixed .header__cities {
       display: block !important; }
+    .header__fixed .header__logo__text {
+      display: none; }
   .header__content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9772,8 +9783,10 @@ a:hover {
         font-weight: 600;
         text-decoration: underline; }
   .hero h1 {
-    color: #484848;
+    color: #222222;
     font-size: 4rem; }
+    .hero h1.night {
+      color: #ffffff; }
 
 .welcome {
   max-width: 128rem;
