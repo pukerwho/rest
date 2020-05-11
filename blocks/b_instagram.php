@@ -1,10 +1,9 @@
 <div class="b_instagram">
-	<div class="container">
+	<div class="container-fluid cf_px">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-4">
 					<div class="my-table">
-						
 						<div class="table-text">
 							<h2><?php _e( 'Подписывайтесь на наш Instagram', 'restx' ); ?></h2>
 							<p><?php _e( 'Там много-много полезного!', 'restx' ); ?></p>

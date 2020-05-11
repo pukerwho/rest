@@ -32,23 +32,7 @@
 </head>
 <body <?php echo body_class(); ?>>
   <!-- <div class="preloader"></div> -->
-  <?php 
-    date_default_timezone_set('Europe/Kiev');
-    $current_hour = date('H');
-    if ($current_hour < 12 & $current_hour >= 6) {
-      $menu_class = 'dark';
-    }
-    else if ($current_hour < 19 & $current_hour >= 12) {
-      $menu_class = 'dark';
-    }
-    else if ($current_hour < 22 & $current_hour >= 19) {
-      $menu_class = 'light';
-    }
-    else if ($current_hour >= 22) {
-      $menu_class = 'light';
-    }
-  ?>
-  <header id="header" class="header <?php echo $menu_class ?>" role="banner">
+  <header id="header" class="header" role="banner">
     <div class="container-fluid">
       <div class="header__content">
         <div class="d-flex align-items-center">

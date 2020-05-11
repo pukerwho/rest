@@ -1,12 +1,9 @@
 <div class="nearseahotels">
-	<div class="container">
+	<div class="container-fluid cf_px">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-5">
 					<div class="my-table">
-						<div class="my-table-cell pr-4">
-							<img src="<?php bloginfo('template_url'); ?>/img/nearsea.svg" alt="" width="40px">
-						</div>
 						<div class="table-text">
 							<h2><?php _e( 'Возле моря', 'restx' ); ?></h2>
 							<p><?php _e( 'До моря рукой подать!', 'restx' ); ?></p>		

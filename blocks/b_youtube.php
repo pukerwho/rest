@@ -1,5 +1,5 @@
 <div class="b_youtube">
-	<div class="container">
+	<div class="container-fluid cf_px">
 		<div class="row">
 			<div class="col-md-12">
 				<a href="https://www.youtube.com/channel/UC8aL1GxvTKVEdzp8Za3Gqig?sub_confirmation=1" target="_blank">

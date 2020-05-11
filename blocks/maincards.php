@@ -1,5 +1,5 @@
 <div class="allcity maincards">
-	<div class="container ">
+	<div class="container-fluid cf_px">
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-12">
 				<h2 class="mb-5"><?php _e( 'Где отдыхать в Украине?', 'restx' ); ?></h2>

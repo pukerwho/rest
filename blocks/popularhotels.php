@@ -1,12 +1,9 @@
 <div class="popular">
-	<div class="container">
+	<div class="container-fluid cf_px">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-5">
 					<div class="my-table">
-						<div class="my-table-cell pr-4">
-							<img src="<?php bloginfo('template_url'); ?>/img/popularhotels.svg" alt="" width="40px">
-						</div>
 						<div class="table-text">
 							<h2><?php _e( 'Популярные предложения', 'restx' ); ?></h2>
 							<p><?php _e( 'Это жилье пользуется повышенным спросом!', 'restx' ); ?></p>	

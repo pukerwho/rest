@@ -1,5 +1,5 @@
 <div class="b_video">
-	<div class="container">
+	<div class="container-fluid cf_px">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-5">

@@ -1,15 +1,12 @@
 <div class="b_rest">
-	<div class="container">
+	<div class="container-fluid cf_px">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-5">
 					<div class="my-table">
-						<div class="my-table-cell pr-4">
-							<img src="<?php bloginfo('template_url'); ?>/img/sun.svg" alt="" width="40px">
-						</div>
 						<div class="table-text">
-							<h2><?php _e( 'Без отдыха и конь не скачет', 'restx' ); ?></h2>
-							<p><?php _e( 'Пора планировать отпуск', 'restx' ); ?></p>		
+							<h2><?php _e( 'Курорты Украины', 'restx' ); ?></h2>
+							<p><?php _e( 'Черное море, Азовское море, Карпаты', 'restx' ); ?></p>		
 						</div>
 					</div>
 				</div>

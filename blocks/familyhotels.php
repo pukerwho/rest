@@ -1,12 +1,9 @@
 <div class="familyhotels">
-	<div class="container">
+	<div class="container-fluid cf_px">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mb-5">
 					<div class="my-table">
-						<div class="my-table-cell pr-4">
-							<img src="<?php bloginfo('template_url'); ?>/img/familyhotels.svg" alt="" width="40px">
-						</div>
 						<div class="table-text">
 							<h2><?php _e( 'Семейный отдых', 'restx' ); ?></h2>
 							<p><?php _e( 'Лучшие предложения для тех, кто едет отдыхать с детьми!', 'restx' ); ?></p>

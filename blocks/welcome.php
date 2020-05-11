@@ -27,15 +27,12 @@
 		$menu_class = 'night';
 	}
 ?>
-<div class="hero" style="background: url(<?php echo $current_bg ?>); background-size: cover; -webkit-background-size: cover;">
+<div class="hero mb-5" style="background: url(<?php echo $current_bg ?>); background-size: cover; -webkit-background-size: cover;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<h1 class="text-center mb-5"><?php _e( 'Отдых в Украине', 'restx' ); ?></h1>
 				<div class="hero__block">
-					<h1 class="mb-3"><?php _e( 'Отдых в Украине', 'restx' ); ?></h1>
-					<div class="hero__block-subtitle mb-4">
-						<?php _e( 'Самый удобный сайт по отдыху', 'restx' ); ?>
-					</div>
 					<div class="hero__block-cities mb-4">
 						<input list="hero_city" id="my_hero_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
 					  <datalist id="hero_city">
@@ -53,16 +50,7 @@
 					</div>
 					<div class="hero__block-advice">
 						<?php _e( 'Например', 'restx' ); ?>: 
-						<?php if (get_locale() == 'ru_RU'): ?>
-							<li><a href="<?php echo get_term_link(14, 'citylist') ?>"><?php _e( 'Кирилловка', 'restx' ); ?></a></li>
-							<li><a href="<?php echo get_term_link(12, 'citylist') ?>"><?php _e( 'Бердянск', 'restx' ); ?></a></li>
-							<li><a href="<?php echo get_term_link(17, 'citylist') ?>"><?php _e( 'Затока', 'restx' ); ?></a></li>
-						<?php endif; ?>
-						<?php if (get_locale() == 'uk'): ?>
-							<li><a href="<?php echo get_term_link(370, 'citylist') ?>">Кирилівка</a></li>
-							<li><a href="<?php echo get_term_link(399, 'citylist') ?>">Бердянськ</a></li>
-							<li><a href="<?php echo get_term_link(372, 'citylist') ?>">Затока</a></li>
-						<?php endif; ?>
+						
 					</div>
 				</div>
 			</div>
