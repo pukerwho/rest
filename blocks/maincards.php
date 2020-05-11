@@ -10,7 +10,6 @@
 						'taxonomy' => 'citylist', 
 						'parent' => 0, 
 						'hide_empty' => false,
-						'orderby' => 'rand',
 						'meta_query' => array(
 							'relation' => 'OR',
 				      array(
@@ -25,6 +24,7 @@
 				      )
 				    )
 					));
+					shuffle( $maincitylists );
 					foreach ( array_slice($maincitylists, 0, 5) as $citylist ): ?>
 					<div class="maincards__item">
 						<a href="<?php echo get_term_link($citylist); ?>">
@@ -45,7 +45,6 @@
 								'taxonomy' => 'citylist', 
 								'parent' => 0, 
 								'hide_empty' => false,
-								'orderby' => 'rand',
 								'meta_query' => array(
 									'relation' => 'OR',
 						      array(
@@ -60,6 +59,7 @@
 						      )
 						    )
 							));
+							shuffle( $maincitylists );
 							foreach ( array_slice($citylists, 0, 6) as $citylist ): ?>
 							<div class="maincards__item">
 								<a href="<?php echo get_term_link($citylist); ?>">
