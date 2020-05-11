@@ -10,6 +10,7 @@
 						'taxonomy' => 'citylist', 
 						'parent' => 0, 
 						'hide_empty' => false,
+						'orderby' => 'rand',
 						'meta_query' => array(
 							'relation' => 'OR',
 				      array(
@@ -44,6 +45,7 @@
 								'taxonomy' => 'citylist', 
 								'parent' => 0, 
 								'hide_empty' => false,
+								'orderby' => 'rand',
 								'meta_query' => array(
 									'relation' => 'OR',
 						      array(
