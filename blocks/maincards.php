@@ -60,7 +60,7 @@
 						    )
 							));
 							shuffle( $maincitylists );
-							foreach ( array_slice($citylists, 0, 6) as $citylist ): ?>
+							foreach ( array_slice($maincitylists, 0, 6) as $citylist ): ?>
 							<div class="maincards__item">
 								<a href="<?php echo get_term_link($citylist); ?>">
 									<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
