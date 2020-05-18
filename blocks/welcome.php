@@ -49,7 +49,7 @@
 					  </script>
 					</div>
 					<div class="hero__block-advice">
-						<?php _e( 'Например', 'restx' ); ?>: 
+						<li><?php _e( 'Например', 'restx' ); ?>: </li>
 						<?php if (get_locale() == 'ru_RU'): ?>
 							<li><a href="<?php echo get_term_link(14, 'citylist') ?>"><?php _e( 'Кирилловка', 'restx' ); ?></a></li>
 							<li><a href="<?php echo get_term_link(12, 'citylist') ?>"><?php _e( 'Бердянск', 'restx' ); ?></a></li>

@@ -9779,9 +9779,12 @@ a:hover {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
       font-size: 1.3rem; }
       .hero__block-advice li {
-        padding: 0 8px; }
+        margin-right: 8px; }
       .hero__block-advice a {
         color: #484848;
         font-weight: 600;
