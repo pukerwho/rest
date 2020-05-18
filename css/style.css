@@ -9662,6 +9662,8 @@ a:hover {
       .header__allcity-content a {
         color: #82817d;
         font-size: 1.75rem; }
+  .header .header__logo__text {
+    display: none; }
   .header .secondemenu_wrap {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -9734,6 +9736,8 @@ a:hover {
     color: #484848; }
 .home #content {
   padding-top: 0; }
+.home .header__logo__text {
+  display: block; }
 
 .hero {
   min-height: 350px;
