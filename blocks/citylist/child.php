@@ -1,30 +1,53 @@
+<?php 
+// Parent Name = echo get_parent_term_title(get_queried_object_id(), 'citylist' );
+// Parent Id = echo get_parent_term_id(get_queried_object_id(), 'citylist' );
+?>
+
+<!-- Основной город -->
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="table-text mb-5">
 				<h1><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_title') ?></h1>
-				<p><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_description') ?></p>
+				<!-- Хлебные крошки -->
+					<?php get_template_part( 'blocks/citylist/breadcrumbs', 'default' ); ?>
+				<!-- end Хлебные крошки -->
 			</div>
+
+			<!-- Wrapper -->
 			<div class="citylist_wrapper">
-				<div class="citylist_content">
-					<div id="response" class="lead mb-5">
+				<div class="citylist_content mb-5">
+
+					<!-- Filter -->
+					<?php get_template_part( 'blocks/filters/city_filter', 'default' ); ?>	
+					<!-- end Filter -->
+
+					<!-- Catalog Hotels -->
+					<div class="lead">
 			  		<?php get_template_part( 'blocks/citylist/child-catalog', 'default' ); ?>
 			  	</div>
+			  	<!-- end Catalog Hotels -->
+
 				</div>
+				
+				<!-- Сайдбар -->
 				<div class="citylist_sidebar">
-					<div class="lead">
-						Информация
-					</div>
-					<div>
+					<!-- Сайдбар Блог -->
+					<div class="citylist_sidebar_box mb-5">
+						<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img">
+								<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Информация', 'restx' ); ?>
+							</div>
+						</div>
+						<!-- Сайдбар Блог выводим из этого города -->
 						<?php 
-							global $wp_query, $wp_rewrite;  
-							// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-							$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 							$current_term = get_queried_object_id();
-							$custom_query = new WP_Query( array( 
+							$blog_current_query = new WP_Query( array( 
 							'post_type' => 'blogs', 
-							'posts_per_page' => 24,
-							'paged' => $current,
+							'posts_per_page' => 5,
 							'tax_query' => array(
 						    array(
 					        'taxonomy' => 'citylist',
@@ -35,136 +58,220 @@
 						    )
 							),
 						) );
-						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-					  	<div class="col-md-12">
+						
+						if ($blog_current_query->have_posts()) : while ($blog_current_query->have_posts()) : $blog_current_query->the_post(); ?>
+					  	<div class="mb-2">
 				  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
 				  		</div>
-						<?php endwhile; endif; wp_reset_postdata(); ?>
+						<?php wp_reset_postdata(); endwhile; endif;  ?>
+						<!-- end Сайдбар Блог выводим из этого города -->
 					</div>
-				</div>
-			</div>
-			<div class="tabs">
-				<div class="tab-button-outer mb-5">
-					<div class="nav-img">
-			    	<img src="<?php bloginfo('template_url') ?>/img/swipe.svg" alt="">
-			    </div>
-					<ul class="nav nav-tabs" id="singleHotelTabs" role="tablist">
-					  <li class="nav-item">
-					    <a class="nav-link active" id="catalog-tab" data-toggle="tab" href="#catalog" role="tab" aria-controls="catalog" aria-selected="true"><?php _e( 'Каталог', 'restx' ); ?></a>
-					  </li>
-					  <!-- <li class="nav-item">
-					    <a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="place" aria-selected="false">Куда пойти</a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" id="way-tab" data-toggle="tab" href="#way" role="tab" aria-controls="way" aria-selected="false">Как добраться</a>
-					  </li> -->
-					  <li class="nav-item">
-					  	<a class="nav-link" id="cityblog-tab" data-toggle="tab" href="#cityblog" role="tab" aria-controls="cityblog" aria-selected="false"><?php _e( 'Информация', 'restx' ); ?></a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false"><?php _e( 'Видео', 'restx' ); ?></a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" id="cityreviews-tab" data-toggle="tab" href="#cityreviews" role="tab" aria-controls="cityreviews" aria-selected="false"><?php _e( 'Обсуждение', 'restx' ); ?></a>
-					  </li>
-					</ul>
-				</div>
-				
-				<div class="tab-content" id="myTabContent">
-				  <div class="tab-pane tab-single-hotel fade show active" id="catalog" role="tabpanel" aria-labelledby="catalog-tab">
-				  	<div class="mb-5 lead" id="response">
-				  		<?php get_template_part( 'blocks/citylist/child-catalog', 'default' ); ?>
-				  	</div>
-				  	<div class="row">
-							<div class="col-md-12">
-								<div class="citylist-text lead">
-									<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ?>
-								</div>
+					<!-- end Сайдбар блог -->
+
+					<!-- Сайдбар Видео -->
+					<div class="citylist_sidebar_box mb-5">
+						<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #d3d7f6;">
+								<img src="<?php bloginfo('template_url') ?>/img/video-player.svg" width="25px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Видео', 'restx' ); ?>
 							</div>
 						</div>
-				  </div>
-				  <!-- <div class="tab-pane tab-single-hotel fade" id="place" role="tabpanel" aria-labelledby="place-tab">
-				  	<h2>Раздел в разработке</h2>
-				  </div>
-				  <div class="tab-pane tab-single-hotel fade" id="way" role="tabpanel" aria-labelledby="way-tab">
-				  	<h2>Еще нет ничего</h2>
-				  </div> -->
-				  <div class="tab-pane tab-single-hotel fade" id="cityblog" role="tabpanel" aria-labelledby="cityblog-tab">
-				  	<div class="row">
-				  		<?php 
-								global $wp_query, $wp_rewrite;  
-								// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-								$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-								$current_term = get_queried_object_id();
-								$custom_query = new WP_Query( array( 
+						<?php if(carbon_get_term_meta(get_parent_term_id(get_queried_object_id(), "citylist" ), 'crb_citylist_video')): ?>
+							<h3 class="mb-4"><?php _e( 'Наслаждайтесь видео!', 'restx' ); ?></h3>
+					  	<div class="youtube-player" data-id="<?php echo carbon_get_term_meta(get_parent_term_id(get_queried_object_id(), "citylist" ), 'crb_citylist_video') ?>"></div>
+					  <?php else: ?>
+							<?php get_template_part('blocks/citylist/no-video', 'default'); ?> 
+				  	<?php endif ?>
+					</div>
+			  	<!-- end Сайдбар видео -->
+			  	<!-- общий Блог -->
+			  	<div class="citylist_sidebar_box mb-5">
+			  		<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #cdf5d4;">
+								<img src="<?php bloginfo('template_url') ?>/img/organize.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Блог', 'restx' ); ?>
+							</div>
+						</div>
+						<div>
+							<?php 
+								$blog_all_query = new WP_Query( array( 
 								'post_type' => 'blogs', 
-								'posts_per_page' => 24,
-								'paged' => $current,
+								'posts_per_page' => 5,
 								'tax_query' => array(
 							    array(
-						        'taxonomy' => 'citylist',
-								    'terms' => $current_term,
-						        'field' => 'term_id',
+						        'taxonomy' => 'blog-categories',
+								    'terms' => 'common',
+						        'field' => 'slug',
 						        'include_children' => true,
 						        'operator' => 'IN'
 							    )
 								),
 							) );
-							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-						  	<div class="col-md-12">
+							
+							if ($blog_all_query->have_posts()) : while ($blog_all_query->have_posts()) : $blog_all_query->the_post(); ?>
+						  	<div class="mb-2">
 					  			<?php get_template_part( 'blocks/citylist/blog', 'default' ); ?>
 					  		</div>
-							<?php endwhile; endif; wp_reset_postdata(); ?>
-				  	</div>
-				  </div>
-				  <div class="tab-pane tab-single-hotel fade" id="video" role="tabpanel" aria-labelledby="video-tab">
-				  	<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
-					  	<h3 class="mb-4"><?php _e( 'Наслаждайтесь видео!', 'restx' ); ?></h3>
-					  	<div class="youtube-player" data-id="<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video') ?>"></div>
-					  	<?php else: ?>
-				  		<div class="no-video">
-				  			<div class="mb-5">
-				  				<img src="<?php bloginfo('template_url') ?>/img/sad.svg" alt="" width="50px">
-				  			</div>
-				  			<div class="sad mb-5">
-				  				<?php _e( 'К сожалению, мы пока не подготовили для вас хорошего видеоматериала	', 'restx' ); ?>
-				  			</div>
-				  			<div class="help mb-5">
-				  				<?php _e( 'Но вы можете помочь нам, отправив ссылку на подходящее видео', 'restx' ); ?>
-				  			</div>
-				  			<div class="send-message mb-5">
-				  				<img src="<?php bloginfo('template_url') ?>/img/life-saver.svg" alt="" width="25px">
-				  				<div>
-				  					<?php _e( 'Отправить ссылку на видео', 'restx' ); ?>
-				  				</div>
-				  			</div>
-				  		</div>
-				  	<?php endif ?>
-				  </div>
-				  <div class="tab-pane tab-single-hotel fade" id="cityreviews" role="tabpanel" aria-labelledby="cityreviews-tab">
-				  	<?php 
-							$current_term = get_queried_object_id();
-							$custom_query_post_comment = new WP_Query( array( 
-							'post_type' => 'post_comment', 
-							'posts_per_page' => 1,
-							'tax_query' => array(
-						    array(
-					        'taxonomy' => 'citylist',
-							    'terms' => $current_term,
-					        'field' => 'term_id',
-					        'include_children' => true,
-					        'operator' => 'IN'
-						    )
-							),
-						) );
-						if ($custom_query_post_comment->have_posts()) : while ($custom_query_post_comment->have_posts()) : $custom_query_post_comment->the_post(); ?>
-					  	<?php global $withcomments;
-							$withcomments = true;
-							comments_template(); ?> 
-						<?php endwhile; endif; wp_reset_postdata(); ?>
-				  </div>
+							<?php wp_reset_postdata();  endwhile; endif; ?>
+						</div>
+					</div>
+			  	<!-- end общий Блог -->
+			  	<!-- Ближайшие города -->
+			  	<?php if(carbon_get_term_meta(get_parent_term_id(get_queried_object_id(), "citylist" ), 'crb_citylist_association')): ?>
+				  	<div class="citylist_sidebar_box mb-5">
+				  		<div class="citylist-blog mb-4">
+								<div class="citylist-blog__img" style="background-color: #c5eefa;">
+									<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
+								</div>
+								<div class="title">
+									<?php _e( 'Ближайшие курорты', 'restx' ); ?>
+								</div>
+							</div>
+							<div>
+								<?php 
+						  		$near_cities_array = [];
+						  		$near_cities = carbon_get_term_meta(get_parent_term_id(get_queried_object_id(), "citylist" ), 'crb_citylist_association'); 
+						  		foreach($near_cities as $near_city) {
+							  		$near_city_id = $near_city['id'];
+							  		array_push($near_cities_array, $near_city_id);
+							  	}
+						  	?>
+						  	<?php $near_city_terms = get_terms(array(
+						  		'taxonomy' => 'citylist',
+						  		'include' => $near_cities_array,
+						  	)) ?>
+						  	<?php foreach($near_city_terms as $near_city_term): ?>
+						  		<div class="citylist-blog__item">
+						  			<a href="<?php echo get_term_link($near_city_term->term_id, 'citylist') ?>"><div class="citylist-blog__title"><?php echo $near_city_term->name ?></div></a>	
+						  		</div>
+						  	<?php endforeach; ?>
+							</div>
+						</div>
+					<?php endif; ?>
+			  	<!-- end Ближайшие города -->
+			  	<!-- автобусы из города -->
+			  	<div class="citylist_sidebar_box mb-5">
+			  		<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #c5eefa;">
+								<img src="<?php bloginfo('template_url') ?>/img/bus.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Автобусы из г.', 'restx' ); ?> <?php echo get_parent_term_title(get_queried_object_id(), 'citylist' ); ?>
+							</div>
+						</div>
+						<div>
+				  		<?php 
+				  			$current_city_for_way = 'term:citylist:'. get_parent_term_id(get_queried_object_id(), "citylist" ) .'';
+								$custom_query = new WP_Query( array( 
+								'post_type' => 'way', 
+								'posts_per_page' => 10,
+								'meta_query' => array(
+									'relation' => 'AND',
+									array(
+										'key'     => 'crb_way_start_city',
+							      'value'   => array($current_city_for_way),
+							      'compare' => 'IN', 
+									)
+								)
+							) );
+							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+		        		<a href="<?php the_permalink(); ?>">
+	        				<div class="single-blogs__other-title mb-2 p-0">
+	        					<?php the_title(); ?>	
+	        				</div>
+			        	</a>
+							<?php endwhile; ?>
+							<?php else: ?>
+								<p><?php _e('Пока ничего нет', 'restx'); ?></p>
+							<?php endif; ?>
+						</div>
+					</div>
+			  	<!-- end автобусы из города -->
+			  	<!-- автобусы в города -->
+			  	<div class="citylist_sidebar_box mb-5">
+			  		<div class="citylist-blog mb-4">
+							<div class="citylist-blog__img" style="background-color: #c5eefa;">
+								<img src="<?php bloginfo('template_url') ?>/img/bus.svg" width="30px" alt="">
+							</div>
+							<div class="title">
+								<?php _e( 'Автобусы в г.', 'restx' ); ?> <?php echo get_parent_term_title(get_queried_object_id(), 'citylist' );; ?>
+							</div>
+						</div>
+						<div>
+				  		<?php 
+				  			$current_city_for_way = 'term:citylist:'. get_parent_term_id(get_queried_object_id(), "citylist" ) .'';
+								$custom_query = new WP_Query( array( 
+								'post_type' => 'way', 
+								'posts_per_page' => 10,
+								'meta_query' => array(
+									'relation' => 'AND',
+									array(
+										'key'     => 'crb_way_end_city',
+							      'value'   => array($current_city_for_way),
+							      'compare' => 'IN', 
+									)
+								)
+							) );
+							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+		        		<a href="<?php the_permalink(); ?>">
+	        				<div class="single-blogs__other-title mb-2 p-0">
+	        					<?php the_title(); ?>	
+	        				</div>
+			        	</a>
+							<?php endwhile; ?>
+							<?php else: ?>
+								<p><?php _e('Пока ничего нет', 'restx'); ?></p>
+							<?php endif; ?>
+						</div>
+					</div>
+			  	<!-- end автобусы в города -->
 				</div>
+				<!-- end Сайдбар -->
+			</div>
+			<!-- end Wrapper -->
+		</div>
+		<!-- end col-md -->
+	</div>
+	<!-- end row -->
+
+	<!-- Текст Контент -->
+	<div class="row justify-content-center">
+		<div class="col-md-8">		
+			<div class="citylist__text lead">
+				<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ); ?>
+				<!-- Вопросы и ответы -->
+				<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq')): ?>
+					<div id="citylist-faq" class="mt-5">
+						<h2 class="mb-4">Вопросы и ответы</h2>
+						<div>
+							<ul itemscope itemtype="https://schema.org/FAQPage">
+								<?php 
+								$city_faqs = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq');
+								foreach( $city_faqs as $city_faq ): ?>
+									<li itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+										<h4 class="zag" itemprop="name">
+											<?php echo $city_faq['crb_citylist_faq_question'] ?>
+										</h4>
+										<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+											<div class="lead" itemprop="text">
+												<p><?php echo $city_faq['crb_citylist_faq_answer'] ?></p>
+											</div>
+										</div>
+									</li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
+					</div>
+				<?php endif; ?>
+				<!-- end Вопросы и ответы -->
 			</div>
 		</div>
-	</div>	
+	</div>
+	<!-- end Текст Контент -->
+
 </div>
+<!-- end container -->

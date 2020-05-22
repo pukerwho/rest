@@ -350,6 +350,35 @@ function get_page_url($template_name) {
   return get_bloginfo('url');
 }
 
+
+//GET PARENT TERM INFO
+function get_parent_term_title($parent_term_id, $parent_term_name) {
+  $parent_city_terms = get_ancestors( $parent_term_id, $parent_term_name );
+  foreach ($parent_city_terms as $parent_city_term); {
+    $current_parent_term_id = $parent_city_term;
+  }
+  $current_parent_term = get_term($current_parent_term_id, $parent_term_name);
+  return $current_parent_term->name;
+}
+
+function get_parent_term_id($parent_term_id, $parent_term_name) {
+  $parent_city_terms = get_ancestors( $parent_term_id, $parent_term_name );
+  foreach ($parent_city_terms as $parent_city_term); {
+    $current_parent_term_id = $parent_city_term;
+  }
+  $current_parent_term = get_term($current_parent_term_id, $parent_term_name);
+  return $current_parent_term->term_id;
+}
+
+function get_parent_term_slug($parent_term_id, $parent_term_name) {
+  $parent_city_terms = get_ancestors( $parent_term_id, $parent_term_name );
+  foreach ($parent_city_terms as $parent_city_term); {
+    $current_parent_term_id = $parent_city_term;
+  }
+  $current_parent_term = get_term($current_parent_term_id, $parent_term_name);
+  return $current_parent_term->slug;
+}
+
 // function change_rating_function(){
 //   $metas = get_post_meta( $post->ID );
 //   if( !isset($metas['meta-hotel-mainrating']) ){
