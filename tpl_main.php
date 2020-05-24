@@ -17,7 +17,7 @@ Template Name: Главная страница
 <!-- <div class="pc-show pt-5">
 	<?php /* get_template_part( 'blocks/gocity', 'default' ); */ ?>	
 </div> -->
-<div class="py-5">
+<div class="pt-5 pb-2">
 	<?php get_template_part( 'blocks/p_main-blog', 'default' ); ?>	
 </div>
 <div class="pt-5">
