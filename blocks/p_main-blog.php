@@ -35,7 +35,7 @@
 				)
 			) );
 		if ($blog_how_to_query->have_posts()) : while ($blog_how_to_query->have_posts()) : $blog_how_to_query->the_post(); ?>
-		<div class="col-md-4">
+		<div class="col-md-4 mb-4">
 			<div class="home_blog main">
 				<a href="<?php get_the_permalink(); ?>">
 					<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="home_blog_img mb-4">
