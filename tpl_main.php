@@ -18,13 +18,13 @@ Template Name: Главная страница
 	<?php /* get_template_part( 'blocks/gocity', 'default' ); */ ?>	
 </div> -->
 <div class="py-5">
-	<?php get_template_part( 'blocks/now-watch', 'default' ); ?>	
+	<?php get_template_part( 'blocks/p_main-blog', 'default' ); ?>	
 </div>
 <div class="pt-5">
 	<?php get_template_part( 'blocks/familyhotels', 'default' ); ?>	
 </div>
 <div class="py-5">
-	<?php get_template_part( 'blocks/b_instagram', 'default' ); ?>	
+	<?php get_template_part( 'blocks/b_social', 'default' ); ?>	
 </div>
 <div class="pt-5">
 	<?php get_template_part( 'blocks/premiumhotels', 'default' ); ?>	
@@ -32,9 +32,6 @@ Template Name: Главная страница
 <div class="pt-5">
 	<?php get_template_part( 'blocks/nearseahotels', 'default' );  ?>	
 </div> 
-<div class="py-5">
-	<?php get_template_part( 'blocks/b_youtube', 'default' ); ?>	
-</div>
 <div class="pt-5">
 	<?php get_template_part( 'blocks/animalshotels', 'default' ); ?>	
 </div>

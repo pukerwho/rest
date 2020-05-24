@@ -38,16 +38,15 @@ $(function() {
   });
 });
 
-if ($(document).width() > 760) {
-  $(window).scroll(function(){
-    var h_scroll = $(this).scrollTop();
-    if (h_scroll > 100) {
-      $('header').addClass('header__fixed')
-    } else {
-      $('header').removeClass('header__fixed')
-    }
-  })
-}
+
+$(window).scroll(function(){
+  var h_scroll = $(this).scrollTop();
+  if (h_scroll > 100) {
+    $('header').addClass('header__fixed')
+  } else {
+    $('header').removeClass('header__fixed')
+  }
+})
 
 $('.allcity-button').on('click', function(){
   $('.header__allcity').toggleClass('header__allcity-open');
