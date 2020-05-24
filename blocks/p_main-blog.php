@@ -27,7 +27,13 @@
 				'post_type' => 'blogs', 
 				'posts_per_page' => 2,
 				'orderby' => 'rand',
-				
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'blog-categories',
+						'field' => 'slug',
+						'terms' => $blog_how_term_slug
+					)
+				)
 			) );
 		if ($blog_how_to_query->have_posts()) : while ($blog_how_to_query->have_posts()) : $blog_how_to_query->the_post(); ?>
 		<div class="col-md-4 mb-4">
