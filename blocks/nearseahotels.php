@@ -5,8 +5,8 @@
 				<div class="mb-5">
 					<div class="my-table">
 						<div class="table-text">
-							<h2><?php _e( 'Возле моря', 'restx' ); ?></h2>
-							<p><?php _e( 'До моря рукой подать!', 'restx' ); ?></p>		
+							<h2><?php _e( 'Отдых возле моря', 'restx' ); ?></h2>
+							<p><?php _e( 'Первая линия - до моря рукой подать', 'restx' ); ?></p>		
 						</div>
 					</div>
 				</div>
