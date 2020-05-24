@@ -43,7 +43,7 @@
 				<div class="home_blog_cat mb-2">
 					<?php
 					$home_blog_terms = get_the_terms( $blog_how_to_query->ID, 'blog-categories' );
-					foreach ($home_blog_terms as $home_blog_term): ?>
+					foreach (array_slice($home_blog_terms, 0,1) as $home_blog_term): ?>
 						<a href="<?php echo get_term_link($home_blog_term); ?>"><?php echo $home_blog_term->name; ?></a>
 					<?php endforeach; ?>
 				</div>
@@ -79,7 +79,7 @@
 							<div class="home_blog_cat mr-2">
 								<?php
 								$home_blog_terms = get_the_terms( $blog_how_to_query->ID, 'blog-categories' );
-								foreach ($home_blog_terms as $home_blog_term): ?>
+								foreach (array_slice($home_blog_terms, 0,1) as $home_blog_term): ?>
 									<a href="<?php echo get_term_link($home_blog_term); ?>"><?php echo $home_blog_term->name; ?></a>
 								<?php endforeach; ?>
 							</div>

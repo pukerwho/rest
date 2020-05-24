@@ -5,7 +5,7 @@
 				<div class="my-table">
 					<div class="table-text">
 						<h2><?php _e( 'Подписывайтесь на наши социальные сети', 'restx' ); ?></h2>
-						<p><?php _e( 'Там много-много полезного!', 'restx' ); ?></p>
+						<p><?php _e( 'Там много полезного!', 'restx' ); ?></p>
 					</div>
 				</div>
 			</div>
