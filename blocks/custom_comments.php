@@ -47,7 +47,7 @@ add_action( 'comment_form', 'output_hidden_field_in_comment_form' );
 		<div <?php comment_class('mb-5'); ?>>
 			<div id="comment-<?php echo get_comment_ID(); ?>">
 				<div class="comment_content mb-2">
-					<span class="comment_name mr-4"><?php echo get_comment_author(); ?></span>
+					<span class="comment_name pr-4"><?php echo get_comment_author(); ?></span>
 					<span class="comment_text"><?php comment_text(); ?></span>
 				</div>
 				<div class="comment_bottom">
