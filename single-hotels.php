@@ -297,6 +297,7 @@
 			<div class="col-md-12">
 				<div class="maincards__grid pc-show">
 					<?php $citylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false ) );
+					shuffle( $citylists );
 					foreach ( array_slice($citylists, 0, 5) as $citylist ): ?>
 					<div class="maincards__item">
 						<a href="<?php echo get_term_link($citylist); ?>">
