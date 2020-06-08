@@ -86,6 +86,7 @@ add_action( 'comment_form', 'output_hidden_field_in_comment_form' );
 
 	$args = array(
 		'post__in' => $post__in_array,
+		'status' => 'approve'
 	);
 
 	$comments = get_comments( $args );
