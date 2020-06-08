@@ -146,7 +146,7 @@
 					  <div>
 					  	<h3 class="mb-5"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
 					  	<div class="mb-5">
-					  		<?php echo do_shortcode('[anycomment]'); ?> 		
+					  		<?php get_template_part('blocks/custom_comments'); ?>
 					  	</div>
 					  </div>
 					  
