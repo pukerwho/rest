@@ -76,10 +76,10 @@
 				</div>
 			</article>
 			<div class="row justify-content-center mb-5">
-				<div class="col-md-10 text-center">
-					<h3 class="display-4 mb-4"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
+				<div class="col-md-10">
+					<h3 class="display-4 text-center mb-4"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
 					<div>
-						<?php echo do_shortcode('[anycomment]'); ?>
+						<?php get_template_part('blocks/custom_comments'); ?>
 					</div>
 				</div>
 			</div>

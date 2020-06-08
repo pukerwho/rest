@@ -5,6 +5,7 @@ Template Name: Партнерство
 ?>
 
 <?php get_header(); ?>
+
 <div class="p_partner">
 	<div class="container py-5">
 		<div class="row mb-5">

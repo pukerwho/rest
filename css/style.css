@@ -11797,7 +11797,78 @@ a:hover {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  border: 1px solid #EBEBEB;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0 0.2rem 0 0 #e7e6e4;
+  box-shadow: 0 0.2rem 0 0 #e7e6e4;
+  padding: 1rem 2rem; }
+  .comment_content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .comment_name {
+    color: #1b8bf9;
+    font-size: 1.5rem; }
+  .comment_text {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 500; }
+    .comment_text p {
+      color: #000000;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 0; }
+  .comment_bottom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #777777;
+    font-size: 1.25rem; }
+  .comment_answer a {
+    font-size: 1.25rem;
+    color: #222222; }
+  .comment-form input {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+    outline: none; }
+    .comment-form input[type="submit"] {
+      width: auto;
+      background-color: #1b8bf9;
+      color: #ffffff;
+      cursor: pointer; }
+  .comment-form textarea {
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    border-radius: 0.75rem;
+    -webkit-box-shadow: 0 0.2rem 0 0 #e7e6e4;
+    box-shadow: 0 0.2rem 0 0 #e7e6e4;
+    outline: none;
+    padding: 1rem 2rem; }
+
+.children {
+  margin-left: 1.5rem; }
+  .children .comment {
+    border: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 0 !important;
+    padding: 1.5rem 0; }
 
 html.lb-disable-scrolling {
   overflow: hidden;

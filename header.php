@@ -8,10 +8,7 @@
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="alternate" hreflang="uk" href="<?php echo home_url(); ?>/uk">
-
   <?php
-  // ENQUEUE your css and js in inc/enqueues.php
-
     wp_head();
 	?>
   <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>">

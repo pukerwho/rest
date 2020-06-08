@@ -22,6 +22,7 @@ function city_sort_filter_function(){
   $filterargs = array(
     'post_type' => 'hotels',
     'orderby' => 'date',
+    'post_status' => 'publish'
     // 'meta_key'       => 'meta-hotel-mainrating',
   );
 
@@ -30,6 +31,7 @@ function city_sort_filter_function(){
       'post_type' => 'hotels',
       'posts_per_page' => -1,
       'orderby' => 'date',
+      'post_status' => 'publish'
     ); 
   }
   
@@ -37,8 +39,9 @@ function city_sort_filter_function(){
     $filterargs = array(
       'post_type' => 'hotels',
       'posts_per_page' => -1,
-      'orderby' => 'meta_value',
+      'orderby' => 'meta_value_num',
       'meta_key' => 'meta-hotel-mainrating',
+      'post_status' => 'publish'
     );
   }
 
@@ -46,9 +49,10 @@ function city_sort_filter_function(){
     $filterargs = array(
       'post_type' => 'hotels',
       'posts_per_page' => -1,
-      'orderby' => 'meta_value',
+      'orderby' => 'meta_value_num',
       'meta_key' => 'meta-hotel-minprice',
       'order' => 'ASC',
+      'post_status' => 'publish'
     );
   }
 
@@ -85,9 +89,10 @@ function city_price_filter_function(){
     $filterargs = array(
       'post_type' => 'hotels',
       'posts_per_page' => -1,
-      'orderby' => 'meta_value',
+      'orderby' => 'meta_value_num',
       'meta_key' => 'meta-hotel-minprice',
       'order' => $price_sort,
+      'post_status' => 'publish'
     ); 
   }
 
