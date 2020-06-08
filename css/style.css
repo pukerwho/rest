@@ -11814,12 +11814,14 @@ a:hover {
     color: #000000;
     line-height: 1.5;
     font-size: 1.5rem;
-    font-weight: 400; }
+    font-weight: 400;
+    word-break: break-word; }
     .comment_text p {
       color: #000000;
       font-size: 1.5rem;
       font-weight: 400;
       line-height: 1.5;
+      word-break: break-word;
       margin-bottom: 0; }
   .comment_bottom {
     display: -webkit-box;
