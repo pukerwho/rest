@@ -62,10 +62,15 @@
 									<?php 
 										$images = rwmb_meta( 'meta-hotel-photos', array( 'size' => 'large' ) );
 										$title_img_territory = get_the_title();
-										foreach ( $images as $image ) {
-										    echo '<div class="hotel-photos__item nomer_photos"><a href="', $image['full_url'], '" data-lightbox="territory" data-title="', $title_img_territory,'"><div class="hotel-photos__item-bg"></div><div class="hotel-photos__item-title">Фото территории</div><img src="', $image['url'], '"></a></div>';
-										} 
-									?>
+										foreach ( $images as $image ): ?> 
+											<div class="hotel-photos__item nomer_photos">
+												<a href="<?php echo $image['full_url'] ?>" data-lightbox="territory" data-title="<?php $title_img_territory ?>">
+													<div class="hotel-photos__item-bg"></div>
+													<div class="hotel-photos__item-title"><?php _e("Фото территории", "restx") ?></div>
+													<img src="<?php echo $image['url'] ?>">
+												</a>
+											</div>
+									<?php endforeach; ?>
 								</div>
 								<div>
 									<?php 
@@ -135,14 +140,14 @@
 					  		<?php endif ?>
 				  		</div>
 			  		</div>
+			  		<?php if(rwmb_meta( 'meta-hotel-sale' )): ?>
 			  		<div>
 			  			<h3 class="mb-5"><?php _e( 'Скидки', 'restx' ); ?></h3>
 			  			<div class="mb-5">
-					  		<?php if(rwmb_meta( 'meta-hotel-sale' )): ?>
-							  	<?php echo rwmb_meta( 'meta-hotel-sale-text' ); ?>
-							  <?php endif ?>	
+					  		<?php echo rwmb_meta( 'meta-hotel-sale-text' ); ?>
 						  </div>
 			  		</div>
+			  		<?php endif ?>	
 					  <div>
 					  	<h3 class="mb-5"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
 					  	<div class="mb-5">
