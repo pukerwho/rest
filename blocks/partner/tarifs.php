@@ -15,6 +15,7 @@
 			</div>
 			<div class="p_partner__list mb-5">
 				<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
+				<li class="mb-3"><?php _e( 'Один номер телефона', 'restx' ); ?></li>
 				<li class="mb-3"><?php _e( 'До 5 фотографий', 'restx' ); ?></li>
 				<li class="mb-3">500-1000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
 			</div>
@@ -27,9 +28,9 @@
 	</div>
 	<div class="col-md-4 text-center mb-5 mb-md-0">
 		<div class="p_partner__box">
-			<div class="p_partner__sale">
+			<!-- <div class="p_partner__sale">
 				<p class="p_partner__sale-second"><?php _e('Скидка', 'restx'); ?>!</p>
-			</div>
+			</div> -->
 			<div class="p_partner__subtitle mb-4">
 				<?php _e( 'Стандарт', 'restx' ); ?>
 			</div>
@@ -37,14 +38,15 @@
 				<img src="<?php bloginfo('template_url') ?>/img/startup.svg" alt="" width="55px" class="mb-5">
 			</div>
 			<div class="p_partner__text">
-				<del class="text-muted">800 грн</del>
-				<div>699 грн</div>
+				<!-- <del class="text-muted">800 грн</del> -->
+				<div>800 грн</div>
 			</div>
 			<div class="mb-5">
 				<?php _e( 'за год', 'restx' ); ?>
 			</div>
 			<div class="p_partner__list mb-5">
 				<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
+				<li class="mb-3"><?php _e( 'Неограниченное кол-во телефонов и мессенджеров', 'restx' ); ?></li>
 				<li class="mb-3"><?php _e( 'До 15 фотографий', 'restx' ); ?></li>
 				<li class="mb-3"><?php _e( 'Техническая поддержка', 'restx' ); ?></li>
 				<li class="mb-3">2500-5000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
@@ -58,9 +60,9 @@
 	</div>
 	<div class="col-md-4 text-center mb-5 mb-md-0">
 		<div class="p_partner__box">
-			<div class="p_partner__sale">
+			<!-- <div class="p_partner__sale">
 				<p class="p_partner__sale-third"><?php _e('Скидка', 'restx'); ?>!</p>
-			</div>
+			</div> -->
 			<div class="p_partner__subtitle mb-4">
 				<?php _e( 'Премиум', 'restx' ); ?>
 			</div>
@@ -68,8 +70,8 @@
 				<img src="<?php bloginfo('template_url') ?>/img/diamond.svg" alt="" width="55px" class="mb-5">
 			</div>
 			<div class="p_partner__text">
-				<del class="text-muted">1500 грн</del>
-				<div>1299 грн</div>
+				<!-- <del class="text-muted">1500 грн</del> -->
+				<div>1500 грн</div>
 			</div>
 			<div class="mb-5">
 				<?php _e( 'за год', 'restx' ); ?>
@@ -77,9 +79,11 @@
 			<div class="p_partner__list mb-5">
 				<li class="mb-3"><?php _e( 'Размещение жилья', 'restx' ); ?></li>
 				<li class="mb-3"><?php _e( 'До 60 фотографий', 'restx' ); ?></li>
+				<li class="mb-3"><?php _e( 'Неограниченное кол-во телефонов и мессенджеров', 'restx' ); ?></li>
 				<li class="mb-3"><?php _e( 'Техническая поддержка', 'restx' ); ?></li>
 				<li class="mb-3"><?php _e( 'Ссылка на ваш сайт', 'restx' ); ?></li>
-				<li class="mb-3"><?php _e( 'Реклама в наших соцсетях', 'restx' ); ?></li>
+				<li class="mb-3"><?php _e( 'Реклама на наших страницах в соцсетях', 'restx' ); ?></li>
+				<li class="mb-3"><?php _e( 'Отдельная рекламная кампания в соцсетях', 'restx' ); ?></li>
 				<li class="mb-3"><?php _e( 'Упоминание в e-mail рассылке', 'restx' ); ?></li>
 				<li class="mb-3">7000-10000 <?php _e( 'просмотров за месяц', 'restx' ); ?></li>
 			</div>
