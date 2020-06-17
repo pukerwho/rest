@@ -109,6 +109,65 @@ if ($('.page-template-tpl_partner').length > 0) {
   })
 };
 
+//BUS FORM Кнопка добавить рейс
+let busFormAddWay = document.querySelector('.bus_form_add_way span');
+let busFormWayNumber = 1;
+function createInputWay(input,name,type,value, placeholder) {
+  input.setAttribute('name', name);
+  input.setAttribute('type', type);
+  input.setAttribute('value', '');
+  input.setAttribute('placeholder', placeholder);
+  return input;
+}
+if (busFormAddWay) {
+  busFormAddWay.addEventListener('click', function(){
+    busFormLabel = document.createElement('div');
+    busFormLabel.innerHTML = 'Рейс ' + busFormWayNumber;
+
+    busFormFromCityInput = document.createElement('input');
+    busFormInCityInput = document.createElement('input');
+    busFormDateFromInput = document.createElement('input');
+    busFormDateInInput = document.createElement('input');
+    busFormPhonesInput = document.createElement('input');
+
+    createInputWay(busFormFromCityInput, 'Город отправления' + busFormWayNumber, 'text', '', 'Город отправления');
+    createInputWay(busFormInCityInput, 'Город прибытия' + busFormWayNumber, 'text', '', 'Город прибытия');
+    createInputWay(busFormDateFromInput, 'Время отправления' + busFormWayNumber, 'text', '', 'Время отправления');
+    createInputWay(busFormDateInInput, 'Время прибытия' + busFormWayNumber, 'text', '', 'Время прибытия');
+    createInputWay(busFormPhonesInput, 'Телефоны для бронирования' + busFormWayNumber, 'text', '', 'Телефоны для бронирования');
+
+    $(this).before(busFormLabel);
+    $(this).before(busFormFromCityInput);
+    $(this).before(busFormInCityInput);
+    $(this).before(busFormDateFromInput);
+    $(this).before(busFormDateInInput);
+    $(this).before(busFormPhonesInput);
+
+    busFormWayNumber = busFormWayNumber + 1;
+  });
+  
+}
+
+//Успешно отправлена форма BUS_FORM
+let busFormSuccess = document.querySelector('.bus_form_success');
+const busFormURL = 'https://script.google.com/macros/s/AKfycbzvdyugnq2EPDDxPbs-YZbo5FrmeQnPSbTriZovigMY4R_VHHBG/exec'
+const bus_form = document.forms['bus-form']
+if (bus_form) {
+  bus_form.addEventListener('submit', e => {
+    e.preventDefault()
+    let this_form = bus_form
+    let data = new FormData(bus_form)
+    fetch(busFormURL, { method: 'POST', mode: 'cors', body: data})
+      .then(response => showSuccessMessage(data, this_form))
+      .catch(error => console.error('Error!', error.message))
+  })  
+}
+
+function showSuccessMessage(data, this_form){
+  this_form.reset();
+  busFormSuccess.classList.add('bus_form_success_show', 'mb-5');
+}
+
 //Mobile Menu
 $('.header__mobile__menu').on('click', function(){
 	$('.header__mobile__cover').addClass('header__mobile__cover__active');

@@ -12653,6 +12653,58 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px; }
 
+.bus_form label {
+  width: 100%;
+  color: #212529;
+  margin-bottom: -1rem; }
+.bus_form form {
+  font-size: 1.75rem; }
+.bus_form input, .bus_form textarea {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+  outline: none; }
+.bus_form input[type="radio"], .bus_form input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  margin-bottom: 0;
+  margin-right: 1rem; }
+  .bus_form input[type="radio"] ~ label, .bus_form input[type="checkbox"] ~ label {
+    font-size: 1.55rem;
+    margin-bottom: 0; }
+.bus_form [type="submit"] {
+  min-width: 150px;
+  display: inline-block;
+  width: auto;
+  color: #343a40;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  background-color: #cdf5d4;
+  -webkit-box-shadow: 0px 3px 4px 1px #9ef6ad;
+  box-shadow: 0px 4px 3px 0px #9ef6ad;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out; }
+  .bus_form [type="submit"]:hover {
+    -webkit-box-shadow: 0px 1px 0.001px 0px #9ef6ad;
+    box-shadow: 0px 1px 0.001px 0px #9ef6ad; }
+.bus_form_success {
+  border: 1px solid #212121;
+  border-radius: 0.75rem;
+  background-color: #cdf5d4; }
+  .bus_form_success_show {
+    display: block !important;
+    margin: 2rem 0; }
+.bus_form_add_way span {
+  cursor: pointer; }
+
 .b_filter__item {
   width: -webkit-calc(25% - 3rem);
   width: calc(25% - 3rem);
@@ -12707,9 +12759,7 @@ button.swiper-pagination-bullet {
     height: auto;
     background: #e6eafd;
     overflow: hidden;
-    -webkit-border-top-left-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
-    -webkit-border-bottom-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     padding: 1rem;
     margin-right: 3rem; }
@@ -12836,7 +12886,6 @@ button.swiper-pagination-bullet {
   top: -2px;
   width: 20px;
   height: 20px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   color: #fff;
   -webkit-transform: translateY(50%);
@@ -12854,7 +12903,6 @@ button.swiper-pagination-bullet {
   opacity: 0; }
 
 .ui-slider .ui-slider-handle {
-  -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
   background: #484848 !important;
   border: none !important;
@@ -12895,7 +12943,6 @@ button.swiper-pagination-bullet {
     right: 0;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    -webkit-border-radius: 13px;
     border-radius: 13px;
     -webkit-transition: .16s;
     -o-transition: .16s;
@@ -12909,7 +12956,6 @@ button.swiper-pagination-bullet {
     top: 0;
     bottom: 0;
     right: 17px;
-    -webkit-border-radius: 50%;
     border-radius: 50%;
     background: #fff;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);

@@ -117,8 +117,8 @@ Template Name: Партнерство
 		</div>
 		<div class="row adv mb-5">
 			<div class="col-md-6 mb-5">
-				<img src="<?php bloginfo('template_url') ?>/img/facebook-ad-1.jpeg" alt="">
-				<img src="<?php bloginfo('template_url') ?>/img/facebook-ad.jpeg" alt="">
+				<img src="<?php bloginfo('template_url') ?>/img/partner_screen1.png" alt="">
+				<img src="<?php bloginfo('template_url') ?>/img/partner_screen2.png" alt="">
 			</div>
 			<div class="col-md-6 mb-5">
 				<img src="<?php bloginfo('template_url') ?>/img/insta-ad.jpg" alt="">

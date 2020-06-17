@@ -24,6 +24,9 @@ Template Name: Главная страница
 	<?php get_template_part( 'blocks/familyhotels', 'default' ); ?>	
 </div>
 <div class="py-5">
+	<?php get_template_part( 'blocks/way-slider', 'default' ); ?>	
+</div>
+<div class="py-5">
 	<?php get_template_part( 'blocks/b_social', 'default' ); ?>	
 </div>
 <div class="pt-5">
