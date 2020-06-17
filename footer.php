@@ -55,6 +55,9 @@
         <div class="menu modal_menu" data-bottom-btn="menu_btn">
             <div class="modal_menu_top settings_top">
                 <div class="modal_menu_item settings_item">
+                    <a href="<?php echo get_page_url( 'tpl_allcity' ); ?>"><?php _e( 'Все курорты', 'restx' ); ?></a>
+                </div>
+                <div class="modal_menu_item settings_item">
                     <a href="<?php echo get_page_url( 'tpl_faq' ); ?>"><?php _e( 'Вопросы', 'restx' ); ?></a>
                 </div>
                 <div class="modal_menu_item settings_item">
