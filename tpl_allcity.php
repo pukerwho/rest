@@ -220,13 +220,4 @@ Template Name: Все города
 	</div>
 </div>
 
-<div class="test">Test</div>
-<script type="text/javascript">
-	let testButton = document.querySelector('.test');
-	testButton.addEventListener('click', function(){
-		fbq('track', 'AddToCart', {currency: "USD", value: 30.00});
-		console.log('FacebookEvent');
-	}) ;
-</script>
-
 <?php get_footer(); ?>
