@@ -89,7 +89,7 @@
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="wow_subtitle text-center">
-						<?php _e( 'Есть много всего интересного!', 'restx' ); ?>
+						<?php _e( 'Есть много всего интересного', 'restx' ); ?>!
 					</div>
 				</div>
 				<?php 
