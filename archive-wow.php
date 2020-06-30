@@ -6,7 +6,7 @@
 			<div class="col-md-12">
 				<div class="d-flex flex-column">
 					<h1 class="archive text-uppercase"><?php _e('Впечатления', 'restx'); ?></h1>	
-					<div class="wow_archive_subtitle"><?php _e('Куда пойти, что посмотреть. Как интересно провести время на курорте.', 'restx'); ?></div>
+					<div class="wow_archive_subtitle"><?php _e('Куда пойти, что посмотреть. Как интересно провести время на курорте', 'restx'); ?>.</div>
 				</div>
 			</div>
 		</div>

@@ -393,15 +393,22 @@ function get_parent_term_slug($parent_term_id, $parent_term_name) {
 }
 
 function tutCount($id) {
-  if ( metadata_exists( 'post', $id, 'hotel_count' ) ) {
-    $count_value = get_post_meta( $id, 'hotel_count', true );
-    $count_value = $count_value + 1;
-    update_post_meta( $id, 'hotel_count', $count_value );
-  } else {
-    add_post_meta( $id, 'hotel_count', '200', true);
+  $tr_array_id = array();
+  $tr_ids = pll_get_post_translations($id);
+  foreach ($tr_ids as $tr_id) {
+    array_push($tr_array_id, $tr_id);
   }
-  $hotel_count = get_post_meta( $id, 'hotel_count', true );
-  return $hotel_count;
+  foreach ($tr_array_id as $post_id) {
+    if ( metadata_exists( 'post', $post_id, 'hotel_count' ) ) {
+      $count_value = get_post_meta( $post_id, 'hotel_count', true );
+      $count_value = $count_value + 1;
+      update_post_meta( $id, 'hotel_count', $count_value );
+    } else {
+      add_post_meta( $post_id, 'hotel_count', '200', true);
+    }
+    $hotel_count = get_post_meta( $post_id, 'hotel_count', true );
+    return $hotel_count;
+  }
 }
 
 // function change_rating_function(){
