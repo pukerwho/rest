@@ -119,7 +119,7 @@ function create_post_type() {
       'has_archive' => true,
       'hierarchical' => true,
       'show_in_rest' => false,
-      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'custom-fields' ),
     )
   );
   register_post_type( 'webcamers',
@@ -151,6 +151,18 @@ function create_post_type() {
       'labels' => array(
           'name' => __( 'Направления' ),
           'singular_name' => __( 'Направление' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    )
+  );
+  register_post_type( 'wow',
+    array(
+      'labels' => array(
+          'name' => __( 'Впечатления' ),
+          'singular_name' => __( 'Впечатление' )
       ),
       'public' => true,
       'has_archive' => true,
@@ -286,7 +298,7 @@ function your_prefix_register_taxonomy() {
     ),
   );
 
-  register_taxonomy( 'citylist', array( 'hotels', 'webcamers', 'blogs', 'post_comment', 'way' ), $args );
+  register_taxonomy( 'citylist', array( 'hotels', 'webcamers', 'blogs', 'post_comment', 'way', 'wow' ), $args );
 }
 add_action( 'init', 'your_prefix_register_taxonomy');
 
@@ -378,6 +390,18 @@ function get_parent_term_slug($parent_term_id, $parent_term_name) {
   }
   $current_parent_term = get_term($current_parent_term_id, $parent_term_name);
   return $current_parent_term->slug;
+}
+
+function tutCount($id) {
+  if ( metadata_exists( 'post', $id, 'hotel_count' ) ) {
+    $count_value = get_post_meta( $id, 'hotel_count', true );
+    $count_value = $count_value + 1;
+    update_post_meta( $id, 'hotel_count', $count_value );
+  } else {
+    add_post_meta( $id, 'hotel_count', '200', true);
+  }
+  $hotel_count = get_post_meta( $id, 'hotel_count', true );
+  return $hotel_count;
 }
 
 // function change_rating_function(){

@@ -13,6 +13,89 @@
 			<div class="citylist_wrapper">
 				<div class="citylist_content mb-5">
 
+					<!-- Мобильная навигация -->
+					<div class="mobile-show">
+						<div class="citylist_nav mb-5">
+							<div class="citylist_nav_container swiper-container">
+								<div class="swiper-wrapper">
+									<!-- Мобильная навигация ITEM -->
+									<div class="swiper-slide">
+										<a href="#info" class="d-flex flex-column">
+											<span class="mb-2">
+												<?php _e( 'Информация', 'restx' ); ?>
+											</span>
+											<span>
+												<?php _e( 'Погода в городе; Как добраться', 'restx' ); ?>;
+											</span>
+										</a>
+									</div>
+									<!-- end Мобильная навигация ITEM -->
+									<!-- Мобильная навигация ITEM -->
+									<div class="swiper-slide">
+										<a href="#video" class="d-flex flex-column">
+											<span class="mb-2">
+												<?php _e( 'Видео', 'restx' ); ?>
+											</span>
+											<span>
+												<?php _e( 'Посмотреть на город', 'restx' ); ?>;
+											</span>
+										</a>
+									</div>
+									<!-- end Мобильная навигация ITEM -->
+									<!-- Мобильная навигация ITEM -->
+									<div class="swiper-slide">
+										<a href="#blog" class="d-flex flex-column">
+											<span class="mb-2">
+												<?php _e( 'Блог', 'restx' ); ?>
+											</span>
+											<span>
+												<?php _e( 'Узнайте много полезного', 'restx' ); ?>;
+											</span>
+										</a>
+									</div>
+									<!-- end Мобильная навигация ITEM -->
+									<!-- Мобильная навигация ITEM -->
+									<div class="swiper-slide">
+										<a href="#near" class="d-flex flex-column">
+											<span class="mb-2">
+												<?php _e( 'Что рядом', 'restx' ); ?>?
+											</span>
+											<span>
+												<?php _e( 'Какие курорты рядом', 'restx' ); ?>;
+											</span>
+										</a>
+									</div>
+									<!-- end Мобильная навигация ITEM -->
+									<!-- Мобильная навигация ITEM -->
+									<div class="swiper-slide">
+										<a href="#bus" class="d-flex flex-column">
+											<span class="mb-2">
+												<?php _e( 'Автобусы', 'restx' ); ?>
+											</span>
+											<span>
+												<?php _e( 'Какие есть маршруты', 'restx' ); ?>;
+											</span>
+										</a>
+									</div>
+									<!-- end Мобильная навигация ITEM -->
+									<!-- Мобильная навигация ITEM -->
+									<div class="swiper-slide">
+										<a href="#review" class="d-flex flex-column">
+											<span class="mb-2">
+												<?php _e( 'Отзывы', 'restx' ); ?>
+											</span>
+											<span>
+												<?php _e( 'Что говорят отдыхающие', 'restx' ); ?>;
+											</span>
+										</a>
+									</div>
+									<!-- end Мобильная навигация ITEM -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end Мобильная навигация -->
+
 					<!-- Filter -->
 					<?php get_template_part( 'blocks/filters/city_filter', 'default' ); ?>	
 					<!-- end Filter -->
@@ -28,7 +111,7 @@
 				<!-- Сайдбар -->
 				<div class="citylist_sidebar">
 					<!-- Сайдбар Блог -->
-					<div class="citylist_sidebar_box mb-5">
+					<div id="info" class="citylist_sidebar_box mb-5">
 						<div class="citylist-blog mb-4">
 							<div class="citylist-blog__img">
 								<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" width="30px" alt="">
@@ -64,7 +147,7 @@
 					<!-- end Сайдбар блог -->
 
 					<!-- Сайдбар Видео -->
-					<div class="citylist_sidebar_box mb-5">
+					<div id="video" class="citylist_sidebar_box mb-5">
 						<div class="citylist-blog mb-4">
 							<div class="citylist-blog__img" style="background-color: #d3d7f6;">
 								<img src="<?php bloginfo('template_url') ?>/img/video-player.svg" width="25px" alt="">
@@ -82,7 +165,7 @@
 					</div>
 			  	<!-- end Сайдбар видео -->
 			  	<!-- общий Блог -->
-			  	<div class="citylist_sidebar_box mb-5">
+			  	<div id="blog" class="citylist_sidebar_box mb-5">
 			  		<div class="citylist-blog mb-4">
 							<div class="citylist-blog__img" style="background-color: #cdf5d4;">
 								<img src="<?php bloginfo('template_url') ?>/img/organize.svg" width="30px" alt="">
@@ -117,7 +200,7 @@
 			  	<!-- end общий Блог -->
 			  	<!-- Ближайшие города -->
 			  	<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_association')): ?>
-				  	<div class="citylist_sidebar_box mb-5">
+				  	<div id="near" class="citylist_sidebar_box mb-5">
 				  		<div class="citylist-blog mb-4">
 								<div class="citylist-blog__img" style="background-color: #c5eefa;">
 									<img src="<?php bloginfo('template_url') ?>/img/direction-sign.svg" width="30px" alt="">
@@ -149,7 +232,7 @@
 					<?php endif; ?>
 			  	<!-- end Ближайшие города -->
 			  	<!-- автобусы из города -->
-			  	<div class="citylist_sidebar_box mb-5">
+			  	<div id="bus" class="citylist_sidebar_box mb-5">
 			  		<div class="citylist-blog mb-4">
 							<div class="citylist-blog__img" style="background-color: #c5eefa;">
 								<img src="<?php bloginfo('template_url') ?>/img/bus.svg" width="30px" alt="">
@@ -234,7 +317,7 @@
 	<!-- end row -->
 
 	<!-- Комментарии -->
-	<div class="row justify-content-center mb-5">
+	<div id="review" class="row justify-content-center mb-5">
 		<div class="col-md-8">
 			<div class="text-center text-dark display-4 text-uppercase font-weight-normal mb-5">
 				<?php _e('Обсуждение', 'restx'); ?>

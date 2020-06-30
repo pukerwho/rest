@@ -64,6 +64,20 @@ $('.lang').on('click', function(){
   }
 });
 
+//
+function scrollToAnchor(sectionId) {
+  console.log(sectionId);
+  var targetScroll =  $(sectionId).offset().top;
+  $('html, body').animate({
+      scrollTop: (targetScroll - 100 /* минус сто - это нужный вам отступ, чтобы сделать прокрутку немного выше якоря */ )
+  }, 500);
+}
+
+$('.citylist_nav a[href*="#"]').on('click', function(){
+  sectionId = $(this).attr('href');
+  scrollToAnchor(sectionId);
+});
+
 //MODAL BOTTOM MENU
 let bottomMenuItems = document.querySelectorAll('.bottom_menu_js');
 let modalMenus = document.querySelectorAll('.modal_menu');
@@ -358,6 +372,13 @@ if ($(document).width() < 960) {
     },
   });
 };
+
+//SWIPER CITYLIST MOBILE NAV
+var NavSwiper = new Swiper ('.citylist_nav_container', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  loop: true,
+});
 
 //SWIPER NOW WATCH
 var nowwatch_button_next = $('.swiper-nowwatch-button-next');

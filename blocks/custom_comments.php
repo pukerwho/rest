@@ -83,7 +83,6 @@ add_action( 'comment_form', 'output_hidden_field_in_comment_form' );
 	foreach ($translation_id as $tr_id) {
 		array_push($post__in_array, $tr_id);
 	}
-
 	$args = array(
 		'post__in' => $post__in_array,
 		'status' => 'approve'

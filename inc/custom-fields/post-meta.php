@@ -17,6 +17,12 @@ function crb_post_theme_options() {
     ) ),
   ) );
   Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'wow' )
+    ->add_fields( array(
+      Field::make( 'media_gallery', 'crb_wow_gallery', 'Галерея' )->set_type( array( 'image' ) ),
+      Field::make( 'textarea', 'crb_wow_map', 'Карта (расположение)' ),
+  ) );
+  Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'way' )
     ->add_fields( array(
       Field::make( 'complex', 'crb_way', 'Рейсы' )->add_fields( array(

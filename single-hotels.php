@@ -92,6 +92,10 @@
 						<div class="mobile-show">
 							<?php get_template_part('blocks/single-hotel/contact') ?>	
 						</div>
+						<div class="d-flex align-items-center lead mb-5">
+							<img src="<?php bloginfo('template_url'); ?>/img/vision.svg" alt="" width="20px" class="mr-3">
+							<p class="mb-0">Кол-во просмотров: <?php echo tutCount(get_the_ID()); ?></p>
+						</div>
 						<?php if(rwmb_meta( 'meta-hotel-gps' )): ?>
 						<div class="d-flex align-items-center mb-5">
 							<img src="<?php bloginfo('template_url') ?>/img/map.svg" alt="" width="35px" class="mr-2">
