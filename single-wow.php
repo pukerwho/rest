@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="wow wow_single">
-		<div class="container py-5">
+		<div class="container pb-5">
 			<div class="row mb-2">
 				<div class="col-md-12">
 					<div class="single-blogs__breadcrumb d-flex mb-5">

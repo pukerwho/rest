@@ -43,11 +43,32 @@
 						<div class="single-blogs__title d-flex">
 							<h1 itemprop="headline"><?php the_title(); ?></h1>	
 						</div>
-						<div class="single-blogs__date">
-							<?php _e('Автор', 'restx') ?>: <?php echo get_the_author(); ?>
-						</div>
-						<div class="single-blogs__date mb-5">
-							<?php _e('Дата', 'restx') ?>: <?php echo get_the_modified_time('j/n/Y') ?>
+						<div class="d-flex mb-5">
+							<div class="single-blogs__avatar mr-4">
+								<?php 
+									$avatar = get_avatar(get_the_author_meta('ID'));
+								?>
+								<?php if ($avatar): ?>
+	                <?php echo $avatar; ?>
+	              <?php else: ?>
+	                <img src="<?php bloginfo('template_part'); ?>/img/user.svg" width="35px">
+	              <?php endif; ?>
+							</div>
+							<div>
+								<div class="single-blogs__date mb-3">
+									<div>
+										<?php _e('Автор', 'restx') ?>: <?php echo get_the_author(); ?>
+									</div>
+									<?php if(!empty(get_the_author_meta('facebook'))) { ?>
+									<div>
+										<a href="<?php the_author_meta('facebook'); ?>">Facebook</a>
+									</div>
+									<?php } ?>
+								</div>
+								<div class="single-blogs__date">
+									<?php _e('Дата', 'restx') ?>: <?php echo get_the_modified_time('j/n/Y') ?>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

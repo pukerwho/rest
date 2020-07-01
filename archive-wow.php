@@ -24,6 +24,13 @@
 			<div class="col-md-3 mb-5">
 				<a href="<?php the_permalink(); ?>">
 					<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="wow_archive_thumb mb-3">
+					<div class="hotel-item__city mb-2">
+						<?php
+							$myterms = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
+							foreach ($myterms as $myterm): ?>
+								<a href="<?php echo get_term_link($myterm) ?>"><span><?php echo $myterm->name; ?><span></a>
+							<?php endforeach; ?>
+					</div>
 					<div class="wow_archive_name">
 						<?php the_title(); ?>
 					</div>
