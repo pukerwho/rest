@@ -11512,7 +11512,10 @@ a:hover {
   font-size: 2.5rem; }
 .wow_content p {
   color: #222222;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  line-height: 1.65; }
+.wow_content iframe {
+  width: 100%; }
 .wow_archive_subtitle {
   font-size: 2.5rem;
   opacity: 0.75; }
