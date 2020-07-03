@@ -4,7 +4,7 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/img/restx-logo.png">
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="alternate" hreflang="uk" href="<?php echo home_url(); ?>/uk">

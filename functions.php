@@ -402,7 +402,7 @@ function tutCount($id) {
     if ( metadata_exists( 'post', $post_id, 'hotel_count' ) ) {
       $count_value = get_post_meta( $post_id, 'hotel_count', true );
       $count_value = $count_value + 1;
-      update_post_meta( $id, 'hotel_count', $count_value );
+      update_post_meta( $post_id, 'hotel_count', $count_value );
     } else {
       add_post_meta( $post_id, 'hotel_count', '200', true);
     }

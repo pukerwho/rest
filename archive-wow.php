@@ -27,7 +27,7 @@
 					<div class="hotel-item__city mb-2">
 						<?php
 							$myterms = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
-							foreach ($myterms as $myterm): ?>
+							foreach (array_slice($myterms, 0,1) as $myterm): ?>
 								<a href="<?php echo get_term_link($myterm) ?>"><span><?php echo $myterm->name; ?><span></a>
 							<?php endforeach; ?>
 					</div>
