@@ -63,6 +63,9 @@
                 <div class="modal_menu_item settings_item">
                     <a href="<?php echo get_post_type_archive_link('blogs'); ?>"><?php _e( 'Блог', 'restx' ); ?></a>
                 </div>
+                <div class="modal_menu_item settings_item">
+                    <a href="<?php echo get_post_type_archive_link('way'); ?>"><?php _e( 'Маршруты', 'restx' ); ?></a>
+                </div>
             </div>
             <div class="modal_menu_bottom settings_bottom modal_close_js">
                 <div class="modal_menu_item settings_item">

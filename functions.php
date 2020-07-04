@@ -411,6 +411,42 @@ function tutCount($id) {
   }
 }
 
+
+//Alert для комментов
+add_action( 'set_comment_cookies', function( $comment, $user ) {
+  setcookie( 'ta_comment_wait_approval', '1', 0, '/' );
+}, 10, 2 );
+
+add_action( 'init', function() {
+  if( isset( $_COOKIE['ta_comment_wait_approval'] ) && $_COOKIE['ta_comment_wait_approval'] === '1' ) {
+    setcookie( 'ta_comment_wait_approval', '0', 0, '/' );
+    echo "<script type='text/javascript'>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      function insertAfter(referenceNode, newNode) {
+        console.log(referenceNode);
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+      }
+
+      var commentAlert = document.createElement('p');
+      commentAlert.setAttribute('id', 'wait_approval');
+      commentAlert.innerHTML = 'Ваш комментарий ожидает одобрения';
+
+      var respondDiv = document.querySelector('#respond');
+      console.log(respondDiv);
+      insertAfter(respondDiv, commentAlert);
+    });
+    </script>";
+    // add_action( 'comment_form_after', function() {
+    //   echo "<p id='wait_approval' style=''><strong>" . _e('Ваш комментарий ожидает одобрения', 'restx') . "</strong></p>";
+    // });
+  }
+});
+
+add_filter( 'comment_post_redirect', function( $location, $comment ) {
+    $location = get_permalink( $comment->comment_post_ID ) . '#wait_approval';
+    return $location;
+}, 10, 2 );
+
 // function change_rating_function(){
 //   $metas = get_post_meta( $post->ID );
 //   if( !isset($metas['meta-hotel-mainrating']) ){

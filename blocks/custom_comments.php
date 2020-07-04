@@ -90,4 +90,5 @@ add_action( 'comment_form', 'output_hidden_field_in_comment_form' );
 
 	$comments = get_comments( $args );
 ?>
+
 <?php wp_list_comments($list_comments_args, $comments); ?>

@@ -6,7 +6,7 @@
 			<div class="col-md-12">
 				<div class="d-flex flex-column align-items-center">
 					<img src="<?php bloginfo('template_url') ?>/img/bus.svg" width="80px" class="mb-5" alt="">
-					<h1 class="archive text-uppercase"><?php _e('Автобусные перевозки', 'restx'); ?></h1>	
+					<h1 class="archive text-uppercase text-center"><?php _e('Автобусные перевозки', 'restx'); ?></h1>	
 				</div>
 			</div>
 		</div>

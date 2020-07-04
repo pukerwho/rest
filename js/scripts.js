@@ -78,6 +78,16 @@ $('.citylist_nav a[href*="#"]').on('click', function(){
   scrollToAnchor(sectionId);
 });
 
+document.addEventListener('DOMContentLoaded', function(event) {
+  if (location.href.indexOf("#wait_approval") != -1) {
+    var wait_approval_scroll =  $('#wait_approval').offset().top;
+    console.log(wait_approval_scroll);
+    $('html, body').animate({
+        scrollTop: (wait_approval_scroll - 100 /* минус сто - это нужный вам отступ, чтобы сделать прокрутку немного выше якоря */ )
+    }, 500);
+  }
+});
+
 //MODAL BOTTOM MENU
 let bottomMenuItems = document.querySelectorAll('.bottom_menu_js');
 let modalMenus = document.querySelectorAll('.modal_menu');
