@@ -16,7 +16,7 @@
     <meta property="og:article:published_time" content="<?php echo get_post_time('Y/n/j'); ?>" />
     <meta property="og:article:article:modified_time" content="<?php echo get_the_modified_time('Y/n/j'); ?>" />
     <meta property="og:article:author" content="<?php echo get_the_author(); ?>" />
-    <script data-ad-client="ca-pub-6649504422654100" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
   <?php endif; ?>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135287974-1"></script>
