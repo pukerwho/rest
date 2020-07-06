@@ -443,8 +443,18 @@ add_action( 'init', function() {
 });
 
 add_filter( 'comment_post_redirect', function( $location, $comment ) {
-    $location = get_permalink( $comment->comment_post_ID ) . '#wait_approval';
+  if ( get_post_type( $comment->comment_post_ID ) == 'post_comment' ) {
+    // $current_url = home_url( add_query_arg( array(), $wp->request ) );
+    $city_terms = get_the_terms($comment->comment_post_ID, 'citylist');
+    foreach ($city_terms as $city_term) {
+      $current_term_url = get_term_link($city_term->term_id, 'citylist'); 
+    }
+    $location = $current_term_url . '#wait_approval';  
     return $location;
+  } else {
+    $location = get_permalink( $comment->comment_post_ID ) . '#wait_approval';  
+    return $location;
+  }
 }, 10, 2 );
 
 // function change_rating_function(){
