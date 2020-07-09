@@ -352,7 +352,7 @@
 
 	<!-- Текст Контент -->
 	<div class="row justify-content-center">
-		<div class="col-md-8">		
+		<div class="col-md-7">		
 			<div class="citylist__text lead">
 				<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ); ?>
 				<!-- Вопросы и ответы -->
