@@ -369,7 +369,7 @@
 											<?php echo $city_faq['crb_citylist_faq_question'] ?>
 										</h4>
 										<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-											<div class="lead" itemprop="text">
+											<div class="lead mb-5" itemprop="text">
 												<p><?php echo $city_faq['crb_citylist_faq_answer'] ?></p>
 											</div>
 										</div>
