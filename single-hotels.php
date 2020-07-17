@@ -19,7 +19,27 @@
 						} 
 					?>
 					<?php $getCurrentTermId = pll_get_term($myterm->term_id); ?>
-					<span typeof="v:Breadcrumb"> <a href="<?php echo home_url(); ?>" rel="v:url" property="v:title"><?php _e( 'Главная', 'restx' ); ?></a> › </span><span typeof="v:Breadcrumb"> <a href="<?php echo get_term_link($getCurrentTermId, 'citylist') ?>" rel="v:url" property="v:title"> <?php echo $current_term_name ?> </a> › </span> <span typeof="v:Breadcrumb"> <?php the_title(); ?> </span>
+
+					<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+			      <ul>
+							<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
+								<a itemprop="item" href="<?php echo home_url(); ?>">
+									<span itemprop="name"><?php _e( 'Главная', 'restx' ); ?></span>
+								</a>                        
+								<meta itemprop="position" content="1">
+							</li>
+							<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
+								<a itemprop="item" href="<?php echo get_term_link($getCurrentTermId, 'citylist') ?>">
+									<span itemprop="name"><?php echo $current_term_name ?></span>
+								</a>                        
+								<meta itemprop="position" content="2">
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+				        <span itemprop="name"><?php the_title(); ?></span>
+				        <meta itemprop="position" content="3" />
+				      </li>
+			      </ul>
+			    </div>
 				</div>
 			</div>
 		</div>
