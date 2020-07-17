@@ -11912,14 +11912,16 @@ button.swiper-pagination-bullet {
   src: url(/wp-content/themes/rest/fonts/CarolynaPro.eot);
   src: url(/wp-content/themes/rest/fonts/CarolynaPro.eot?#iefix) format("embedded-opentype"), url(/wp-content/themes/rest/fonts/CarolynaPro.woff) format("woff"), url(/wp-content/themes/rest/fonts/CarolynaPro.ttf) format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 @font-face {
   font-family: 'Carolyna Pro Black';
   src: url(/wp-content/themes/rest/fonts/CarolynaProBlack.eot);
   src: url(/wp-content/themes/rest/fonts/CarolynaProBlack.eot?#iefix) format("embedded-opentype"), url(/wp-content/themes/rest/fonts/CarolynaProBlack.woff) format("woff"), url(/wp-content/themes/rest/fonts/CarolynaProBlack.ttf) format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 .animate-puk-mask {
   overflow: hidden; }
