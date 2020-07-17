@@ -55,7 +55,7 @@
 								<?php echo rwmb_meta( 'meta-hotel-address' ); ?>
 							</div>
 							<div class="cover">
-								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 							</div>
 							<div class="right">
 								<div class="p-relative" style="margin-bottom: 20px">
@@ -67,7 +67,7 @@
 												<a href="<?php echo $image['full_url'] ?>" data-lightbox="territory" data-title="<?php $title_img_territory ?>">
 													<div class="hotel-photos__item-bg"></div>
 													<div class="hotel-photos__item-title"><?php _e("Фото территории", "restx") ?></div>
-													<img src="<?php echo $image['url'] ?>">
+													<img src="<?php echo $image['url'] ?>" alt="<?php echo $title_img_territory; ?> - Территория">
 												</a>
 											</div>
 									<?php endforeach; ?>
@@ -92,10 +92,11 @@
 						<div class="mobile-show">
 							<?php get_template_part('blocks/single-hotel/contact') ?>	
 						</div>
-						<div class="d-flex align-items-center lead mb-5">
-							<img src="<?php bloginfo('template_url'); ?>/img/vision.svg" alt="" width="20px" class="mr-3">
-							<p class="mb-0">Кол-во просмотров: <?php echo tutCount(get_the_ID()); ?></p>
-						</div>
+						<!-- <div class="d-flex align-items-center lead mb-5">
+							<img src="ВСТАВИТЬ БЛОГИНФО!!!/img/vision.svg" alt="" width="20px" class="mr-3">
+							<p class="mb-0">Кол-во просмотров:</p>
+						</div> -->
+						<?php  tutCount(get_the_ID()); ?>
 						<?php if(rwmb_meta( 'meta-hotel-gps' )): ?>
 						<div class="d-flex align-items-center mb-5">
 							<img src="<?php bloginfo('template_url') ?>/img/map.svg" alt="" width="35px" class="mr-2">

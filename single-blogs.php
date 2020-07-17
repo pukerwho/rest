@@ -97,6 +97,22 @@
 				</div>
 			</article>
 			<div class="row justify-content-center mb-5">
+				<div class="col-md-9">
+					<div class="konkurs">
+						<div class="konkurs_block">
+							<div class="konkurs_title">
+								<?php _e('Участвуй в нашем конкурсе в Instagram'); ?>
+							</div>
+							<div class="konkurs_photo">
+								<a href="https://www.instagram.com/p/CCvAV_ODozg/">
+									<img src="<?php bloginfo('template_url'); ?>/img/konkurs.jpg">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center mb-5">
 				<div class="col-md-10">
 					<h3 class="display-4 text-center mb-4"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
 					<div>

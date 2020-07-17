@@ -9266,6 +9266,33 @@ a:hover {
   top: 0;
   background-color: rgba(0, 0, 0, 0.35); }
 
+.konkurs {
+  margin-bottom: 3rem; }
+  .konkurs_title {
+    position: relative;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 6rem; }
+    @media (max-width: 767px) {
+      .konkurs_title {
+        margin-bottom: 3rem; } }
+    .konkurs_title:after {
+      content: '';
+      background: url(../img/arrow-hand.svg);
+      background-size: 75px 75px;
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      -webkit-transform: rotate(100deg);
+      -ms-transform: rotate(100deg);
+      transform: rotate(100deg);
+      top: 15px; }
+      @media (max-width: 767px) {
+        .konkurs_title:after {
+          content: none; } }
+  .konkurs_photo img {
+    width: 100%; }
+
 /* Pagination */
 .breadcrumbs ul {
   display: -webkit-box;
