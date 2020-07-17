@@ -1,7 +1,7 @@
 {
   "name": "start",
   "version": "1.0.0",
-  "description": "minimal-blank-theme =================== A simple, light and minimal blank theme, to start any wordpress project, without need of deleting or changing any code. Just add yours.",
+  "description": "Time To TOP",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,16 +10,18 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-inline-source": "^4.0.0",
     "gulp-install": "^1.1.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "sass-watch": "^0.1.0"
   },
-  "Dependencies": {
-    "sticky-sidebar": "^3.3.1"
-  },
   "dependencies": {
-    "autoprefixer": "^9.6.5",
-    "browserslist": "^4.7.1",
-    "caniuse-lite": "^1.0.30001002"
-  }
+    "autoprefixer": "^9.7.6"
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 1%",
+    "IE 10"
+  ]
 }

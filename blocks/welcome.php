@@ -34,7 +34,7 @@
 				<h1 class="<?php echo $menu_class; ?> text-center text-uppercase mb-5"><?php _e( 'Отдых в Украине', 'restx' ); ?></h1>
 				<div class="hero__block">
 					<div class="hero__block-cities mb-4">
-						<input list="hero_city" id="my_hero_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
+						<input list="hero_city" id="my_welcome_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
 					  <datalist id="hero_city">
 					  	<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false) );
 								foreach ( $maincitylists as $citylist ): ?>
