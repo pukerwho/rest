@@ -486,7 +486,8 @@ if ($('.send-message').length > 0) {
 // WEATHER START //
 var cityWeather = $(".weather-block").data("weather");
 console.log(cityWeather);
-var mainWeather = {
+if (cityWeather) {
+  var mainWeather = {
     init: function() {
       return mainWeather.getWeather();
   },
@@ -517,6 +518,8 @@ var mainWeather = {
     return "<div class='pressure'><span class='font-weight-bold'>Температура:</span> " + cityTemp.toFixed(2) + " C</div><div><span class='font-weight-bold'>В данный момент:</span> " + cityStatus + "</div><div class='weather-block__icon'><img src='https://openweathermap.org/img/w/" + cityIcons + ".png' ></div>"
   }
 };
+
+}
 
 var echo = function(dataPass) {
   $.ajax({
