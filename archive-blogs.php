@@ -72,8 +72,8 @@
 								</div>
 								<div>
 									<?php 
-										$content = get_the_content(); 
-										echo mb_strimwidth($content, 0, 150, '...');
+										$content_text = wp_strip_all_tags( get_the_content() );
+										echo mb_strimwidth($content_text, 0, 150, '...');
 									?>
 								</div>
 							</div>
