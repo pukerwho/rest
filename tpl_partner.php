@@ -300,7 +300,6 @@ Template Name: Партнерство
 					<!-- 093-77-12-218
 					<br>050-28-62-184 -->
 					099-77-13-997
-					<br>098-35-00-394
 				</div>
 				<!-- <a href="https://docs.google.com/forms/d/1J14J9G1fIYQA2oXnfyNny0LkPT7QbLYFDwTGX2KfIuI/edit" target="_blank" class="text-dark">
 					<div class="btn bg-pastel-green">

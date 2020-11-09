@@ -2,7 +2,7 @@
 	<div class="container-fluid cf_px">
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-12">
-				<h2><?php _e( 'Куда поехать летом на море', 'restx' ); ?></h2>
+				<h2><?php _e( 'Популярные курорты', 'restx' ); ?></h2>
 				<p class="mb-5"><?php _e( 'Где отдыхать в Украине?', 'restx' ); ?></p>		
 				<!-- MAINCARDS PC VERSION -->
 				<div class="maincards__grid pc-show">
@@ -11,17 +11,11 @@
 						'parent' => 0, 
 						'hide_empty' => false,
 						'meta_query' => array(
-							'relation' => 'OR',
 				      array(
-								'key'       => '_crb_citylist_location',
-								'value'     => 'azovsea',
+								'key'       => '_crb_citylist_iscurort',
+								'value'     => 'yes',
 								'compare'   => '='
 				      ),
-				      array(
-								'key'       => '_crb_citylist_location',
-								'value'     => 'blacksea',
-								'compare'   => '='
-				      )
 				    )
 					));
 					shuffle( $maincitylists );
@@ -46,17 +40,11 @@
 								'parent' => 0, 
 								'hide_empty' => false,
 								'meta_query' => array(
-									'relation' => 'OR',
 						      array(
-										'key'       => '_crb_citylist_location',
-										'value'     => 'azovsea',
+										'key'       => '_crb_citylist_iscurort',
+										'value'     => 'yes',
 										'compare'   => '='
 						      ),
-						      array(
-										'key'       => '_crb_citylist_location',
-										'value'     => 'blacksea',
-										'compare'   => '='
-						      )
 						    )
 							));
 							shuffle( $maincitylists );
@@ -76,13 +64,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="button-more text-center">
-					<a href="<?php echo get_page_url('tpl_allcity') ?>">
-					<div class="btn"><?php _e( 'Все города', 'restx' ); ?></div>
+		<div class="row mb-5">
+			<div class="col-md-12 d-flex justify-content-center">
+				<a href="<?php echo get_page_url('tpl_allcity') ?>" class="btn-more text-center d-flex align-items-center">
+					<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35px" class="mr-4">
+					<div class="btn-more-info d-flex align-items-center">
+						<img src="http://localhost/mythemetwo/restx/wp-content/uploads/2019/04/photo_2019-04-15-10.08.50.jpeg" height="50px" class="rounded-circle">
+						<span><?php _e( 'Посмотреть все города', 'restx' ); ?></span>	
+					</div>
 				</a>
-				</div>
 			</div>
 		</div>
 	</div>

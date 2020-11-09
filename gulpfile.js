@@ -2,6 +2,7 @@ const { src, dest, series } = require('gulp');
 const sass = require('gulp-sass');
 const inlinesource = require('gulp-inline-source');
 const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
 
 function scss() {
   return src('./sass/**/*.scss')
@@ -15,6 +16,12 @@ function prefix() {
     .pipe(dest('./css'));
 }
 
+function scripts() {
+	return src('./src/js/**/*.js')
+		.pipe(concat('all.js'))
+    .pipe(dest('./js'));
+}
+
 function inlinecss() {
   return src('temp/header.php')
     .pipe(inlinesource())
@@ -23,6 +30,7 @@ function inlinecss() {
 
 exports.prefix = prefix;
 exports.scss = scss;
+exports.scripts = scripts;
 exports.inlinecss = inlinecss;
 
-exports.default = series(scss, prefix, inlinecss);
+exports.default = series(scss, prefix, scripts, inlinecss);

@@ -65,7 +65,7 @@
 					<a href="<?php 
 					$term_link = get_term_link($premium_slug, 'collections');
 					echo $term_link;
-					?>"><div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div></a>
+					?>"><?php _e( 'Еще варианты', 'restx' ); ?></a>
 				</div>
 			</div>
 		</div>

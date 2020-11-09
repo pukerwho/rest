@@ -1,6 +1,7 @@
 node_modules/
 sass/
 temp/
+src/
 .sass-cache/
 add_hotels.php
 add_hotels_sheet.php

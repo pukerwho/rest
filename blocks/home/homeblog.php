@@ -26,14 +26,6 @@
 			$blog_how_to_query = new WP_Query( array( 
 				'post_type' => 'blogs', 
 				'posts_per_page' => 2,
-				'orderby' => 'rand',
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'blog-categories',
-						'field' => 'slug',
-						'terms' => $blog_how_term_slug
-					)
-				)
 			) );
 		if ($blog_how_to_query->have_posts()) : while ($blog_how_to_query->have_posts()) : $blog_how_to_query->the_post(); ?>
 		<div class="col-md-4 mb-4">
@@ -61,14 +53,7 @@
 				$blog_other_query = new WP_Query( array( 
 					'post_type' => 'blogs', 
 					'posts_per_page' => 3,
-					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'blog-categories',
-							'field' => 'slug',
-							'terms' => $blog_other_slug
-						)
-					)
+					'offset' => 2
 				) );
 			if ($blog_other_query->have_posts()) : while ($blog_other_query->have_posts()) : $blog_other_query->the_post(); ?>
 				<div class="home_blog second mb-4">

@@ -40,8 +40,9 @@ require_once get_template_directory() . '/inc/custom-fields/post-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/page-meta.php';
 require_once get_template_directory() . '/inc/hotels/meta.php';
 require_once get_template_directory() . '/inc/filters/catalog-filter.php';
-require_once get_template_directory() . '/inc/filters/city-filter.php';
+// require_once get_template_directory() . '/inc/filters/city-filter.php';
 require_once get_template_directory() . '/inc/loadmore/catalog-loadmore.php';
+require_once get_template_directory() . '/inc/shortcodes.php';
 
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
@@ -64,22 +65,7 @@ register_nav_menus( array(
   'head_menu' => 'Главное меню',
 ) );
 
-// Register sidebars
-function registerThemeSidebars() {
-    if( !function_exists( 'register_sidebar' ) ) {
-        return;
-    }
-    register_sidebar( array(
-        'name' => 'Main sidebar',
-        'id' => 'main-sidebar',
-        'description' => '',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
-}
-add_action( 'widgets_init', 'registerThemeSidebars' );
+
 function addAdminEditorStyle() {
     add_editor_style( get_stylesheet_directory_uri() . 'css/editor-style.css' );
 };
@@ -89,29 +75,29 @@ function theme_name_scripts() {
     // wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/style.css', false, time() );
     wp_enqueue_style( 'jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css', false, time() );
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script('comment-reply');
+    wp_enqueue_script( 'comment-reply' );
     wp_enqueue_script( 'jquery-ui-core' );
-    wp_enqueue_script( 'jquery-ui-touch-punch', get_template_directory_uri() . '/js/jquery-ui-touch-punch.min.js', '','',true);
-    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js','','',true);
-    wp_enqueue_script( 'jquery.serialize-object', get_template_directory_uri() . '/js/jquery.serialize-object.min.js','','',true);
-    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.min.js','','',true);
-    wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js','','',true);
-    wp_enqueue_script( 'add_hotel_ajax', get_template_directory_uri() . '/js/add_hotel_ajax.js','','',true);
-    wp_enqueue_script( 'animate-puk', get_template_directory_uri() . '/js/animate-puk.js','','',true);
-    wp_register_script( 'loadmore__catalog', get_stylesheet_directory_uri() . '/js/loadmore_catalog.js', array('jquery') );
-    wp_enqueue_script( 'myscripts', get_template_directory_uri() . '/js/scripts.js', '','',true);
+    // wp_enqueue_script( 'jquery-ui-touch-punch', get_template_directory_uri() . '/js/jquery-ui-touch-punch.min.js', '','',true);
+    // wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js','','',true);
+    // wp_enqueue_script( 'jquery.serialize-object', get_template_directory_uri() . '/js/jquery.serialize-object.min.js','','',true);
+    // wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.min.js','','',true);
+    // wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js','','',true);
+    // wp_enqueue_script( 'add_hotel_ajax', get_template_directory_uri() . '/js/add_hotel_ajax.js','','',true);
+    // wp_enqueue_script( 'animate-puk', get_template_directory_uri() . '/js/animate-puk.js','','',true);
+    // wp_register_script( 'loadmore__catalog', get_stylesheet_directory_uri() . '/js/loadmore_catalog.js', array('jquery') );
+    wp_enqueue_script( 'myscripts', get_template_directory_uri() . '/js/all.js', '','',true);
  
-    wp_localize_script( 'loadmore__catalog', 'loadmore_params__catalog', array(
-        'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
-        'posts' => json_encode( $custom_query_catalog->query_vars ), // everything about your loop is here
-        'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
-        'max_page' => $custom_query_catalog->max_num_pages,
-        'cityname' => $custom_query_catalog->cityname,
-        'catalog_price_min' => $custom_query_catalog->catalog_price_min,
-        'catalog_price_max' => $custom_query_catalog->catalog_price_max,
-    ) );
+    // wp_localize_script( 'loadmore__catalog', 'loadmore_params__catalog', array(
+    //     'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
+    //     'posts' => json_encode( $custom_query_catalog->query_vars ),
+    //     'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+    //     'max_page' => $custom_query_catalog->max_num_pages,
+    //     'cityname' => $custom_query_catalog->cityname,
+    //     'catalog_price_min' => $custom_query_catalog->catalog_price_min,
+    //     'catalog_price_max' => $custom_query_catalog->catalog_price_max,
+    // ) );
 
-    wp_enqueue_script( 'loadmore__catalog');
+    // wp_enqueue_script( 'loadmore__catalog');
 };
 
 //подключаем стили к админке
@@ -307,7 +293,8 @@ function your_prefix_register_taxonomy() {
     'has_archive' => true,
     'sort' => true,
     'rewrite' => array(
-      'with_front' => false,
+      'slug' => 'citylist',
+      'with_front'    => true,
       'hierarchical' => true,
     ),
   );
@@ -315,6 +302,7 @@ function your_prefix_register_taxonomy() {
   register_taxonomy( 'citylist', array( 'hotels', 'webcamers', 'blogs', 'post_comment', 'way', 'wow' ), $args );
 }
 add_action( 'init', 'your_prefix_register_taxonomy');
+
 
 function my_custom_upload_mimes($mimes = array()) {
     $mimes['svg'] = "image/svg+xml";
@@ -424,6 +412,67 @@ function tutCount($id) {
     return $hotel_count;
   }
 }
+
+add_action( 'wp_enqueue_scripts', 'myRating' );
+function myRating() {
+  wp_register_script( 'rating', get_template_directory_uri() . '/js/rating.js', '','',true);
+  wp_localize_script( 'rating', 'rating_params', array(
+    'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+
+    'postId' => $custom_query->postId,
+    'postRatingCount' => $custom_query->postRatingCount,
+    'postRatingOld' => $custom_query->postRatingOld,
+    'postRatingNew' => $custom_query->postRatingNew,
+    ) );
+  wp_enqueue_script( 'rating' );
+}
+
+function rating_post(){
+  global $wpdb;
+  
+  $post_id = stripslashes_deep($_POST['postId']);
+  $post_rating_new = stripslashes_deep($_POST['postRatingNew']);
+  $post_rating_old = stripslashes_deep($_POST['postRatingOld']);
+  $post_rating_count = stripslashes_deep($_POST['postRatingCount']);
+
+  $post_rating_count = $post_rating_count + 1;
+  $post_rating_old = $post_rating_old + $post_rating_new;
+
+  $wpdb->update(
+    'wp_postmeta', 
+    array(
+      'meta_value' => $post_rating_old,
+    ),
+    array(
+      'post_id' => $post_id,
+      'meta_key' => 'meta-hotel-mainrating',
+    ),
+    array( '%s' ),
+    array( // формат для &laquo;где&raquo;
+      '%d',
+      '%s'
+    )
+  );
+
+  $wpdb->update(
+    'wp_postmeta', 
+    array(
+      'meta_value' => $post_rating_count,
+    ),
+    array(
+      'post_id' => $post_id,
+      'meta_key' => 'meta-hotel-rating-count',
+    ),
+    array( '%s' ),
+    array( // формат для &laquo;где&raquo;
+      '%d',
+      '%s'
+    )
+  );
+}
+
+add_action('wp_ajax_rating_post_back', 'rating_post');
+add_action('wp_ajax_nopriv_rating_post_back', 'rating_post');
 
 
 //Alert для комментов

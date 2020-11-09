@@ -22,6 +22,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'std'  => 1,
       ),
       array(
+        'name'  => 'Кол-во оценок',
+        'id' => $prefix . 'hotel-rating-count',
+        'type' => 'number',
+        'std'  => 1,
+      ),
+      array(
         'name'  => 'Минимальная стоимость',
         'id' => $prefix . 'hotel-minprice',
         'type' => 'number',

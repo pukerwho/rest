@@ -65,7 +65,7 @@
 					$term_link = get_term_link($family_slug, 'collections');
 					echo $term_link;
 					?>">
-						<div class="btn"><?php _e( 'Смотреть больше вариантов', 'restx' ); ?></div>
+						<?php _e( 'Еще варианты', 'restx' ); ?>
 					</a>
 				</div>
 			</div>

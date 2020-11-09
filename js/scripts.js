@@ -42,19 +42,31 @@ $(function() {
 $(window).scroll(function(){
   var h_scroll = $(this).scrollTop();
   if (h_scroll > 100) {
-    $('header').addClass('header__fixed')
+    $('.header_bottom').addClass('header_bottom_fixed')
   } else {
-    $('header').removeClass('header__fixed')
+    $('.header_bottom').removeClass('header_bottom_fixed')
   }
 })
+
+function getMaxArray(forMaxArray) {
+  return Math.max.apply(null, forMaxArray);
+}
 
 $('.allcity-button').on('click', function(){
   $('.header__allcity').toggleClass('header__allcity-open');
   $('.allcity-button-open').toggleClass('allcity-button-open-active');
   $('.allcity-button-close').toggleClass('allcity-button-close-active');
-  $('.modal-bg').toggleClass('modal-bg__open');
+  $('.modal-bg').toggleClass('open');
   $('body').toggleClass('modal-open');
 });
+
+console.log('aga');
+
+
+$('.header__mobile_toggle').on('click', function(){
+  $(this).toggleClass('open');
+  $('.mobile-menu').toggleClass('show');
+})
 
 $('.lang').on('click', function(){
   if ($('.lang a').hasClass('active')){
@@ -101,7 +113,7 @@ for (bottomMenuItem of bottomMenuItems) {
       dataThisItem = this.dataset.bottomBtn;
       findDivWithData = document.querySelector('.modal_menu[data-bottom-btn='+ dataThisItem +']');
       findDivWithData.classList.add('open');
-      modalBg.classList.add('modal-bg__open');
+      modalBg.classList.add('open');
     })
   }
 }
@@ -112,7 +124,7 @@ for (modalClose of modalCloses) {
       e.preventDefault;
       for (modalMenu of modalMenus) {
         modalMenu.classList.remove('open');
-        modalBg.classList.remove('modal-bg__open');    
+        modalBg.classList.remove('open');    
       }
     })
   }
@@ -206,7 +218,7 @@ if ($('.modal-callback-btn').length > 0) {
   $(document).on('click', '.modal-callback-btn', function(){
     $('.modal-callback').toggleClass('modal-callback__open');
     $('body').toggleClass('modal-open');
-    $('.modal-bg').toggleClass('modal-bg__open');
+    $('.modal-bg').toggleClass('open');
     // $('.modal-callback-icon').attr('src', 'https://vidpochivai.com.ua/wp-content/themes/rest/img/modal-close.svg');
     $('.modal-callback-icon-phone').toggleClass('modal-callback-icon-hide');
     $('.modal-callback-icon-close').toggleClass('modal-callback-icon-show');
@@ -334,99 +346,67 @@ if ($(document).width() < 960) {
   })
 }
 
-//SWIPER
-if ($(document).width() < 960) {
-  var mySwiper = new Swiper ('.swiper-maincards', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-maincards-button-next',
-      prevEl: '.swiper-maincards-button-prev',
-    },
-  });
-};
-
-if ($(document).width() < 960) {
-  var mySwiper = new Swiper ('.swiper-hotels', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-hotels-button-next',
-      prevEl: '.swiper-hotels-button-prev',
-    },
-  });
-};
-
-//SWIPER REGION
-if ($(document).width() > 960) {
-  var myRegionSwiper = new Swiper ('.swiper-region', {
-    slidesPerView: 5,
-    spaceBetween: 15,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-region-button-next',
-      prevEl: '.swiper-region-button-prev',
-    },
-  });
-};
-if ($(document).width() < 960) {
-  var myRegionSwiper = new Swiper ('.swiper-region', {
-    slidesPerView: 2,
-    spaceBetween: 15,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-region-button-next',
-      prevEl: '.swiper-region-button-prev',
-    },
-  });
-};
-
-//SWIPER CITYLIST MOBILE NAV
-var NavSwiper = new Swiper ('.citylist_nav_container', {
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  loop: true,
-});
-
-//SWIPER NOW WATCH
-var nowwatch_button_next = $('.swiper-nowwatch-button-next');
-var nowwatch_button_prev = $('.swiper-nowwatch-button-prev');
-var mySwiper = new Swiper ('.swiper-hotels-now-watch', {
-  slidesPerView: 7,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: nowwatch_button_next,
-    prevEl: nowwatch_button_prev,
-  },
-});
-
-//SWIPER SINGLE CARD IMG
-// $(document).on('click', '.swiper-click', function(event){
-//   var swiper_id = $(this).attr("data-swiper");
-//   console.log(swiper_id);
-//   hotelcard_button_next = $('.swiper-next-' + swiper_id);
-// })
-
-var hotelItemSwiper = function() {
-  $('.hotel-item-swiper').each(function(){
-    swiper_next = $(this).find('.swiper-hotelcard-button-next');
-    swiper_next_id = swiper_next.attr("data-swiper");
-    var mySwiperHotelCard = new Swiper($(this), {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      navigation: {
-        nextEl: $('.swiper-next-'+swiper_next_id),
-        prevEl: $('.swiper-prev-'+swiper_next_id),
-      },
-    });
-  });
+// Определяем высоту для блока Info (Места на главной странице)
+let allHomePlacesInfo = document.querySelectorAll('.home_places_item_info');
+let homePlacesInfoArray = [];
+for (HomePlacesInfo of allHomePlacesInfo) {
+  if (HomePlacesInfo) {
+    homePlacesInfoArray.push(HomePlacesInfo.offsetHeight);
+  }
 }
 
-hotelItemSwiper();
+if (homePlacesInfoArray.length > 1) {
+  let maxHomePlacesInfoHeight = getMaxArray(homePlacesInfoArray);  
+  for (HomePlacesInfo of allHomePlacesInfo) {
+    if (HomePlacesInfo) {
+      HomePlacesInfo.style.height = maxHomePlacesInfoHeight + 'px';
+    }
+  }
+}
+
+
+if ( $('.single-hotel-territory').length > 0 ) {
+  var singleHotelTerritoryLength = singleHotelTerritory.slides.length;
+  $('.single-hotel-territory-count-length').append(singleHotelTerritoryLength);
+
+  var singleHotelTerritoryCurrent = singleHotelTerritory.realIndex;
+  singleHotelTerritoryCurrent = singleHotelTerritoryCurrent + 1;
+  $('.single-hotel-territory-count-current').append(singleHotelTerritoryCurrent);
+}
+
+singleHotelTerritory.on('slideChange', function () {
+  var singleHotelTerritoryCurrent = singleHotelTerritory.realIndex;
+  singleHotelTerritoryCurrent = singleHotelTerritoryCurrent + 1;
+  $('.single-hotel-territory-count-current').html(singleHotelTerritoryCurrent);
+});
+
+
+// Модальное окно
+function openModal(attrModal) {
+  $('.modal[data-modal-id='+attrModal+']').addClass('open');
+  $('.modal-bg').addClass('open');
+}
+
+function closeModal(attrModal) {
+  $('.modal').removeClass('open');
+  $('.modal-bg').removeClass('open');
+}
+
+$('.js-openmodal-click').on('click', function(e){
+  var clickModalData = $(this).data('modal-id');
+  openModal(clickModalData);
+});
+
+$('.modal_content_close').on('click', function(){
+  closeModal();
+});
+
+document.addEventListener('click', function(e){
+  console.log(e.target.classList.value);
+    if(e.target.classList.value === 'modal open') {
+      closeModal();
+    }
+  });
 
 //Номер Модель Инфа
 $(document).on('click', '.nomer', function(event){
@@ -473,13 +453,13 @@ if ($('.send-message').length > 0) {
   $(document).on('click', '.send-message', function(){
     $('.send-message-modal').addClass('send-message-modal__open');
     $('body').addClass('modal-open');
-    $('.modal-bg').addClass('modal-bg__open');
+    $('.modal-bg').addClass('open');
   });
 
   $(document).on('click', '.send-message-modal__close', function(){
     $('.send-message-modal').removeClass('send-message-modal__open');
     $('body').removeClass('modal-open');
-    $('.modal-bg').removeClass('modal-bg__open');
+    $('.modal-bg').removeClass('open');
   });  
 }
 
@@ -537,7 +517,27 @@ if (cityWeather) {
   // WEATHER END //
 }
 
+let contactSuccess = document.querySelector('.success_contact');
+const contactScriptURL = 'https://script.google.com/macros/s/AKfycbzH8qiokEfHbJe07eaURr63TWtugVvaox3Xs7PfNjXxoERd4ls/exec'
+const contact_page_form = document.forms['contacts']
+if (contact_page_form) {
+  contact_page_form.addEventListener('submit', e => {
+    e.preventDefault()
+    let this_form = contact_page_form
+    let data = new FormData(contact_page_form)
+    fetch(contactScriptURL, { method: 'POST', mode: 'cors', body: data})
+      .then(response => showSuccessMessage(data, this_form))
+      .catch(error => console.error('Error!', error.message))
+  })  
+}
 
+function showSuccessMessage(data, this_form){
+  this_form.reset();
+  contactSuccess.classList.add('show');
+  setTimeout(function(){
+    $('.success_contact').removeClass('show');
+  }, 2500)
+}
 
 //Add NEW
 $('.addnew__nomers_checked').change(function(){
@@ -594,43 +594,6 @@ $(".add_hotel_file").change(function() {
   readURL(this);
 });
 
-// $('.single-hotel-sidebar').stickySidebar({
-//   topSpacing: 60,
-//   bottomSpacing: 0,
-//   containerSelector: '.single-hotem-content',
-// });
-
-// var sidebar = new StickySidebar('.single-hotel-sidebar', {
-//   topSpacing: 60,
-//   bottomSpacing: 560,
-//   containerSelector: '.single-hotel-content',
-//   innerWrapperSelector: '.single-hotel-sidebar'
-// });
-
-
-//sibebar fixed (single-hotel)
-// var singleHotelMain = document.querySelector('.single-hotel-main');
-// var singleHotelSibebar = document.querySelector('.single-hotel-cover-item');
-// if (singleHotelMain) {
-//   var mainHeight = singleHotelMain.clientHeight - 380;
-//   console.log(singleHotelMain.clientHeight);  
-// }
-
-// window.addEventListener('scroll', function() {
-//   var h_scroll = $(this).scrollTop();
-//   if (singleHotelSibebar) {
-//     if (h_scroll > 0 & h_scroll <= 95 ) {
-//       singleHotelSibebar.setAttribute('style', 'position: absolute; top: 0');
-//     }
-//     if (h_scroll > 95) {
-//       singleHotelSibebar.setAttribute('style', 'position: fixed; top: 95px;')  
-//     }
-//     if (h_scroll > mainHeight) {
-//       singleHotelSibebar.setAttribute('style', 'position: absolute; top: -30px; transform: translate3d(0,' + mainHeight + 'px, 0)');
-//     }
-//   }
-// });
-
 //BLOG SUBJECTS 
 let blogSubjects = document.querySelector('.single-blogs_subjects');
 let blogH2 = document.querySelectorAll('.single-blogs__text h2');
@@ -671,3 +634,28 @@ for (anchor of anchors) {
     })
   }
 }
+
+var allCityItems = document.querySelectorAll('.allcity_item');
+var allCityArray = [];
+var charArray = [];
+
+function createChar(item, char) {
+  var newChar = document.createElement('div');
+  newChar.className = 'text-3xl mt-4 mb-1';
+  newChar.innerHTML = char;
+  item.before(newChar);
+}
+
+for (allCityItem of allCityItems) {
+  if (allCityItem) {
+    var cityName = allCityItem.textContent;
+    cityChar = cityName.replace(/\s/g, "").charAt(0);
+    if (charArray.includes(cityChar)) {
+      console.log('уже есть');
+    } else {
+      charArray.push(cityChar);
+      createChar(allCityItem, cityChar)
+    }
+  }
+}
+

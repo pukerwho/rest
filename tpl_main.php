@@ -6,37 +6,14 @@ Template Name: Главная страница
 
 <?php get_header(); ?>
 
-<?php get_template_part( 'blocks/welcome', 'default' ); ?>
-<?php get_template_part( 'blocks/maincards', 'default' ); ?>
-<div class="pt-5">
-	<?php get_template_part( 'blocks/b_rest', 'default' ); ?>	
-</div>
-<div class="pt-5">
-	<?php get_template_part( 'blocks/popularhotels', 'default' ); ?>	
-</div>
-<!-- <div class="pc-show pt-5">
-	<?php /* get_template_part( 'blocks/gocity', 'default' ); */ ?>	
-</div> -->
+<?php get_template_part( 'blocks/home/homehero', 'default' ); ?>
+<?php get_template_part( 'blocks/home/homecities', 'default' ); ?>
+<?php get_template_part( 'blocks/home/homeplaces', 'default' ); ?>
 <div class="pt-5 pb-2">
-	<?php get_template_part( 'blocks/p_main-blog', 'default' ); ?>	
-</div>
-<div class="pt-5">
-	<?php get_template_part( 'blocks/familyhotels', 'default' ); ?>	
+	<?php get_template_part( 'blocks/home/homeblog', 'default' ); ?>	
 </div>
 <div class="py-5">
-	<?php get_template_part( 'blocks/way-slider', 'default' ); ?>	
-</div>
-<div class="py-5">
-	<?php get_template_part( 'blocks/b_social', 'default' ); ?>	
-</div>
-<div class="pt-5">
-	<?php get_template_part( 'blocks/premiumhotels', 'default' ); ?>	
-</div>
-<div class="pt-5">
-	<?php get_template_part( 'blocks/nearseahotels', 'default' );  ?>	
-</div> 
-<div class="pt-5">
-	<?php get_template_part( 'blocks/animalshotels', 'default' ); ?>	
+	<?php get_template_part( 'blocks/home/homebus', 'default' ); ?>	
 </div>
 
 <div class="container pt-5">
