@@ -10917,14 +10917,23 @@ input[type="checkbox"]:checked + label:before {
     content: url(""); }
 
 .b_rest__text p {
-  color: #484848;
-  font-size: 1.5rem; }
+  color: #222222;
+  font-size: 1.75rem; }
 
 .b_rest__text li {
-  color: #484848;
+  color: #222222;
   list-style-type: none;
   font-size: 1.5rem;
   line-height: 1.4; }
+  .b_rest__text li:before {
+    top: 0%;
+    -webkit-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    transform: translateY(7px); }
+
+.b_rest__text .zag {
+  font-size: 1.8rem;
+  color: #222222; }
 
 .addnew {
   padding: 6rem 0; }
