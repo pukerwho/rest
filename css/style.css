@@ -7754,7 +7754,7 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-/*$url_theme: /wp-content/themes/rest;*/
+/*$url_theme: /mythemetwo/restX/wp-content/themes/restx;*/
 html {
   font-size: 10px;
   font-family: 'NotoSans-Regular'; }
@@ -8327,7 +8327,7 @@ input[type="checkbox"]:checked + label:before {
         margin-bottom: 3rem; } }
     .konkurs_title:after {
       content: '';
-      background: url(/mythemetwo/restX/wp-content/themes/restx/img/arrow-hand.svg);
+      background: url(/wp-content/themes/rest/img/arrow-hand.svg);
       background-size: 75px 75px;
       width: 75px;
       height: 75px;
@@ -8387,14 +8387,14 @@ input[type="checkbox"]:checked + label:before {
     outline: none;
     padding: .8rem 1.5rem; }
   .b_pagination .next {
-    background-image: url(/mythemetwo/restX/wp-content/themes/restx/img/pagination-next.svg);
+    background-image: url(/wp-content/themes/rest/img/pagination-next.svg);
     width: 9px;
     height: 14px;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 60%; }
   .b_pagination .prev {
-    background-image: url(/mythemetwo/restX/wp-content/themes/restx/img/pagination-prev.svg);
+    background-image: url(/wp-content/themes/rest/img/pagination-prev.svg);
     width: 9px;
     height: 14px;
     background-position: 50%;
@@ -8685,7 +8685,7 @@ input[type="checkbox"]:checked + label:before {
     display: block;
     width: 5rem;
     height: 5rem;
-    background: url(/mythemetwo/restX/wp-content/themes/restx/img/restx-logo.png);
+    background: url(/wp-content/themes/rest/img/restx-logo.png);
     background-repeat: no-repeat !important;
     background-position: 50% !important;
     background-size: contain !important;
@@ -8700,7 +8700,7 @@ input[type="checkbox"]:checked + label:before {
       display: block;
       width: 5rem;
       height: 5rem;
-      background: url(/mythemetwo/restX/wp-content/themes/restx/img/hand.svg);
+      background: url(/wp-content/themes/rest/img/hand.svg);
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: contain;
@@ -9108,7 +9108,7 @@ input[type="checkbox"]:checked + label:before {
         position: absolute;
         right: 0;
         top: 0;
-        background: url(/mythemetwo/restX/wp-content/themes/restx/img/circle-highlight.svg);
+        background: url(/wp-content/themes/rest/img/circle-highlight.svg);
         background-size: contain;
         background-repeat: no-repeat;
         z-index: -1; }
@@ -9546,7 +9546,7 @@ input[type="checkbox"]:checked + label:before {
     position: relative; }
   .single-hotel .rating__filled-stars {
     height: 16px;
-    background-image: url(/mythemetwo/restX/wp-content/themes/restx/img/star-fill.svg);
+    background-image: url(/wp-content/themes/rest/img/star-fill.svg);
     background-size: contain;
     position: absolute;
     top: 0;
@@ -9556,7 +9556,7 @@ input[type="checkbox"]:checked + label:before {
   .single-hotel .rating__star {
     width: 16px;
     height: 16px;
-    background-image: url(/mythemetwo/restX/wp-content/themes/restx/img/star.svg);
+    background-image: url(/wp-content/themes/rest/img/star.svg);
     background-size: contain;
     cursor: pointer; }
     .single-hotel .rating__star--1:hover ~ .rating__filled-stars,
@@ -10275,13 +10275,13 @@ input[type="checkbox"]:checked + label:before {
     padding: 2rem 0 1rem 0; }
     .single-blogs__text h2:after {
       display: block;
-      content: url(/mythemetwo/restX/wp-content/themes/restx/img/h2line.svg); }
+      content: url(/wp-content/themes/rest/img/h2line.svg); }
   .single-blogs__text h3 {
     font-size: 1.8rem;
     padding: 1rem 0; }
     .single-blogs__text h3:after {
       display: block;
-      content: url(/mythemetwo/restX/wp-content/themes/restx/img/h2line.svg); }
+      content: url(/wp-content/themes/rest/img/h2line.svg); }
   .single-blogs__text ul {
     color: #1b1b1b;
     font-size: 2.1rem;
@@ -10419,7 +10419,7 @@ input[type="checkbox"]:checked + label:before {
     padding: 2rem 0 1rem 0; }
     .citylist__text h2:after {
       display: block;
-      content: url(/mythemetwo/restX/wp-content/themes/restx/img/h2line.svg); }
+      content: url(/wp-content/themes/rest/img/h2line.svg); }
   .citylist__text li {
     position: relative;
     padding-left: 15px; }
@@ -10658,7 +10658,7 @@ input[type="checkbox"]:checked + label:before {
 .way h1.single {
   position: relative; }
   .way h1.single:after {
-    content: url(/mythemetwo/restX/wp-content/themes/restx/img/h2line.svg);
+    content: url(/wp-content/themes/rest/img/h2line.svg);
     display: block; }
 
 .way h1.archive {
@@ -10990,7 +10990,7 @@ input[type="checkbox"]:checked + label:before {
       padding: 1.5rem; }
     .addnew__content .ajax-loader:after {
       content: '';
-      background-image: url(/mythemetwo/restX/wp-content/themes/restx/img/load-notice.png);
+      background-image: url(/wp-content/themes/rest/img/load-notice.png);
       width: 100%;
       height: 100%;
       background-repeat: no-repeat;
@@ -11198,7 +11198,7 @@ html.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(/mythemetwo/restX/wp-content/themes/restx/img/lightbox-loading.gif) no-repeat; }
+  background: url(/wp-content/themes/rest/img/lightbox-loading.gif) no-repeat; }
 
 .lb-nav {
   position: absolute;
@@ -11224,7 +11224,7 @@ html.lb-disable-scrolling {
   width: 34%;
   left: 0;
   float: left;
-  background: url(/mythemetwo/restX/wp-content/themes/restx/img/lightbox-prev.png) left 48% no-repeat;
+  background: url(/wp-content/themes/rest/img/lightbox-prev.png) left 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -11239,7 +11239,7 @@ html.lb-disable-scrolling {
   width: 64%;
   right: 0;
   float: right;
-  background: url(/mythemetwo/restX/wp-content/themes/restx/img/lightbox-next.png) right 48% no-repeat;
+  background: url(/wp-content/themes/rest/img/lightbox-next.png) right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -11293,7 +11293,7 @@ html.lb-disable-scrolling {
   float: right;
   width: 30px;
   height: 30px;
-  background: url(/mythemetwo/restX/wp-content/themes/restx/img/lightbox-close.png) top right no-repeat;
+  background: url(/wp-content/themes/rest/img/lightbox-close.png) top right no-repeat;
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -12228,42 +12228,42 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: 'NotoSans-Bold';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSans-Bold.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSans-Bold.ttf) format("truetype");
   font-display: swap; }
 
 @font-face {
   font-family: 'NotoSans-BoldItalic';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSans-BoldItalic.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSans-BoldItalic.ttf) format("truetype");
   font-display: swap; }
 
 @font-face {
   font-family: 'NotoSans-Italic';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSans-Italic.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSans-Italic.ttf) format("truetype");
   font-display: swap; }
 
 @font-face {
   font-family: 'NotoSans-Regular';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSans-Regular.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSans-Regular.ttf) format("truetype");
   font-display: swap; }
 
 @font-face {
   font-family: 'NotoSerif-Bold';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSerif-Bold.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSerif-Bold.ttf) format("truetype");
   font-display: swap; }
 
 @font-face {
   font-family: 'NotoSerif-BoldItalic';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSerif-BoldItalic.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSerif-BoldItalic.ttf) format("truetype");
   font-display: swap; }
 
 @font-face {
   font-family: 'NotoSerif-Italic';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSerif-Italic.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSerif-Italic.ttf) format("truetype");
   font-display: swap; }
 
 @font-face {
   font-family: 'NotoSerif-Regular';
-  src: url(/mythemetwo/restX/wp-content/themes/restx/fonts/NotoSerif-Regular.ttf) format("truetype");
+  src: url(/wp-content/themes/rest/fonts/NotoSerif-Regular.ttf) format("truetype");
   font-display: swap; }
 
 .shortcode_blog {
