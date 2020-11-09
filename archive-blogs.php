@@ -63,12 +63,18 @@
 										<?php the_title(); ?>		
 									</a>
 								</div>
-								<div class="blog_item_cat">
+								<div class="blog_item_cat mb-4">
 									<?php
 									$home_blog_terms = get_the_terms( $blog_how_to_query->ID, 'blog-categories' );
 									foreach (array_slice($home_blog_terms, 0,1) as $home_blog_term): ?>
 										<a href="<?php echo get_term_link($home_blog_term); ?>"><?php echo $home_blog_term->name; ?></a>
 									<?php endforeach; ?>	
+								</div>
+								<div>
+									<?php 
+										$content = get_the_content(); 
+										echo mb_strimwidth($content, 0, 150, '...');
+									?>
 								</div>
 							</div>
 						</div>

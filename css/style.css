@@ -10142,6 +10142,8 @@ input[type="checkbox"]:checked + label:before {
   position: relative;
   margin-bottom: 2.5rem; }
   .blog_item_img {
+    min-width: 150px;
+    min-height: 150px;
     width: 150px;
     height: 150px; }
     .blog_item_img img {
@@ -10153,7 +10155,8 @@ input[type="checkbox"]:checked + label:before {
     padding-left: 2rem; }
   .blog_item_title a {
     color: #000000;
-    font-size: 1.75rem; }
+    font-size: 2rem;
+    font-weight: 600; }
   .blog_item_cat a {
     color: #f56565;
     font-size: 1.2rem;
