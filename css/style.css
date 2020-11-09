@@ -7948,6 +7948,12 @@ input[type="checkbox"]:checked + label:before {
   border-radius: 1.25rem;
   margin-right: 1.5rem;
   padding: 1.5rem 2rem; }
+  @media (max-width: 767px) {
+    .tag {
+      width: 90%;
+      display: block;
+      margin: auto;
+      margin-bottom: 1rem; } }
 
 .select_container {
   position: relative; }

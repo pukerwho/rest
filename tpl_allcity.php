@@ -24,7 +24,7 @@ Template Name: Все города
 			</div>
 		</div>
 		<div class="row justify-content-center mb-5">
-			<div class="tags d-flex">
+			<div class="tags d-flex flex-column justify-content-center flex-lg-row col-12">
 				<li><a href="<?php echo get_page_url('tpl_karpaty') ?>" class="tag"><?php _e('Карпаты', 'restx'); ?></a></li>
 				<li><a href="<?php echo get_page_url('tpl_blacksea') ?>" class="tag" style="background: rgba(255, 211, 29, 0.15);"><?php _e('Черное море', 'restx'); ?></a></li>
 				<li><a href="<?php echo get_page_url('tpl_azovsea') ?>" class="tag" style="background: rgba(95, 126, 255, 0.15);"><?php _e('Азовское', 'restx'); ?></a></li>
