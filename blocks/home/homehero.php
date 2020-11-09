@@ -11,7 +11,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-7 pc-show text-center">
 				<div class="homehero__block">
-					<div class="homehero__block-cities mb-4">
+					<div class="homehero__block-cities mb-2">
 						<input list="homehero_city" id="my_welcome_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>
 					  <datalist id="homehero_city">
 					  	<?php $maincitylists = get_terms( array( 'taxonomy' => 'citylist', 'parent' => 0, 'hide_empty' => false) );
