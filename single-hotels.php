@@ -3,9 +3,12 @@
 <?php $countNumber = tutCount(get_the_ID()); ?>
 <?php 
 	$current_rating = rwmb_meta('meta-hotel-mainrating');
-	$count_rating = rwmb_meta('meta-hotel-rating-count');
-	echo $count_rating;
-	echo $current_rating;
+	if (rwmb_meta('meta-hotel-rating-count')) {
+		$count_rating = rwmb_meta('meta-hotel-rating-count');	
+	} else {
+		$count_rating = 1;
+	}
+	
 	if ($count_rating) {
 		$count_rating = $count_rating;
 	} else {
