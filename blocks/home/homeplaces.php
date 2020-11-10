@@ -46,7 +46,7 @@
 			<a href="<?php echo get_post_type_archive_link('wow'); ?>" class="btn-more text-center d-flex align-items-center">
 				<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35px" class="mr-4">
 				<div class="btn-more-info d-flex align-items-center">
-					<img src="http://localhost/mythemetwo/restx/wp-content/uploads/2019/04/photo_2019-04-15-10.08.50.jpeg" height="50px" class="rounded-circle">
+					<img src="https://859628.smushcdn.com/1875481/wp-content/uploads/2020/07/akvapark_oazis-150x150.jpg" height="50px" class="rounded-circle">
 					<span><?php _e( 'Посмотреть все интересные места', 'restx' ); ?></span>	
 				</div>
 			</a>

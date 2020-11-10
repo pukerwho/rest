@@ -69,7 +69,7 @@
 				<a href="<?php echo get_page_url('tpl_allcity') ?>" class="btn-more text-center d-flex align-items-center">
 					<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35px" class="mr-4">
 					<div class="btn-more-info d-flex align-items-center">
-						<img src="http://localhost/mythemetwo/restx/wp-content/uploads/2019/04/photo_2019-04-15-10.08.50.jpeg" height="50px" class="rounded-circle">
+						<img src="https://vidpochivai.com.ua/wp-content/uploads/2019/08/dragobrat-150x150.jpg" height="50px" class="rounded-circle">
 						<span><?php _e( 'Посмотреть все города', 'restx' ); ?></span>	
 					</div>
 				</a>

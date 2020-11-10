@@ -78,7 +78,7 @@
 						<a href="#" class="btn-more white text-center d-flex align-items-center">
 							<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35px" class="mr-4">
 							<div class="btn-more-info d-flex align-items-center">
-								<img src="http://localhost/mythemetwo/restx/wp-content/uploads/2019/04/photo_2019-04-15-10.08.50.jpeg" height="50px" class="rounded-circle">
+								<img src="https://vidpochivai.com.ua/wp-content/uploads/2020/07/photo_2020-07-06_22-58-09-150x150.jpg" height="50px" class="rounded-circle">
 								<span><?php _e( 'Перейти в каталог', 'restx' ); ?></span>	
 							</div>
 						</a>	
