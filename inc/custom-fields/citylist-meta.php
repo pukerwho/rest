@@ -85,6 +85,13 @@ function crb_attach_theme_options() {
             'compare' => '=',
         )
         ) ),
+      Field::make( 'textarea', 'crb_citylist_camers', 'Камера (iframe)' )->set_conditional_logic( array(
+          array(
+            'field' => 'crb_citylist_newtemplate',
+            'value' => '1', 
+            'compare' => '=',
+        )
+        ) ),
   ) );
 }
 

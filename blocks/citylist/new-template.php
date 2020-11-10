@@ -49,7 +49,10 @@
 								<li><a href="#citylist_common"><?php _e('Общая информация', 'restx'); ?></a></li>
 								<li><a href="#citylist_hotels"><?php _e('Жилье в городе', 'restx'); ?></a></li>
 								<li><a href="#citylist_wow"><?php _e('Куда пойти', 'restx'); ?></a></li>
-								<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
+								<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers')): ?>
+									<li><a href="#citylist_camers"><?php _e('Онлайн камеры', 'restx'); ?></a></li>
+								<?php endif ?>
+								<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers')): ?>
 									<li><a href="#citylist_video"><?php _e('Видео', 'restx'); ?></a></li>
 								<?php endif ?>	
 								<li><a href="#near"><?php _e('Ближайшие курорты', 'restx'); ?></a></li>
@@ -88,6 +91,15 @@
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_placestext') ); ?>
 					</div>
 					<!-- END Места в городе -->
+
+					<!-- Камеры -->
+					<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers')): ?>
+						<h2 id="citylist_camers" class="mb-4"><?php _e( 'Онлайн камеры', 'restx' ); ?></h2>
+				  	<div>
+				  		<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers') ?>	
+				  	</div>
+			  	<?php endif ?>
+					<!-- END Камеры -->
 
 					<!-- Видео -->
 					<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
