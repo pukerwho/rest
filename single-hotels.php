@@ -4,6 +4,8 @@
 <?php 
 	$current_rating = rwmb_meta('meta-hotel-mainrating');
 	$count_rating = rwmb_meta('meta-hotel-rating-count');
+	echo $count_rating;
+	echo $current_rating;
 	if ($count_rating) {
 		$count_rating = $count_rating;
 	} else {
@@ -11,6 +13,7 @@
 	}
 	$new_rating = $current_rating/$count_rating;
 	$width_rating = ($new_rating/5) * 100;
+
 ?>
 <input type="hidden" value="<?php echo $current_rating; ?>" class="post_rating_old">
 <input type="hidden" value="<?php echo get_the_ID(); ?>" class="post_id">
