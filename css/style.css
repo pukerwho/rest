@@ -9554,11 +9554,22 @@ input[type="checkbox"]:checked + label:before {
 
 .single-hotel .rating {
   text-align: center; }
+  .single-hotel .rating input[type="checkbox"] {
+    opacity: 0; }
+  .single-hotel .rating input[type=checkbox] + label {
+    font-size: inherit;
+    position: relative;
+    padding-left: 0; }
+    .single-hotel .rating input[type=checkbox] + label::before {
+      content: none; }
+    .single-hotel .rating input[type=checkbox] + label::after {
+      content: none; }
   .single-hotel .rating__bar {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    position: relative; }
+    position: relative;
+    top: 1px; }
   .single-hotel .rating__filled-stars {
     height: 16px;
     background-image: url(/wp-content/themes/rest/img/star-fill.svg);
