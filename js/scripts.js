@@ -517,6 +517,8 @@ if (cityWeather) {
   // WEATHER END //
 }
 
+//ФОРМЫ
+
 let contactSuccess = document.querySelector('.success_contact');
 const contactScriptURL = 'https://script.google.com/macros/s/AKfycbzH8qiokEfHbJe07eaURr63TWtugVvaox3Xs7PfNjXxoERd4ls/exec'
 const contact_page_form = document.forms['contacts']
@@ -526,6 +528,20 @@ if (contact_page_form) {
     let this_form = contact_page_form
     let data = new FormData(contact_page_form)
     fetch(contactScriptURL, { method: 'POST', mode: 'cors', body: data})
+      .then(response => showSuccessMessage(data, this_form))
+      .catch(error => console.error('Error!', error.message))
+  })  
+}
+
+let modalSuccess = document.querySelector('.modal_success');
+const modalScriptURL = 'https://script.google.com/macros/s/AKfycbxCuyzBJNQ4c7BVNBEGF3u37mkMg2RgvKA22yXzRYl7ZsTy_yY/exec'
+const modal_form = document.forms['form_add']
+if (modal_form) {
+  modal_form.addEventListener('submit', e => {
+    e.preventDefault()
+    let this_form = modal_form
+    let data = new FormData(modal_form)
+    fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
       .then(response => showSuccessMessage(data, this_form))
       .catch(error => console.error('Error!', error.message))
   })  

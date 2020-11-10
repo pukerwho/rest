@@ -105,6 +105,7 @@
           <span class="mr-4"><?php _e('Отправить', 'restx'); ?></span>
           <img src="<?php bloginfo('template_url'); ?>/img/white-arrow.svg" width="12px" class="mt-1">
         </button>
+        <div class="modal_success hidden"><?php _e('Мы получили ваше сообщение. Скоро ответим Вам', 'restx'); ?>.</div>
       </form>
     </div>
   </div>

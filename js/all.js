@@ -645,26 +645,49 @@ if (cityWeather) {
   // WEATHER END //
 }
 
-let contactSuccess = document.querySelector('.success_contact');
-const contactScriptURL = 'https://script.google.com/macros/s/AKfycbzH8qiokEfHbJe07eaURr63TWtugVvaox3Xs7PfNjXxoERd4ls/exec'
+//ФОРМЫ
+
+
+const contactScriptURL = 'https://script.google.com/macros/s/AKfycbxCuyzBJNQ4c7BVNBEGF3u37mkMg2RgvKA22yXzRYl7ZsTy_yY/exec'
 const contact_page_form = document.forms['contacts']
 if (contact_page_form) {
   contact_page_form.addEventListener('submit', e => {
     e.preventDefault()
+    let contactSuccess = document.querySelector('.success_contact');
+    let contactSuccessShow = 1;
     let this_form = contact_page_form
     let data = new FormData(contact_page_form)
     fetch(contactScriptURL, { method: 'POST', mode: 'cors', body: data})
-      .then(response => showSuccessMessage(data, this_form))
+      .then(response => showSuccessMessage(data, this_form, contactSuccess, contactSuccessShow))
       .catch(error => console.error('Error!', error.message))
   })  
 }
 
-function showSuccessMessage(data, this_form){
+const modalScriptURL = 'https://script.google.com/macros/s/AKfycbxCuyzBJNQ4c7BVNBEGF3u37mkMg2RgvKA22yXzRYl7ZsTy_yY/exec'
+const modal_form = document.forms['form_add']
+if (modal_form) {
+  modal_form.addEventListener('submit', e => {
+    e.preventDefault()
+    let modalSuccess = document.querySelector('.modal_success');
+    let modalSuccessShow = 0;
+    let this_form = modal_form
+    let data = new FormData(modal_form)
+    fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
+      .then(response => showSuccessMessage(data, this_form, modalSuccess, modalSuccessShow))
+      .catch(error => console.error('Error!', error.message))
+  })  
+}
+
+function showSuccessMessage(data, this_form, element, show){
   this_form.reset();
-  contactSuccess.classList.add('show');
-  setTimeout(function(){
-    $('.success_contact').removeClass('show');
-  }, 2500)
+  element.classList.add('show');
+  if (show === 0) {
+    console.log('ок, не показываем');
+  } else {
+    setTimeout(function(){
+      element.classList.remove('show');
+    }, 2500)
+  }
 }
 
 //Add NEW
