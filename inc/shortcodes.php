@@ -60,7 +60,7 @@
   				<?php echo $params_hotel['text']; ?>
   			</p>
   			<div class="shortcode_hotel_btn d-flex align-items-center">
-	  			<a href="#" class="btn-rest btn-rest-yellow d-flex align-items-center">
+	  			<a href="<?php echo get_the_permalink($params_hotel['id']); ?>" class="btn-rest btn-rest-yellow d-flex align-items-center">
 	    			<span class="mr-3"><?php _e('Подробнее', 'restx'); ?></span>
             <img src="<?php bloginfo('template_url'); ?>/img/arrow.svg" width="15px">
 	    		</a>	

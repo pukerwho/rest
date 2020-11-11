@@ -63,7 +63,7 @@
 					</div>
 					<!-- END Оглавление -->
 					<!-- Общая информация -->
-					<h2 id="citylist_common" class="mb-4"><?php _e('Общая информация', 'restx'); ?></h2>
+					<h2 id="citylist_common" class="mb-4"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_welcometitle') ?></h2>
 					<div class="citylist_text text-2xl mb-5">
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_welcometext') ); ?>	
 					</div>
@@ -94,7 +94,7 @@
 
 					<!-- Камеры -->
 					<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers')): ?>
-						<h2 id="citylist_camers" class="mb-4"><?php _e( 'Онлайн камеры', 'restx' ); ?></h2>
+						<h2 id="citylist_camers" class="mb-4"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camerstitle') ?></h2>
 				  	<div>
 				  		<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers') ?>	
 				  	</div>
@@ -103,7 +103,7 @@
 
 					<!-- Видео -->
 					<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video')): ?>
-						<h2 id="citylist_video" class="mb-4"><?php _e( 'Видео', 'restx' ); ?></h2>
+						<h2 id="citylist_video" class="mb-4"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_videotitle') ?></h2>
 				  	<div class="youtube-player" data-id="<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_video') ?>"></div>
 			  	<?php endif ?>
 					<!-- END Видео -->

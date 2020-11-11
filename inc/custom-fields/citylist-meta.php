@@ -43,6 +43,13 @@ function crb_attach_theme_options() {
             'compare' => '=',
         )
         ) ),
+      Field::make( 'text', 'crb_citylist_welcometitle', 'Заголовок для Информации' )->set_conditional_logic( array(
+          array(
+            'field' => 'crb_citylist_newtemplate',
+            'value' => '1', 
+            'compare' => '=',
+        )
+        ) ),
       Field::make( 'rich_text', 'crb_citylist_welcometext', 'Общая информация' )->set_conditional_logic( array(
           array(
             'field' => 'crb_citylist_newtemplate',
@@ -79,6 +86,20 @@ function crb_attach_theme_options() {
         )
         ) ),
       Field::make( 'rich_text', 'crb_citylist_placestext', 'Про места' )->set_conditional_logic( array(
+          array(
+            'field' => 'crb_citylist_newtemplate',
+            'value' => '1', 
+            'compare' => '=',
+        )
+        ) ),
+      Field::make( 'text', 'crb_citylist_videotitle', 'Заголовок для Видео' )->set_conditional_logic( array(
+          array(
+            'field' => 'crb_citylist_newtemplate',
+            'value' => '1', 
+            'compare' => '=',
+        )
+        ) ),
+      Field::make( 'text', 'crb_citylist_camerstitle', 'Заголовок для Камер' )->set_conditional_logic( array(
           array(
             'field' => 'crb_citylist_newtemplate',
             'value' => '1', 
