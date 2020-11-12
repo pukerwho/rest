@@ -12407,16 +12407,11 @@ button.swiper-pagination-bullet {
       border-top-left-radius: 1rem;
       border-bottom-left-radius: 1rem; }
   .shortcode_place_title {
-    color: #ffffff;
+    color: #f56565;
     font-size: 2rem; }
   .shortcode_place_text {
     font-size: 1.5rem;
     color: #ffffff; }
-  .shortcode_place_category {
-    color: #f56565;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-transform: uppercase; }
 
 .animate-puk-mask {
   overflow: hidden; }
