@@ -16,6 +16,11 @@
 								'key'       => '_crb_citylist_iscurort',
 								'value'     => 'yes',
 								'compare'   => '='
+				      ),
+				      array(
+								'key'       => '_crb_citylist_showmain',
+								'value'     => 'yes',
+								'compare'   => '='
 				      )
 				    )
 					));
