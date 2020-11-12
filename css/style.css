@@ -12384,6 +12384,38 @@ button.swiper-pagination-bullet {
 .shortcode_hotel_btn a {
   font-size: 1.5rem; }
 
+.shortcode_place {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 1rem; }
+  .shortcode_place_img {
+    width: 150px; }
+    @media (max-width: 767px) {
+      .shortcode_place_img {
+        width: 100%; }
+        .shortcode_place_img img {
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+          border-bottom-left-radius: 0rem;
+          border-bottom-right-radius: 0rem; } }
+    .shortcode_place_img img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem; }
+  .shortcode_place_title {
+    color: #ffffff;
+    font-size: 2rem; }
+  .shortcode_place_text {
+    font-size: 1.5rem;
+    color: #ffffff; }
+  .shortcode_place_category {
+    color: #f56565;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+
 .animate-puk-mask {
   overflow: hidden; }
 

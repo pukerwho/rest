@@ -72,4 +72,43 @@
     return $out;
 	}
 	add_shortcode( 'add_hotel_page', 'addHotelPage' );
+
+
+    function addPlacePage($atts) {
+        $params_hotel = shortcode_atts( array(
+            'id' => 1,
+            'text' => 'Hello',
+        ), $atts );
+        ob_start();
+    ?>
+        <div class="shortcode_place my-5">
+            <a href="<?php echo get_the_permalink($params_hotel['id']); ?>" class="d-flex flex-column flex-md-row">
+                <div class="shortcode_place_img mr-3">
+                    <img src="<?php echo get_the_post_thumbnail_url( $params_hotel['id'], 'medium' ); ?>">
+                </div>
+                <div class="p-5">
+                    <div class="shortcode_place_title mb-2">
+                        <?php echo get_the_title($params_hotel['id']); ?>   
+                    </div>
+                    <div class="shortcode_place_category mb-4">
+                        <?php
+                        $cur_terms = get_the_terms( $params_hotel['id'], 'citylist' );
+                        if( is_array( $cur_terms ) ): ?>
+                            <?php foreach( $cur_terms as $cur_term ): ?>
+                                <?php echo $cur_term->name; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="shortcode_place_text">
+                        <?php echo $params_hotel['text']; ?>
+                    </div>
+                </div>
+            </a>
+        </div>
+    <?php
+    $out = ob_get_clean();
+    wp_reset_postdata();
+    return $out;
+    }
+    add_shortcode( 'add_place_page', 'addPlacePage' );
 ?>
