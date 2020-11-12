@@ -12388,10 +12388,12 @@ button.swiper-pagination-bullet {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 1rem; }
   .shortcode_place_img {
-    width: 150px; }
+    width: 150px;
+    min-width: 150px; }
     @media (max-width: 767px) {
       .shortcode_place_img {
-        width: 100%; }
+        width: 100%;
+        min-width: 100%; }
         .shortcode_place_img img {
           border-top-left-radius: 1rem;
           border-top-right-radius: 1rem;
