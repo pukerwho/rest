@@ -35,6 +35,7 @@ function crb_attach_theme_options() {
           )
       ) ),
       Field::make( 'checkbox', 'crb_citylist_iscurort', 'Курорт?' ),
+      Field::make( 'checkbox', 'crb_citylist_showmain', 'Показывать на главной?' ),
       Field::make( 'checkbox', 'crb_citylist_newtemplate', 'Новый шаблон?' ),
       Field::make( 'textarea', 'crb_citylist_innertext', 'Вступительный текст' )->set_conditional_logic( array(
           array(

@@ -17,7 +17,7 @@
 					) );
 				if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 				<div class="swiper-slide">
-					<a href="" class="home_places_item">
+					<a href="<?php echo get_the_permalink(); ?>" class="home_places_item">
 						<div class="home_places_item_img">
 							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="" class="">
 						</div>
