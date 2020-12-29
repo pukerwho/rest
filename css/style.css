@@ -7925,10 +7925,11 @@ input[type="checkbox"]:checked + label:before {
   #hero_city option {
     width: 100%; }
 
-#content {
-  padding-top: 50px; }
+#content > div {
+  padding-top: 50px;
+  padding-bottom: 3rem; }
   @media (max-width: 767px) {
-    #content {
+    #content > div {
       padding-top: 140px; } }
 
 .home .dark.header .header__menu a {
@@ -8172,6 +8173,9 @@ input[type="checkbox"]:checked + label:before {
   .bg-pink:hover {
     -webkit-box-shadow: 0px 1px 0.001px 0px #c248a8;
     box-shadow: 0px 1px 0.001px 0px #c248a8; }
+
+.bg-custom-grey {
+  background: #e8eaee !important; }
 
 .btn {
   min-width: 150px;
@@ -10603,36 +10607,15 @@ input[type="checkbox"]:checked + label:before {
     width: 40px; }
 
 .citylist_firstphoto {
-  position: relative;
-  margin-bottom: 2.5rem; }
+  position: relative; }
   .citylist_firstphoto img {
-    height: 500px;
+    width: 100%;
     display: block;
-    -webkit-box-shadow: 0 4px 24px rgba(13, 12, 34, 0.1);
-    box-shadow: 0 4px 24px rgba(13, 12, 34, 0.1);
-    border: 1px solid #cccccc;
-    border-radius: 0.75rem;
-    -webkit-transform: rotate(-3deg);
-    -ms-transform: rotate(-3deg);
-    transform: rotate(-3deg);
-    padding: 3rem;
-    margin: auto; }
-    @media (max-width: 767px) {
-      .citylist_firstphoto img {
-        width: 75%;
-        height: auto;
-        padding: 1.5rem; } }
-  .citylist_firstphoto svg {
-    position: absolute;
-    bottom: -3rem;
-    left: 0; }
+    border-radius: 0.75rem; }
 
 .citylist_subjects {
   display: inline-block;
-  background: #ffffff;
-  border: solid 2px #41403E;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  padding: 4rem; }
+  background: #ffffff; }
   .citylist_subjects ol {
     padding: 0;
     margin: 0; }
