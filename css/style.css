@@ -7930,7 +7930,7 @@ input[type="checkbox"]:checked + label:before {
   padding-bottom: 3rem; }
   @media (max-width: 767px) {
     #content > div {
-      padding-top: 140px; } }
+      padding-top: 90px; } }
 
 .home .dark.header .header__menu a {
   text-shadow: 1px 2px 3px black; }
