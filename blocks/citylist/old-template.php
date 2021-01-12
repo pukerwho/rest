@@ -49,7 +49,7 @@
 	  	<!-- end Catalog Hotels -->
 
 	  	<!-- TEXT -->
-	  	<div class="mb-6">
+	  	<div class="content mb-6">
 		  	<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_rich_text') ); ?>	
 	  	</div>
 	  	<!-- END TEXT -->
@@ -58,7 +58,7 @@
 			<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq')): ?>
 				<div id="citylist-faq" class="mt-5">
 					<h2 class="mb-4">Вопросы и ответы</h2>
-					<div>
+					<div class="content">
 						<ul itemscope itemtype="https://schema.org/FAQPage">
 							<?php 
 							$city_faqs = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_faq');

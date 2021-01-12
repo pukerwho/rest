@@ -40,7 +40,7 @@
 			<article class="content">
 				<div class="flex justify-center">
 					<div class="w-full lg:w-7/12">
-						<div class="single-blogs__title flex">
+						<div class="single-blogs__title flex mb-6">
 							<h1 itemprop="headline"><?php the_title(); ?></h1>	
 						</div>
 						<div class="flex mb-5">
