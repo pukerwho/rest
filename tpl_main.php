@@ -19,14 +19,14 @@ Template Name: Главная страница
 <div class="container mx-auto px-2 lg:px-0 pt-8">
 	<div class="flex">
 		<div class="w-full">
-			<div class="citylist__text content">
+			<div class="content">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="content">
 						<?php the_content(); ?>
 					</div>
 					<!-- Вопросы и ответы -->
 					<?php if (carbon_get_post_meta(get_the_ID(), 'crb_page_faq')): ?>
-						<div id="citylist-faq" class="mt-8">
+						<div id="citylist-faq" class="content mt-8">
 							<h2 class="mb-6">Вопросы и ответы</h2>
 							<div>
 								<ul itemscope itemtype="https://schema.org/FAQPage">
