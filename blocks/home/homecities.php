@@ -30,7 +30,7 @@
 						<div class="citycard w-1/2 lg:w-1/5 relative px-2 mb-4">
 							<a href="<?php echo get_term_link($citylist); ?>" >
 								<div class="citycard_photo">
-									<img src="<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>" alt="<?php echo $citylist->name ?>" loading="lazy">
+									<img src="<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>" alt="<?php echo $citylist->name ?>" loading="lazy" width="300" class="citycard_photo_img">
 								</div>
 								<div class="citycard_title text-xl text-white">
 									<?php echo $citylist->name ?>
