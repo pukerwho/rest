@@ -4,7 +4,6 @@
 			<div class="w-full">
 				<h2 class="font-bold"><?php _e( 'Популярные курорты', 'restx' ); ?></h2>
 				<p class="text-lg mb-8"><?php _e( 'Где отдыхать в Украине?', 'restx' ); ?></p>		
-
 				<!-- MAINCARDS PC VERSION -->
 				<div class="citycards flex flex-wrap -mx-2">
 					<?php $maincitylists = get_terms( array( 
@@ -38,43 +37,6 @@
 							</a>
 						</div>
 					<?php endforeach; ?>
-				</div>
-				<!-- MAINCARDS MOBILE VERSION -->
-				<div class="mobile-show">
-					<div class="allcity">
-						<div class="maincards__grid">
-							<?php $maincitylists = get_terms( array( 
-								'taxonomy' => 'citylist', 
-								'parent' => 0, 
-								'hide_empty' => false,
-								'meta_query' => array(
-									'relation' => 'AND',
-						      array(
-										'key'       => '_crb_citylist_iscurort',
-										'value'     => 'yes',
-										'compare'   => '='
-						      ),
-						      array(
-										'key'       => '_crb_citylist_showmain',
-										'value'     => 'yes',
-										'compare'   => '='
-						      )
-						    )
-							));
-							shuffle( $maincitylists );
-							foreach ( array_slice($maincitylists, 0, 6) as $citylist ): ?>
-							<div class="maincards__item">
-								<a href="<?php echo get_term_link($citylist); ?>">
-									<div class="maincards__item__card" style="background: url('<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>')">
-										<div class="maincards__item__card__title">
-											<?php echo $citylist->name ?>
-										</div>
-									</div>
-								</a>
-							</div>
-							<?php endforeach; ?>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
