@@ -22,7 +22,30 @@ Template Name: Азовское море
 			<div class="sticky" style="top: 90px;">
 				<!-- Хлебные крошки (mobile) -->
 				<div class="block lg:hidden mb-6">
-					
+					<div class="flex">
+						<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+					    <ul>
+								<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+									<a itemprop="item" href="<?php echo home_url(); ?>">
+										<span itemprop="name"><?php _e( 'Главная', 'restx' ); ?></span>
+									</a>                        
+									<meta itemprop="position" content="1">
+								</li>
+					      <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+					        <a itemprop="item" href="<?php echo get_page_url('tpl_allcity') ?>">
+					          <span itemprop="name"><?php _e( 'Курорты', 'restx' ); ?></span>
+					        </a>                        
+					        <meta itemprop="position" content="2">
+					      </li>
+					      <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+					        <a itemprop="item" href="<?php echo get_page_url('tpl_azovsea') ?>">
+					          <span itemprop="name"><?php _e( 'Отдых на Азовском море', 'restx' ); ?></span>
+					        </a>
+					        <meta itemprop="position" content="3">
+					      </li>
+					    </ul>
+					  </div>
+					</div>
 				</div>	
 				<!-- end Хлебные крошки (mobile) -->
 				<div>
@@ -50,64 +73,81 @@ Template Name: Азовское море
 		<div class="w-full lg:w-9/12 pl-0 lg:pl-8">
 			<!-- Хлебные крошки (pc) -->
 			<div class="hidden lg:block mb-4">
-				
+				<div class="flex">
+					<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+				    <ul>
+							<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+								<a itemprop="item" href="<?php echo home_url(); ?>">
+									<span itemprop="name"><?php _e( 'Главная', 'restx' ); ?></span>
+								</a>                        
+								<meta itemprop="position" content="1">
+							</li>
+				      <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+				        <a itemprop="item" href="<?php echo get_page_url('tpl_allcity') ?>">
+				          <span itemprop="name"><?php _e( 'Курорты', 'restx' ); ?></span>
+				        </a>                        
+				        <meta itemprop="position" content="2">
+				      </li>
+				      <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+				        <a itemprop="item" href="<?php echo get_page_url('tpl_azovsea') ?>">
+				          <span itemprop="name"><?php _e( 'Отдых на Азовском море', 'restx' ); ?></span>
+				        </a>
+				        <meta itemprop="position" content="3">
+				      </li>
+				    </ul>
+				  </div>
+				</div>
 			</div>	
 			<!-- end Хлебные крошки (pc) -->
-			
 
-			<h1 class="text-2xl lg:text-4xl mb-2"><?php _e( 'Отдых на Азовском море', 'restx' ); ?></h1>
-			
-			<!-- Filter -->
-			<?php get_template_part( 'blocks/filters/city_filter', 'default' ); ?>	
-			<!-- end Filter -->
-
+			<h1 class="text-2xl lg:text-4xl mb-6"><?php _e( 'Отдых на Азовском море', 'restx' ); ?></h1>
 			<!-- Catalog Hotels -->
-	  		<div class="flex flex-wrap lg:-mx-2" id="response">
-					<?php 
-						global $wp_query, $wp_rewrite;  
-						// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-						$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-						
-						$custom_query = new WP_Query( array( 
-						'post_type' => 'hotels', 
-						'posts_per_page' => 24,
-						'paged' => $current,
-						'orderby'        => 'meta_value',
-				    'meta_key'       => 'meta-hotel-mainrating',
-						'tax_query' => array(
-					    array(
-				        'taxonomy' => 'citylist',
-						    'terms' => $term_ids,
-				        'field' => 'term_id',
-				        'include_children' => true,
-				        'operator' => 'IN'
-					    )
-						),
-					) );
-					if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-					  	<div class="w-1/2 lg:w-1/3 px-1">
-					  		<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
-					  	</div>
-					<?php endwhile; endif; wp_reset_postdata(); ?>
-				</div>
+  		<div class="flex flex-wrap lg:-mx-2" id="response">
+				<?php 
+					global $wp_query, $wp_rewrite;  
+					// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+					
+					$custom_query = new WP_Query( array( 
+					'post_type' => 'hotels', 
+					'posts_per_page' => 24,
+					'paged' => $current,
+					'orderby'        => 'meta_value',
+			    'meta_key'       => 'meta-hotel-mainrating',
+					'tax_query' => array(
+				    array(
+			        'taxonomy' => 'citylist',
+					    'terms' => $term_ids,
+			        'field' => 'term_id',
+			        'include_children' => true,
+			        'operator' => 'IN'
+				    )
+					),
+				) );
+				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+				  	<div class="w-1/2 lg:w-1/3 px-1">
+				  		<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
+				  	</div>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div>
 
-				<div class="flex">
-					<div class="w-full text-center">
-						<div class="b_pagination">
-							<?php 
-								$big = 999999999; // уникальное число
-								echo paginate_links( array(
-								'format'  => 'page/%#%',
-								'current'   => $current,
-								'total'   => $custom_query->max_num_pages,
-								'prev_next' => true,
-								'next_text' => (''),
-								'prev_text' => ('')
-								)); 
-							?>
-						</div>
+			<div class="flex mb-8">
+				<div class="w-full text-center">
+					<div class="b_pagination">
+						<?php 
+							$big = 999999999; // уникальное число
+							echo paginate_links( array(
+							'format'  => 'page/%#%',
+							'current'   => $current,
+							'total'   => $custom_query->max_num_pages,
+							'prev_next' => true,
+							'next_text' => (''),
+							'prev_text' => ('')
+							)); 
+						?>
 					</div>
 				</div>
+			</div>
 	  	<!-- end Catalog Hotels -->
 
 	  	<!-- TEXT -->
