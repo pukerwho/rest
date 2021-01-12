@@ -30,8 +30,7 @@
 						<div class="citycard w-1/2 lg:w-1/5 relative px-2 mb-4">
 							<a href="<?php echo get_term_link($citylist); ?>" >
 								<div class="citycard_photo">
-									<!-- <img src="<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>" alt="<?php echo $citylist->name ?>" loading="lazy"> -->
-									<img src="http://localhost/mythemetwo/restx/wp-content/uploads/2019/09/photo-1489364263090-dcc27370aa1c-500x333.jpeg" alt="<?php echo $citylist->name ?>" loading="lazy" width="300" class="citycard_photo_img">
+									<img src="<?php echo carbon_get_term_meta($citylist->term_id, 'crb_citylist_img' ); ?>" alt="<?php echo $citylist->name ?>" loading="lazy">
 								</div>
 								<div class="citycard_title text-xl text-white">
 									<?php echo $citylist->name ?>

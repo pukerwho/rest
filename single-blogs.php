@@ -109,7 +109,7 @@
 					<h3 class="text-3xl"><?php _e( 'Похожие записи', 'restx' ); ?></h3>
 				</div>
 			</div>
-			<div class="flex justify-center flex-wrap">
+			<div class="flex justify-center flex-wrap lg:-mx-2">
 				<?php 
 					$current_id = get_the_ID();
 					$custom_query = new WP_Query( array( 
@@ -127,7 +127,7 @@
 					),
 				) );
 				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-        	<div class="w-full lg:w-1/3 mb-5">
+        	<div class="w-full lg:w-1/3 mb-5 lg:px-2">
         		<a href="<?php the_permalink(); ?>">
         			<div class="single-blogs__other">
         				<div class="single-blogs__other-img mb-4">
