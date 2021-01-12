@@ -37,7 +37,7 @@
 					</div>
 				</div>
 			</div>
-			<article>
+			<article class="content">
 				<div class="flex justify-center">
 					<div class="w-full lg:w-7/12">
 						<div class="single-blogs__title flex">

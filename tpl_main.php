@@ -21,7 +21,9 @@ Template Name: Главная страница
 		<div class="w-full">
 			<div class="b_rest__text citylist__text content">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
+					<div class="content">
+						<?php the_content(); ?>
+					</div>
 					<!-- Вопросы и ответы -->
 					<?php if (carbon_get_post_meta(get_the_ID(), 'crb_page_faq')): ?>
 						<div id="citylist-faq" class="mt-8">

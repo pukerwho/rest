@@ -62063,6 +62063,33 @@ input[type="checkbox"]:checked + label:before {
 .cf_px {
   padding: 0 90px; }
 
+.content p {
+  color: #1b1b1b;
+  font-size: 21px;
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 15px; }
+
+.content ul {
+  color: #1b1b1b;
+  font-size: 21px;
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 15px; }
+
+.content li {
+  position: relative;
+  padding-left: 20px; }
+  .content li:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    background-color: #60cc7d;
+    border-radius: 50%; }
+
 .tag {
   color: #000;
   font-weight: 500;
@@ -63430,7 +63457,7 @@ input[type="checkbox"]:checked + label:before {
 
 .single-hotel__breadcrumb {
   color: #484848;
-  font-size: 1.5rem;
+  font-size: 15px;
   text-align: center; }
   .single-hotel__breadcrumb a {
     color: #484848;
@@ -63454,7 +63481,7 @@ input[type="checkbox"]:checked + label:before {
 .single-hotel_allphotos_more {
   display: none;
   position: absolute;
-  bottom: 1rem;
+  bottom: 10px;
   left: 0;
   right: 0; }
   .single-hotel_allphotos_more.show {
@@ -63462,9 +63489,9 @@ input[type="checkbox"]:checked + label:before {
 
 .single-hotel_allphotos_shadow {
   width: 95%;
-  height: 0.6rem;
+  height: 6px;
   position: absolute;
-  bottom: -0.6rem;
+  bottom: -6px;
   left: 0;
   right: 0;
   border-radius: 0 0 12px 12px;
@@ -63473,9 +63500,9 @@ input[type="checkbox"]:checked + label:before {
   margin: auto; }
   .single-hotel_allphotos_shadow_two {
     width: 85%;
-    height: 0.6rem;
+    height: 6px;
     position: absolute;
-    bottom: -1.2rem;
+    bottom: -12px;
     left: 0;
     right: 0;
     border-radius: 0 0 12px 12px;
@@ -64130,30 +64157,6 @@ input[type="checkbox"]:checked + label:before {
     .single-blogs__text h2:after {
       display: block;
       content: url(/wp-content/themes/rest/img/h2line.svg); }
-  .single-blogs__text h3 {
-    font-size: 18px;
-    padding: 10px 0; }
-    .single-blogs__text h3:after {
-      display: block;
-      content: url(/wp-content/themes/rest/img/h2line.svg); }
-  .single-blogs__text ul {
-    color: #1b1b1b;
-    font-size: 20px;
-    line-height: 1.65;
-    font-weight: 300;
-    margin: 20px 0; }
-  .single-blogs__text li {
-    position: relative;
-    padding-left: 20px; }
-    .single-blogs__text li:before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      top: 14px;
-      left: 0;
-      background-color: #60cc7d;
-      border-radius: 50%; }
   .single-blogs__text blockquote {
     background-color: #f0f2f6;
     border-radius: 5px; }
@@ -64921,33 +64924,6 @@ input[type="checkbox"]:checked + label:before {
   height: 100px;
   -o-object-fit: cover;
   object-fit: cover; }
-
-.content p {
-  color: #1b1b1b;
-  font-size: 21px;
-  line-height: 1.65;
-  font-weight: 300;
-  margin-bottom: 15px; }
-
-.content ul {
-  color: #1b1b1b;
-  font-size: 21px;
-  line-height: 1.65;
-  font-weight: 300;
-  margin-bottom: 15px; }
-
-.content li {
-  position: relative;
-  padding-left: 20px; }
-  .content li:before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 14px;
-    left: 0;
-    background-color: #60cc7d;
-    border-radius: 50%; }
 
 .page-template-tpl_contact .contact_info li a {
   color: #484848;
