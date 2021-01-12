@@ -9,8 +9,8 @@
 				</div>	
 				<!-- end Хлебные крошки (mobile) -->
 				<div>
-					<div class="mb-3 text-blue-500" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
-						<a href="/hotels"><?php _e('Жилье в Украине', 'restx'); ?></a>
+					<div class="mb-3" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
+						<a href="/hotels" class="blue-links"><?php _e('Жилье в Украине', 'restx'); ?></a>
 					</div>
 					<div class="mb-3"><?php single_term_title(); ?>: <?php _e('все жилье в городе', 'restx'); ?>	</div>
 					<ul class="ml-3">
@@ -20,7 +20,7 @@
 						foreach ($t_terms as $t_term): ?>
 							<?php if($t_term): ?>
 							<li class="mb-2">
-								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="text-blue-500"><?php echo $t_term->name; ?></a>
+								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="blue-links"><?php echo $t_term->name; ?></a>
 							</li>
 							<?php endif; ?>
 						<?php endforeach; ?>

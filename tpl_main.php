@@ -16,7 +16,7 @@ Template Name: Главная страница
 	<?php get_template_part( 'blocks/home/homebus', 'default' ); ?>	
 </div>
 
-<div class="container mx-auto px-2 lg:px-0 pt-8">
+<div class="container mx-auto px-2 lg:px-0 py-8">
 	<div class="flex">
 		<div class="w-full">
 			<div class="content">

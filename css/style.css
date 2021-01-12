@@ -62063,6 +62063,14 @@ input[type="checkbox"]:checked + label:before {
 .cf_px {
   padding: 0 90px; }
 
+.blue-links {
+  color: #0666f5;
+  -webkit-transition: color .1s ease;
+  -o-transition: color .1s ease;
+  transition: color .1s ease; }
+  .blue-links:hover {
+    color: #f95146; }
+
 .content h2 {
   font-size: 28px;
   padding: 20px 0 10px 0; }
