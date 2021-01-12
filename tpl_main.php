@@ -19,7 +19,7 @@ Template Name: Главная страница
 <div class="container mx-auto px-2 lg:px-0 pt-8">
 	<div class="flex">
 		<div class="w-full">
-			<div class="b_rest__text citylist__text content">
+			<div class="citylist__text content">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="content">
 						<?php the_content(); ?>
