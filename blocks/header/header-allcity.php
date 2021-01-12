@@ -20,7 +20,7 @@
 		<?php endforeach; ?>
 	</div>
 	<div class="header__allcity-item">
-		<div class="d-flex align-items-center mb-5">
+		<div class="flex items-center mb-5">
 			<img src="<?php bloginfo('template_url') ?>/img/azovsea.svg" alt="" width="40px" class="mr-3">
 			<h2 class="mb-0">Азовское море</h2>	
 		</div>	
@@ -40,7 +40,7 @@
 		<?php endforeach; ?>
 	</div>
 	<div class="header__allcity-item">
-		<div class="d-flex align-items-center mb-5">
+		<div class="flex items-center mb-5">
 			<img src="<?php bloginfo('template_url') ?>/img/mountains.svg" alt="" width="40px" class="mr-3">
 			<h2 class="mb-0">Карпаты</h2>	
 		</div>	

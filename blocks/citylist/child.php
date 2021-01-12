@@ -3,6 +3,18 @@
 // Parent Id = echo get_parent_term_id(get_queried_object_id(), 'citylist' );
 ?>
 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+			<div><?php _e('Жилье в Украине', 'restx'); ?></div>
+		</div>
+		<div class="col-md-9">
+			Основа
+		</div>
+	</div>
+</div>
+
+
 <!-- Основной город -->
 <div class="container-fluid">
 	<div class="row">

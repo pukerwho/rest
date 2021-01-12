@@ -2,10 +2,10 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="single-blogs pt-5">
-		<div class="container" itemscope itemtype="http://schema.org/Article">
-			<div class="row justify-content-center">
-				<div class="col-md-9">
-					<div class="single-blogs__breadcrumb d-flex mb-5">
+		<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12" itemscope itemtype="http://schema.org/Article">
+			<div class="flex justify-center">
+				<div class="w-full lg:w-7/12">
+					<div class="single-blogs__breadcrumb flex mb-5">
 						<?php 
 						$current_term = wp_get_post_terms(  get_the_ID() , 'blog-categories', array( 'parent' => 0 ) );
 						foreach (array_slice($current_term, 0,1) as $myterm); {
@@ -38,12 +38,12 @@
 				</div>
 			</div>
 			<article>
-				<div class="row justify-content-center">
-					<div class="col-md-9">
-						<div class="single-blogs__title d-flex">
+				<div class="flex justify-center">
+					<div class="w-full lg:w-7/12">
+						<div class="single-blogs__title flex">
 							<h1 itemprop="headline"><?php the_title(); ?></h1>	
 						</div>
-						<div class="d-flex mb-5">
+						<div class="flex mb-5">
 							<div class="single-blogs__avatar mr-4">
 								<?php 
 									$avatar = get_avatar(get_the_author_meta('ID'));
@@ -72,8 +72,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center mb-5">
-					<div class="col-md-9">
+				<div class="flex justify-center mb-5">
+					<div class="w-full lg:w-7/12">
 						<div class="single-blogs__text">
 							<?php if(carbon_get_the_post_meta('crb_blogs_whether')): ?>
 							<div class="weather-block" data-weather="<?php echo carbon_get_the_post_meta('crb_blogs_city'); ?>">
@@ -96,20 +96,20 @@
 					</div>
 				</div>
 			</article>
-			<div class="row justify-content-center mb-5">
-				<div class="col-md-10">
-					<h3 class="display-4 text-center mb-4"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
+			<div class="flex justify-center mb-5">
+				<div class="w-full lg:w-7/12">
+					<h3 class="text-3xl text-center mb-4"><?php _e( 'Обсуждение', 'restx' ); ?></h3>
 					<div>
 						<?php get_template_part('blocks/custom_comments'); ?>
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-center mb-5">
-				<div class="col-md-8 text-center">
-					<h3 class="display-4"><?php _e( 'Похожие записи', 'restx' ); ?></h3>
+			<div class="flex justify-center mb-5">
+				<div class="w-full lg:w-7/12 text-center">
+					<h3 class="text-3xl"><?php _e( 'Похожие записи', 'restx' ); ?></h3>
 				</div>
 			</div>
-			<div class="row justify-content-center">
+			<div class="flex justify-center flex-wrap">
 				<?php 
 					$current_id = get_the_ID();
 					$custom_query = new WP_Query( array( 
@@ -127,7 +127,7 @@
 					),
 				) );
 				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-        	<div class="col-md-4 mb-5">
+        	<div class="w-full lg:w-1/3 mb-5">
         		<a href="<?php the_permalink(); ?>">
         			<div class="single-blogs__other">
         				<div class="single-blogs__other-img mb-4">

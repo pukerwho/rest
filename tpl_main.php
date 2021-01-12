@@ -16,16 +16,16 @@ Template Name: Главная страница
 	<?php get_template_part( 'blocks/home/homebus', 'default' ); ?>	
 </div>
 
-<div class="container pt-5">
-	<div class="row">
-		<div class="col-md-12">
+<div class="container mx-auto px-2 lg:px-0 pt-8">
+	<div class="flex">
+		<div class="w-full">
 			<div class="b_rest__text citylist__text">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<?php the_content(); ?>
 					<!-- Вопросы и ответы -->
 					<?php if (carbon_get_post_meta(get_the_ID(), 'crb_page_faq')): ?>
-						<div id="citylist-faq" class="mt-5">
-							<h2 class="mb-4">Вопросы и ответы</h2>
+						<div id="citylist-faq" class="mt-8">
+							<h2 class="mb-6">Вопросы и ответы</h2>
 							<div>
 								<ul itemscope itemtype="https://schema.org/FAQPage">
 									<?php 

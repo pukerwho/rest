@@ -11,6 +11,19 @@ function your_prefix_get_meta_box( $meta_boxes ) {
     'autosave' => true,
     'fields' => array(
       array(
+        'name'  => 'Все фотографии',
+        'id' => $prefix . 'hotel-all-photos',
+        'type' => 'image_advanced',
+      ),
+      array(
+        'name'  => 'Все контакты',
+        'id' => $prefix . 'hotel-all-contacts',
+        'type' => 'wysiwyg',
+        'options' => array(
+          'textarea_rows' => 4,
+        ),
+      ),
+      array(
         'name'  => 'Фотографии территории',
         'id' => $prefix . 'hotel-photos',
         'type' => 'image_advanced',

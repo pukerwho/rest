@@ -2,10 +2,10 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="wow wow_single">
-		<div class="container pb-5">
+		<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12">
 			<div class="row mb-2">
 				<div class="col-md-12">
-					<div class="single-blogs__breadcrumb d-flex mb-5">
+					<div class="single-blogs__breadcrumb flex mb-5">
 						<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
 				      <ul>
 								<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
@@ -29,11 +29,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mb-5">
-				<div class="col-md-12">
-					<h1><?php the_title(); ?></h1>
-				</div>
-			</div>
+			<h1 class="text-3xl text-5xl mb-8"><?php the_title(); ?></h1>
 			<div class="row mb-5">
 				<div class="col-md-12">
 					<div class="wow_gallery">
@@ -50,48 +46,48 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mb-5">
-				<div class="col-md-4">
+			<div class="flex mb-5">
+				<div class="w-full lg:w-4/12">
 					<div class="wow_subtitle">
 						<?php _e( 'Описание', 'restx' ); ?>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="w-full lg:w-8/12">
 					<div class="wow_content pt-3">
 						<?php the_content(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="row mb-5">
-				<div class="col-md-4">
+			<div class="flex mb-5">
+				<div class="w-full lg:w-4/12">
 					<div class="wow_subtitle">
 						<?php _e( 'Расположение', 'restx' ); ?>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="w-full lg:w-8/12">
 					<div class="wow_content pt-3">
 						<?php echo carbon_get_the_post_meta('crb_wow_map'); ?>
 					</div>
 				</div>
 			</div>
-			<div class="row mb-5">
-				<div class="col-md-4">
+			<div class="flex mb-5">
+				<div class="w-full lg:w-4/12">
 					<div class="wow_subtitle">
 						<?php _e( 'Отзывы', 'restx' ); ?>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="w-full lg:w-8/12">
 					<div class="wow_content pt-3">
 						<?php get_template_part('blocks/custom_comments'); ?>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="wow_subtitle text-center">
-						<?php _e( 'Есть много всего интересного', 'restx' ); ?>!
-					</div>
+			<div class="w-full mb-5">
+				<div class="wow_subtitle text-center">
+					<?php _e( 'Есть много всего интересного', 'restx' ); ?>!
 				</div>
+			</div>
+			<div class="flex lg:-mx-2">
 				<?php 
 					$current_id = get_the_ID();
 					$query = new WP_Query( array( 
@@ -101,7 +97,7 @@
 						'order'    => 'DESC',
 					) );
 				if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-					<div class="col-md-3 mb-5">
+					<div class="w-full lg:w-3/12 px-0 lg:px-2 mb-5">
 						<a href="<?php the_permalink(); ?>">
 							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="wow_archive_thumb mb-3">
 							<div class="wow_archive_name">

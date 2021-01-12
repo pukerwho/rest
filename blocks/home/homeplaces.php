@@ -1,12 +1,12 @@
-<div class="container-fluid cf_px">
-	<div class="row justify-content-center">
-		<div class="col-md-12">
-			<h2><?php _e( 'Популярные места', 'restx' ); ?></h2>
-			<p class="mb-5"><?php _e( 'Что посмотреть интересного в Украине?', 'restx' ); ?></p>
+<div class="container mx-auto px-2 lg:px-0">
+	<div class="flex justify-center">
+		<div class="w-full mb-8">
+			<h2 class="font-bold"><?php _e( 'Популярные места', 'restx' ); ?></h2>
+			<p class="text-lg"><?php _e( 'Что посмотреть интересного в Украине?', 'restx' ); ?></p>
 		</div>
 	</div>
-	<div class="row mb-5">
-		<div class="col-md-12">
+	<div class="flex mb-8">
+		<div class="w-full">
 			<div class="swiper-container swiper-home-places">
 		    <div class="swiper-wrapper">
 		    	<?php 
@@ -41,12 +41,12 @@
 		</div>
 		
 	</div>
-	<div class="row mb-5">
-		<div class="col-md-12 d-flex justify-content-center">
-			<a href="<?php echo get_post_type_archive_link('wow'); ?>" class="btn-more text-center d-flex align-items-center">
-				<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35px" class="mr-4">
-				<div class="btn-more-info d-flex align-items-center">
-					<img src="https://859628.smushcdn.com/1875481/wp-content/uploads/2020/07/akvapark_oazis-150x150.jpg" height="50px" class="rounded-circle">
+	<div class="flex mb-8">
+		<div class="w-full flex justify-center">
+			<a href="<?php echo get_post_type_archive_link('wow'); ?>" class="btn-more text-center flex items-center rounded-full">
+				<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35" class="mr-4">
+				<div class="btn-more-info flex items-center">
+					<img src="https://859628.smushcdn.com/1875481/wp-content/uploads/2020/07/akvapark_oazis-150x150.jpg" width="50" class="rounded-full">
 					<span><?php _e( 'Посмотреть все интересные места', 'restx' ); ?></span>	
 				</div>
 			</a>

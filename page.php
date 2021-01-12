@@ -1,18 +1,12 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<div class="custom-page pt-5">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md-12">
-					<h1><?php the_title(); ?></h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<?php the_content(); ?>
-				</div>
-			</div>
+	<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12">
+		<div class="mb-5">
+			<h1 class="text-3xl lg:text-5xl"><?php the_title(); ?></h1>
+		</div>
+		<div class="content">
+			<?php the_content(); ?>
 		</div>
 	</div>
 <?php endwhile; else: ?>

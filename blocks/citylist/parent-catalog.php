@@ -1,4 +1,4 @@
-<div class="row mobile-hotels-grid" id="response">
+<div class="flex flex-wrap lg:-mx-2" id="response">
 	<?php 
 		global $wp_query, $wp_rewrite;  
 		// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -21,14 +21,14 @@
 		),
 	) );
 	if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-	  	<div class="col-md-4">
+	  	<div class="w-1/2 lg:w-1/3 px-1">
 	  		<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
 	  	</div>
 	<?php endwhile; endif; wp_reset_postdata(); ?>
 </div>
 
-<div class="row">
-	<div class="col-md-12 text-center">
+<div class="flex">
+	<div class="w-full text-center">
 		<div class="b_pagination">
 			<?php 
 				$big = 999999999; // уникальное число

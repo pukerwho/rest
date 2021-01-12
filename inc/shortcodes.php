@@ -59,10 +59,10 @@
   			<p class="mb-4">
   				<?php echo $params_hotel['text']; ?>
   			</p>
-  			<div class="shortcode_hotel_btn d-flex align-items-center">
-	  			<a href="<?php echo get_the_permalink($params_hotel['id']); ?>" class="btn-rest btn-rest-yellow d-flex align-items-center">
+  			<div class="shortcode_hotel_btn flex items-center">
+	  			<a href="<?php echo get_the_permalink($params_hotel['id']); ?>" class="btn-rest btn-rest-yellow flex items-center">
 	    			<span class="mr-3"><?php _e('Подробнее', 'restx'); ?></span>
-            <img src="<?php bloginfo('template_url'); ?>/img/arrow.svg" width="15px">
+            <img src="<?php bloginfo('template_url'); ?>/img/arrow.svg" width="15">
 	    		</a>	
   			</div>
     	</div>
@@ -82,7 +82,7 @@
         ob_start();
     ?>
         <div class="shortcode_place my-5">
-            <a href="<?php echo get_the_permalink($params_hotel['id']); ?>" class="d-flex flex-column flex-md-row">
+            <a href="<?php echo get_the_permalink($params_hotel['id']); ?>" class="flex flex-col lg:flex-row">
                 <div class="shortcode_place_img mr-3">
                     <img src="<?php echo get_the_post_thumbnail_url( $params_hotel['id'], 'medium' ); ?>">
                 </div>

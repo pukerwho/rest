@@ -1,16 +1,16 @@
-<div class="citylist bg-custom-grey">
-	<div class="container-fluid cf_px">
-		<div class="row d-flex justify-content-center">
-			<div class="col-md-8">
-				<h1 class="text-center"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_title') ?></h1>
+<div class="citylist bg-custom-grey py-12">
+	<div class="container mx-auto px-2 lg:px-0">
+		<div class="flex justify-center">
+			<div class="w-full lg:w-8/12">
+				<h1 class="text-5xl text-center"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_title') ?></h1>
 				<!-- Хлебные крошки -->
-				<div class="d-flex justify-content-center mb-5">
+				<div class="flex justify-center mb-5">
 					<?php get_template_part( 'blocks/citylist/breadcrumbs', 'default' ); ?>
 				</div>
 				<!-- END Хлебные крошки -->
 				
 				<!-- Вступительный текст -->
-				<div class="text-2xl mb-5">
+				<div class="text-xl mb-10">
 					<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_innertext') ?>
 				</div>
 				<!-- END Вступительный текст -->
@@ -20,34 +20,34 @@
 
 	<!-- Контент фон -->
 	<div>
-		<div class="container-fluid cf_px">
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-9 bg-white shadow px-5 py-5" style="border-radius: 0.75rem;">
-					<div class="row">
+		<div class="container mx-auto px-2 lg:px-0">
+			<div class="flex justify-center">
+				<div class="w-full lg:w-9/12 bg-white shadow-lg px-6 py-6 lg:px-8 lg:py-8" style="border-radius: 0.75rem;">
+					<div class="flex flex-col lg:flex-row">
 						<!-- Оглавление -->
-						<div class="col-md-6">
+						<div class="w-full lg:w-1/2">
 							<div class="citylist_subjects mb-5">
-								<h2 class="mb-1"><?php _e('Содержание', 'restx'); ?></h2>
+								<div class="citylist_subjects_title text-2xl font-bold"><?php _e('Содержание', 'restx'); ?></div>
 								<div>
 									<ol>
-										<li><a href="#citylist_common"><?php _e('Общая информация', 'restx'); ?></a></li>
-										<li><a href="#citylist_hotels"><?php _e('Жилье в городе', 'restx'); ?></a></li>
-										<li><a href="#citylist_wow"><?php _e('Куда пойти', 'restx'); ?></a></li>
+										<li class="mb-1"><a href="#citylist_common" class="text-xl text-blue-700"><?php _e('Общая информация', 'restx'); ?></a></li>
+										<li class="mb-1"><a href="#citylist_hotels" class="text-xl text-blue-700"><?php _e('Жилье в городе', 'restx'); ?></a></li>
+										<li class="mb-1"><a href="#citylist_wow" class="text-xl text-blue-700"><?php _e('Куда пойти', 'restx'); ?></a></li>
 										<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers')): ?>
-											<li><a href="#citylist_camers"><?php _e('Онлайн камеры', 'restx'); ?></a></li>
+											<li class="mb-1"><a href="#citylist_camers" class="text-xl text-blue-700"><?php _e('Онлайн камеры', 'restx'); ?></a></li>
 										<?php endif ?>
 										<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_camers')): ?>
-											<li><a href="#citylist_video"><?php _e('Видео', 'restx'); ?></a></li>
+											<li class="mb-1"><a href="#citylist_video" class="text-xl text-blue-700"><?php _e('Видео', 'restx'); ?></a></li>
 										<?php endif ?>	
-										<li><a href="#near"><?php _e('Ближайшие курорты', 'restx'); ?></a></li>
-										<li><a href="#citylist-faq"><?php _e('Часто задаваемые вопросы', 'restx'); ?></a></li>
-										<li><a href="#review"><?php _e('Комментарии', 'restx'); ?></a></li>
+										<li class="mb-1"><a href="#near" class="text-xl text-blue-700"><?php _e('Ближайшие курорты', 'restx'); ?></a></li>
+										<li class="mb-1"><a href="#citylist-faq" class="text-xl text-blue-700"><?php _e('Часто задаваемые вопросы', 'restx'); ?></a></li>
+										<li class="mb-1"><a href="#review" class="text-xl text-blue-700"><?php _e('Комментарии', 'restx'); ?></a></li>
 									</ol>
 								</div>
 							</div>
 						</div>
 						<!-- Первая фотка -->
-						<div class="col-md-6">
+						<div class="w-full lg:w-1/2">
 							<?php 
 								$first_photo_medium = wp_get_attachment_image_src(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_firstphoto'), 'medium'); 
 								$first_photo_large = wp_get_attachment_image_src(carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_firstphoto'), 'large'); 
@@ -78,11 +78,11 @@
 					<div class="citylist_text mb-5">
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_hotelstext') ); ?>
 					</div>
-					<div class="d-flex justify-content-center mb-5">
-						<a href="#" class="btn-more white text-center d-flex align-items-center">
-							<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35px" class="mr-4">
-							<div class="btn-more-info bg-custom-grey d-flex align-items-center">
-								<img src="https://vidpochivai.com.ua/wp-content/uploads/2020/07/photo_2020-07-06_22-58-09-150x150.jpg" height="50px" class="rounded-circle">
+					<div class="flex justify-center mb-5">
+						<a href="#" class="btn-more white text-center flex items-center">
+							<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35" class="mr-4">
+							<div class="btn-more-info bg-custom-grey flex items-center">
+								<img src="https://vidpochivai.com.ua/wp-content/uploads/2020/07/photo_2020-07-06_22-58-09-150x150.jpg" width="50px" class="rounded-full">
 								<span><?php _e( 'Перейти в каталог', 'restx' ); ?></span>	
 							</div>
 						</a>	
@@ -118,7 +118,7 @@
 			  		<h2 class="mb-4">
 			  			<?php _e( 'Ближайшие курорты', 'restx' ); ?>
 			  		</h2>
-			  		<div class="citylist_near_grid d-flex flex-wrap">
+			  		<div class="citylist_near_grid flex flex-wrap">
 			  			<?php 
 					  		$near_cities_array = [];
 					  		$near_cities = carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_association'); 

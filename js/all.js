@@ -211,9 +211,11 @@ $(function() {
 $(window).scroll(function(){
   var h_scroll = $(this).scrollTop();
   if (h_scroll > 100) {
-    $('.header_bottom').addClass('header_bottom_fixed')
+    $('.header_bottom_fixed').addClass('show');
+    // $('.header_bottom').addClass('header_bottom_fixed')
   } else {
-    $('.header_bottom').removeClass('header_bottom_fixed')
+    $('.header_bottom_fixed').removeClass('show');
+    // $('.header_bottom').removeClass('header_bottom_fixed')
   }
 })
 
@@ -493,22 +495,12 @@ if ($(document).width() < 960) {
   })
 }
 
-
-if ( $('.single-hotel-territory').length > 0 ) {
-  var singleHotelTerritoryLength = singleHotelTerritory.slides.length;
-  $('.single-hotel-territory-count-length').append(singleHotelTerritoryLength);
-
-  var singleHotelTerritoryCurrent = singleHotelTerritory.realIndex;
-  singleHotelTerritoryCurrent = singleHotelTerritoryCurrent + 1;
-  $('.single-hotel-territory-count-current').append(singleHotelTerritoryCurrent);
-}
-
-singleHotelTerritory.on('slideChange', function () {
-  var singleHotelTerritoryCurrent = singleHotelTerritory.realIndex;
-  singleHotelTerritoryCurrent = singleHotelTerritoryCurrent + 1;
-  $('.single-hotel-territory-count-current').html(singleHotelTerritoryCurrent);
+//Single Hotel 
+$('.single-hotel_allphotos_more').on('click', function(){
+  $('.single-hotel_allphotos').toggleClass('show');
+  $('.single-hotel_allphotos_more').toggleClass('show');
+  
 });
-
 
 // Модальное окно
 function openModal(attrModal) {

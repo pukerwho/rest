@@ -1,15 +1,15 @@
-<div class="homehero">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-9 text-center">
-				<h1 class="text-uppercase mb-5"><?php _e( 'Отдых в ', 'restx' ); ?><span><?php _e( 'Украине', 'restx' ); ?></span></h1>
-				<p class="text-3xl mb-5">
+<div class="homehero pb-8 pt-24 lg:pb-12 lg:pt-16">
+	<div class="container mx-auto">
+		<div class="flex justify-center">
+			<div class="w-full lg:w-9/12 text-center">
+				<h1 class="text-5xl uppercase mb-5"><?php _e( 'Отдых в ', 'restx' ); ?><span><?php _e( 'Украине', 'restx' ); ?></span></h1>
+				<p class="text-lg mb-5 px-4 lg:px-0">
 					<?php _e('Куда поехать? Где жить? Что посмотреть? Как добраться? Все ответы на одном сайте', 'restx'); ?>.
 				</p>
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			<div class="col-md-7 pc-show text-center">
+		<div class="flex justify-center">
+			<div class="w-full lg:w-7/12 pc-show text-center">
 				<div class="homehero__block">
 					<div class="homehero__block-cities mb-2">
 						<input list="homehero_city" id="my_welcome_city" name="myCity" placeholder="<?php _e( 'Введите город', 'restx' ); ?>"  onchange="setCity(this)"/>

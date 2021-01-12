@@ -1,29 +1,23 @@
 <?php get_header(); ?>
 
-<div class="blog">
-	<div class="container">
-		<div class="row mb-5">
-			<div class="col-md-12">
-				<div class="text-center">
-					<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" alt="" width="55px">
-				</div>
+<div class="blog py-20 pb-4 lg:py-12 lg:pb-12">
+	<div class="container mx-auto px-2 lg:px-0">
+		<div class="flex justify-center mb-5">
+			<div class="w-full lg:w-9/12">
+				<img src="<?php bloginfo('template_url') ?>/img/clipboard.svg" alt="<?php _e('Блог', 'restx') ?>" width="55" class="mx-auto mb-5">
+				<h1 class="text-5xl uppercase text-center"><?php _e('Блог', 'restx') ?></h1>
 			</div>
 		</div>
-		<div class="row d-flex justify-content-center mb-5">
-			<div class="col-md-9">
-				<h1 class="text-uppercase text-center"><?php _e('Блог', 'restx') ?></h1>
-			</div>
-		</div>
-		<div class="row d-flex justify-content-center mb-5">
-			<div class="col-md-9">
+		<div class="flex justify-center mb-5">
+			<div class="w-full lg:w-9/12">
 				<div class="info mb-5">
 					Здесь собраны все статьи, которые могут быть полезными для вас. Первый раз отправляетесь в какой-то город? Мы расскажем, как лучше добраться, на что обращать особое внимание, как не потерять время зря. Отвечаем на самые важные для туристов вопросы. 
 				</div>
 			</div>
 		</div>
-		<div class="row d-flex justify-content-center mb-5">
-			<div class="col-md-9">
-				<div class="blog_categories">
+		<div class="flex justify-center mb-5">
+			<div class="w-full lg:w-9/12">
+				<div class="blog_categories flex flex-wrap">
 					<?php 
 						$blog_cats = get_terms(array(
 							'taxonomy' => 'blog-categories',
@@ -31,7 +25,7 @@
 					?>
 					<?php foreach ($blog_cats as $blog_cat): ?>
 						<div class="blog_category mb-3">
-							<a href="<?php echo get_term_link($blog_cat->term_id, 'blog-categories') ?>">
+							<a href="<?php echo get_term_link($blog_cat->term_id, 'blog-categories') ?>" class="block-inline lg:inline">
 								<?php echo $blog_cat->name; ?>
 							</a>
 						</div>
@@ -40,8 +34,8 @@
 			</div>
 		</div>
 		
-		<div class="row align-items-center justify-content-center flex-column-reverse flex-lg-row mb-5">
-			<div class="col-md-9">
+		<div class="flex items-center justify-center flex-col-reverse lg:flex-row mb-5">
+			<div class="w-full lg:w-9/12">
 				<?php 
 					$current_page = !empty( $_GET['page'] ) ? $_GET['page'] : 1;
 
@@ -53,14 +47,14 @@
 					) );
 				if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 					<div class="blog_item">
-						<div class="d-flex h-100">
-							<div class="blog_item_img">
-								<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="w-100 h-100">
+						<div class="flex h-100 -mx-2">
+							<div class="blog_item_img px-1">
+								<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
 							</div>	
-							<div class="blog_item_info">
+							<div class="blog_item_info px-1">
 								<div class="blog_item_title mb-3">
 									<a href="<?php the_permalink(); ?>">
-										<?php the_title(); ?>		
+										<?php the_title(); ?>
 									</a>
 								</div>
 								<div class="blog_item_cat mb-4">
@@ -82,8 +76,8 @@
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div>
 		</div>
-		<div class="row mb-5">
-			<div class="col-md-12 text-center">
+		<div class="flex mb-5">
+			<div class="w-full text-center">
 				<div class="b_pagination">
 					<?php 
 						$big = 9999999991; // уникальное число
