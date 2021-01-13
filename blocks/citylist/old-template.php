@@ -83,7 +83,7 @@
 			<!-- Комментарии -->
 			<div id="review" class="row justify-content-center">
 				<div class="col-md-8">
-					<div class="text-center text-dark display-4 text-uppercase font-weight-normal mb-5">
+					<div class="text-2xl font-bold mb-4">
 						<?php _e('Обсуждение', 'restx'); ?>
 					</div>
 					<div>
@@ -104,7 +104,6 @@
 						?>
 						<?php if ($post_comment_query->have_posts()): ?>
 							<?php while ($post_comment_query->have_posts()) : $post_comment_query->the_post(); ?>
-						  	<?php /* echo do_shortcode('[anycomment]'); */ ?>
 						  	<?php get_template_part('blocks/custom_comments'); ?>				  	
 						  	<?php wp_reset_postdata(); ?>
 							<?php endwhile; ?>
