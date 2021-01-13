@@ -29,14 +29,14 @@
 					<div class="homehero__block-advice">
 						<li><?php _e( 'Например', 'restx' ); ?>: </li>
 						<?php if (get_locale() == 'ru_RU'): ?>
-							<li><a href="<?php echo get_term_link(14, 'citylist') ?>"><?php _e( 'Кирилловка', 'restx' ); ?></a></li>
-							<li><a href="<?php echo get_term_link(12, 'citylist') ?>"><?php _e( 'Бердянск', 'restx' ); ?></a></li>
-							<li><a href="<?php echo get_term_link(17, 'citylist') ?>"><?php _e( 'Затока', 'restx' ); ?></a></li>
+							<li><a href="/citylist/kirillovka/"><?php _e( 'Кирилловка', 'restx' ); ?></a></li>
+							<li><a href="/citylist/berdynsk/"><?php _e( 'Бердянск', 'restx' ); ?></a></li>
+							<li><a href="/citylist/zatoka/"><?php _e( 'Затока', 'restx' ); ?></a></li>
 						<?php endif; ?>
 						<?php if (get_locale() == 'uk'): ?>
-							<li><a href="<?php echo get_term_link(370, 'citylist') ?>">Кирилівка</a></li>
-							<li><a href="<?php echo get_term_link(399, 'citylist') ?>">Бердянськ</a></li>
-							<li><a href="<?php echo get_term_link(372, 'citylist') ?>">Затока</a></li>
+							<li><a href="/uk/citylist/kirilivka/">Кирилівка</a></li>
+							<li><a href="/uk/citylist/berdjansk/">Бердянськ</a></li>
+							<li><a href="/uk/citylist/zatoka-uk/">Затока</a></li>
 						<?php endif; ?>
 					</div>
 				</div>
