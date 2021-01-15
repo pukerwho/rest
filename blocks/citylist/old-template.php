@@ -13,14 +13,14 @@
 						<a href="/hotels" class="blue-links"><?php _e('Жилье в Украине', 'restx'); ?></a>
 					</div>
 					<div class="mb-3"><?php single_term_title(); ?>: <?php _e('все жилье в городе', 'restx'); ?>	</div>
-					<ul class="ml-3">
+					<ul class="ml-6">
 						<?php 
 						$taxonomyName = 'citylist';
 						$t_terms = get_terms($taxonomyName, array('parent' => get_queried_object()->term_id, 'hide_empty' => false));
 						foreach ($t_terms as $t_term): ?>
 							<?php if($t_term): ?>
 							<li class="mb-2">
-								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="blue-links"><?php echo $t_term->name; ?></a>
+								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="blue-links"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
 							</li>
 							<?php endif; ?>
 						<?php endforeach; ?>

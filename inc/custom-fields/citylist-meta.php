@@ -10,6 +10,7 @@ function crb_attach_theme_options() {
     ->add_fields( array(
     	Field::make( 'image', 'crb_citylist_img', 'Заглавная картинка' )->set_value_type( 'url'),
       Field::make( 'text', 'crb_citylist_title', 'Заголовок' ),
+      Field::make( 'text', 'crb_citylist_menu_name', 'Название в меню' ),
       Field::make( 'text', 'crb_citylist_description', 'Подзаголовок' ),
 
       Field::make( 'image', 'crb_citylist_icon', 'Иконка' )->set_value_type( 'url'),
