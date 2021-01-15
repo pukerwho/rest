@@ -17,7 +17,14 @@
 						$term = get_term_by('slug', get_query_var('term'), $taxonomyName); 
 					?>
 					<div class="mb-3">
-						<a href="<?php echo get_term_link( $term->parent, $taxonomyName ); ?>" class="blue-links">
+						<?php 
+							if (get_locale() == 'ru_RU') {
+								$link_all = 'all';	
+							} else {
+								$link_all = 'all-ua';
+							}
+						?>
+						<a href="<?php echo get_term_link( $term->parent, $taxonomyName ); ?>/<?php echo $link_all; ?>" class="blue-links">
 							<?php $parent_term = get_term( $term->parent, $taxonomyName ); echo $parent_term->name ?>: 
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>

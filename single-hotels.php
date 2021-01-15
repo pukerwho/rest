@@ -49,13 +49,13 @@
 						<a href="/hotels"><?php _e('Жилье в Украине', 'restx'); ?></a>
 					</div>
 					<div class="mb-3"><?php echo $current_term_name; ?>: <?php _e('все жилье в городе', 'restx'); ?>	</div>
-					<ul class="ml-3">
+					<ul class="ml-6">
 						<?php 
 						$taxonomyName = 'citylist';
 						$t_terms = get_terms($taxonomyName, array('parent' => $getCurrentTermId, 'hide_empty' => false));
 						foreach ($t_terms as $t_term): ?>
 							<li class="mb-2">
-								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="text-blue-500"><?php echo $t_term->name; ?></a>
+								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="text-blue-500"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
 							</li>
 						<?php endforeach; ?>
 					</ul>
