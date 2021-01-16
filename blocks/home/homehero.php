@@ -2,7 +2,7 @@
 	<div class="container mx-auto">
 		<div class="flex justify-center">
 			<div class="w-full lg:w-9/12 text-center">
-				<h1 class="text-5xl uppercase mb-5"><?php _e( 'Отдых в ', 'restx' ); ?><span><?php _e( 'Украине', 'restx' ); ?></span></h1>
+				<h1 class="text-5xl uppercase mb-5"><?php _e( 'Отдых в', 'restx' ); ?><span class="ml-3"><?php _e( 'Украине', 'restx' ); ?></span></h1>
 				<p class="text-lg mb-5 px-4 lg:px-0">
 					<?php _e('Куда поехать? Где жить? Что посмотреть? Как добраться? Все ответы на одном сайте', 'restx'); ?>.
 				</p>
