@@ -95,7 +95,7 @@
       <form name="form_add">
         <div class="flex flex-col mb-3">
           <input type="text" name="EmailPhone" placeholder="<?php _e('Email или телефон', 'restx'); ?>" class="input-with-icon" required>
-          <textarea name="Сообщение" id="" rows="5" placeholder="Сообщение" class="w-full"></textarea>
+          <textarea name="Сообщение" id="" rows="5" placeholder="<?php _e('Сообщение','restx'); ?>" class="w-full"></textarea>
           <div class="flex items-center">
             <input type="checkbox" id="just_callback" name="just_callback">
             <label for="just_callback"><?php _e('Просто перезвоните мне, пообщаемся', 'restx'); ?></label>  
