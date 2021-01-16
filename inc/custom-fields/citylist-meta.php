@@ -11,6 +11,7 @@ function crb_attach_theme_options() {
     	Field::make( 'image', 'crb_citylist_img', 'Заглавная картинка' )->set_value_type( 'url'),
       Field::make( 'text', 'crb_citylist_title', 'Заголовок' ),
       Field::make( 'text', 'crb_citylist_menu_name', 'Название в меню' ),
+      Field::make( 'checkbox', 'crb_citylist_all_category', 'Это субкатегория для всего жилья?' ),
       Field::make( 'text', 'crb_citylist_description', 'Подзаголовок' ),
 
       Field::make( 'image', 'crb_citylist_icon', 'Иконка' )->set_value_type( 'url'),
