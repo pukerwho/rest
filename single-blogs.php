@@ -82,7 +82,7 @@
 							<?php endif ?>
 							<div class="single-blogs_subjects mb-5">
 								<div class="single-blogs_subjects_subtitle font-weight-bold mb-3">
-									Содержание:
+									<?php _e('Содержание','restx'); ?>:
 								</div>
 								<div class="single-blogs_subjects_inner"></div>
 							</div>
