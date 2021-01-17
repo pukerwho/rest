@@ -16,22 +16,10 @@
 						$taxonomyName = 'citylist'; 
 						$term = get_term_by('slug', get_query_var('term'), $taxonomyName); 
 
-						$find_all_hotels_term = get_terms(
-							'citylist', array(
-								'parent' => $term->parent, 
-								'hide_empty' => false,
-								'meta_query' => array(
-						      array(
-										'key'       => '_crb_citylist_all_category',
-										'value'     => 'yes',
-										'compare'   => '='
-						      )
-						    ),
-							)
-						);
+						
 					?>
 					<div class="mb-3">
-						<a href="#" class="blue-links">
+						<a href="" class="blue-links">
 							<?php $parent_term = get_term( $term->parent, $taxonomyName ); echo $parent_term->name ?>: 
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>
