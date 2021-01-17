@@ -94,7 +94,7 @@
 							    ),
 								)
 							);
-							if ($find_all_hotels_term[0]->term_id)) {
+							if ($find_all_hotels_term[0]->term_id) {
 								$term_hotels_all_id = $find_all_hotels_term[0]->term_id;
 								$term_hotels_all_link = '2';
 								// $term_hotels_all_link = get_term_link( $term_hotels_all_id, 'citylist' );
