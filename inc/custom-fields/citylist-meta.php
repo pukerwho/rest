@@ -12,9 +12,8 @@ function crb_attach_theme_options() {
       Field::make( 'text', 'crb_citylist_title', 'Заголовок' ),
       Field::make( 'text', 'crb_citylist_menu_name', 'Название в меню' ),
       Field::make( 'checkbox', 'crb_citylist_all_category', 'Это субкатегория для всего жилья?' ),
-      Field::make( 'text', 'crb_citylist_description', 'Подзаголовок' ),
-
-      Field::make( 'image', 'crb_citylist_icon', 'Иконка' )->set_value_type( 'url'),
+      // Field::make( 'text', 'crb_citylist_description', 'Подзаголовок' ),
+      // Field::make( 'image', 'crb_citylist_icon', 'Иконка' )->set_value_type( 'url'),
       Field::make( 'rich_text', 'crb_citylist_rich_text', 'Текст' ),
       Field::make( 'complex', 'crb_citylist_faq', 'FAQ' )->add_fields( array(
           Field::make( 'text', 'crb_citylist_faq_question', 'Вопрос' ),
@@ -46,6 +45,13 @@ function crb_attach_theme_options() {
             'compare' => '=',
         )
         ) ),
+      Field::make( 'image', 'crb_citylist_firstphoto', 'Первая фотка' )->set_conditional_logic( array(
+          array(
+            'field' => 'crb_citylist_newtemplate',
+            'value' => '1', 
+            'compare' => '=',
+        )
+        ) ),
       Field::make( 'text', 'crb_citylist_welcometitle', 'Заголовок для Информации' )->set_conditional_logic( array(
           array(
             'field' => 'crb_citylist_newtemplate',
@@ -54,13 +60,6 @@ function crb_attach_theme_options() {
         )
         ) ),
       Field::make( 'rich_text', 'crb_citylist_welcometext', 'Общая информация' )->set_conditional_logic( array(
-          array(
-            'field' => 'crb_citylist_newtemplate',
-            'value' => '1', 
-            'compare' => '=',
-        )
-        ) ),
-      Field::make( 'image', 'crb_citylist_firstphoto', 'Первая фотка' )->set_conditional_logic( array(
           array(
             'field' => 'crb_citylist_newtemplate',
             'value' => '1', 

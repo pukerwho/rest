@@ -13,7 +13,7 @@
     		$shortcode_blog_permalink = get_the_permalink($params['id']);
     		
     		$post_author_id = get_post_field( 'post_author', $params['id'] );
-    		$post_author_name = get_the_author_meta( 'user_nicename', $post_author_id );
+    		$post_author_name = get_the_author_meta( 'display_name', $post_author_id );
     	?>
     	<div class="my-4">
     		<a href="<?php echo $shortcode_blog_permalink; ?>" class="shortcode_blog">
