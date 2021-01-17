@@ -16,7 +16,6 @@
 						$taxonomyName = 'citylist'; 
 						$term = get_term_by('slug', get_query_var('term'), $taxonomyName); 
 						$parent_term = get_term( $term->parent, $taxonomyName );
-
 						$find_all_hotels_term = get_terms(
 							'citylist', array(
 								'parent' => $term->parent, 
@@ -30,7 +29,7 @@
 						    ),
 							)
 						);
-						echo $find_all_hotels_term[0];
+						echo $find_all_hotels_term[0]->name;
 					?>
 					<div class="mb-3">
 						<a href="" class="blue-links">
