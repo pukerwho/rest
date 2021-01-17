@@ -16,7 +16,7 @@
 						$taxonomyName = 'citylist'; 
 						$term = get_term_by('slug', get_query_var('term'), $taxonomyName); 
 						$parent_term = get_term( $term->parent, $taxonomyName );
-						echo $parent_term;
+						echo $parent_term->term_id;
 
 						
 					?>
