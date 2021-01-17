@@ -42,7 +42,7 @@
 						foreach ($t_terms as $t_term): ?>
 							<?php if($t_term): ?>
 							<li class="mb-2">
-								<a href="" class="blue-links"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
+								
 							</li>
 							<?php endif; ?>
 						<?php endforeach; ?>
