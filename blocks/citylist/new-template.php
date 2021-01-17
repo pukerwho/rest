@@ -94,7 +94,7 @@
 							    ),
 								)
 							);
-							if ($find_all_hotels_term[0]->term_id != undefined) {
+							if (is_array($find_all_hotels_term)) {
 								$term_hotels_all_id = $find_all_hotels_term[0]->term_id;
 							} else {
 								$term_hotels_all_id = '#';
