@@ -16,6 +16,7 @@
 						$taxonomyName = 'citylist'; 
 						$term = get_term_by('slug', get_query_var('term'), $taxonomyName); 
 						$parent_term = get_term( $term->parent, $taxonomyName );
+						echo $term->parent;
 
 						$find_all_hotels_term = get_terms(
 							'citylist', array(
