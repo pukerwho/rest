@@ -81,22 +81,22 @@
 					<div class="flex justify-center mb-5">
 						<!-- Находим субкатегорию ALL -->
 						<?php 
-							$args = array(
-								'hide_empty' => false,
-								'meta_query' => array(
-						      array(
-										'key'       => '_crb_citylist_all_category',
-										'value'     => 'yes',
-										'compare'   => '='
-						      )
-						    ),
-								'taxonomy'  => 'citylist',
+							$t_terms = get_terms(
+								'citylist', array(
+									'parent' => get_queried_object_id(), 
+									'hide_empty' => false,
+									'meta_query' => array(
+							      array(
+											'key'       => '_crb_citylist_all_category',
+											'value'     => 'yes',
+											'compare'   => '='
+							      )
+							    ),
+								)
 							);
-							$term = get_term( $args ); 
-							echo $term->name;
 						?>
 						<!-- END Находим субкатегорию ALL -->
-						<a href="#" class="btn-more white text-center flex items-center">
+						<a href="<?php echo get_term_link( $t_terms[0]->term_id, 'citylist' ); ?>" class="btn-more white text-center flex items-center">
 							<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35" class="mr-4">
 							<div class="btn-more-info bg-custom-grey flex items-center">
 								<img src="https://vidpochivai.com.ua/wp-content/uploads/2020/07/photo_2020-07-06_22-58-09-150x150.jpg" width="50px" class="rounded-full">

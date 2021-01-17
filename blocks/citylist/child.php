@@ -24,7 +24,22 @@
 					</div>
 					<ul class="ml-6">
 						<?php 
-						$t_terms = get_terms($taxonomyName, array('parent' => $term->parent, 'hide_empty' => false ));
+						
+						$find_all_hotels_term = get_terms(
+							'citylist', array(
+								'parent' => get_queried_object_id(), 
+								'hide_empty' => false,
+								'meta_query' => array(
+						      array(
+										'key'       => '_crb_citylist_all_category',
+										'value'     => 'yes',
+										'compare'   => '='
+						      )
+						    ),
+							)
+						);
+						
+						$t_terms = get_terms($taxonomyName, array('parent' => $term->parent, 'hide_empty' => false, 'exclude' => $find_all_hotels_term[0]->term_id ));
 						foreach ($t_terms as $t_term): ?>
 							<?php if($t_term): ?>
 							<li class="mb-2">
