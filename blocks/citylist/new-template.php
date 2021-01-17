@@ -81,7 +81,7 @@
 					<div class="flex justify-center mb-5">
 						<!-- Находим субкатегорию ALL -->
 						<?php 
-							$t_terms = get_terms(
+							$find_all_hotels_term = get_terms(
 								'citylist', array(
 									'parent' => get_queried_object_id(), 
 									'hide_empty' => false,
@@ -94,9 +94,14 @@
 							    ),
 								)
 							);
+							if ($find_all_hotels_term[0]->term_id) {
+								$term_hotels_all_id = $find_all_hotels_term[0]->term_id;
+							} else {
+								$term_hotels_all_id = '#';
+							}
 						?>
 						<!-- END Находим субкатегорию ALL -->
-						<a href="<?php echo get_term_link( $t_terms[0]->term_id, 'citylist' ); ?>" class="btn-more white text-center flex items-center">
+						<a href="<?php echo get_term_link( $term_hotels_all_id, 'citylist' ); ?>" class="btn-more white text-center flex items-center">
 							<img src="<?php bloginfo('template_url'); ?>/img/more.svg" width="35" class="mr-4">
 							<div class="btn-more-info bg-custom-grey flex items-center">
 								<img src="https://vidpochivai.com.ua/wp-content/uploads/2020/07/photo_2020-07-06_22-58-09-150x150.jpg" width="50px" class="rounded-full">
