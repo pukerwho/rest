@@ -18,7 +18,7 @@
 
 						$find_all_hotels_term = get_terms(
 							'citylist', array(
-								'parent' => get_queried_object_id(), 
+								'parent' => $term->parent, 
 								'hide_empty' => false,
 								'meta_query' => array(
 						      array(
