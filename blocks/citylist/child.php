@@ -31,12 +31,22 @@
 						);
 					?>
 					<div class="mb-3">
-						<a href="<?php echo get_term_link( $find_all_hotels_term[0]->term_id, $taxonomyName ); ?>" class="blue-links">
+						<a href="#" class="blue-links">
 							<?php $parent_term = get_term( $term->parent, $taxonomyName ); echo $parent_term->name ?>: 
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>
 					</div>
-					
+					<ul class="ml-6">
+						<?php 
+						$t_terms = get_terms($taxonomyName, array('parent' => $term->parent, 'hide_empty' => false ));
+						foreach ($t_terms as $t_term): ?>
+							<?php if($t_term): ?>
+							<li class="mb-2">
+								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="blue-links"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
+							</li>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</ul>
 				</div>
 			</div>
 		</div>
