@@ -68,14 +68,14 @@
 					<!-- END Оглавление -->
 					<!-- Общая информация -->
 					<h2 id="citylist_common" class="mb-4"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_welcometitle') ?></h2>
-					<div class="citylist_text text-2xl mb-5">
+					<div class="citylist_text content text-2xl mb-5">
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_welcometext') ); ?>	
 					</div>
 					<!-- END Общая информация -->
 
 					<!-- Жилье в городе -->
 					<h2 id="citylist_hotels" class="mb-4"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_hotelstitle') ?></h2>
-					<div class="citylist_text mb-5">
+					<div class="citylist_text content mb-5">
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_hotelstext') ); ?>
 					</div>
 					<div class="flex justify-center mb-5">
@@ -108,7 +108,7 @@
 
 					<!-- Места в городе -->
 					<h2 id="citylist_wow" class="mb-4"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_placestitle') ?></h2>
-					<div class="citylist_text mb-5">
+					<div class="citylist_text content mb-5">
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_placestext') ); ?>
 					</div>
 					<!-- END Места в городе -->
