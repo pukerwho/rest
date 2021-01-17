@@ -16,6 +16,7 @@
 						$taxonomyName = 'citylist'; 
 						$term = get_term_by('slug', get_query_var('term'), $taxonomyName); 
 						$parent_term = get_term( $term->parent, $taxonomyName );
+
 						$find_all_hotels_term = get_terms(
 							'citylist', array(
 								'parent' => $term->parent, 
@@ -29,17 +30,21 @@
 						    ),
 							)
 						);
-						echo $find_all_hotels_term[0]->name;
+						if ($find_all_hotels_term[0]->term_id) {
+							$term_hotels_all_id = $find_all_hotels_term[0]->term_id;
+						} else {
+							$term_hotels_all_id = '#';
+						}
 					?>
 					<div class="mb-3">
-						<a href="" class="blue-links">
+						<a href="<?php echo get_term_link( $term_hotels_all_id, $taxonomyName ); ?>" class="blue-links">
 							<?php echo $parent_term->name ?>: 
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>
 					</div>
 					<ul class="ml-6">
 						<?php 
-						$t_terms = get_terms($taxonomyName, array('parent' => $term->parent, 'hide_empty' => false, ));
+						$t_terms = get_terms($taxonomyName, array('parent' => $term->parent, 'hide_empty' => false, 'exclude' => $term_hotels_all_id ));
 						foreach ($t_terms as $t_term): ?>
 							<?php if($t_term): ?>
 							<li class="mb-2">
