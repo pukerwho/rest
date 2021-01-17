@@ -36,17 +36,7 @@
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>
 					</div>
-					<ul class="ml-6">
-						<?php 
-						$t_terms = get_terms($taxonomyName, array('parent' => $term->parent, 'hide_empty' => false ));
-						foreach ($t_terms as $t_term): ?>
-							<?php if($t_term): ?>
-							<li class="mb-2">
-								
-							</li>
-							<?php endif; ?>
-						<?php endforeach; ?>
-					</ul>
+					
 				</div>
 			</div>
 		</div>
