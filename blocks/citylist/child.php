@@ -31,7 +31,7 @@
 						);
 					?>
 					<div class="mb-3">
-						<a href="<?php echo get_term_link( $find_all_hotels_term[0]->term_id, $taxonomyName ); ?>" class="blue-links">
+						<a href="#" class="blue-links">
 							<?php $parent_term = get_term( $term->parent, $taxonomyName ); echo $parent_term->name ?>: 
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>
