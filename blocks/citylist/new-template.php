@@ -77,6 +77,32 @@
 					<h2 id="citylist_hotels" class="mb-4"><?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_hotelstitle') ?></h2>
 					<div class="citylist_text content mb-5">
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_citylist_hotelstext') ); ?>
+						<!-- Список жилья -->
+						<div class="flex flex-wrap -mx-2">
+						<?php 
+							$current_term = get_queried_object_id();
+							$custom_query = new WP_Query( array( 
+							'post_type' => 'hotels', 
+							'posts_per_page' => 3,
+							'paged' => $current,
+							'orderby' => 'date',
+							'order' => 'DESC',
+							'tax_query' => array(
+						    array(
+					        'taxonomy' => 'citylist',
+							    'terms' => $current_term,
+					        'field' => 'term_id',
+					        'include_children' => true,
+					        'operator' => 'IN'
+						    )
+							),
+						) );
+						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+						  	<div class="w-1/2 lg:w-1/3 px-1">
+						  		<?php get_template_part( 'blocks/hotel-card', 'default' ); ?>
+						  	</div>
+						<?php endwhile; endif; wp_reset_postdata(); ?>
+						</div>
 					</div>
 					<div class="flex justify-center mb-5">
 						<!-- Находим субкатегорию ALL -->
