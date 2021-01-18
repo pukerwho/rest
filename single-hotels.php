@@ -35,15 +35,10 @@
 <input type="hidden" value="<?php echo $count_rating; ?>" class="post_rating_count">
 
 <div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12">
-	<div class="flex flex-wrap flex-col lg:flex-row">
+	<div class="flex flex-wrap flex-col-reverse lg:flex-row">
 		<!-- Сайдбар -->
 		<div class="w-full lg:w-3/12 mb-6 lg:mb-0 pr-0 lg:pr-8">
 			<div class="sticky" style="top: 90px;">
-				<!-- Хлебные крошки (mobile) -->
-				<div class="block lg:hidden mb-6">
-					Хлебные крошки
-				</div>	
-				<!-- end Хлебные крошки (mobile) -->
 				<div>
 					<div class="mb-3 text-blue-500" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
 						<a href="/hotels"><?php _e('Жилье в Украине', 'restx'); ?></a>
@@ -66,7 +61,7 @@
 		<!-- Основной контент -->
 		<div class="w-full lg:w-9/12 pl-0 lg:pl-8">
 			<!-- Хлебные крошки (pc) -->
-			<div class="hidden lg:block mb-4">
+			<div class="block mb-4">
 				<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 		      <ul>
 						<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
@@ -96,7 +91,7 @@
 			</div>	
 			<!-- end Хлебные крошки (pc) -->
 
-			<div class="flex flex-wrap flex-col lg:flex-row">
+			<div class="flex flex-wrap flex-col-reverse lg:flex-row">
 				<!-- Контент Отеля -->
 				<div class="w-full lg:w-8/12 pr-0 lg:pr-8">
 					<div>
@@ -221,7 +216,7 @@
 				<!-- end Контент Отеля -->
 
 				<!-- Инфо Отеля -->
-				<div class="w-full lg:w-4/12">
+				<div class="w-full lg:w-4/12 mb-12 lg:mb-0">
 					<div class="sticky" style="top: 90px;">
 						<span class="text-sm text-gray-700"><?php _e('Просмотров', 'restx'); ?>: <?php echo $countNumber; ?></span>
 						<h1 class="text-2xl lg:text-3xl font-normal mb-2"><?php the_title(); ?></h1>	
