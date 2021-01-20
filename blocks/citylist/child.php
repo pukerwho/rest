@@ -33,11 +33,16 @@
 						if ($find_all_hotels_term[0]->term_id) {
 							$term_hotels_all_id = $find_all_hotels_term[0]->term_id;
 						} else {
-							$term_hotels_all_id = '#';
+							$term_hotels_all_id = '1';
 						}
 					?>
 					<div class="mb-3">
-						<a href="<?php echo get_term_link( $term_hotels_all_id, $taxonomyName ); ?>" class="blue-links">
+						<a href="
+							<?php 
+								if($term_hotels_all_id != 1) { 
+									echo get_term_link( $term_hotels_all_id, $taxonomyName );
+								} 
+							?>" class="blue-links">
 							<?php echo $parent_term->name ?>: 
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>

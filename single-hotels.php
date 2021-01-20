@@ -40,20 +40,54 @@
 		<div class="w-full lg:w-3/12 mb-6 lg:mb-0 pr-0 lg:pr-8">
 			<div class="sticky" style="top: 90px;">
 				<div>
-					<div class="mb-3 text-blue-500" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
-						<a href="/hotels"><?php _e('Жилье в Украине', 'restx'); ?></a>
+					<div class="mb-3" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
+						<a href="/hotels" class="blue-links"><?php _e('Жилье в Украине', 'restx'); ?></a>
 					</div>
-					<div class="mb-3"><?php echo $current_term_name; ?>: <?php _e('все жилье в городе', 'restx'); ?>	</div>
+					<?php 
+						$taxonomyName = 'citylist'; 
+
+						$find_all_hotels_term = get_terms(
+							'citylist', array(
+								'parent' => $getCurrentTermId, 
+								'hide_empty' => false,
+								'meta_query' => array(
+						      array(
+										'key'       => '_crb_citylist_all_category',
+										'value'     => 'yes',
+										'compare'   => '='
+						      )
+						    ),
+							)
+						);
+						if ($find_all_hotels_term[0]->term_id) {
+							$term_hotels_all_id = $find_all_hotels_term[0]->term_id;
+						} else {
+							$term_hotels_all_id = '1';
+						}
+					?>
+					<div class="mb-3">
+						<a href="
+							<?php 
+								if($term_hotels_all_id != 1) { 
+									echo get_term_link( $term_hotels_all_id, $taxonomyName );
+								} 
+							?>" class="blue-links">
+							<?php echo $current_term_name ?>: 
+							<?php _e('все жилье в городе', 'restx'); ?>
+						</a>
+					</div>
 					<ul class="ml-6">
 						<?php 
-						$taxonomyName = 'citylist';
-						$t_terms = get_terms($taxonomyName, array('parent' => $getCurrentTermId, 'hide_empty' => false));
+						$t_terms = get_terms($taxonomyName, array('parent' => $getCurrentTermId, 'hide_empty' => false, 'exclude' => $term_hotels_all_id ));
 						foreach ($t_terms as $t_term): ?>
+							<?php if($t_term): ?>
 							<li class="mb-2">
-								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="text-blue-500"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
+								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="blue-links"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
 							</li>
+							<?php endif; ?>
 						<?php endforeach; ?>
 					</ul>
+					
 				</div>
 			</div>
 		</div>
