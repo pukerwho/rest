@@ -70,12 +70,12 @@
 							</a>                        
 							<meta itemprop="position" content="1">
 						</li>
-						<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-							<a itemprop="item" href="<?php echo get_term_link($getCurrentTermId, 'citylist') ?>">
-								<span itemprop="name"><?php echo $current_term_name ?></span>
-							</a>                        
-							<meta itemprop="position" content="2">
-						</li>
+						<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+			        <a itemprop="item" href="<?php echo get_page_url('tpl_allcity') ?>">
+			          <span itemprop="name"><?php _e( 'Курорты', 'restx' ); ?></span>
+			        </a>                        
+			        <meta itemprop="position" content="2">
+			      </li>
 						<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
 							<a itemprop="item" href="<?php echo get_term_link($getCurrentTermId, 'citylist') ?>">
 								<span itemprop="name"><?php echo $current_term_name ?></span>
@@ -216,9 +216,9 @@
 				<!-- end Контент Отеля -->
 
 				<!-- Инфо Отеля -->
-				<div class="w-full lg:w-4/12 mb-12 lg:mb-0">
+				<div class="w-full lg:w-4/12 mb-6 lg:mb-0">
 					<div class="sticky" style="top: 90px;">
-						<span class="text-sm text-gray-700"><?php _e('Просмотров', 'restx'); ?>: <?php echo $countNumber; ?></span>
+						<span class="text-sm text-gray-700 mb-1"><?php _e('Просмотров', 'restx'); ?>: <?php echo $countNumber; ?></span>
 						<h1 class="text-2xl lg:text-3xl font-normal mb-2"><?php the_title(); ?></h1>	
 
 						<div>
