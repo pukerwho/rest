@@ -255,13 +255,16 @@
 						<span class="text-sm text-gray-700 mb-1"><?php _e('Просмотров', 'restx'); ?>: <?php echo $countNumber; ?></span>
 						<h1 class="text-2xl lg:text-3xl font-normal mb-2"><?php the_title(); ?></h1>	
 
-						<div>
+						<div class="mb-4">
 							<?php $all_contacts = rwmb_meta('meta-hotel-all-contacts'); ?>
 							<?php if ($all_contacts): ?>
 								<?php echo $all_contacts; ?>
 							<?php else: ?>
 								<?php get_template_part('blocks/single-hotel/contact') ?>
 							<?php endif; ?>
+						</div>
+						<div>
+							<span class="text-red-600"><?php _e('Цена', 'restx'); ?></span>: <span class="get_hotel_minprice"><?php echo rwmb_meta( 'meta-hotel-minprice' ); ?></span> — <span class="get_hotel_maxprice"><?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?></span> грн 
 						</div>
 					</div>
 				</div>

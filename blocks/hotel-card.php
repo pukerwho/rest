@@ -21,7 +21,7 @@
 			
 			<?php /* get_template_part('blocks/hotel-price'); */ ?>
 
-			Цена: <span class="get_hotel_minprice"><?php echo rwmb_meta( 'meta-hotel-minprice' ); ?></span> — <span class="get_hotel_maxprice"><?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?></span> грн 
+			<?php _e('Цена', 'restx'); ?>: <span class="get_hotel_minprice"><?php echo rwmb_meta( 'meta-hotel-minprice' ); ?></span> — <span class="get_hotel_maxprice"><?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?></span> грн 
 		</div>
 	</div>
 </a>
