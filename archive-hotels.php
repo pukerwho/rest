@@ -27,7 +27,7 @@
 						    )
 							));
 							shuffle( $maincitylists );
-							foreach ( array_slice($maincitylists, 0, 6) as $citylist ): ?>
+							foreach ( array_slice($maincitylists, 0, 9) as $citylist ): ?>
 								<?php if($citylist): ?>
 									<?php
 									$find_all_hotels_term = get_terms(
@@ -50,7 +50,7 @@
 									}
 									?>
 									<li class="mb-2">
-										<a href="<?php echo get_term_link($term_hotels_all_id, 'citylist'); ?>" class="blue-links"><?php echo $term_hotels_all_id; echo $citylist->name ?></a>
+										<a href="<?php echo get_term_link($term_hotels_all_id, 'citylist'); ?>" class="blue-links"><?php echo $citylist->name ?></a>
 									</li>
 								<?php endif; ?>
 							<?php endforeach; ?>
