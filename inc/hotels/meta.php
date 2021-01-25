@@ -27,6 +27,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'name'  => 'Фотографии территории',
         'id' => $prefix . 'hotel-photos',
         'type' => 'image_advanced',
+        'class' => 'hidden',
       ),
       array(
         'name'  => 'Рейтинг (Главный)',
@@ -52,12 +53,12 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'type' => 'number',
         'std'  => 2,
       ),
-      array(
-        'name'  => 'Открыть отзывы?',
-        'id' => $prefix . 'hotel-reviews',
-        'type' => 'checkbox',
-        'std'  => 0,
-      ),
+      // array(
+      //   'name'  => 'Открыть отзывы?',
+      //   'id' => $prefix . 'hotel-reviews',
+      //   'type' => 'checkbox',
+      //   'std'  => 0,
+      // ),
     ),
   );
 
@@ -92,6 +93,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'id' => $prefix . 'hotel-gps',
         'type' => 'text',
         'name' => esc_html__( 'GPS', 'hotels-contact' ),
+        'class' => 'hidden',
       ),
       array(
         'name'  => 'Телефоны',
@@ -99,6 +101,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
+        'class' => 'hidden',
       ),
       array(
         'name'  => 'Viber',
@@ -106,6 +109,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
+        'class' => 'hidden',
       ),
       array(
         'name'  => 'Whatsapp',
@@ -113,6 +117,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
+        'class' => 'hidden',
       ),
       array(
         'name'  => 'Telegram',
@@ -120,6 +125,7 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
+        'class' => 'hidden',
       ),
     ),
   );

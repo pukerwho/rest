@@ -254,7 +254,9 @@
 					<div class="sticky" style="top: 90px;">
 						<span class="text-sm text-gray-700 mb-1"><?php _e('Просмотров', 'restx'); ?>: <?php echo $countNumber; ?></span>
 						<h1 class="text-2xl lg:text-3xl font-normal mb-2"><?php the_title(); ?></h1>	
-
+						<div class="text-2xl mb-6">
+							<span class="text-red-600"><?php _e('Цена', 'restx'); ?></span>: <span class="get_hotel_minprice"><?php echo rwmb_meta( 'meta-hotel-minprice' ); ?></span> — <span class="get_hotel_maxprice"><?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?></span> грн 
+						</div>
 						<div class="mb-4">
 							<?php $all_contacts = rwmb_meta('meta-hotel-all-contacts'); ?>
 							<?php if ($all_contacts): ?>
@@ -263,9 +265,7 @@
 								<?php get_template_part('blocks/single-hotel/contact') ?>
 							<?php endif; ?>
 						</div>
-						<div>
-							<span class="text-red-600"><?php _e('Цена', 'restx'); ?></span>: <span class="get_hotel_minprice"><?php echo rwmb_meta( 'meta-hotel-minprice' ); ?></span> — <span class="get_hotel_maxprice"><?php echo rwmb_meta( 'meta-hotel-maxprice' ); ?></span> грн 
-						</div>
+						
 					</div>
 				</div>
 				<!-- end Инфо Отеля -->
