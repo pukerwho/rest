@@ -245,24 +245,11 @@
   <div class="mobile-menu mobile-show">
     <div class="container mx-auto px-2 lg:px-0">
       <nav>
-        <li>
-          <a href="/about"><?php _e( 'О нас', 'restx' ); ?></a>
-        </li>
-        <li>
-          <a href="<?php echo get_page_url( 'tpl_allcity' ); ?>"><?php _e( 'Курорты', 'restx' ); ?></a>
-        </li>
-        <li>
-          <a href="<?php echo get_post_type_archive_link('way'); ?>"><?php _e( 'Маршруты', 'restx' ); ?></a>
-        </li>
-        <li>
-          <a href="<?php echo get_post_type_archive_link('wow'); ?>"><?php _e( 'Места', 'restx' ); ?></a>
-        </li>
-        <li>
-          <a href="<?php echo get_post_type_archive_link('blogs'); ?>"><?php _e( 'Блог', 'restx' ); ?></a>
-        </li>
-        <li>
-          <a href="/contacts"><?php _e( 'Контакты', 'restx' ); ?></a>
-        </li>
+        <?php wp_nav_menu([
+          'theme_location' => 'head_menu',
+          'menu_id' => 'head_menu',
+          'menu_class' => 'flex flex-col'
+        ]); ?>
       </nav>
       <?php 
         $currentlang = get_bloginfo('language'); 
