@@ -40,7 +40,7 @@ get_header(); ?>
 					<div class="col-md-5">
 						<?php 
 						$args = array(
-							'redirect' => home_url().'/login/', 
+							'redirect' => home_url().'/signin/', 
 						);
 
 						wp_login_form($args); ?>
@@ -74,12 +74,12 @@ get_header(); ?>
 									echo '<div class="register-error text-red-900 mb-2">'. _e("Такой логин уже есть. Пожалуйста, придумайте что-то другое", "restx") .'</div>';
 								} else {
 									$from = get_option('admin_email'); 
-									$headers = 'From: '.$from . "\r\n"; 
-									$subject = "Registration successful"; 
-									$message = "Registration successful.\nYour login details\nUsername: $username\nPassword: $random_password"; 
+									$headers = 'Від: Vidpochivai'; 
+									$subject = "Vidpochivai::Ви успішно зареєстровані"; 
+									$message = "Ви зареєстровані.\nВаші дані для входу\nLogin: $username\nPassword: $random_password"; 
 									// Email password and other details to the user
 									wp_mail( $email, $subject, $message, $headers ); 
-									echo "Please check your email for login details."; 
+									echo _e("Пожалуйста, проверьте свой электронный адрес для получения данных для входа. Письмо может попасть в СПАМ", "restx"); 
 									$error = 2; // We will check for this variable before showing the sign up form. 
 								}
 							}
