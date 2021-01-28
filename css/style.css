@@ -62368,6 +62368,9 @@ input[type="checkbox"]:checked + label:before {
 .bg-custom-grey {
   background: #e8eaee !important; }
 
+.color-red {
+  color: #f56565; }
+
 .btn {
   min-width: 150px;
   font-size: 18px;

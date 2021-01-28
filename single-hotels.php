@@ -34,7 +34,7 @@
 <input type="hidden" value="<?php echo get_the_ID(); ?>" class="post_id">
 <input type="hidden" value="<?php echo $count_rating; ?>" class="post_rating_count">
 
-<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12">
+<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-4">
 	<div class="flex flex-wrap flex-col-reverse lg:flex-row">
 		<!-- Сайдбар -->
 		<div class="w-full lg:w-3/12 mb-6 lg:mb-0 pr-0 lg:pr-8">
@@ -87,7 +87,6 @@
 							<?php endif; ?>
 						<?php endforeach; ?>
 					</ul>
-					
 				</div>
 			</div>
 		</div>
@@ -125,7 +124,7 @@
 			</div>	
 			<!-- end Хлебные крошки (pc) -->
 
-			<div class="flex flex-wrap flex-col-reverse lg:flex-row">
+			<div class="flex flex-wrap flex-col-reverse lg:flex-row mb-2 lg:mb-10">
 				<!-- Контент Отеля -->
 				<div class="w-full lg:w-8/12 pr-0 lg:pr-8">
 					<div>
@@ -240,7 +239,7 @@
 							<?php echo rwmb_meta( 'meta-hotel-address' ); ?>		
 						</div>
 					</div>
-					<div class="mb-6">
+					<div>
 						<div class="text-2xl font-bold mb-4">
 							<?php _e('Отзывы', 'restx'); ?>
 						</div>
@@ -269,10 +268,39 @@
 					</div>
 				</div>
 				<!-- end Инфо Отеля -->
-
 			</div>
 		</div>
 	</div>
+
+	<!-- Другое жилье в этом городе -->
+	<div>
+		<h2 class="text-2xl lg:text-4xl text-center mb-6 lg:mb-10"><?php _e('Другие предложения в этом городе', 'restx'); ?></h2>
+		<div class="flex flex-wrap lg:-mx-2">
+			<?php 
+				$current_id = get_the_ID();
+				$query = new WP_Query( array( 
+					'post_type' => 'hotels', 
+					'posts_per_page' => 8,
+					'post__not_in' => array($current_id),
+					'order'    => 'DESC',
+					'tax_query' => array(
+				    array(
+			        'taxonomy' => 'citylist',
+					    'terms' => $getCurrentTermId,
+			        'field' => 'term_id',
+			        'include_children' => true,
+			        'operator' => 'IN'
+				    )
+					),
+				) );
+			if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+				<div class="w-full lg:w-3/12 px-0 lg:px-2 mb-6">
+					<?php get_template_part('blocks/hotel-card'); ?>
+				</div>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
+		</div>
+	</div>
+	<!-- END Другое жилье в этом городе -->
 </div>
 
 

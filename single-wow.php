@@ -29,24 +29,31 @@
 					</div>
 				</div>
 			</div>
-			<h1 class="text-3xl text-5xl mb-8"><?php the_title(); ?></h1>
-			<div class="row mb-5">
-				<div class="col-md-12">
+			<h1 class="text-3xl lg:text-5xl mb-4 lg:mb-0"><?php the_title(); ?></h1>
+			<div class="text-md lg:text-2xl color-red uppercase mb-6 lg:mb-8">
+				<?php
+					$myterms = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
+					foreach (array_slice($myterms, 0,1) as $myterm): ?>
+						<a href="<?php echo get_term_link($myterm) ?>"><span><?php echo $myterm->name; ?><span></a>
+				<?php endforeach; ?>
+			</div>
+			<div class="flex flex-col lg:flex-row mb-5">
+				<div class="w-full">
 					<div class="wow_gallery">
 						<?php 
 							$wow_photos = carbon_get_the_post_meta('crb_wow_gallery');
 							foreach ( $wow_photos as $wow_photo ): ?>
-								<div class="wow_gallery_item">
-									<?php $photo_src = wp_get_attachment_image_src($wow_photo, 'large'); ?>
-									<a href="<?php echo $photo_src[0]; ?>" data-lightbox="wow-gallery" data-title="<?php the_title(); ?>">
-										<img src="<?php echo $photo_src[0]; ?>" loading="lazy">
-									</a>
-								</div>
+							<div class="wow_gallery_item">
+								<?php $photo_src = wp_get_attachment_image_src($wow_photo, 'large'); ?>
+								<a href="<?php echo $photo_src[0]; ?>" data-lightbox="wow-gallery" data-title="<?php the_title(); ?>">
+									<img src="<?php echo $photo_src[0]; ?>" loading="lazy">
+								</a>
+							</div>
 						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
-			<div class="flex mb-5">
+			<div class="flex flex-col lg:flex-row mb-5">
 				<div class="w-full lg:w-4/12">
 					<div class="wow_subtitle">
 						<?php _e( 'Описание', 'restx' ); ?>
@@ -58,7 +65,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex mb-5">
+			<div class="flex flex-col lg:flex-row mb-5">
 				<div class="w-full lg:w-4/12">
 					<div class="wow_subtitle">
 						<?php _e( 'Расположение', 'restx' ); ?>
@@ -70,7 +77,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex mb-5">
+			<div class="flex flex-col lg:flex-row mb-5">
 				<div class="w-full lg:w-4/12">
 					<div class="wow_subtitle">
 						<?php _e( 'Отзывы', 'restx' ); ?>
@@ -87,7 +94,7 @@
 					<?php _e( 'Есть много всего интересного', 'restx' ); ?>!
 				</div>
 			</div>
-			<div class="flex lg:-mx-2">
+			<div class="flex flex-wrap lg:-mx-2">
 				<?php 
 					$current_id = get_the_ID();
 					$query = new WP_Query( array( 
@@ -100,6 +107,13 @@
 					<div class="w-full lg:w-3/12 px-0 lg:px-2 mb-5">
 						<a href="<?php the_permalink(); ?>">
 							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="wow_archive_thumb mb-3">
+							<div class="hotel-item__city mb-2">
+								<?php
+									$myterms = wp_get_post_terms(  get_the_ID() , 'citylist', array( 'parent' => 0 ) );
+									foreach (array_slice($myterms, 0,1) as $myterm): ?>
+										<a href="<?php echo get_term_link($myterm) ?>"><span><?php echo $myterm->name; ?><span></a>
+									<?php endforeach; ?>
+							</div>
 							<div class="wow_archive_name">
 								<?php the_title(); ?>
 							</div>

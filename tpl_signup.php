@@ -71,7 +71,7 @@ get_header(); ?>
 								$random_password = wp_generate_password( 12, false ); 
 								$status = wp_create_user( $username, $random_password, $email ); 
 								if ( is_wp_error($status) ) {
-									echo '<div class="register-error text-red-900 mb-2">'. _e("Такой логин уже есть. Пожалуйста, придумайте что-то другое", "restx") .'</div>';
+									echo '<div class="register-error text-red-900 mb-2">'. _e("Такой логин или email уже есть. Пожалуйста, введите что-то другое", "restx") .'</div>';
 								} else {
 									$from = get_option('admin_email'); 
 									$headers = 'Від: Vidpochivai'; 
@@ -111,12 +111,10 @@ get_header(); ?>
 				else { ?>
 
 				<!-- Если уже залогинился -->
-				<script>window.location.href = 'http://vidpochivai.com.ua/';</script>
+				<script>window.location.href = 'https://vidpochivai.com.ua/';</script>
 
 				<?php } ?>
-			</div>
-
-				
+			</div>				
 		</div>
 	</div>
 
