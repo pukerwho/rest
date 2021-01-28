@@ -71,9 +71,9 @@
             <?php _e('Эл. почта для связи', 'restx'); ?>: <a href="mailto:partner@vidpochivai.com.ua">partner@vidpochivai.com.ua</a>
           </div>
           <?php if( !is_page_template( 'tpl_main.php' )): ?>
-            2020 &copy; Vidpochivai.com.ua
+            2021 &copy; Vidpochivai.com.ua
           <? else: ?>
-            2020 &copy; 
+            2021 &copy; 
             <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"> Vidpochivai.com.ua</a> › </span> <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua//#best" rel="v:url" property="v:title"><?php _e( 'Только проверенные предложения!', 'restx' ); ?></a> </span>
           <?php endif ?>
         </div>
