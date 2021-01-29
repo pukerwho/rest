@@ -40,7 +40,7 @@ get_header(); ?>
 					<div class="col-md-5">
 						<?php 
 						$args = array(
-							'redirect' => home_url().'/signin/', 
+							'redirect' => home_url().'/welcome/', 
 						);
 
 						wp_login_form($args); ?>
@@ -100,7 +100,7 @@ get_header(); ?>
 										<input type="submit" id="register-submit-btn" class="mb-4" name="submit" value="<?php _e('Зарегистрироваться', 'restx'); ?>" /> 
 									</form>
 
-									<p><?php _e('Уже есть аккаунт','restx'); ?>? <a href="/login" class="blue-links"><?php _e('Войдите здесь','restx'); ?></a></p>
+									<p><?php _e('Уже есть аккаунт','restx'); ?>? <a href="/welcome" class="blue-links"><?php _e('Войдите здесь','restx'); ?></a></p>
 									</div>
 								<?php } else {
 									echo _e('Регистрация сейчас недоступна. Зайдите позже.', 'restx');
