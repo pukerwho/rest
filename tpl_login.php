@@ -39,9 +39,7 @@ get_header(); ?>
 				);
 			}?>
 
-			<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" alt="<?php esc_attr_e( 'Забыли пароль', 'restx' ); ?>" class="blue-links">
-				<?php esc_html_e( 'Я забыл пароль', 'restx' ); ?>
-			</a>
+			
 
 			<?php endwhile; else: ?>
 				<p><?php _e('Ничего не найдено'); ?></p>
