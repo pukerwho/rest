@@ -105,12 +105,25 @@
           <span class="mr-4"><?php _e('Отправить', 'restx'); ?></span>
           <img src="<?php bloginfo('template_url'); ?>/img/white-arrow.svg" width="12px" class="mt-1">
         </button>
-        <div class="modal_success hidden"><?php _e('Мы получили ваше сообщение. Скоро ответим Вам', 'restx'); ?>.</div>
+        <div class="modal_success hidden" data-notice="mail-send-success"><?php _e('Мы получили ваше сообщение. Скоро ответим Вам', 'restx'); ?>.</div>
       </form>
     </div>
   </div>
 </div>
 <!-- Конец Модальное окно, обратная связь -->
+
+<!-- Модальное окно, войти или зарегистрироваться -->
+<div class="modal" data-modal-id="login">
+  <div class="modal_content">
+    <div class="modal_content_close">
+      <img src="<?php bloginfo('template_url'); ?>/img/close-modal.svg" width="15px">
+    </div>
+    <div>
+      <?php _e('Вам нужно ', 'restx'); ?><a href="/login" class="blue-links"><?php _e('Войти','restx'); ?></a> <?php _e('или ', 'restx'); ?> <a href="/signup" class="blue-links"><?php _e('Зарегистрироваться', 'restx'); ?></a>
+    </div>
+  </div>
+</div>
+<!-- Конец Модальное окно, войти или зарегистрироваться -->
 
 <!-- Поиск -->
 <div class="search">
@@ -133,6 +146,9 @@
 
 <div class="rest_modal_bg"></div>
 <div class="modal-bg"></div>
+
+<div class="modal_success hidden" data-notice="fav-add-success"><?php _e('Успешно добавили в Избранное', 'restx'); ?></div>
+<div class="modal_success hidden" data-notice="fav-remove-success"><?php _e('Успешно удалили из Избранного', 'restx'); ?></div>
 
 <?php wp_footer(); ?>
 

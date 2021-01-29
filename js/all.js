@@ -660,12 +660,12 @@ const modal_form = document.forms['form_add']
 if (modal_form) {
   modal_form.addEventListener('submit', e => {
     e.preventDefault()
-    let modalSuccess = document.querySelector('.modal_success');
+    let modalContactSuccess = document.querySelector('.modal_success[data-notice="mail-send-success"]');
     let modalSuccessShow = 0;
     let this_form = modal_form
     let data = new FormData(modal_form)
     fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
-      .then(response => showSuccessMessage(data, this_form, modalSuccess, modalSuccessShow))
+      .then(response => showSuccessMessage(data, this_form, modalContactSuccess, modalSuccessShow))
       .catch(error => console.error('Error!', error.message))
   })  
 }

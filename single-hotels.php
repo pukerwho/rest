@@ -251,6 +251,24 @@
 				<!-- Инфо Отеля -->
 				<div class="w-full lg:w-4/12 mb-6 lg:mb-0">
 					<div class="sticky" style="top: 90px;">
+						<!-- Добавить в избранное -->
+						<div style="position: absolute; right: 0; z-index: 2; top: 0; transform: translateY(-12px);">
+							<?php if ( is_user_logged_in() ): ?>
+								<?php
+									global $current_user;
+									$post_type = get_post_type();
+									$post_id = get_the_ID();
+									$user_id = $current_user->id;
+									$favClass = new Favbtn();
+									$favBtn = $favClass->show_fav_btn($user_id,$post_id,$post_type);
+								?>
+							<?php else: ?>
+								<div class="btn-fav cursor-pointer js-openmodal-click" data-modal-id="login">
+									<svg width="24" height="24" fill="none" class="color-red"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.509 20.86C18.78 17.154 22 13.22 22 9c0-6.002-6.749-7.89-10-3.898C8.749 1.11 2 2.998 2 9c0 4.22 3.219 8.153 9.491 11.86a1 1 0 001.018 0zm.402-13.448C14.677 3.51 20 4.542 20 9c0 3.253-2.616 6.55-8 9.834C6.617 15.549 4 12.254 4 9c0-4.459 5.323-5.49 7.089-1.588a1 1 0 001.822 0z" fill="currentColor"></path></svg>
+								</div>
+							<?php endif; ?>
+						</div>
+						<!-- END Добавить в Избранное -->
 						<span class="text-sm text-gray-700 mb-1"><?php _e('Просмотров', 'restx'); ?>: <?php echo $countNumber; ?></span>
 						<h1 class="text-2xl lg:text-3xl font-normal mb-2"><?php the_title(); ?></h1>	
 						<div class="text-2xl mb-6">
@@ -264,7 +282,6 @@
 								<?php get_template_part('blocks/single-hotel/contact') ?>
 							<?php endif; ?>
 						</div>
-						
 					</div>
 				</div>
 				<!-- end Инфо Отеля -->

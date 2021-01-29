@@ -102,8 +102,8 @@ function theme_name_scripts() {
 
 //подключаем стили к админке
 function load_custom_wp_admin_style() {
-        wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
-        wp_enqueue_style( 'custom_wp_admin_css' );
+  wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
+  wp_enqueue_style( 'custom_wp_admin_css' );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
@@ -371,6 +371,22 @@ function my_wp_new_user_notification_email_admin( $notification, $user, $blognam
     $notification['to'] = 'time2top10@gmail.com';
     return $notification;
 }
+
+function wpse23007_redirect(){
+  if( is_admin() && !defined('DOING_AJAX') && ( current_user_can('author') || current_user_can('contributor') ) ){
+    wp_redirect(home_url());
+    exit;
+  }
+}
+add_action('init','wpse23007_redirect');
+
+add_action('set_current_user', 'cc_hide_admin_bar');
+function cc_hide_admin_bar() {
+  if (!current_user_can('administrator')) {
+    show_admin_bar(false);
+  }
+}
+
 
 //GET PARENT TERM INFO
 function get_parent_term_title($parent_term_id, $parent_term_name) {

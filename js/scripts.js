@@ -533,7 +533,6 @@ if (contact_page_form) {
   })  
 }
 
-let modalSuccess = document.querySelector('.modal_success');
 const modalScriptURL = 'https://script.google.com/macros/s/AKfycbxCuyzBJNQ4c7BVNBEGF3u37mkMg2RgvKA22yXzRYl7ZsTy_yY/exec'
 const modal_form = document.forms['form_add']
 if (modal_form) {
