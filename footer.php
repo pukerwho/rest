@@ -118,7 +118,7 @@
       <img src="<?php bloginfo('template_url'); ?>/img/close-modal.svg" width="15px">
     </div>
     <div>
-      <?php _e('Вам нужно ', 'restx'); ?><a href="/login" class="blue-links"><?php _e('Войти','restx'); ?></a> <?php _e('или ', 'restx'); ?> <a href="/signup" class="blue-links"><?php _e('Зарегистрироваться', 'restx'); ?></a>
+      <?php _e('Вам нужно ', 'restx'); ?><a href="/welcome" class="blue-links"><?php _e('Войти','restx'); ?></a> <?php _e('или ', 'restx'); ?> <a href="/signup" class="blue-links"><?php _e('Зарегистрироваться', 'restx'); ?></a>
     </div>
   </div>
 </div>
