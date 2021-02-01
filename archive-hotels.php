@@ -7,6 +7,13 @@
 			<div class="sticky" style="top: 90px;">
 				<div>
 					<div>
+						<div class="mb-4 text-lg"><?php _e('Направления', 'restx'); ?>:</div>
+						<ul class="mb-6">
+							<li class="mb-2"><a href="<?php echo get_page_url('tpl_blacksea') ?>" class="blue-links"><?php _e('Черное море', 'restx'); ?></a></li>
+							<li class="mb-2"><a href="<?php echo get_page_url('tpl_azovsea') ?>" class="blue-links"><?php _e('Азовское море', 'restx'); ?></a></li>
+							<li class="mb-2"><a href="<?php echo get_page_url('tpl_karpaty') ?>" class="blue-links"><?php _e('Карпаты', 'restx'); ?></a></li>
+						</ul>
+						<div class="mb-4 text-lg"><?php _e('Популярные курорты', 'restx'); ?>:</div>
 						<ul class="mb-3" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
 							<?php $maincitylists = get_terms( array( 
 								'taxonomy' => 'citylist', 

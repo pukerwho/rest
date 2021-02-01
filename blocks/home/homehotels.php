@@ -7,7 +7,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex flex-wrap -mx-3 mb-8">
+	<div class="flex flex-wrap -mx-1 mb-8">
 		<?php $custom_query = new WP_Query( array( 
 			'post_type' => 'hotels', 
 			'posts_per_page' => 8,
