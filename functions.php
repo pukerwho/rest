@@ -380,11 +380,11 @@ function wpse23007_redirect(){
 }
 add_action('init','wpse23007_redirect');
 
-add_action('set_current_user', 'cc_hide_admin_bar');
-function cc_hide_admin_bar() {
-  if (!current_user_can('administrator')) {
-    show_admin_bar(false);
-  }
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
 }
 
 
