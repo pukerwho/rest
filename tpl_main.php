@@ -8,6 +8,7 @@ Template Name: Главная страница
 
 <?php get_template_part( 'blocks/home/homehero', 'default' ); ?>
 <?php get_template_part( 'blocks/home/homecities', 'default' ); ?>
+<?php get_template_part( 'blocks/home/homehotels', 'default' ); ?>
 <?php get_template_part( 'blocks/home/homeplaces', 'default' ); ?>
 <div class="pt-5 pb-2">
 	<?php get_template_part( 'blocks/home/homeblog', 'default' ); ?>	
