@@ -382,10 +382,16 @@ add_action('init','wpse23007_redirect');
 
 add_action('after_setup_theme', 'remove_admin_bar');
 function remove_admin_bar() {
-if (!current_user_can('administrator') && !is_admin()) {
-  show_admin_bar(false);
+  if (!current_user_can('administrator') && !is_admin()) {
+    show_admin_bar(false);
+  }
 }
+
+function so174837_registration_email_alert( $user_id ) {
+    $message = 'На видпочивае кто-то зарегался';
+    wp_mail( 'pelegrin2puk@gmail.com', 'Новый пользователь', $message );
 }
+add_action('user_register', 'so174837_registration_email_alert');
 
 
 //GET PARENT TERM INFO

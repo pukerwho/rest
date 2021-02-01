@@ -73,7 +73,7 @@ get_header(); ?>
 								if ( is_wp_error($status) ) {
 									echo '<div class="register-error text-red-900 mb-2">'. _e("Такой логин или email уже есть. Пожалуйста, введите что-то другое", "restx") .'</div>';
 								} else {
-									$from = get_option('admin_email'); 
+									$from = 'Vidpochivai'; 
 									$headers = 'Від: Vidpochivai'; 
 									$subject = "Vidpochivai::Ви успішно зареєстровані"; 
 									$message = "Ви зареєстровані.\nВаші дані для входу\nLogin: $username\nPassword: $random_password"; 
