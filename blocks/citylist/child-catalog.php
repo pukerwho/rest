@@ -1,3 +1,4 @@
+<?php echo get_queried_object_id(); ?>
 <div class="flex flex-wrap lg:-mx-2" id="response">
 	<?php 
 		global $wp_query, $wp_rewrite;  
@@ -6,7 +7,9 @@
 		$custom_query = new WP_Query( array( 
 		'post_type' => 'hotels', 
 		'posts_per_page' => 24,
-		'orderby'        => 'date',
+		'orderby' => 'date',
+		'order' => 'DESC',
+		'paged' => $current,
 		'tax_query' => array(
 	    array(
         'taxonomy' => 'citylist',
@@ -28,7 +31,7 @@
 	<div class="w-full text-center">
 		<div class="b_pagination">
 			<?php 
-				$big = 999999999; // уникальное число
+				$big = 9999999969; // уникальное число
 				echo paginate_links( array(
 				'format'  => 'page/%#%',
 				'current'   => $current,

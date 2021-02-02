@@ -796,7 +796,7 @@ for (citylistSubject of citylistSubjects) {
 
 function createChar(item, char) {
   var newChar = document.createElement('div');
-  newChar.className = 'text-3xl mt-4 mb-1';
+  newChar.className = 'citylist_varchar text-3xl mt-4 mb-1';
   newChar.innerHTML = char;
   item.before(newChar);
 }
@@ -813,4 +813,31 @@ for (allCityItem of allCityItems) {
     }
   }
 }
+
+//Быстрый поиск на странице Citylist
+$("#search_city_box").keyup(function() {
+  var filter = $(this).val();
+  filter = filter.toLowerCase();
+  if (filter.length > 0) {
+    $('.citylist_varchar').css({'display':'none'});
+  } else {
+    $('.citylist_varchar').css({'display':'block'});
+  }
+  $(".allcity_item a").each(function() {
+    var metadata = $(this).data("metadata");
+    var regexp = new RegExp(filter); 
+    var metadatastring = "";
+    metadatastring = metadatastring.toLowerCase();
+
+    if(typeof metadata.tag != "undefined") {
+      metadatastring = metadata.tag.join(" ");
+    }
+    if (metadatastring.toLowerCase().search(regexp) < 0) {
+      $(this).hide();
+    } 
+    else {
+      $(this).show();
+    }
+  });
+});
 

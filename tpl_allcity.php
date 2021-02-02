@@ -23,11 +23,16 @@ Template Name: Все города
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-center mb-5">
+		<div class="flex justify-center mb-6">
 			<div class="tags w-full flex flex-col justify-center lg:flex-row text-md lg:-mx-2">
 				<li class="mb-3 lg:px-1"><a href="<?php echo get_page_url('tpl_karpaty') ?>" class="tag px-6 py-4 rounded-lg"><?php _e('Карпаты', 'restx'); ?></a></li>
 				<li class="mb-3 lg:px-1"><a href="<?php echo get_page_url('tpl_blacksea') ?>" class="tag px-6 py-4 rounded-lg" style="background: rgba(255, 211, 29, 0.15);"><?php _e('Черное море', 'restx'); ?></a></li>
 				<li class="mb-3 lg:px-1"><a href="<?php echo get_page_url('tpl_azovsea') ?>" class="tag px-6 py-4 rounded-lg" style="background: rgba(95, 126, 255, 0.15);"><?php _e('Азовское', 'restx'); ?></a></li>
+			</div>
+		</div>
+		<div class="flex justify-center">
+			<div class="w-full lg:w-8/12">
+				<input id="search_city_box" placeholder="<?php _e('Быстрый поиск', 'restx'); ?>" class="text-lg py-5" />
 			</div>
 		</div>
 		<div class="flex justify-center">
@@ -43,7 +48,7 @@ Template Name: Все города
         ));
 				foreach ( $cities as $city ): ?>
 					<div class="text-2xl allcity_item">
-						<a href="<?php echo get_term_link($city); ?>">
+						<a href="<?php echo get_term_link($city); ?>" data-metadata='{"name": "city","category": "kurort","tag": ["<?php echo $city->name; ?>"]}'>
 							<?php echo $city->name; ?>
 						</a>
 					</div>
