@@ -1,4 +1,3 @@
-<?php echo get_queried_object_id(); ?>
 <div class="flex flex-wrap lg:-mx-2" id="response">
 	<?php 
 		global $wp_query, $wp_rewrite;  
@@ -7,8 +6,7 @@
 		$custom_query = new WP_Query( array( 
 		'post_type' => 'hotels', 
 		'posts_per_page' => 24,
-		'orderby' => 'date',
-		'order' => 'DESC',
+		'orderby'        => 'date',
 		'paged' => $current,
 		'tax_query' => array(
 	    array(
