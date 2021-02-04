@@ -12,19 +12,19 @@ Template Name: Профиль
 		<?php global $current_user; ?>
 
 		<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12">
-			<div class="w-9/12 flex flex-col lg:flex-row mx-auto">
+			<div class="flex flex-col lg:flex-row mx-auto">
 
 				<!-- Навигация -->
 				<div class="w-full lg:w-3/12">
 					<div>
 						<div>
-							<?php _e('Ваш профиль', 'restx'); ?>
-						</div>
-						<div>
-							<?php _e('Ваши комментарии', 'restx'); ?>
+							<?php _e('Ваши объявления', 'restx'); ?>
 						</div>
 						<div>
 							<?php _e('Избранное', 'restx'); ?>
+						</div>
+						<div>
+							<?php _e('Настройки', 'restx'); ?>
 						</div>
 					</div>
 					
@@ -34,8 +34,8 @@ Template Name: Профиль
 				<!-- Информация -->
 				<div class="w-full lg:w-9/12">
 					<?php 
-						echo $current_user->nickname;
-						echo $current_user->id;
+						// echo $current_user->nickname;
+						// echo $current_user->id;
 					?>
 
 					<!-- Избранные объявления -->
@@ -60,11 +60,12 @@ Template Name: Профиль
 				    				<?php echo get_comment_date("j/n/Y", $comment->comment_ID) ?>
 				    			</a>
 				    		</div>
-				    		
 				    		<!-- END Дата комментария -->
+
 				    		<!-- Текст комментария -->
 				    		<?php echo $comment->comment_content; ?>
 				    		<!-- END Текст комментария -->
+
 				      <?php endforeach; ?>
 				    <?php else: ?>
 				    	Комментов нет
