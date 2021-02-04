@@ -167,6 +167,11 @@ var hotelItemSwiper = function() {
   });
 }
 hotelItemSwiper();
+$('.profile-tab ').on('click', function(){
+	let dataProfileTab = $(this).data('profile-tab');
+	$('.profile-tab-content').removeClass('show');
+	$('.profile-tab-content[data-content-tab="'+dataProfileTab+'"').addClass('show');
+})
 $(function() {
   (function() {
     var div, n,

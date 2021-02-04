@@ -65083,6 +65083,11 @@ input[type="checkbox"]:checked + label:before {
   margin: 20px 0;
   padding: 12.5px; }
 
+.profile-tab-content {
+  display: none; }
+  .profile-tab-content.show {
+    display: inline-block; }
+
 html.lb-disable-scrolling {
   overflow: hidden;
   /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */

@@ -14,17 +14,29 @@ Template Name: Профиль
 		<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12">
 			<div class="flex flex-col lg:flex-row mx-auto">
 
-				<!-- Навигация -->
-				<div class="w-full lg:w-3/12">
-					<div>
-						<div>
-							<?php _e('Ваши объявления', 'restx'); ?>
+				
+				<div class="w-full lg:w-3/12 lg:pr-6">
+					<!-- Инфо Юзер -->
+					<div class="mb-6" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 20px;">
+						<div class="text-lg"><?php echo $current_user->nickname; ?></div>
+						<div class="opacity-75"><?php echo $current_user->user_email; ?></div>
+					</div>
+					<!-- Навигация -->
+					<div class="profile-tabs text-lg">
+						<div class="mb-2">
+							<div class="profile-tab blue-links cursor-pointer" data-profile-tab="profile-tab-ads">
+								<?php _e('Ваши объявления', 'restx'); ?>
+							</div>
 						</div>
-						<div>
-							<?php _e('Избранное', 'restx'); ?>
+						<div class="mb-2">
+							<span class="profile-tab blue-links cursor-pointer" data-profile-tab="profile-tab-favorites">
+								<?php _e('Избранное', 'restx'); ?>
+							</span>
 						</div>
-						<div>
-							<?php _e('Настройки', 'restx'); ?>
+						<div class="mb-2">
+							<span class="profile-tab blue-links cursor-pointer" data-profile-tab="profile-tab-settings">
+								<?php _e('Настройки', 'restx'); ?>
+							</span>
 						</div>
 					</div>
 					
@@ -32,46 +44,26 @@ Template Name: Профиль
 				<!-- END Навигация -->
 
 				<!-- Информация -->
-				<div class="w-full lg:w-9/12">
-					<?php 
-						// echo $current_user->nickname;
-						// echo $current_user->id;
-					?>
+				<div class="w-full lg:w-9/12 lg:pl-6">
+
+					<!-- Мои объявления -->
+					<div class="profile-tab-content show" data-content-tab="profile-tab-ads">
+						<div class="text-2xl"><?php _e('Мои объявления','restx'); ?></div>
+					</div>
+					<!-- END Мои объявления -->
 
 					<!-- Избранные объявления -->
-					Избранное
+					<div class="profile-tab-content" data-content-tab="profile-tab-favorites">
+						<div class="text-2xl"><?php _e('Избранное','restx'); ?></div>
+					</div>
 					<!-- END Избранные объявления -->
 
-					<!-- Комментарии пользователя -->
-					<div class="mb-6">
-						<?php
-				    $args = array(
-			        'user_id' => $current_user->id,
-			        'number' => 10, // how many comments to retrieve
-			        'status' => 'approve'
-		        );
-				    $comments = get_comments( $args );
-				    if ( $comments ): ?>
-				    	<?php foreach ($comments as $comment): ?>
+					<!-- Избранные объявления -->
+					<div class="profile-tab-content" data-content-tab="profile-tab-settings">
+						<div class="text-2xl"><?php _e('Настройки','restx'); ?></div>
+					</div>
+					<!-- END Избранные объявления -->
 
-				    		<!-- Дата комментария -->
-				    		<div>
-				    			<a href="<?php echo get_comment_link( $comment->comment_ID ); ?>" class="blue-links">
-				    				<?php echo get_comment_date("j/n/Y", $comment->comment_ID) ?>
-				    			</a>
-				    		</div>
-				    		<!-- END Дата комментария -->
-
-				    		<!-- Текст комментария -->
-				    		<?php echo $comment->comment_content; ?>
-				    		<!-- END Текст комментария -->
-
-				      <?php endforeach; ?>
-				    <?php else: ?>
-				    	Комментов нет
-				    <?php endif; ?>
-				  </div>
-				  <!-- END Комментарии пользователя -->
 				</div>
 				<!-- END Информация -->
 			</div>
