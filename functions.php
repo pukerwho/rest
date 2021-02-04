@@ -107,7 +107,6 @@ function load_custom_wp_admin_style() {
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
-
 function create_post_type() {
   register_post_type( 'hotels',
     array(
@@ -366,11 +365,11 @@ function get_page_url($template_name) {
 }
 
 
-add_filter( 'wp_new_user_notification_email_admin', 'my_wp_new_user_notification_email_admin', 10, 3 );
-function my_wp_new_user_notification_email_admin( $notification, $user, $blogname ) {
-    $notification['to'] = 'time2top10@gmail.com';
-    return $notification;
-}
+// add_filter( 'wp_new_user_notification_email_admin', 'my_wp_new_user_notification_email_admin', 10, 3 );
+// function my_wp_new_user_notification_email_admin( $notification, $user, $blogname ) {
+//     $notification['to'] = 'time2top10@gmail.com';
+//     return $notification;
+// }
 
 function wpse23007_redirect(){
   if( is_admin() && !defined('DOING_AJAX') && ( current_user_can('author') || current_user_can('contributor') ) ){
@@ -387,11 +386,11 @@ function remove_admin_bar() {
   }
 }
 
-function so174837_registration_email_alert( $user_id ) {
-    $message = 'На видпочивае кто-то зарегался';
-    wp_mail( 'pelegrin2puk@gmail.com', 'Новый пользователь', $message );
-}
-add_action('user_register', 'so174837_registration_email_alert');
+// function so174837_registration_email_alert( $user_id ) {
+//     $message = 'На видпочивае кто-то зарегался';
+//     wp_mail( 'pelegrin2puk@gmail.com', 'Новый пользователь', $message );
+// }
+// add_action('user_register', 'so174837_registration_email_alert');
 
 
 //GET PARENT TERM INFO
