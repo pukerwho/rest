@@ -59,8 +59,12 @@
       <div class="w-full lg:w-1/4 mb-8">
         <h3 class="text-lg font-bold mb-4"><?php _e('Полезные ссылки', 'restx'); ?></h3>
         <ul>
-          <li><a href="<?php echo get_page_url('tpl_partner') ?>"><?php _e('Условия размещения','restx'); ?></a></li>
-          <li><a href="/policy"><?php _e('Политика конфиденциальности','restx'); ?></a></li>
+          <?php if (get_locale() == 'ru_RU') {
+            $policy_link = '/policy/';
+          } else {
+            $policy_link = '/policy-ua/';
+          }  ?>
+          <li><a href="<?php echo $policy_link; ?>"><?php _e('Политика конфиденциальности','restx'); ?></a></li>
         </ul>
       </div>
     </div>

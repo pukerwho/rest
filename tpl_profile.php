@@ -11,7 +11,7 @@ Template Name: Профиль
 	<?php if ( is_user_logged_in() ): ?>
 		<?php global $current_user; ?>
 
-		<div class="container mx-auto px-2 lg:px-0 pt-20 lg:pt-12 lg:pb-12">
+		<div class="container mx-auto px-2 lg:px-0 pt-20 pb-8 lg:pt-12 lg:pb-12 ">
 			<div class="flex flex-col lg:flex-row mx-auto">
 
 				

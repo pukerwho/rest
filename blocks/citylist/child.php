@@ -37,15 +37,19 @@
 						}
 					?>
 					<div class="mb-3">
+						<?php if ($term_hotels_all_id === get_queried_object()->term_id) {
+							$classActive = 'active';
+						} ?>
 						<a href="
 							<?php 
 								if($term_hotels_all_id != 1) { 
 									echo get_term_link( $term_hotels_all_id, $taxonomyName );
 								} 
-							?>" class="blue-links">
+							?>" class="blue-links <?php echo $classActive; ?>">
 							<?php echo $parent_term->name ?>: 
 							<?php _e('все жилье в городе', 'restx'); ?>
 						</a>
+						<?php unset($classActive); ?>
 					</div>
 					<ul class="ml-6">
 						<?php 
@@ -53,7 +57,11 @@
 						foreach ($t_terms as $t_term): ?>
 							<?php if($t_term): ?>
 							<li class="mb-2">
-								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="blue-links"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
+								<?php if ($t_term->term_id === get_queried_object()->term_id) {
+									$classActive = 'active';
+								} ?>
+								<a href="<?php echo get_term_link( $t_term->term_id, $taxonomyName ); ?>" class="blue-links <?php echo $classActive; ?>"><?php echo carbon_get_term_meta($t_term->term_id, 'crb_citylist_menu_name'); ?></a>
+								<?php unset($classActive); ?>
 							</li>
 							<?php endif; ?>
 						<?php endforeach; ?>

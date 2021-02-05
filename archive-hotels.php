@@ -83,7 +83,7 @@
 							<meta itemprop="position" content="1">
 						</li>
 						<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-			        <a itemprop="item" href="<?php echo get_post_type_archive_link('wow'); ?>">
+			        <a itemprop="item" href="<?php echo get_post_type_archive_link('hotels'); ?>">
 			          <span itemprop="name"><?php _e( 'Жилье в Украине', 'restx' ); ?></span>
 			        </a>                        
 			        <meta itemprop="position" content="2">
@@ -92,6 +92,26 @@
 		    </div>
 			</div>
 			<h1 class="text-2xl lg:text-4xl mb-6"><?php _e('Снять жилье в Украине', 'restx'); ?></h1>
+			<!-- Подборки жилья -->
+			<div class="mb-2">
+				<ul class="flex flex-wrap -mx-2">
+					<?php $collections = get_terms( array( 
+						'taxonomy' => 'collections', 
+						'parent' => 0, 
+						'hide_empty' => false,
+					));
+					foreach ( $collections as $col ): ?>
+						<?php if($col): ?>
+							<li class="mb-6 px-2">
+								<a href="<?php echo get_term_link($col->term_id, 'collections'); ?>" class="blue-tabs bg-gray-200 px-3 py-2 rounded-lg">
+									<?php echo $col->name; ?>
+								</a>
+							</li>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+			<!-- END Подборки жилья -->
 			<!-- Все жилье, что есть -->
 			<div class="flex flex-wrap lg:-mx-2 mb-6" id="response">
 				<?php 

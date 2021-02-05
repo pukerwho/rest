@@ -62070,6 +62070,18 @@ input[type="checkbox"]:checked + label:before {
   transition: color .1s ease; }
   .blue-links:hover {
     color: #f95146; }
+  .blue-links.active {
+    color: #f95146; }
+
+.blue-tabs {
+  color: rgba(0, 0, 0, 0.64);
+  background: rgba(0, 0, 0, 0.04); }
+  .blue-tabs:hover {
+    background: #0066f5;
+    color: #ffffff; }
+  .blue-tabs.active {
+    background: #0066f5;
+    color: #ffffff; }
 
 .content h2 {
   font-size: 28px;

@@ -101,7 +101,6 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
-        'class' => 'hidden',
       ),
       array(
         'name'  => 'Viber',
@@ -109,7 +108,6 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
-        'class' => 'hidden',
       ),
       array(
         'name'  => 'Whatsapp',
@@ -117,7 +115,6 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         'size'        => 50,
         'field_type' => 'text',
         'clone' => true,
-        'class' => 'hidden',
       ),
       array(
         'name'  => 'Telegram',
