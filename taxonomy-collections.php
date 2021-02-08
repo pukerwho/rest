@@ -105,6 +105,7 @@
 						'taxonomy' => 'collections', 
 						'parent' => 0, 
 						'hide_empty' => false,
+						'exclude' => array(60,354),
 					));
 					foreach ( $collections as $col ): ?>
 						<?php if($col): ?>
