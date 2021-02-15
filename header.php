@@ -108,7 +108,7 @@
               </div>
               <div>
                 <?php if ( is_user_logged_in() ): ?>
-                  <a href="<?php echo get_page_url('tpl_allcity') ?>">
+                  <a href="<?php echo get_page_url('tpl_profile') ?>">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
                   </a>
                 <?php else: ?>
@@ -148,7 +148,7 @@
           <!-- mobile add btn -->
           <div class="mobile-show">
             <?php if ( is_user_logged_in() ): ?>
-              <a href="<?php echo get_page_url('tpl_allcity') ?>">
+              <a href="<?php echo get_page_url('tpl_profile') ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
               </a>
             <?php else: ?>
