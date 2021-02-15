@@ -94,7 +94,7 @@
                   <!-- <img src="<?php bloginfo('template_url') ?>/img/close.svg"> -->
                 </li>
               </div>
-              <div>
+              <div class="mr-5">
                 <?php 
                   $currentlang = get_bloginfo('language'); 
                   $home_path = home_url();
@@ -105,6 +105,17 @@
                     <a href="<?php echo $translation['url'] ?>" class="<?php echo ($currentlang === 'uk') ? 'active' : '' ?>">Українською</a>
                   </li>
                 <?php endforeach; ?>
+              </div>
+              <div>
+                <?php if ( is_user_logged_in() ): ?>
+                  <a href="<?php echo get_page_url('tpl_allcity') ?>">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
+                  </a>
+                <?php else: ?>
+                  <a href="/member-login">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
+                  </a>
+                <?php endif; ?>
               </div>
             </div>
           </div>
@@ -136,11 +147,15 @@
 
           <!-- mobile add btn -->
           <div class="mobile-show">
-            <div class="header__mobile_add">
-              <a href="<?php echo get_page_url( 'tpl_partner' ); ?>">
-                <img src="<?php bloginfo('template_url') ?>/img/plus.svg" alt="">  
+            <?php if ( is_user_logged_in() ): ?>
+              <a href="<?php echo get_page_url('tpl_allcity') ?>">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
               </a>
-            </div>
+            <?php else: ?>
+              <a href="/member-login">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
+              </a>
+            <?php endif; ?>
           </div>
           <!-- end mobile add btn -->
 
@@ -190,11 +205,15 @@
 
           <!-- mobile add btn -->
           <div class="mobile-show">
-            <div class="header__mobile_add">
-              <a href="<?php echo get_page_url( 'tpl_partner' ); ?>">
-                <img src="<?php bloginfo('template_url') ?>/img/plus.svg" alt="">  
+            <?php if ( is_user_logged_in() ): ?>
+              <a href="<?php echo get_page_url('tpl_allcity') ?>">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
               </a>
-            </div>
+            <?php else: ?>
+              <a href="/member-login">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/user.svg" alt="<?php _e('Профиль'); ?>" width="32">
+              </a>
+            <?php endif; ?>
           </div>
           <!-- end mobile add btn -->
 
