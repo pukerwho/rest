@@ -80,6 +80,14 @@
             2021 &copy; 
             <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua/" rel="v:url" property="v:title"> Vidpochivai.com.ua</a> › </span> <span typeof="v:Breadcrumb"> <a href="https://vidpochivai.com.ua//#best" rel="v:url" property="v:title"><?php _e( 'Только проверенные предложения!', 'restx' ); ?></a> </span>
           <?php endif ?>
+          <div>
+            <?php if (get_locale() == 'ru_RU'): ?>
+              Создание и продвижение сайта: <a href="https://treba-solutions.com/" target="_blank">Treba Solutions</a>
+            <?php endif; ?>
+            <?php if (get_locale() == 'uk'): ?>
+              Створення та просування сайту: <a href="https://treba-solutions.com/uk/" target="_blank">Treba Solutions</a>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
 		</div>
